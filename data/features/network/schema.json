@@ -1,0 +1,86 @@
+{
+  "modality": "network_features",
+  "total_records": 45,
+  "fields": {
+    "sample_id": {
+      "type": "str",
+      "nullable": false
+    },
+    "run_id": {
+      "type": "str",
+      "nullable": false
+    },
+    "label": {
+      "type": "int",
+      "nullable": false
+    },
+    "net_total_observations_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "net_snapshot_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "net_sysmon_eid3_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "net_established_connections_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "net_listening_sockets_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "net_unique_remote_ips_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "net_unique_destination_ports_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "net_outbound_remote_connection_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "net_non_standard_http_ssl_ports_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "net_privileged_ports_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "net_ephemeral_ports_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "net_network_enabled_process_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "net_max_connections_single_process": {
+      "type": "int",
+      "nullable": false
+    },
+    "net_packet_count": {
+      "type": "NoneType",
+      "nullable": true
+    },
+    "net_byte_count": {
+      "type": "NoneType",
+      "nullable": true
+    },
+    "net_flow_duration_sec": {
+      "type": "NoneType",
+      "nullable": true
+    },
+    "net_beacon_periodicity_sec": {
+      "type": "NoneType",
+      "nullable": true
+    }
+  }
+}

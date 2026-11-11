@@ -1,0 +1,209 @@
+{
+  "report_version": "1.0.0",
+  "generated_at": "2026-09-21T10:25:00+00:00",
+  "framework_name": "Real-Time Fileless Malware Detection",
+  "data_policy": {
+    "custom_dataset_isolation": "ENFORCED",
+    "fabrication_prevention": "ENFORCED",
+    "modality_isolation": "ENFORCED"
+  },
+  "candidate_datasets": [
+    {
+      "dataset_name": "CIC-MalMem-2022",
+      "official_source": "Canadian Institute for Cybersecurity (CIC) / University of New Brunswick (UNB)",
+      "url": "https://www.unb.ca/cic/datasets/malmem-2022.html",
+      "citation": "Carrier et al., ICISSP 2022",
+      "license": "Creative Commons / Academic Research Terms",
+      "sample_count": 58596,
+      "benign_count": 29298,
+      "malware_count": 29298,
+      "malware_families": [
+        "Transponder",
+        "Gator",
+        "TIBS",
+        "192.com",
+        "Ako",
+        "Conti",
+        "Phorpiex",
+        "Shade",
+        "WannaCry",
+        "Emotet",
+        "Zeus",
+        "Reconyc",
+        "Refroso"
+      ],
+      "operating_system": "Windows 10 x64",
+      "modalities": {
+        "process": true,
+        "command": false,
+        "network": false,
+        "memory": true
+      },
+      "raw_format": "CSV (55 Volatility features)",
+      "label_granularity": "Binary ('Benign', 'Malware') and Multi-class (Category + Family)",
+      "schema_mapping_feasibility": "High for Process and Memory schemas. Zero mapping for Command and Network.",
+      "compatibility_classification": "PARTIALLY_COMPATIBLE",
+      "recommended_use": "Scaling ProcessModel (XGBoost) and MemoryModel (CatBoost) training sets",
+      "limitations": "Completely lacks command strings and network captures. Memory entropy is unmeasured (preserved as null)."
+    },
+    {
+      "dataset_name": "Any.Run / CAPEv2 Sandbox Behavioral Corpus",
+      "official_source": "Any.Run Interactive Sandbox & CAPE Sandbox Community",
+      "url": "https://any.run/ / https://github.com/kevoreilly/CAPEv2",
+      "citation": "CAPE Sandbox Open Source Community & Any.Run Public Traces",
+      "license": "Community Research / Public Submission Terms",
+      "sample_count": 100000,
+      "benign_count": 25000,
+      "malware_count": 75000,
+      "malware_families": [
+        "PowerShell Stagers",
+        "Cobalt Strike",
+        "Metasploit",
+        "Empire",
+        "AsyncRAT",
+        "AgentTesla",
+        "RedLine",
+        "Remcos"
+      ],
+      "operating_system": "Windows 7 / Windows 10 / Windows 11",
+      "modalities": {
+        "process": true,
+        "command": true,
+        "network": true,
+        "memory": false
+      },
+      "raw_format": "JSON Execution Reports",
+      "label_granularity": "Binary and Family Tags",
+      "schema_mapping_feasibility": "High for Command (raw command strings), Network (sockets, DNS), and Process (process tree).",
+      "compatibility_classification": "PARTIALLY_COMPATIBLE",
+      "recommended_use": "Scaling CommandModel (DistilBERT) and NetworkModel (LightGBM)",
+      "limitations": "Does not contain complete volatile RAM images; lacks Volatility VAD and malfind structures."
+    },
+    {
+      "dataset_name": "EMBER 2018",
+      "official_source": "Endgame / Elastic Security",
+      "url": "https://github.com/elastic/ember",
+      "citation": "Anderson & Roth, arXiv:1804.04159 (2018)",
+      "license": "MIT License",
+      "sample_count": 1100000,
+      "benign_count": 400000,
+      "malware_count": 400000,
+      "malware_families": ["Various PE Families"],
+      "operating_system": "Windows PE32/PE32+",
+      "modalities": {
+        "process": false,
+        "command": false,
+        "network": false,
+        "memory": false
+      },
+      "raw_format": "JSONL / Vectorized Static PE Attributes",
+      "label_granularity": "Binary",
+      "schema_mapping_feasibility": "Impossible without synthesizing live execution behavior from static headers.",
+      "compatibility_classification": "INCOMPATIBLE",
+      "recommended_use": "None for real-time memory/telemetry detection.",
+      "limitations": "Purely static file attributes. Fails to capture memory forensics, command lines, or live network flows."
+    },
+    {
+      "dataset_name": "SOREL-20M",
+      "official_source": "Sophos AI / ReversingLabs",
+      "url": "https://github.com/sophos-ai/SOREL-20M",
+      "citation": "Harang et al., arXiv:2012.07634 (2020)",
+      "license": "CC BY 4.0",
+      "sample_count": 20000000,
+      "benign_count": 10800000,
+      "malware_count": 9200000,
+      "malware_families": ["Multi-tag taxonomy"],
+      "operating_system": "Windows PE",
+      "modalities": {
+        "process": false,
+        "command": false,
+        "network": false,
+        "memory": false
+      },
+      "raw_format": "Static Disassembly & Neural Embeddings",
+      "label_granularity": "Multi-tag attributes",
+      "schema_mapping_feasibility": "Zero mapping to dynamic forensic telemetry.",
+      "compatibility_classification": "INCOMPATIBLE",
+      "recommended_use": "None.",
+      "limitations": "Static binary representations only."
+    },
+    {
+      "dataset_name": "MalwareBazaar / VX-Underground",
+      "official_source": "abuse.ch & VX-Underground",
+      "url": "https://bazaar.abuse.ch/",
+      "citation": "abuse.ch MalwareBazaar Repository",
+      "license": "Security Research Terms",
+      "sample_count": 500000,
+      "benign_count": 0,
+      "malware_count": 500000,
+      "malware_families": ["Extensive family taxonomy"],
+      "operating_system": "Multi-OS",
+      "modalities": {
+        "process": false,
+        "command": false,
+        "network": false,
+        "memory": false
+      },
+      "raw_format": "Raw Executables / ZIP (password: infected)",
+      "label_granularity": "Family Tags",
+      "schema_mapping_feasibility": "Contains no pre-extracted forensic telemetry. Requires manual sandbox execution.",
+      "compatibility_classification": "INCOMPATIBLE",
+      "recommended_use": "Payload source for manual sandbox execution only.",
+      "limitations": "Raw malicious binaries with zero telemetry."
+    },
+    {
+      "dataset_name": "BODMAS",
+      "official_source": "Georgia Tech / Stony Brook University",
+      "url": "https://github.com/whyisyoung/BODMAS",
+      "citation": "Yang et al., IEEE TDSC 2021",
+      "license": "Research License",
+      "sample_count": 71205,
+      "benign_count": 13912,
+      "malware_count": 57293,
+      "malware_families": ["581 families"],
+      "operating_system": "Windows PE",
+      "modalities": {
+        "process": false,
+        "command": false,
+        "network": false,
+        "memory": false
+      },
+      "raw_format": "Static PE Feature Vectors",
+      "label_granularity": "Family & Timestamp",
+      "schema_mapping_feasibility": "Static attributes only.",
+      "compatibility_classification": "INCOMPATIBLE",
+      "recommended_use": "None.",
+      "limitations": "Static PE file features."
+    },
+    {
+      "dataset_name": "CIC-IDS-2017 / CTU-13",
+      "official_source": "Canadian Institute for Cybersecurity / Stratosphere IPS",
+      "url": "https://www.unb.ca/cic/datasets/ids-2017.html",
+      "citation": "Sharafaldin et al., 2018",
+      "license": "Academic Research Terms",
+      "sample_count": 2830743,
+      "benign_count": 2273097,
+      "malware_count": 557646,
+      "malware_families": ["DDoS", "PortScan", "Botnet", "Infiltration"],
+      "operating_system": "Mixed network captures",
+      "modalities": {
+        "process": false,
+        "command": false,
+        "network": true,
+        "memory": false
+      },
+      "raw_format": "PCAP & NetFlow CSV",
+      "label_granularity": "Attack Type",
+      "schema_mapping_feasibility": "Maps to network socket and flow statistics.",
+      "compatibility_classification": "PARTIALLY_COMPATIBLE",
+      "recommended_use": "Supplemental network flow reference.",
+      "limitations": "No process, memory, or command line visibility."
+    }
+  ],
+  "classification_counts": {
+    "COMPATIBLE": 0,
+    "PARTIALLY_COMPATIBLE": 3,
+    "INCOMPATIBLE": 4
+  },
+  "scientific_conclusion": "No monolithic public dataset provides all four forensic modalities simultaneously. The recommended strategy is modality-specific benchmark expansion: pairing CIC-MalMem-2022 for Process and Memory models with Any.Run / CAPEv2 dynamic sandbox execution reports for Command and Network models."
+}

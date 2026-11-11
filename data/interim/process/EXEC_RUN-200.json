@@ -1,0 +1,13 @@
+{
+  "sample_id": "EXEC_RUN-200",
+  "total_process_count": 134,
+  "hidden_process_count": 1,
+  "anomalous_ppid_count": 0,
+  "avg_threads_per_process": 12.22,
+  "max_threads_in_single_process": 152,
+  "total_handle_count": 50964,
+  "suspicious_dll_count": 0,
+  "malfind_process_count": 3,
+  "elevated_privilege_count": 50,
+  "unlinked_dll_count": 431
+}

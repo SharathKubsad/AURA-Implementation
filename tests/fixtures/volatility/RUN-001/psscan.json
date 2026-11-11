@@ -1,0 +1,13 @@
+[
+  {"pid": 4, "ppid": 0, "imagefilename": "System", "exittime": "N/A"},
+  {"pid": 280, "ppid": 4, "imagefilename": "smss.exe", "exittime": "N/A"},
+  {"pid": 360, "ppid": 280, "imagefilename": "csrss.exe", "exittime": "N/A"},
+  {"pid": 440, "ppid": 280, "imagefilename": "wininit.exe", "exittime": "N/A"},
+  {"pid": 520, "ppid": 440, "imagefilename": "services.exe", "exittime": "N/A"},
+  {"pid": 540, "ppid": 440, "imagefilename": "lsass.exe", "exittime": "N/A"},
+  {"pid": 680, "ppid": 520, "imagefilename": "svchost.exe", "exittime": "N/A"},
+  {"pid": 720, "ppid": 520, "imagefilename": "svchost.exe", "exittime": "N/A"},
+  {"pid": 1100, "ppid": 520, "imagefilename": "spoolsv.exe", "exittime": "N/A"},
+  {"pid": 1820, "ppid": 680, "imagefilename": "userinit.exe", "exittime": "2026-09-13 14:10:05.000000 UTC"},
+  {"pid": 1840, "ppid": 680, "imagefilename": "explorer.exe", "exittime": "N/A"}
+]

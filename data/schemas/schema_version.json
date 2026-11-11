@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/Prash-2402/Real-Time-Fileless-Malware-Detection/main/data/schemas/schema_version.json",
+  "title": "SchemaVersion",
+  "description": "Version manifest for the shared multi-modal dataset schema contracts (Task J2)",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "description": "Semantic version of the contract"
+    },
+    "release_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of specification release"
+    },
+    "compatibility": {
+      "type": "object",
+      "properties": {
+        "track_a": {
+          "type": "string",
+          "description": "Track A compatibility level"
+        },
+        "track_b": {
+          "type": "string",
+          "description": "Track B compatibility level"
+        }
+      },
+      "required": ["track_a", "track_b"]
+    },
+    "description": {
+      "type": "string"
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "release_date",
+    "compatibility",
+    "description",
+    "artifacts"
+  ],
+  "additionalProperties": false,
+  "default": {
+    "schema_version": "1.0.0",
+    "release_date": "2026-09-13",
+    "compatibility": {
+      "track_a": "1.0.0",
+      "track_b": "1.0.0"
+    },
+    "description": "Shared dataset schema specification connecting Process, Command, Network, and Memory modalities via sample_id.",
+    "artifacts": [
+      "sample_metadata.schema.json",
+      "labels.schema.json",
+      "process_features.schema.json",
+      "command_features.schema.json",
+      "network_features.schema.json",
+      "memory_features.schema.json"
+    ]
+  }
+}

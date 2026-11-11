@@ -1,0 +1,11 @@
+modality,source_plugin_or_file,source_field,preserved_in_rich_representation,transformation_type,is_aggregated,is_discarded,justification
+Process,volatility/pslist.txt,Offset(V),TRANSFORMED,Virtual memory pointer retained in ProcessEntity internal metadata,False,False,Virtual offsets serve as cross-referencing pointers to pool/VAD allocations rather than direct ML features.
+Process,volatility/pslist.txt,File output,DISCARDED,Static Volatility CLI column ('Disabled'),False,True,Constant Volatility 3 output parameter; contains zero forensic signal.
+Process,volatility/pstree.txt,Tree indent asterisks,TRANSFORMED,"Parsed into numerical 'tree_depth' integer (0, 1, 2...)",False,False,Formatting glyphs converted into explicit mathematical graph hierarchy.
+Process,source_evidence/process_snapshot.csv,StartTime,PRESERVED,String timestamp preserved in ProcessEntity.create_time,False,False,Used for execution chronology and process lifetime analysis.
+Process,volatility/psscan.txt,Terminated / Dead Pool Processes,PRESERVED,Pool-carved entries added to ProcessEntity with is_in_psscan=True and is_in_pslist=False,False,False,Ensures unlinked or terminated processes are fully available for anomaly detection.
+Memory,volatility/vadinfo.txt,"Start VPN, End VPN",PRESERVED,Hex strings preserved; virtual region size computed as (End - Start + 1),False,False,Allows memory layout and allocation volume analysis.
+Memory,volatility/malfind.txt,Hexdump and Disassembly text,PRESERVED,Multi-line string payload preserved in MalfindFinding,False,False,Preserved for shellcode analysis and opcode n-gram inspection.
+Command,source_evidence/powershell.evtx,EID 40961 / 40962 Engine Lifecycle Events,DISCARDED_FROM_RICH_COMMANDS,Filtered out during ScriptBlock logging aggregation,False,True,EID 40961/40962 record host state changes (Available/Stopped) without command script text. Raw logs remain in EVTX.
+Command,source_evidence/sysmon.evtx,EID 5 Process Terminate,PRESERVED_IN_SYSMON,Preserved in SysmonEvent; not duplicated in CommandEvent,False,False,EID 5 represents termination lifecycle; preserved in events/sysmon/ for process duration analysis.
+Network,Network Telemetry,Packet Timing / Byte Counts / PCAP,EXPLICIT_NULL,Field left NULL/None,False,False,No PCAP was collected during execution; values explicitly preserved as NULL rather than fabricated as 0.

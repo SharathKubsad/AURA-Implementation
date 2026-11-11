@@ -1,0 +1,24 @@
+# Framework System & Runtime Settings
+app:
+  name: "Real-Time Fileless Malware Detector"
+  version: "0.1.0"
+  env: "development"
+  debug: false
+
+api:
+  host: "0.0.0.0"
+  port: 8000
+  workers: 1
+  timeout: 30
+
+mlflow:
+  tracking_uri: "http://localhost:5000"
+  experiment_name: "fileless-malware-detection"
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+telemetry:
+  collection_interval_seconds: 1.0
+  max_history_events: 1000

@@ -1,0 +1,134 @@
+{
+  "proc_total_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "proc_active_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "proc_carved_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "proc_hidden_unlinked_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "proc_wow64_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "proc_tree_max_depth": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "proc_tree_mean_depth": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "proc_orphan_parent_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "proc_max_children_single_proc": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "proc_spawning_concentration": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "proc_thread_count_total": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "proc_thread_count_mean": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "proc_handle_count_total": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "proc_handle_count_mean": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "proc_working_set_bytes_mean": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "proc_cpu_utilization_mean": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "proc_user_writable_path_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "proc_system_directory_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "proc_temp_directory_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "proc_unusual_executable_location_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "proc_elevated_privilege_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "proc_processes_with_sedebug": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  }
+}

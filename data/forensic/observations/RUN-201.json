@@ -1,0 +1,25 @@
+{
+  "run_id": "RUN-201",
+  "sample_id": "EXEC_RUN-201",
+  "label": 1,
+  "family": "memory_only_rat",
+  "counts": {
+    "processes": 147,
+    "threads": 1508,
+    "handles": 51607,
+    "modules": 6638,
+    "privileges": 4795,
+    "vads": 17594,
+    "malfind_findings": 19,
+    "network_connections": 353,
+    "sysmon_events": 7569,
+    "powershell_events": 506,
+    "command_events": 4166,
+    "relationships_tree": 136,
+    "relationships_network": 84,
+    "relationships_command": 349,
+    "relationships_memory": 19
+  },
+  "malfind_baseline_exceptions": 15,
+  "hidden_processes_psxview": 9
+}

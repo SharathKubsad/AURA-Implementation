@@ -1,0 +1,26 @@
+{
+  "sample_id": "EXEC_RUN-1108",
+  "run_id": "RUN-1108",
+  "label": 0,
+  "family": "benign",
+  "track": "BENIGN",
+  "os": "microsoft_windows_11_home",
+  "execution_timestamp": "2026-09-19T11:42:56Z",
+  "source_category": "custom_benign_batch",
+  "metadata_source": "C:\\Users\\Prash\\Desktop\\Real-Time-Fileless-Malware-Detection\\Dataset\\custom_benign_batch\\metadata\\RUN-1108.json",
+  "evidence_availability": {
+    "volatility": true,
+    "sysmon": true,
+    "powershell": true,
+    "network_connections": true,
+    "process_snapshot": true
+  },
+  "provenance": {
+    "sample_id": "EXEC_RUN-1108",
+    "source_file": "metadata/RUN-1108.json",
+    "source_type": "METADATA",
+    "source_plugin": "sample_metadata",
+    "extraction_timestamp": "2026-09-24T05:48:05.301778+00:00",
+    "extractor_version": "2.0.0-rich-forensic"
+  }
+}

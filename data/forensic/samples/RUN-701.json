@@ -1,0 +1,26 @@
+{
+  "sample_id": "EXEC_RUN-701",
+  "run_id": "RUN-701",
+  "label": 1,
+  "family": "reflective_dll_injection",
+  "track": "TRACK_B",
+  "os": "microsoft_windows_11_home",
+  "execution_timestamp": "2026-09-20T16:09:11Z",
+  "source_category": "custom_reflective_dll_injection",
+  "metadata_source": "C:\\Users\\Prash\\Desktop\\Real-Time-Fileless-Malware-Detection\\Dataset\\custom_reflective_dll_injection\\metadata\\RUN-701.json",
+  "evidence_availability": {
+    "volatility": true,
+    "sysmon": true,
+    "powershell": true,
+    "network_connections": true,
+    "process_snapshot": true
+  },
+  "provenance": {
+    "sample_id": "EXEC_RUN-701",
+    "source_file": "metadata/RUN-701.json",
+    "source_type": "METADATA",
+    "source_plugin": "sample_metadata",
+    "extraction_timestamp": "2026-09-24T05:49:14.803555+00:00",
+    "extractor_version": "2.0.0-rich-forensic"
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "mem_rwx_region_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "mem_executable_private_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "mem_executable_writable_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "mem_vad_total_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "mem_vad_private_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "mem_vad_mapped_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "mem_commit_charge_total": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "mem_commit_charge_mean": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "mem_region_size_bytes_total": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "mem_region_size_bytes_mean": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "mem_malfind_total_findings": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "mem_malfind_baseline_exception_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "mem_malfind_suspicious_non_baseline_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "mem_malfind_affected_processes_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "mem_malfind_max_findings_single_proc": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "mem_unlinked_modules_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "mem_total_loaded_modules": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "mem_modules_per_process_mean": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "dataset_name": "Real-Time Fileless Malware Detection - Rich Forensic Representation",
+  "generated_timestamp": "2026-09-24T05:49:33.077722+00:00",
+  "total_runs": 45,
+  "label_distribution": {
+    "benign": 13,
+    "malware": 32
+  },
+  "canonical_check": {
+    "expected_benign": 13,
+    "expected_malware": 32,
+    "is_canonical": true
+  },
+  "entity_totals": {
+    "processes": 6459,
+    "threads": 72446,
+    "handles": 2321164,
+    "modules": 294321,
+    "privileges": 215775,
+    "vads": 795833,
+    "malfind": 821,
+    "network": 15658,
+    "sysmon": 336266,
+    "powershell": 21902,
+    "commands": 184076,
+    "tree_relationships": 6127
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "dataset_file": "C:\\Users\\PRAJWAL V L\\Downloads\\Real-Time-Fileless-Malware-Detection-main (1)\\Real-Time-Fileless-Malware-Detection-main\\data\\processed\\unified\\unified_dataset.jsonl",
+  "total_executions": 500,
+  "benign_executions": 240,
+  "malware_executions": 260,
+  "malware_family_counts": {
+    "benign": 240,
+    "powershell_fileless": 2,
+    "process_hollowing": 3,
+    "empire_framework": 10,
+    "memory_only_rat": 3,
+    "registry_resident_malware": 3,
+    "cobalt_strike_beacon": 12,
+    "metasploit_memory_payloads": 3,
+    "wmi_malware": 3,
+    "reflective_dll_injection": 3,
+    "lolbins_abuse": 11,
+    "fileless_ransomware": 3,
+    "powershell_stager": 15,
+    "remcos_rat": 18,
+    "asyncrat": 12,
+    "agenttesla": 15,
+    "metasploit_payload": 13,
+    "redline_stealer": 18,
+    "ransomware_ako": 14,
+    "trojan_zeus": 16,
+    "ransomware_shade": 11,
+    "spyware_transponder": 19,
+    "ransomware_conti": 21,
+    "spyware_gator": 14,
+    "trojan_emotet": 18
+  },
+  "duplicate_execution_ids": 0,
+  "integrity_checks": {
+    "missing_process_modality": 0,
+    "missing_command_modality": 0,
+    "missing_network_modality": 0,
+    "missing_memory_modality": 0,
+    "invalid_numeric_ranges": 0,
+    "data_leakage_detected": false
+  },
+  "status": "PASS"
+}

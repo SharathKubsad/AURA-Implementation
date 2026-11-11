@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/Prash-2402/Real-Time-Fileless-Malware-Detection/main/data/schemas/sample_metadata.schema.json",
+  "title": "SampleMetadata",
+  "description": "Shared sample identity linking Process, Command, Network, and Memory feature domains for a single execution or dataset entry",
+  "type": "object",
+  "properties": {
+    "sample_id": {
+      "type": "string",
+      "pattern": "^(EXEC|PUB)_[A-Za-z0-9_.-]+$",
+      "description": "Canonical unique primary key across all feature sets (e.g. EXEC_20260913_001 or PUB_CIC_0042)"
+    },
+    "source_type": {
+      "type": "string",
+      "enum": ["custom_sandbox", "public_dataset"],
+      "description": "Origin of sample record: isolated sandbox execution or public reference dataset"
+    },
+    "source_id": {
+      "type": "string",
+      "description": "Sample hash (SHA-256) or upstream public dataset identifier. Never commit live malware code."
+    },
+    "execution_id": {
+      "type": "string",
+      "description": "Identifier for the specific sandbox execution session (or N/A for static public dataset rows)"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 UTC timestamp of execution or acquisition"
+    },
+    "operating_system": {
+      "type": "string",
+      "enum": ["windows_10", "windows_11", "ubuntu_linux", "generic_windows", "other"],
+      "description": "Target guest operating system during execution"
+    },
+    "environment": {
+      "type": "string",
+      "enum": ["vmware_workstation", "virtualbox", "hyperv", "bare_metal", "public_benchmark"],
+      "description": "Virtualization hypervisor or execution environment"
+    },
+    "binary_label": {
+      "type": "integer",
+      "enum": [0, 1],
+      "description": "0 = Benign, 1 = Malware"
+    },
+    "family_label": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Initial baseline: 0=Benign, 1=PowerShell Fileless, 2=WMI Malware, 3=Process Hollowing, 4=Reflective DLL Injection, 5=Registry Malware (subject to Phase 1 finalization)"
+    },
+    "family_name": {
+      "type": "string",
+      "description": "Descriptive malware family name or 'Benign'"
+    },
+    "operator": {
+      "type": "string",
+      "description": "Track owner or automated harness that conducted the run (Track A / Track B / Public)"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Non-sensitive operational or forensic notes regarding execution anomalies or configuration"
+    }
+  },
+  "required": [
+    "sample_id",
+    "source_type",
+    "source_id",
+    "execution_id",
+    "timestamp",
+    "operating_system",
+    "environment",
+    "binary_label",
+    "family_label",
+    "family_name"
+  ],
+  "additionalProperties": false
+}

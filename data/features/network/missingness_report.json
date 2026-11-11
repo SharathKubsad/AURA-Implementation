@@ -1,0 +1,104 @@
+{
+  "net_total_observations_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "net_snapshot_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "net_sysmon_eid3_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "net_established_connections_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "net_listening_sockets_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "net_unique_remote_ips_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "net_unique_destination_ports_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "net_outbound_remote_connection_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "net_non_standard_http_ssl_ports_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "net_privileged_ports_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "net_ephemeral_ports_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "net_network_enabled_process_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "net_max_connections_single_process": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "net_packet_count": {
+    "total_count": 45,
+    "missing_count": 45,
+    "missing_percentage": 100.0,
+    "is_explicit_null_field": true
+  },
+  "net_byte_count": {
+    "total_count": 45,
+    "missing_count": 45,
+    "missing_percentage": 100.0,
+    "is_explicit_null_field": true
+  },
+  "net_flow_duration_sec": {
+    "total_count": 45,
+    "missing_count": 45,
+    "missing_percentage": 100.0,
+    "is_explicit_null_field": true
+  },
+  "net_beacon_periodicity_sec": {
+    "total_count": 45,
+    "missing_count": 45,
+    "missing_percentage": 100.0,
+    "is_explicit_null_field": true
+  }
+}

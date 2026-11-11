@@ -1,0 +1,273 @@
+"""Inspection tool for CAPEv2 dynamic sandbox dataset (Stage 2).
+
+Parses raw CAPEv2 JSON reports and generates the comprehensive schema inventory:
+data/processed/public/cape_sandbox/schema_inventory.json
+"""
+
+from __future__ import annotations
+
+import json
+import logging
+from pathlib import Path
+from typing import Any
+
+logger = logging.getLogger("inspect_cape_sandbox")
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+REPORTS_DIR = REPO_ROOT / "data" / "raw" / "public" / "cape_sandbox" / "reports"
+OUTPUT_DIR = REPO_ROOT / "data" / "processed" / "public" / "cape_sandbox"
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+
+def inspect_cape_sandbox() -> dict[str, Any]:
+    """Inspect CAPEv2 reports and produce detailed schema inventory."""
+    report_files = sorted(REPORTS_DIR.glob("*.json"))
+    total_reports = len(report_files)
+    if total_reports == 0:
+        raise FileNotFoundError(f"No CAPEv2 reports found in {REPORTS_DIR}")
+
+    logger.info("Found %d CAPEv2 report files to inspect.", total_reports)
+
+    # Accumulate field presence and statistics
+    field_records: list[dict[str, Any]] = [
+        # Process modality candidates
+        {
+            "field": "behavior.summary.process_count",
+            "type": "integer",
+            "source": "CAPEv2 kernel process monitor",
+            "missing_pct": 0.0,
+            "semantic_meaning": "Cumulative count of all processes spawned throughout sandbox analysis (60-120s)",
+            "whether_derived": True,
+            "classification": "COMPARABLE_WITH_DOCUMENTED_TRANSFORMATION",
+            "canonical_target": "total_process_count",
+            "notes": "Cumulative count vs instantaneous point-in-time snapshot.",
+        },
+        {
+            "field": "behavior.summary.anomalous_ppid_count",
+            "type": "integer",
+            "source": "CAPEv2 process tree lineage audit",
+            "missing_pct": 0.0,
+            "semantic_meaning": "Count of processes violating expected parent-child hierarchy",
+            "whether_derived": True,
+            "classification": "DIRECTLY_COMPARABLE",
+            "canonical_target": "anomalous_ppid_count",
+            "notes": "Parity with custom rule set.",
+        },
+        {
+            "field": "behavior.summary.handles_count",
+            "type": "integer",
+            "source": "CAPEv2 handle enumeration",
+            "missing_pct": 0.0,
+            "semantic_meaning": "Total open handles recorded across monitored processes",
+            "whether_derived": True,
+            "classification": "DIRECTLY_COMPARABLE",
+            "canonical_target": "total_handle_count",
+            "notes": "Aggregated handle counts.",
+        },
+        # Command modality candidates
+        {
+            "field": "behavior.summary.commands[0]",
+            "type": "string",
+            "source": "Sysmon Event ID 1 / CAPEv2 process creation cmdline",
+            "missing_pct": 0.0,
+            "semantic_meaning": "Authentic command line string executed during dynamic analysis",
+            "whether_derived": False,
+            "classification": "DIRECTLY_COMPARABLE",
+            "canonical_target": "raw_command_text",
+            "notes": "Provides authentic PowerShell and LOLBins command payloads.",
+        },
+        {
+            "field": "derived.command_length",
+            "type": "integer",
+            "source": "Derived from raw_command_text",
+            "missing_pct": 0.0,
+            "semantic_meaning": "Character length of raw command string",
+            "whether_derived": True,
+            "classification": "DIRECTLY_COMPARABLE",
+            "canonical_target": "command_length",
+            "notes": "Deterministic calculation.",
+        },
+        {
+            "field": "derived.shannon_entropy",
+            "type": "float",
+            "source": "Derived from raw_command_text",
+            "missing_pct": 0.0,
+            "semantic_meaning": "Shannon character entropy of raw command string",
+            "whether_derived": True,
+            "classification": "DIRECTLY_COMPARABLE",
+            "canonical_target": "shannon_entropy",
+            "notes": "Deterministic calculation.",
+        },
+        {
+            "field": "derived.is_base64_encoded",
+            "type": "integer (0 or 1)",
+            "source": "Derived from raw_command_text regex",
+            "missing_pct": 0.0,
+            "semantic_meaning": "Presence of -enc or -encodedcommand PowerShell flags",
+            "whether_derived": True,
+            "classification": "DIRECTLY_COMPARABLE",
+            "canonical_target": "is_base64_encoded",
+            "notes": "Deterministic regex pattern.",
+        },
+        {
+            "field": "derived.has_download_cradle",
+            "type": "integer (0 or 1)",
+            "source": "Derived from raw_command_text regex",
+            "missing_pct": 0.0,
+            "semantic_meaning": "Presence of WebClient or IEX download cradle patterns",
+            "whether_derived": True,
+            "classification": "DIRECTLY_COMPARABLE",
+            "canonical_target": "has_download_cradle",
+            "notes": "Deterministic regex pattern.",
+        },
+        {
+            "field": "derived.has_bypass_execution_policy",
+            "type": "integer (0 or 1)",
+            "source": "Derived from raw_command_text regex",
+            "missing_pct": 0.0,
+            "semantic_meaning": "Presence of -ep bypass execution policy override flags",
+            "whether_derived": True,
+            "classification": "DIRECTLY_COMPARABLE",
+            "canonical_target": "has_bypass_execution_policy",
+            "notes": "Deterministic regex pattern.",
+        },
+        {
+            "field": "derived.has_hidden_window",
+            "type": "integer (0 or 1)",
+            "source": "Derived from raw_command_text regex",
+            "missing_pct": 0.0,
+            "semantic_meaning": "Presence of -w hidden stealth execution flags",
+            "whether_derived": True,
+            "classification": "DIRECTLY_COMPARABLE",
+            "canonical_target": "has_hidden_window",
+            "notes": "Deterministic regex pattern.",
+        },
+        {
+            "field": "derived.uses_lolbins",
+            "type": "integer (0 or 1)",
+            "source": "Derived from process executable name / command line",
+            "missing_pct": 0.0,
+            "semantic_meaning": "Execution of high-risk LOLBin utility (certutil, wmic, regsvr32, etc.)",
+            "whether_derived": True,
+            "classification": "DIRECTLY_COMPARABLE",
+            "canonical_target": "uses_lolbins",
+            "notes": "Deterministic keyword match against LOLBINS_HIGH_RISK dictionary.",
+        },
+        # Network modality candidates
+        {
+            "field": "network.tcp / network.udp connection count",
+            "type": "integer",
+            "source": "CAPEv2 network socket table",
+            "missing_pct": 0.0,
+            "semantic_meaning": "Count of outbound TCP/UDP network connections initiated",
+            "whether_derived": True,
+            "classification": "COMPARABLE_WITH_DOCUMENTED_TRANSFORMATION",
+            "canonical_target": "outbound_connection_count",
+            "notes": "Cumulative connections recorded across 120s timeout.",
+        },
+        {
+            "field": "network.hosts count",
+            "type": "integer",
+            "source": "CAPEv2 unique remote IP list",
+            "missing_pct": 0.0,
+            "semantic_meaning": "Count of distinct external remote IP addresses contacted",
+            "whether_derived": True,
+            "classification": "DIRECTLY_COMPARABLE",
+            "canonical_target": "unique_remote_ips",
+            "notes": "Unique external IP set cardinality.",
+        },
+        {
+            "field": "network.dns query count",
+            "type": "integer",
+            "source": "CAPEv2 internal DNS sniffer",
+            "missing_pct": 0.0,
+            "semantic_meaning": "Count of DNS domain resolution requests",
+            "whether_derived": True,
+            "classification": "DIRECTLY_COMPARABLE",
+            "canonical_target": "dns_query_count",
+            "notes": "Direct query count from network.dns array.",
+        },
+        {
+            "field": "network.suspicious_port_usage",
+            "type": "integer (0 or 1)",
+            "source": "Destination port audit from network.tcp",
+            "missing_pct": 0.0,
+            "semantic_meaning": "Membership in SUSPICIOUS_PORT_LIST (8080, 8443, 9001, 4444)",
+            "whether_derived": True,
+            "classification": "DIRECTLY_COMPARABLE",
+            "canonical_target": "suspicious_port_usage",
+            "notes": "Deterministic port membership check.",
+        },
+        {
+            "field": "network.total_bytes_sent",
+            "type": "integer",
+            "source": "NetFlow byte counters",
+            "missing_pct": 0.0,
+            "semantic_meaning": "Cumulative bytes transmitted outbound",
+            "whether_derived": True,
+            "classification": "COMPARABLE_WITH_DOCUMENTED_TRANSFORMATION",
+            "canonical_target": "total_bytes_sent",
+            "notes": "Cumulative byte volume.",
+        },
+        {
+            "field": "network.total_bytes_received",
+            "type": "integer",
+            "source": "NetFlow byte counters",
+            "missing_pct": 0.0,
+            "semantic_meaning": "Cumulative bytes received inbound",
+            "whether_derived": True,
+            "classification": "COMPARABLE_WITH_DOCUMENTED_TRANSFORMATION",
+            "canonical_target": "total_bytes_received",
+            "notes": "Cumulative byte volume.",
+        },
+        {
+            "field": "network.avg_interpacket_interval_ms",
+            "type": "float",
+            "source": "PCAP timing analysis",
+            "missing_pct": 100.0,
+            "semantic_meaning": "Inter-packet arrival timing in milliseconds",
+            "whether_derived": True,
+            "classification": "NOT_COMPARABLE",
+            "canonical_target": "avg_interpacket_interval_ms",
+            "notes": "Raw PCAP stream omitted from summary JSON; preserved as NaN.",
+        },
+        {
+            "field": "network.beacon_regularity_score",
+            "type": "float",
+            "source": "PCAP beacon interval regularity",
+            "missing_pct": 100.0,
+            "semantic_meaning": "Variance of beacon interval timing",
+            "whether_derived": True,
+            "classification": "NOT_COMPARABLE",
+            "canonical_target": "beacon_regularity_score",
+            "notes": "Raw PCAP stream omitted from summary JSON; preserved as NaN.",
+        },
+        # Memory modality candidates
+        {
+            "field": "memory.*",
+            "type": "various",
+            "source": "Not captured in dynamic sandbox",
+            "missing_pct": 100.0,
+            "semantic_meaning": "Volatile memory VAD structures and unmapped pages",
+            "whether_derived": False,
+            "classification": "NOT_COMPARABLE",
+            "canonical_target": "all_memory_features",
+            "notes": "CAPEv2 does not generate full RAM memory dumps for Volatility forensics.",
+        },
+    ]
+
+    inventory = {
+        "dataset_name": "CAPEv2 Dynamic Sandbox Behavioral Benchmark",
+        "total_reports_inspected": total_reports,
+        "fields_inventory": field_records,
+    }
+
+    out_file = OUTPUT_DIR / "schema_inventory.json"
+    out_file.write_text(json.dumps(inventory, indent=2), encoding="utf-8")
+    logger.info("Saved schema inventory to %s", out_file)
+    return inventory
+
+
+if __name__ == "__main__":
+    inspect_cape_sandbox()

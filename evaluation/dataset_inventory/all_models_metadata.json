@@ -1,0 +1,302 @@
+{
+  "process": {
+    "model_type": "xgboost",
+    "modality": "process",
+    "dataset_source": "C:\\Users\\Prash\\Desktop\\Real-Time-Fileless-Malware-Detection\\data\\processed\\unified\\unified_dataset.jsonl",
+    "train_sample_count": 31,
+    "validation_sample_count": 7,
+    "test_sample_count": 7,
+    "train_class_distribution": {
+      "benign": 9,
+      "malware": 22
+    },
+    "validation_class_distribution": {
+      "benign": 2,
+      "malware": 5
+    },
+    "test_class_distribution": {
+      "benign": 2,
+      "malware": 5
+    },
+    "feature_names": [
+      "total_process_count",
+      "hidden_process_count",
+      "anomalous_ppid_count",
+      "avg_threads_per_process",
+      "max_threads_in_single_process",
+      "total_handle_count",
+      "suspicious_dll_count",
+      "malfind_process_count",
+      "elevated_privilege_count",
+      "unlinked_dll_count",
+      "thread_to_process_ratio"
+    ],
+    "random_seed": 42,
+    "hyperparameters": {
+      "n_estimators": 100,
+      "max_depth": 3,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "random_state": 42,
+      "eval_metric": "logloss"
+    },
+    "training_timestamp": "2026-09-21T10:11:50.133967+00:00",
+    "software_versions": {
+      "xgboost": "3.4.1",
+      "scikit-learn": "1.9.1",
+      "pandas": "3.0.6"
+    },
+    "git_commit": "466a8202fd6e40278e810faa4de7bbc5f362286c",
+    "small_dataset_warning": "WARNING: This model was trained on an extremely small custom dataset (45 samples). Metrics are intended solely for pipeline and architecture validation. Do NOT treat these results as production-grade or statistically conclusive without benchmark dataset merging."
+  },
+  "command": {
+    "model_type": "distilbert",
+    "modality": "command",
+    "dataset_source": "C:\\Users\\Prash\\Desktop\\Real-Time-Fileless-Malware-Detection\\data\\processed\\unified\\unified_dataset.jsonl",
+    "train_sample_count": 31,
+    "validation_sample_count": 7,
+    "test_sample_count": 7,
+    "train_class_distribution": {
+      "benign": 9,
+      "malware": 22
+    },
+    "validation_class_distribution": {
+      "benign": 2,
+      "malware": 5
+    },
+    "test_class_distribution": {
+      "benign": 2,
+      "malware": 5
+    },
+    "feature_names": [
+      "raw_command_text"
+    ],
+    "random_seed": 42,
+    "hyperparameters": {
+      "architecture": "DistilBertForSequenceClassification",
+      "base_model": "distilbert-base-uncased",
+      "epochs": 3,
+      "batch_size": 4,
+      "learning_rate": 5e-05,
+      "max_length": 128,
+      "random_seed": 42,
+      "device": "cpu"
+    },
+    "training_timestamp": "2026-09-21T10:15:52.040908+00:00",
+    "software_versions": {
+      "torch": "2.14.0",
+      "transformers": "5.17.0",
+      "scikit-learn": "1.9.1",
+      "pandas": "3.0.6"
+    },
+    "git_commit": "466a8202fd6e40278e810faa4de7bbc5f362286c",
+    "small_dataset_warning": "WARNING: This model was trained on an extremely small custom dataset (45 samples). Metrics are intended solely for pipeline and architecture validation. Do NOT treat these results as production-grade or statistically conclusive without benchmark dataset merging."
+  },
+  "network": {
+    "model_type": "lightgbm",
+    "modality": "network",
+    "dataset_source": "C:\\Users\\Prash\\Desktop\\Real-Time-Fileless-Malware-Detection\\data\\processed\\unified\\unified_dataset.jsonl",
+    "train_sample_count": 31,
+    "validation_sample_count": 7,
+    "test_sample_count": 7,
+    "train_class_distribution": {
+      "benign": 9,
+      "malware": 22
+    },
+    "validation_class_distribution": {
+      "benign": 2,
+      "malware": 5
+    },
+    "test_class_distribution": {
+      "benign": 2,
+      "malware": 5
+    },
+    "feature_names": [
+      "active_connection_count",
+      "listening_port_count",
+      "outbound_connection_count",
+      "dns_query_count",
+      "unique_remote_ips",
+      "avg_interpacket_interval_ms",
+      "beacon_regularity_score",
+      "total_bytes_sent",
+      "total_bytes_received",
+      "suspicious_port_usage",
+      "is_missing_avg_interpacket_interval_ms",
+      "is_missing_beacon_regularity_score",
+      "is_missing_dns_query_count",
+      "is_missing_total_bytes_received",
+      "is_missing_total_bytes_sent"
+    ],
+    "pcap_missing_features_preserved": [
+      "avg_interpacket_interval_ms",
+      "beacon_regularity_score",
+      "dns_query_count",
+      "total_bytes_received",
+      "total_bytes_sent"
+    ],
+    "random_seed": 42,
+    "hyperparameters": {
+      "n_estimators": 100,
+      "max_depth": 3,
+      "num_leaves": 7,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "min_child_samples": 3,
+      "random_state": 42,
+      "verbosity": -1
+    },
+    "training_timestamp": "2026-09-21T10:15:53.062661+00:00",
+    "software_versions": {
+      "lightgbm": "4.7.0",
+      "scikit-learn": "1.9.1",
+      "pandas": "3.0.6"
+    },
+    "git_commit": "466a8202fd6e40278e810faa4de7bbc5f362286c",
+    "small_dataset_warning": "WARNING: This model was trained on an extremely small custom dataset (45 samples). Metrics are intended solely for pipeline and architecture validation. Do NOT treat these results as production-grade or statistically conclusive without benchmark dataset merging."
+  },
+  "memory": {
+    "model_type": "catboost",
+    "modality": "memory",
+    "dataset_source": "C:\\Users\\Prash\\Desktop\\Real-Time-Fileless-Malware-Detection\\data\\processed\\unified\\unified_dataset.jsonl",
+    "train_sample_count": 31,
+    "validation_sample_count": 7,
+    "test_sample_count": 7,
+    "train_class_distribution": {
+      "benign": 9,
+      "malware": 22
+    },
+    "validation_class_distribution": {
+      "benign": 2,
+      "malware": 5
+    },
+    "test_class_distribution": {
+      "benign": 2,
+      "malware": 5
+    },
+    "feature_names": [
+      "rwx_page_count",
+      "injected_code_regions",
+      "unmapped_executable_pages",
+      "vad_protection_anomaly_count",
+      "ldrmodules_inconsistencies",
+      "yara_shellcode_matches",
+      "mean_memory_entropy",
+      "max_memory_entropy",
+      "memory_injection_score"
+    ],
+    "random_seed": 42,
+    "hyperparameters": {
+      "iterations": 100,
+      "depth": 3,
+      "learning_rate": 0.05,
+      "random_seed": 42,
+      "nan_mode": "Min",
+      "verbose": false
+    },
+    "training_timestamp": "2026-09-21T10:15:55.755932+00:00",
+    "software_versions": {
+      "catboost": "1.2.10",
+      "scikit-learn": "1.9.1",
+      "pandas": "3.0.6"
+    },
+    "git_commit": "466a8202fd6e40278e810faa4de7bbc5f362286c",
+    "small_dataset_warning": "WARNING: This model was trained on an extremely small custom dataset (45 samples). Metrics are intended solely for pipeline and architecture validation. Do NOT treat these results as production-grade or statistically conclusive without benchmark dataset merging."
+  },
+  "multiclass": {
+    "dataset": "data\\processed\\unified\\unified_dataset.jsonl",
+    "training_samples": 32,
+    "num_families": 11,
+    "evaluation_strategy": "Leave-One-Out Cross-Validation (LOO-CV)",
+    "loo_accuracy": 0.0938,
+    "loo_macro_f1": 0.0758,
+    "per_class_report": {
+      "PowerShell Fileless": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 2.0
+      },
+      "WMI Malware": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 3.0
+      },
+      "Process Hollowing": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 3.0
+      },
+      "Reflective DLL Injection": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 3.0
+      },
+      "Registry Malware": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 3.0
+      },
+      "Cobalt Strike Beacon": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 3.0
+      },
+      "Metasploit Memory Payloads": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 3.0
+      },
+      "LOLBins Abuse": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 3.0
+      },
+      "Fileless Ransomware": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 3.0
+      },
+      "Memory-only RAT": {
+        "precision": 0.3333333333333333,
+        "recall": 0.3333333333333333,
+        "f1-score": 0.3333333333333333,
+        "support": 3.0
+      },
+      "Empire Framework": {
+        "precision": 0.4,
+        "recall": 0.6666666666666666,
+        "f1-score": 0.5,
+        "support": 3.0
+      },
+      "accuracy": 0.09375,
+      "macro avg": {
+        "precision": 0.06666666666666667,
+        "recall": 0.09090909090909091,
+        "f1-score": 0.07575757575757575,
+        "support": 32.0
+      },
+      "weighted avg": {
+        "precision": 0.06875,
+        "recall": 0.09375,
+        "f1-score": 0.078125,
+        "support": 32.0
+      }
+    },
+    "insufficient_sample_classes": {
+      "PowerShell Fileless": 2
+    },
+    "limitations": "LOO-CV at N=32 provides one honest estimate per sample but individual fold predictions have very high variance. Classes with < 3 samples cannot be statistically evaluated. Results are indicative, not statistically robust.",
+    "small_dataset_warning": "This model was trained on 32 authentic VM-captured malware samples (2\u20133 per family). LOO-CV metrics are provided for transparency. Results should be interpreted as indicative, not statistically robust."
+  }
+}

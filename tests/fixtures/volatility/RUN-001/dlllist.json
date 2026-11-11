@@ -1,0 +1,8 @@
+[
+  {"pid": 520, "process": "services.exe", "path": "C:\\Windows\\System32\\services.exe"},
+  {"pid": 520, "process": "services.exe", "path": "C:\\Windows\\System32\\ntdll.dll"},
+  {"pid": 680, "process": "svchost.exe", "path": "C:\\Windows\\System32\\svchost.exe"},
+  {"pid": 680, "process": "svchost.exe", "path": "C:\\Windows\\System32\\kernel32.dll"},
+  {"pid": 1840, "process": "explorer.exe", "path": "C:\\Windows\\explorer.exe"},
+  {"pid": 1840, "process": "explorer.exe", "path": "C:\\Windows\\System32\\user32.dll"}
+]

@@ -1,0 +1,25 @@
+{
+  "run_id": "RUN-600",
+  "sample_id": "EXEC_RUN-600",
+  "label": 1,
+  "family": "wmi_malware",
+  "counts": {
+    "processes": 148,
+    "threads": 1520,
+    "handles": 47186,
+    "modules": 5924,
+    "privileges": 4480,
+    "vads": 15718,
+    "malfind_findings": 17,
+    "network_connections": 383,
+    "sysmon_events": 8477,
+    "powershell_events": 492,
+    "command_events": 4615,
+    "relationships_tree": 127,
+    "relationships_network": 94,
+    "relationships_command": 397,
+    "relationships_memory": 17
+  },
+  "malfind_baseline_exceptions": 13,
+  "hidden_processes_psxview": 13
+}

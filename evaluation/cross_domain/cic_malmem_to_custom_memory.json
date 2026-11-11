@@ -1,0 +1,51 @@
+{
+  "evaluation_type": "ZERO-SHOT CROSS-DOMAIN EVALUATION",
+  "evaluated_at": "2026-09-21T12:57:33.411917+00:00",
+  "git_commit": "466a8202fd6e40278e810faa4de7bbc5f362286c",
+  "model_source": "CIC-MalMem-2022 (Memory CatBoost)",
+  "target_dataset": "Custom VM Telemetry (45 samples: 13 Benign, 32 Malware)",
+  "samples_evaluated": 45,
+  "shared_features": [
+    "rwx_page_count",
+    "injected_code_regions",
+    "unmapped_executable_pages",
+    "ldrmodules_inconsistencies"
+  ],
+  "excluded_features": [
+    "vad_protection_anomaly_count",
+    "yara_shellcode_matches",
+    "mean_memory_entropy",
+    "max_memory_entropy"
+  ],
+  "metrics": {
+    "accuracy": 0.2889,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "roc_auc": 0.9255,
+    "confusion_matrix": [
+      [
+        13,
+        0
+      ],
+      [
+        32,
+        0
+      ]
+    ],
+    "fpr": 0.0,
+    "fnr": 1.0,
+    "threshold": 0.5,
+    "total_samples": 45,
+    "true_benign_count": 13,
+    "true_malware_count": 32
+  },
+  "domain_shift_analysis": {
+    "domain_shift_severity": "MODERATE_TO_HIGH",
+    "primary_shift_drivers": [
+      "Exclusion of vad_protection_anomaly_count: MalMem's vad_protection_anomaly_count is a dataset-specific proxy (malfind.commitCharge > 0) rather than true VirtualProtect protection alteration (InitProtection != Protection). It is classified as MALMEM_SPECIFIC_PROXY and strictly excluded from this zero-shot shared feature vector.",
+      "VAD Scope Discrepancy: Custom vadinfo scans all committed user/kernel memory regions, whereas MalMem's rwx_page_count was extracted from candidate injections identified by malfind.protection. Clean Windows 11 JIT runtimes (PowerShell/.NET) create legitimate RWX pages that the public model may penalize.",
+      "Omission of Memory Entropy and YARA: Shannon entropy and shellcode signature matches are completely absent from the public model, removing the ability to verify whether injected RWX memory contains encrypted shellcode."
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "dataset_name": "CAPEv2 Dynamic Sandbox Behavioral Benchmark",
+  "audited_at": "2026-09-22T05:40:25.251882+00:00",
+  "total_samples": 120,
+  "class_distribution": {
+    "benign": 60,
+    "malware": 60,
+    "balance_ratio": 0.5
+  },
+  "family_distribution": {
+    "benign": 60,
+    "powershell_fileless": 10,
+    "cobalt_strike_beacon": 10,
+    "lolbins_abuse": 10,
+    "empire_framework": 10,
+    "wmi_malware": 10,
+    "process_hollowing": 10
+  },
+  "duplicate_ids_count": 0,
+  "duplicate_hashes_count": 0,
+  "duplicate_feature_vectors_count": 108,
+  "missing_values_by_modality": {
+    "command": 0,
+    "network_pcap_timing": 120,
+    "memory": "100% unmeasured (omitted)"
+  },
+  "feature_variance": {
+    "command_entropy_variance": 0.05382515875350137,
+    "command_length_variance": 6310.056022408962,
+    "outbound_connections_variance": 0.5252100840336135,
+    "dns_queries_variance": 0.25210084033613445
+  }
+}

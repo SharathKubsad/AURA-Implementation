@@ -1,0 +1,114 @@
+{
+  "model": "NetworkModel (LightGBM)",
+  "modality": "network",
+  "validation_metrics": {
+    "accuracy": 0.7733,
+    "precision": 0.6964,
+    "recall": 1.0,
+    "f1": 0.8211,
+    "roc_auc": 0.9017,
+    "confusion_matrix": [
+      [
+        19,
+        17
+      ],
+      [
+        0,
+        39
+      ]
+    ],
+    "fpr": 0.4722,
+    "fnr": 0.0,
+    "threshold": 0.5,
+    "total_samples": 75,
+    "true_benign_count": 36,
+    "true_malware_count": 39
+  },
+  "test_metrics": {
+    "accuracy": 0.76,
+    "precision": 0.6842,
+    "recall": 1.0,
+    "f1": 0.8125,
+    "roc_auc": 0.8839,
+    "confusion_matrix": [
+      [
+        18,
+        18
+      ],
+      [
+        0,
+        39
+      ]
+    ],
+    "fpr": 0.5,
+    "fnr": 0.0,
+    "threshold": 0.5,
+    "total_samples": 75,
+    "true_benign_count": 36,
+    "true_malware_count": 39
+  },
+  "metadata": {
+    "model_type": "lightgbm",
+    "modality": "network",
+    "dataset_source": "C:\\Users\\PRAJWAL V L\\Downloads\\Real-Time-Fileless-Malware-Detection-main (1)\\Real-Time-Fileless-Malware-Detection-main\\data\\processed\\unified\\unified_dataset.jsonl",
+    "train_sample_count": 350,
+    "validation_sample_count": 75,
+    "test_sample_count": 75,
+    "train_class_distribution": {
+      "benign": 168,
+      "malware": 182
+    },
+    "validation_class_distribution": {
+      "benign": 36,
+      "malware": 39
+    },
+    "test_class_distribution": {
+      "benign": 36,
+      "malware": 39
+    },
+    "feature_names": [
+      "active_connection_count",
+      "listening_port_count",
+      "outbound_connection_count",
+      "dns_query_count",
+      "unique_remote_ips",
+      "avg_interpacket_interval_ms",
+      "beacon_regularity_score",
+      "total_bytes_sent",
+      "total_bytes_received",
+      "suspicious_port_usage",
+      "is_missing_avg_interpacket_interval_ms",
+      "is_missing_beacon_regularity_score",
+      "is_missing_dns_query_count",
+      "is_missing_total_bytes_received",
+      "is_missing_total_bytes_sent"
+    ],
+    "pcap_missing_features_preserved": [
+      "avg_interpacket_interval_ms",
+      "beacon_regularity_score",
+      "dns_query_count",
+      "total_bytes_received",
+      "total_bytes_sent"
+    ],
+    "random_seed": 42,
+    "hyperparameters": {
+      "n_estimators": 100,
+      "max_depth": 3,
+      "num_leaves": 7,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "min_child_samples": 3,
+      "random_state": 42,
+      "verbosity": -1
+    },
+    "training_timestamp": "2026-09-28T04:47:32.967032+00:00",
+    "software_versions": {
+      "lightgbm": "4.7.0",
+      "scikit-learn": "1.9.0",
+      "pandas": "3.0.5"
+    },
+    "git_commit": "94762d7a0d48c50566f0032b90ba3d1764c3f6c6",
+    "small_dataset_warning": "WARNING: This model was trained on an extremely small custom dataset (45 samples). Metrics are intended solely for pipeline and architecture validation. Do NOT treat these results as production-grade or statistically conclusive without benchmark dataset merging."
+  }
+}

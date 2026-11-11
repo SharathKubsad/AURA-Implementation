@@ -1,0 +1,90 @@
+{
+  "modality": "memory_features",
+  "total_records": 45,
+  "fields": {
+    "sample_id": {
+      "type": "str",
+      "nullable": false
+    },
+    "run_id": {
+      "type": "str",
+      "nullable": false
+    },
+    "label": {
+      "type": "int",
+      "nullable": false
+    },
+    "mem_rwx_region_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "mem_executable_private_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "mem_executable_writable_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "mem_vad_total_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "mem_vad_private_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "mem_vad_mapped_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "mem_commit_charge_total": {
+      "type": "int",
+      "nullable": false
+    },
+    "mem_commit_charge_mean": {
+      "type": "float",
+      "nullable": false
+    },
+    "mem_region_size_bytes_total": {
+      "type": "int",
+      "nullable": false
+    },
+    "mem_region_size_bytes_mean": {
+      "type": "float",
+      "nullable": false
+    },
+    "mem_malfind_total_findings": {
+      "type": "int",
+      "nullable": false
+    },
+    "mem_malfind_baseline_exception_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "mem_malfind_suspicious_non_baseline_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "mem_malfind_affected_processes_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "mem_malfind_max_findings_single_proc": {
+      "type": "int",
+      "nullable": false
+    },
+    "mem_unlinked_modules_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "mem_total_loaded_modules": {
+      "type": "int",
+      "nullable": false
+    },
+    "mem_modules_per_process_mean": {
+      "type": "float",
+      "nullable": false
+    }
+  }
+}

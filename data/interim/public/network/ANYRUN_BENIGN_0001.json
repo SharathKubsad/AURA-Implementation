@@ -1,0 +1,13 @@
+{
+  "sample_id": "ANYRUN_BENIGN_0001",
+  "active_connection_count": 2,
+  "listening_port_count": 1,
+  "outbound_connection_count": 1,
+  "dns_query_count": 2,
+  "unique_remote_ips": 1,
+  "avg_interpacket_interval_ms": null,
+  "beacon_regularity_score": null,
+  "total_bytes_sent": 420,
+  "total_bytes_received": 1050,
+  "suspicious_port_usage": 0
+}

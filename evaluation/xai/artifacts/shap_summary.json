@@ -1,0 +1,101 @@
+{
+  "dataset": "data\\processed\\unified\\unified_dataset.jsonl",
+  "sample_id": "EXEC_RUN-002",
+  "sample_family": "powershell_fileless",
+  "process_top_features": [
+    {
+      "feature": "total_process_count",
+      "importance": 1.2471,
+      "value": -0.6,
+      "domain": "process"
+    },
+    {
+      "feature": "total_handle_count",
+      "importance": 0.7917,
+      "value": -2.43,
+      "domain": "process"
+    },
+    {
+      "feature": "elevated_privilege_count",
+      "importance": -0.2235,
+      "value": 2.18,
+      "domain": "process"
+    },
+    {
+      "feature": "thread_to_process_ratio",
+      "importance": 0.0898,
+      "value": 0.26,
+      "domain": "process"
+    },
+    {
+      "feature": "avg_threads_per_process",
+      "importance": -0.0404,
+      "value": 0.02,
+      "domain": "process"
+    }
+  ],
+  "memory_top_features": [
+    {
+      "feature": "ldrmodules_inconsistencies",
+      "importance": 0.3981,
+      "value": 434.0,
+      "domain": "memory"
+    },
+    {
+      "feature": "memory_injection_score",
+      "importance": 0.3055,
+      "value": 99.0,
+      "domain": "memory"
+    },
+    {
+      "feature": "rwx_page_count",
+      "importance": 0.1203,
+      "value": 21.0,
+      "domain": "memory"
+    },
+    {
+      "feature": "unmapped_executable_pages",
+      "importance": 0.0843,
+      "value": 21.0,
+      "domain": "memory"
+    },
+    {
+      "feature": "injected_code_regions",
+      "importance": 0.0688,
+      "value": 19.0,
+      "domain": "memory"
+    }
+  ],
+  "multiclass_top_features": [
+    {
+      "feature": "total_handle_count",
+      "importance": 0.4433,
+      "value": 46615.0,
+      "domain": "multiclass"
+    },
+    {
+      "feature": "elevated_privilege_count",
+      "importance": 0.056,
+      "value": 55.0,
+      "domain": "multiclass"
+    },
+    {
+      "feature": "hidden_process_count",
+      "importance": 0.0484,
+      "value": 2.0,
+      "domain": "multiclass"
+    },
+    {
+      "feature": "command_length",
+      "importance": 0.0318,
+      "value": 73.0,
+      "domain": "multiclass"
+    },
+    {
+      "feature": "shannon_entropy",
+      "importance": 0.0092,
+      "value": 4.72,
+      "domain": "multiclass"
+    }
+  ]
+}

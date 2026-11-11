@@ -1,0 +1,53 @@
+{
+  "audited_at": "2026-10-02T10:42:03.672089+00:00",
+  "audit_passed": false,
+  "total_public_samples": 10,
+  "class_distribution": {
+    "benign": 4,
+    "malware": 6
+  },
+  "family_distribution": {
+    "benign": 4,
+    "Spyware-Transponder": 1,
+    "Ransomware-Ako": 1,
+    "Trojan-Emotet": 1,
+    "PowerShell Stager": 1,
+    "Cobalt Strike Beacon": 1,
+    "LOLBins Abuse": 1
+  },
+  "source_dataset_distribution": {
+    "CIC-MalMem-2022": 5,
+    "AnyRun-Community-Traces": 5
+  },
+  "modality_coverage": {
+    "process": "10/10",
+    "command": "5/10",
+    "network": "5/10",
+    "memory": "5/10"
+  },
+  "duplicate_sample_ids": [],
+  "custom_dataset_isolation": {
+    "status": "POLLUTED",
+    "overlapping_ids": [
+      "MALMEM_BENIGN_0001",
+      "MALMEM_BENIGN_0002"
+    ]
+  },
+  "schema_validation_status": {
+    "failures_count": 0,
+    "failures": []
+  },
+  "provenance_completeness": {
+    "failures_count": 0,
+    "failures": [],
+    "completeness_pct": 100.0
+  },
+  "dataset_compatibility_classifications": {
+    "CIC-MalMem-2022": "PARTIALLY_COMPATIBLE",
+    "AnyRun-Community-Traces": "PARTIALLY_COMPATIBLE",
+    "EMBER-2018": "INCOMPATIBLE",
+    "SOREL-20M": "INCOMPATIBLE",
+    "BODMAS": "INCOMPATIBLE",
+    "MalwareBazaar": "INCOMPATIBLE"
+  }
+}

@@ -1,0 +1,14 @@
+﻿{
+    "sample_id":  "EXEC_RUN-200",
+    "label":  1,
+    "family":  "memory_only_rat",
+    "track":  "TRACK_A",
+    "os":  "microsoft_windows_11_home",
+    "execution_timestamp":  "2026-09-20T09:10:26Z",
+    "source_type":  "custom_sandbox",
+    "source_reference":  "manual_controlled_execution",
+    "evidence_sha256":  "b13d35832c1038d2c78c60b2eda137e56520494c9e025adf9f7aa4953b5803fc",
+    "memory_dump":  true,
+    "sysmon_available":  true,
+    "notes":  "Controlled execution for memory_only_rat"
+}

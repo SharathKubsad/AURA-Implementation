@@ -1,0 +1,106 @@
+{
+  "modality": "process_features",
+  "total_records": 45,
+  "fields": {
+    "sample_id": {
+      "type": "str",
+      "nullable": false
+    },
+    "run_id": {
+      "type": "str",
+      "nullable": false
+    },
+    "label": {
+      "type": "int",
+      "nullable": false
+    },
+    "proc_total_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "proc_active_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "proc_carved_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "proc_hidden_unlinked_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "proc_wow64_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "proc_tree_max_depth": {
+      "type": "int",
+      "nullable": false
+    },
+    "proc_tree_mean_depth": {
+      "type": "float",
+      "nullable": false
+    },
+    "proc_orphan_parent_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "proc_max_children_single_proc": {
+      "type": "int",
+      "nullable": false
+    },
+    "proc_spawning_concentration": {
+      "type": "float",
+      "nullable": false
+    },
+    "proc_thread_count_total": {
+      "type": "int",
+      "nullable": false
+    },
+    "proc_thread_count_mean": {
+      "type": "float",
+      "nullable": false
+    },
+    "proc_handle_count_total": {
+      "type": "int",
+      "nullable": false
+    },
+    "proc_handle_count_mean": {
+      "type": "float",
+      "nullable": false
+    },
+    "proc_working_set_bytes_mean": {
+      "type": "float",
+      "nullable": false
+    },
+    "proc_cpu_utilization_mean": {
+      "type": "float",
+      "nullable": false
+    },
+    "proc_user_writable_path_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "proc_system_directory_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "proc_temp_directory_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "proc_unusual_executable_location_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "proc_elevated_privilege_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "proc_processes_with_sedebug": {
+      "type": "int",
+      "nullable": false
+    }
+  }
+}

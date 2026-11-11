@@ -1,0 +1,93 @@
+{
+  "dataset": "data\\processed\\unified\\unified_dataset.jsonl",
+  "total_malware_samples": 260,
+  "num_families": 11,
+  "family_accuracy": 0.8731,
+  "family_macro_f1": 0.7739,
+  "family_weighted_f1": 0.8736,
+  "tactical_accuracy": 0.8808,
+  "tactical_macro_f1": 0.8587,
+  "tactical_weighted_f1": 0.88,
+  "tactical_clusters_count": 5,
+  "per_class_report": {
+    "cobalt_strike_beacon": {
+      "precision": 0.9,
+      "recall": 0.75,
+      "f1-score": 0.8181818181818182,
+      "support": 12.0
+    },
+    "empire_framework": {
+      "precision": 0.9,
+      "recall": 0.9,
+      "f1-score": 0.9,
+      "support": 10.0
+    },
+    "fileless_ransomware": {
+      "precision": 0.7692307692307693,
+      "recall": 0.8163265306122449,
+      "f1-score": 0.7920792079207921,
+      "support": 49.0
+    },
+    "lolbins_abuse": {
+      "precision": 0.8461538461538461,
+      "recall": 1.0,
+      "f1-score": 0.9166666666666666,
+      "support": 11.0
+    },
+    "memory_only_rat": {
+      "precision": 0.9242424242424242,
+      "recall": 0.9172932330827067,
+      "f1-score": 0.9207547169811321,
+      "support": 133.0
+    },
+    "metasploit_memory_payloads": {
+      "precision": 0.9333333333333333,
+      "recall": 0.875,
+      "f1-score": 0.9032258064516129,
+      "support": 16.0
+    },
+    "powershell_fileless": {
+      "precision": 0.9375,
+      "recall": 0.8823529411764706,
+      "f1-score": 0.9090909090909091,
+      "support": 17.0
+    },
+    "process_hollowing": {
+      "precision": 0.25,
+      "recall": 0.3333333333333333,
+      "f1-score": 0.2857142857142857,
+      "support": 3.0
+    },
+    "reflective_dll_injection": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 3.0
+    },
+    "registry_resident_malware": {
+      "precision": 0.6666666666666666,
+      "recall": 0.6666666666666666,
+      "f1-score": 0.6666666666666666,
+      "support": 3.0
+    },
+    "wmi_malware": {
+      "precision": 0.5,
+      "recall": 0.3333333333333333,
+      "f1-score": 0.4,
+      "support": 3.0
+    },
+    "accuracy": 0.8730769230769231,
+    "macro avg": {
+      "precision": 0.7842842763297309,
+      "recall": 0.7703914580186141,
+      "f1-score": 0.7738527343339894,
+      "support": 260.0
+    },
+    "weighted avg": {
+      "precision": 0.8763272144522143,
+      "recall": 0.8730769230769231,
+      "f1-score": 0.8736041342809178,
+      "support": 260.0
+    }
+  }
+}

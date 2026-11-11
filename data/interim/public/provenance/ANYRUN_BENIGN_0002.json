@@ -1,0 +1,14 @@
+{
+  "original_dataset": "AnyRun-Community-Traces",
+  "original_sample_id": "ANYRUN_BENIGN_0002",
+  "original_label": "Benign",
+  "original_family": "benign",
+  "source_reference": "Any.Run Interactive Sandbox Public Corpus / CAPEv2 Sandbox",
+  "available_modalities": [
+    "process",
+    "command",
+    "network"
+  ],
+  "mapping_method": "Sandbox execution report mapped to ProcessFeatures, CommandFeatures, NetworkFeatures",
+  "checksum": "02f1fd08b95d96e303ae900713e3916b211009ed17d397268281df9f529eea61"
+}

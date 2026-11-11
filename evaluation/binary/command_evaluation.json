@@ -1,0 +1,93 @@
+{
+  "model": "CommandModel (DistilBERT)",
+  "modality": "command",
+  "validation_metrics": {
+    "accuracy": 0.7467,
+    "precision": 1.0,
+    "recall": 0.5128,
+    "f1": 0.678,
+    "roc_auc": 0.8853,
+    "confusion_matrix": [
+      [
+        36,
+        0
+      ],
+      [
+        19,
+        20
+      ]
+    ],
+    "fpr": 0.0,
+    "fnr": 0.4872,
+    "threshold": 0.5,
+    "total_samples": 75,
+    "true_benign_count": 36,
+    "true_malware_count": 39
+  },
+  "test_metrics": {
+    "accuracy": 0.7333,
+    "precision": 1.0,
+    "recall": 0.4872,
+    "f1": 0.6552,
+    "roc_auc": 0.8405,
+    "confusion_matrix": [
+      [
+        36,
+        0
+      ],
+      [
+        20,
+        19
+      ]
+    ],
+    "fpr": 0.0,
+    "fnr": 0.5128,
+    "threshold": 0.5,
+    "total_samples": 75,
+    "true_benign_count": 36,
+    "true_malware_count": 39
+  },
+  "metadata": {
+    "model_type": "distilbert",
+    "modality": "command",
+    "dataset_source": "C:\\Users\\PRAJWAL V L\\Downloads\\Real-Time-Fileless-Malware-Detection-main (1)\\Real-Time-Fileless-Malware-Detection-main\\data\\processed\\unified\\unified_dataset.jsonl",
+    "train_sample_count": 350,
+    "validation_sample_count": 75,
+    "test_sample_count": 75,
+    "train_class_distribution": {
+      "benign": 168,
+      "malware": 182
+    },
+    "validation_class_distribution": {
+      "benign": 36,
+      "malware": 39
+    },
+    "test_class_distribution": {
+      "benign": 36,
+      "malware": 39
+    },
+    "feature_names": [
+      "raw_command_text"
+    ],
+    "random_seed": 42,
+    "hyperparameters": {
+      "architecture": "DistilBertForSequenceClassification",
+      "base_model": "distilbert-base-uncased",
+      "epochs": 3,
+      "batch_size": 4,
+      "learning_rate": 5e-05,
+      "max_length": 128,
+      "random_seed": 42,
+      "device": "cpu"
+    },
+    "training_timestamp": "2026-09-28T04:47:25.670984+00:00",
+    "software_versions": {
+      "torch": "2.14.0",
+      "transformers": "5.17.0",
+      "scikit-learn": "1.9.0",
+      "pandas": "3.0.5"
+    },
+    "git_commit": "94762d7a0d48c50566f0032b90ba3d1764c3f6c6",
+    "small_dataset_warning": "WARNING: This model was trained on an extremely small custom dataset (45 samples). Metrics are intended solely for pipeline and architecture validation. Do NOT treat these results as production-grade or statistically conclusive without benchmark dataset merging."
+  }
+}

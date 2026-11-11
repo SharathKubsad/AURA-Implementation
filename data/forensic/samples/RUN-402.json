@@ -1,0 +1,26 @@
+{
+  "sample_id": "EXEC_RUN-402",
+  "run_id": "RUN-402",
+  "label": 1,
+  "family": "cobalt_strike_beacon",
+  "track": "TRACK_A",
+  "os": "microsoft_windows_11_home",
+  "execution_timestamp": "2026-09-20T10:14:09Z",
+  "source_category": "custom_cobalt_strike_beacon",
+  "metadata_source": "C:\\Users\\Prash\\Desktop\\Real-Time-Fileless-Malware-Detection\\Dataset\\custom_cobalt_strike_beacon\\metadata\\RUN-402.json",
+  "evidence_availability": {
+    "volatility": true,
+    "sysmon": true,
+    "powershell": true,
+    "network_connections": true,
+    "process_snapshot": true
+  },
+  "provenance": {
+    "sample_id": "EXEC_RUN-402",
+    "source_file": "metadata/RUN-402.json",
+    "source_type": "METADATA",
+    "source_plugin": "sample_metadata",
+    "extraction_timestamp": "2026-09-24T05:48:17.857961+00:00",
+    "extractor_version": "2.0.0-rich-forensic"
+  }
+}

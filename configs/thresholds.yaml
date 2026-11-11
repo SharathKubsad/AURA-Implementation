@@ -1,0 +1,55 @@
+# Detection & Confidence Thresholds Configuration
+# Used by framework/fusion and live evaluation
+
+fusion:
+  # Base decision threshold for binary classification (Benign vs Malware)
+  threshold: 0.60
+  
+  # Stage 1 behavioral suspicion threshold for triggering memory forensics
+  behavioral_suspicion_threshold: 0.50
+
+  # Per-model suspicion thresholds for triggering memory dump
+  suspicion_thresholds:
+    process: 0.50
+    command: 0.50
+    network: 0.50
+
+  # Stage 1 Behavioral Fusion Weights (sum = 1.0)
+  stage1_weights:
+    process: 0.35
+    command: 0.40
+    network: 0.25
+
+  # Stage 2 Global Fusion Weights (sum = 1.0)
+  stage2_weights:
+    behavioral: 0.50
+    memory: 0.50
+
+models:
+  process:
+    model_path: "models/artifacts/process"
+    weight: 0.35
+  memory:
+    model_path: "models/artifacts/memory"
+    weight: 0.50
+  command:
+    model_path: "models/artifacts/command"
+    weight: 0.40
+  network:
+    model_path: "models/artifacts/network"
+    weight: 0.25
+
+multiclass:
+  model_path: "models/multiclass/artifacts/multiclass_model.ubj"
+  label_mapping:
+    0: "PowerShell Fileless"
+    1: "WMI Malware"
+    2: "Process Hollowing"
+    3: "Reflective DLL Injection"
+    4: "Registry Malware"
+    5: "Cobalt Strike Beacon"
+    6: "Metasploit Memory Payloads"
+    7: "LOLBins Abuse"
+    8: "Fileless Ransomware"
+    9: "Memory-only RAT"
+    10: "Empire Framework"

@@ -1,0 +1,904 @@
+Volatility 3 Framework 2.28.0
+PID	Process	Start VPN	End VPN	Tag	Protection	CommitCharge	PrivateMemory	Output
+344	smss.exe	0x004a0000	0x4a4000	Vad	PAGE_EXECUTE_READWRITE	1	1	
+0x4a0000  4d 5a 90 00 03 00 00 00 04 00 00 00 ff ff 00 00  MZ..............
+0x4a0010  b8 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00  ........@.......
+0x4a0020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0x4a0030  00 00 00 00 00 00 00 00 00 00 00 00 f0 00 00 00  ................
+0x4a0000:	4d5a            	dec ebp
+0x4a0002:	90              	nop
+0x4a0003:	0003            	add byte [ebx], al
+0x4a0005:	0000            	add byte [eax], al
+0x4a0007:	0400            	add al, 0x0
+0x4a0009:	0000            	add byte [eax], al
+0x4a000b:	ffff            	???
+0x4a000d:	0000            	add byte [eax], al
+0x4a000f:	b800000000      	mov eax, 0x0
+0x4a0014:	0000            	add byte [eax], al
+0x4a0016:	40              	inc eax
+0x4a0017:	0000            	add byte [eax], al
+0x4a0019:	31c0            	xor eax, eax
+0x4a001b:	50              	push eax
+0x4a001c:	6863616c63      	push 0x636c6163
+0x4a0021:	89e1            	mov ecx, esp
+0x4a0023:	ff1500000000    	call dword [0x0]
+0x4a0029:	85c0            	test eax, eax
+0x4a002b:	7405            	jz 0x5
+0x4a002d:	e800000000      	call 0x0
+0x4a0032:	58              	pop eax
+0x4a0033:	5d              	pop ebp
+0x4a0034:	c3              	ret
+0x4a0035:	90              	nop
+0x4a0036:	90              	nop
+0x4a0037:	90              	nop
+0x4a0038:	89d8            	mov eax, ebx
+0x4a003a:	01c8            	add eax, ecx
+0x4a003c:	29d0            	sub eax, edx
+0x4a003e:	31c9            	xor ecx, ecx
+0x4a0040:	ffc1            	inc ecx
+0x4a0042:	83f90a          	cmp ecx, 0xa
+0x4a0045:	75f8            	jnz 0xfffffff8
+0x4a0047:	c9              	leave
+0x4a0048:	c3              	ret
+0x4a0049:	cc              	int3
+520	services.exe	0x005a0000	0x5a4000	Vad	PAGE_EXECUTE_READWRITE	1	1	
+0x5a0000  4d 5a 90 00 03 00 00 00 04 00 00 00 ff ff 00 00  MZ..............
+0x5a0010  b8 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00  ........@.......
+0x5a0020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0x5a0030  00 00 00 00 00 00 00 00 00 00 00 00 f0 00 00 00  ................
+0x5a0000:	4d5a            	dec ebp
+0x5a0002:	90              	nop
+0x5a0003:	0003            	add byte [ebx], al
+0x5a0005:	0000            	add byte [eax], al
+0x5a0007:	0400            	add al, 0x0
+0x5a0009:	0000            	add byte [eax], al
+0x5a000b:	ffff            	???
+0x5a000d:	0000            	add byte [eax], al
+0x5a000f:	b800000000      	mov eax, 0x0
+0x5a0014:	0000            	add byte [eax], al
+0x5a0016:	40              	inc eax
+0x5a0017:	0000            	add byte [eax], al
+0x5a0019:	31c0            	xor eax, eax
+0x5a001b:	50              	push eax
+0x5a001c:	6863616c63      	push 0x636c6163
+0x5a0021:	89e1            	mov ecx, esp
+0x5a0023:	ff1500000000    	call dword [0x0]
+0x5a0029:	85c0            	test eax, eax
+0x5a002b:	7405            	jz 0x5
+0x5a002d:	e800000000      	call 0x0
+0x5a0032:	58              	pop eax
+0x5a0033:	5d              	pop ebp
+0x5a0034:	c3              	ret
+0x5a0035:	90              	nop
+0x5a0036:	90              	nop
+0x5a0037:	90              	nop
+0x5a0038:	89d8            	mov eax, ebx
+0x5a003a:	01c8            	add eax, ecx
+0x5a003c:	29d0            	sub eax, edx
+0x5a003e:	31c9            	xor ecx, ecx
+0x5a0040:	ffc1            	inc ecx
+0x5a0042:	83f90a          	cmp ecx, 0xa
+0x5a0045:	75f8            	jnz 0xfffffff8
+0x5a0047:	c9              	leave
+0x5a0048:	c3              	ret
+0x5a0049:	cc              	int3
+520	services.exe	0x005b0000	0x5b4000	Vad	PAGE_EXECUTE_READWRITE	1	1	
+0x5b0000  4d 5a 90 00 03 00 00 00 04 00 00 00 ff ff 00 00  MZ..............
+0x5b0010  b8 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00  ........@.......
+0x5b0020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0x5b0030  00 00 00 00 00 00 00 00 00 00 00 00 f0 00 00 00  ................
+0x5b0000:	4d5a            	dec ebp
+0x5b0002:	90              	nop
+0x5b0003:	0003            	add byte [ebx], al
+0x5b0005:	0000            	add byte [eax], al
+0x5b0007:	0400            	add al, 0x0
+0x5b0009:	0000            	add byte [eax], al
+0x5b000b:	ffff            	???
+0x5b000d:	0000            	add byte [eax], al
+0x5b000f:	b800000000      	mov eax, 0x0
+0x5b0014:	0000            	add byte [eax], al
+0x5b0016:	40              	inc eax
+0x5b0017:	0000            	add byte [eax], al
+0x5b0019:	31c0            	xor eax, eax
+0x5b001b:	50              	push eax
+0x5b001c:	6863616c63      	push 0x636c6163
+0x5b0021:	89e1            	mov ecx, esp
+0x5b0023:	ff1500000000    	call dword [0x0]
+0x5b0029:	85c0            	test eax, eax
+0x5b002b:	7405            	jz 0x5
+0x5b002d:	e800000000      	call 0x0
+0x5b0032:	58              	pop eax
+0x5b0033:	5d              	pop ebp
+0x5b0034:	c3              	ret
+0x5b0035:	90              	nop
+0x5b0036:	90              	nop
+0x5b0037:	90              	nop
+0x5b0038:	89d8            	mov eax, ebx
+0x5b003a:	01c8            	add eax, ecx
+0x5b003c:	29d0            	sub eax, edx
+0x5b003e:	31c9            	xor ecx, ecx
+0x5b0040:	ffc1            	inc ecx
+0x5b0042:	83f90a          	cmp ecx, 0xa
+0x5b0045:	75f8            	jnz 0xfffffff8
+0x5b0047:	c9              	leave
+0x5b0048:	c3              	ret
+0x5b0049:	cc              	int3
+610	lsass.exe	0x006a0000	0x6a4000	Vad	PAGE_EXECUTE_READWRITE	1	1	
+0x6a0000  4d 5a 90 00 03 00 00 00 04 00 00 00 ff ff 00 00  MZ..............
+0x6a0010  b8 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00  ........@.......
+0x6a0020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0x6a0030  00 00 00 00 00 00 00 00 00 00 00 00 f0 00 00 00  ................
+0x6a0000:	4d5a            	dec ebp
+0x6a0002:	90              	nop
+0x6a0003:	0003            	add byte [ebx], al
+0x6a0005:	0000            	add byte [eax], al
+0x6a0007:	0400            	add al, 0x0
+0x6a0009:	0000            	add byte [eax], al
+0x6a000b:	ffff            	???
+0x6a000d:	0000            	add byte [eax], al
+0x6a000f:	b800000000      	mov eax, 0x0
+0x6a0014:	0000            	add byte [eax], al
+0x6a0016:	40              	inc eax
+0x6a0017:	0000            	add byte [eax], al
+0x6a0019:	31c0            	xor eax, eax
+0x6a001b:	50              	push eax
+0x6a001c:	6863616c63      	push 0x636c6163
+0x6a0021:	89e1            	mov ecx, esp
+0x6a0023:	ff1500000000    	call dword [0x0]
+0x6a0029:	85c0            	test eax, eax
+0x6a002b:	7405            	jz 0x5
+0x6a002d:	e800000000      	call 0x0
+0x6a0032:	58              	pop eax
+0x6a0033:	5d              	pop ebp
+0x6a0034:	c3              	ret
+0x6a0035:	90              	nop
+0x6a0036:	90              	nop
+0x6a0037:	90              	nop
+0x6a0038:	89d8            	mov eax, ebx
+0x6a003a:	01c8            	add eax, ecx
+0x6a003c:	29d0            	sub eax, edx
+0x6a003e:	31c9            	xor ecx, ecx
+0x6a0040:	ffc1            	inc ecx
+0x6a0042:	83f90a          	cmp ecx, 0xa
+0x6a0045:	75f8            	jnz 0xfffffff8
+0x6a0047:	c9              	leave
+0x6a0048:	c3              	ret
+0x6a0049:	cc              	int3
+1020	svchost.exe	0x007a0000	0x7a4000	Vad	PAGE_EXECUTE_READWRITE	1	1	
+0x7a0000  4d 5a 90 00 03 00 00 00 04 00 00 00 ff ff 00 00  MZ..............
+0x7a0010  b8 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00  ........@.......
+0x7a0020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0x7a0030  00 00 00 00 00 00 00 00 00 00 00 00 f0 00 00 00  ................
+0x7a0000:	4d5a            	dec ebp
+0x7a0002:	90              	nop
+0x7a0003:	0003            	add byte [ebx], al
+0x7a0005:	0000            	add byte [eax], al
+0x7a0007:	0400            	add al, 0x0
+0x7a0009:	0000            	add byte [eax], al
+0x7a000b:	ffff            	???
+0x7a000d:	0000            	add byte [eax], al
+0x7a000f:	b800000000      	mov eax, 0x0
+0x7a0014:	0000            	add byte [eax], al
+0x7a0016:	40              	inc eax
+0x7a0017:	0000            	add byte [eax], al
+0x7a0019:	31c0            	xor eax, eax
+0x7a001b:	50              	push eax
+0x7a001c:	6863616c63      	push 0x636c6163
+0x7a0021:	89e1            	mov ecx, esp
+0x7a0023:	ff1500000000    	call dword [0x0]
+0x7a0029:	85c0            	test eax, eax
+0x7a002b:	7405            	jz 0x5
+0x7a002d:	e800000000      	call 0x0
+0x7a0032:	58              	pop eax
+0x7a0033:	5d              	pop ebp
+0x7a0034:	c3              	ret
+0x7a0035:	90              	nop
+0x7a0036:	90              	nop
+0x7a0037:	90              	nop
+0x7a0038:	89d8            	mov eax, ebx
+0x7a003a:	01c8            	add eax, ecx
+0x7a003c:	29d0            	sub eax, edx
+0x7a003e:	31c9            	xor ecx, ecx
+0x7a0040:	ffc1            	inc ecx
+0x7a0042:	83f90a          	cmp ecx, 0xa
+0x7a0045:	75f8            	jnz 0xfffffff8
+0x7a0047:	c9              	leave
+0x7a0048:	c3              	ret
+0x7a0049:	cc              	int3
+1020	svchost.exe	0x007b0000	0x7b4000	Vad	PAGE_EXECUTE_READWRITE	1	1	
+0x7b0000  4d 5a 90 00 03 00 00 00 04 00 00 00 ff ff 00 00  MZ..............
+0x7b0010  b8 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00  ........@.......
+0x7b0020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0x7b0030  00 00 00 00 00 00 00 00 00 00 00 00 f0 00 00 00  ................
+0x7b0000:	4d5a            	dec ebp
+0x7b0002:	90              	nop
+0x7b0003:	0003            	add byte [ebx], al
+0x7b0005:	0000            	add byte [eax], al
+0x7b0007:	0400            	add al, 0x0
+0x7b0009:	0000            	add byte [eax], al
+0x7b000b:	ffff            	???
+0x7b000d:	0000            	add byte [eax], al
+0x7b000f:	b800000000      	mov eax, 0x0
+0x7b0014:	0000            	add byte [eax], al
+0x7b0016:	40              	inc eax
+0x7b0017:	0000            	add byte [eax], al
+0x7b0019:	31c0            	xor eax, eax
+0x7b001b:	50              	push eax
+0x7b001c:	6863616c63      	push 0x636c6163
+0x7b0021:	89e1            	mov ecx, esp
+0x7b0023:	ff1500000000    	call dword [0x0]
+0x7b0029:	85c0            	test eax, eax
+0x7b002b:	7405            	jz 0x5
+0x7b002d:	e800000000      	call 0x0
+0x7b0032:	58              	pop eax
+0x7b0033:	5d              	pop ebp
+0x7b0034:	c3              	ret
+0x7b0035:	90              	nop
+0x7b0036:	90              	nop
+0x7b0037:	90              	nop
+0x7b0038:	89d8            	mov eax, ebx
+0x7b003a:	01c8            	add eax, ecx
+0x7b003c:	29d0            	sub eax, edx
+0x7b003e:	31c9            	xor ecx, ecx
+0x7b0040:	ffc1            	inc ecx
+0x7b0042:	83f90a          	cmp ecx, 0xa
+0x7b0045:	75f8            	jnz 0xfffffff8
+0x7b0047:	c9              	leave
+0x7b0048:	c3              	ret
+0x7b0049:	cc              	int3
+1020	svchost.exe	0x007c0000	0x7c4000	Vad	PAGE_EXECUTE_READWRITE	1	1	
+0x7c0000  4d 5a 90 00 03 00 00 00 04 00 00 00 ff ff 00 00  MZ..............
+0x7c0010  b8 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00  ........@.......
+0x7c0020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0x7c0030  00 00 00 00 00 00 00 00 00 00 00 00 f0 00 00 00  ................
+0x7c0000:	4d5a            	dec ebp
+0x7c0002:	90              	nop
+0x7c0003:	0003            	add byte [ebx], al
+0x7c0005:	0000            	add byte [eax], al
+0x7c0007:	0400            	add al, 0x0
+0x7c0009:	0000            	add byte [eax], al
+0x7c000b:	ffff            	???
+0x7c000d:	0000            	add byte [eax], al
+0x7c000f:	b800000000      	mov eax, 0x0
+0x7c0014:	0000            	add byte [eax], al
+0x7c0016:	40              	inc eax
+0x7c0017:	0000            	add byte [eax], al
+0x7c0019:	31c0            	xor eax, eax
+0x7c001b:	50              	push eax
+0x7c001c:	6863616c63      	push 0x636c6163
+0x7c0021:	89e1            	mov ecx, esp
+0x7c0023:	ff1500000000    	call dword [0x0]
+0x7c0029:	85c0            	test eax, eax
+0x7c002b:	7405            	jz 0x5
+0x7c002d:	e800000000      	call 0x0
+0x7c0032:	58              	pop eax
+0x7c0033:	5d              	pop ebp
+0x7c0034:	c3              	ret
+0x7c0035:	90              	nop
+0x7c0036:	90              	nop
+0x7c0037:	90              	nop
+0x7c0038:	89d8            	mov eax, ebx
+0x7c003a:	01c8            	add eax, ecx
+0x7c003c:	29d0            	sub eax, edx
+0x7c003e:	31c9            	xor ecx, ecx
+0x7c0040:	ffc1            	inc ecx
+0x7c0042:	83f90a          	cmp ecx, 0xa
+0x7c0045:	75f8            	jnz 0xfffffff8
+0x7c0047:	c9              	leave
+0x7c0048:	c3              	ret
+0x7c0049:	cc              	int3
+1420	explorer.exe	0x008a0000	0x8a4000	Vad	PAGE_EXECUTE_READWRITE	1	1	
+0x8a0000  4d 5a 90 00 03 00 00 00 04 00 00 00 ff ff 00 00  MZ..............
+0x8a0010  b8 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00  ........@.......
+0x8a0020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0x8a0030  00 00 00 00 00 00 00 00 00 00 00 00 f0 00 00 00  ................
+0x8a0000:	4d5a            	dec ebp
+0x8a0002:	90              	nop
+0x8a0003:	0003            	add byte [ebx], al
+0x8a0005:	0000            	add byte [eax], al
+0x8a0007:	0400            	add al, 0x0
+0x8a0009:	0000            	add byte [eax], al
+0x8a000b:	ffff            	???
+0x8a000d:	0000            	add byte [eax], al
+0x8a000f:	b800000000      	mov eax, 0x0
+0x8a0014:	0000            	add byte [eax], al
+0x8a0016:	40              	inc eax
+0x8a0017:	0000            	add byte [eax], al
+0x8a0019:	31c0            	xor eax, eax
+0x8a001b:	50              	push eax
+0x8a001c:	6863616c63      	push 0x636c6163
+0x8a0021:	89e1            	mov ecx, esp
+0x8a0023:	ff1500000000    	call dword [0x0]
+0x8a0029:	85c0            	test eax, eax
+0x8a002b:	7405            	jz 0x5
+0x8a002d:	e800000000      	call 0x0
+0x8a0032:	58              	pop eax
+0x8a0033:	5d              	pop ebp
+0x8a0034:	c3              	ret
+0x8a0035:	90              	nop
+0x8a0036:	90              	nop
+0x8a0037:	90              	nop
+0x8a0038:	89d8            	mov eax, ebx
+0x8a003a:	01c8            	add eax, ecx
+0x8a003c:	29d0            	sub eax, edx
+0x8a003e:	31c9            	xor ecx, ecx
+0x8a0040:	ffc1            	inc ecx
+0x8a0042:	83f90a          	cmp ecx, 0xa
+0x8a0045:	75f8            	jnz 0xfffffff8
+0x8a0047:	c9              	leave
+0x8a0048:	c3              	ret
+0x8a0049:	cc              	int3
+1420	explorer.exe	0x008b0000	0x8b4000	Vad	PAGE_EXECUTE_READWRITE	1	1	
+0x8b0000  4d 5a 90 00 03 00 00 00 04 00 00 00 ff ff 00 00  MZ..............
+0x8b0010  b8 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00  ........@.......
+0x8b0020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0x8b0030  00 00 00 00 00 00 00 00 00 00 00 00 f0 00 00 00  ................
+0x8b0000:	4d5a            	dec ebp
+0x8b0002:	90              	nop
+0x8b0003:	0003            	add byte [ebx], al
+0x8b0005:	0000            	add byte [eax], al
+0x8b0007:	0400            	add al, 0x0
+0x8b0009:	0000            	add byte [eax], al
+0x8b000b:	ffff            	???
+0x8b000d:	0000            	add byte [eax], al
+0x8b000f:	b800000000      	mov eax, 0x0
+0x8b0014:	0000            	add byte [eax], al
+0x8b0016:	40              	inc eax
+0x8b0017:	0000            	add byte [eax], al
+0x8b0019:	31c0            	xor eax, eax
+0x8b001b:	50              	push eax
+0x8b001c:	6863616c63      	push 0x636c6163
+0x8b0021:	89e1            	mov ecx, esp
+0x8b0023:	ff1500000000    	call dword [0x0]
+0x8b0029:	85c0            	test eax, eax
+0x8b002b:	7405            	jz 0x5
+0x8b002d:	e800000000      	call 0x0
+0x8b0032:	58              	pop eax
+0x8b0033:	5d              	pop ebp
+0x8b0034:	c3              	ret
+0x8b0035:	90              	nop
+0x8b0036:	90              	nop
+0x8b0037:	90              	nop
+0x8b0038:	89d8            	mov eax, ebx
+0x8b003a:	01c8            	add eax, ecx
+0x8b003c:	29d0            	sub eax, edx
+0x8b003e:	31c9            	xor ecx, ecx
+0x8b0040:	ffc1            	inc ecx
+0x8b0042:	83f90a          	cmp ecx, 0xa
+0x8b0045:	75f8            	jnz 0xfffffff8
+0x8b0047:	c9              	leave
+0x8b0048:	c3              	ret
+0x8b0049:	cc              	int3
+2100	powershell.exe	0x009a0000	0x9a4000	Vad	PAGE_EXECUTE_READWRITE	1	1	
+0x9a0000  4d 5a 90 00 03 00 00 00 04 00 00 00 ff ff 00 00  MZ..............
+0x9a0010  b8 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00  ........@.......
+0x9a0020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0x9a0030  00 00 00 00 00 00 00 00 00 00 00 00 f0 00 00 00  ................
+0x9a0000:	4d5a            	dec ebp
+0x9a0002:	90              	nop
+0x9a0003:	0003            	add byte [ebx], al
+0x9a0005:	0000            	add byte [eax], al
+0x9a0007:	0400            	add al, 0x0
+0x9a0009:	0000            	add byte [eax], al
+0x9a000b:	ffff            	???
+0x9a000d:	0000            	add byte [eax], al
+0x9a000f:	b800000000      	mov eax, 0x0
+0x9a0014:	0000            	add byte [eax], al
+0x9a0016:	40              	inc eax
+0x9a0017:	0000            	add byte [eax], al
+0x9a0019:	31c0            	xor eax, eax
+0x9a001b:	50              	push eax
+0x9a001c:	6863616c63      	push 0x636c6163
+0x9a0021:	89e1            	mov ecx, esp
+0x9a0023:	ff1500000000    	call dword [0x0]
+0x9a0029:	85c0            	test eax, eax
+0x9a002b:	7405            	jz 0x5
+0x9a002d:	e800000000      	call 0x0
+0x9a0032:	58              	pop eax
+0x9a0033:	5d              	pop ebp
+0x9a0034:	c3              	ret
+0x9a0035:	90              	nop
+0x9a0036:	90              	nop
+0x9a0037:	90              	nop
+0x9a0038:	89d8            	mov eax, ebx
+0x9a003a:	01c8            	add eax, ecx
+0x9a003c:	29d0            	sub eax, edx
+0x9a003e:	31c9            	xor ecx, ecx
+0x9a0040:	ffc1            	inc ecx
+0x9a0042:	83f90a          	cmp ecx, 0xa
+0x9a0045:	75f8            	jnz 0xfffffff8
+0x9a0047:	c9              	leave
+0x9a0048:	c3              	ret
+0x9a0049:	cc              	int3
+2100	powershell.exe	0x009b0000	0x9b4000	Vad	PAGE_EXECUTE_READWRITE	1	1	
+0x9b0000  4d 5a 90 00 03 00 00 00 04 00 00 00 ff ff 00 00  MZ..............
+0x9b0010  b8 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00  ........@.......
+0x9b0020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0x9b0030  00 00 00 00 00 00 00 00 00 00 00 00 f0 00 00 00  ................
+0x9b0000:	4d5a            	dec ebp
+0x9b0002:	90              	nop
+0x9b0003:	0003            	add byte [ebx], al
+0x9b0005:	0000            	add byte [eax], al
+0x9b0007:	0400            	add al, 0x0
+0x9b0009:	0000            	add byte [eax], al
+0x9b000b:	ffff            	???
+0x9b000d:	0000            	add byte [eax], al
+0x9b000f:	b800000000      	mov eax, 0x0
+0x9b0014:	0000            	add byte [eax], al
+0x9b0016:	40              	inc eax
+0x9b0017:	0000            	add byte [eax], al
+0x9b0019:	31c0            	xor eax, eax
+0x9b001b:	50              	push eax
+0x9b001c:	6863616c63      	push 0x636c6163
+0x9b0021:	89e1            	mov ecx, esp
+0x9b0023:	ff1500000000    	call dword [0x0]
+0x9b0029:	85c0            	test eax, eax
+0x9b002b:	7405            	jz 0x5
+0x9b002d:	e800000000      	call 0x0
+0x9b0032:	58              	pop eax
+0x9b0033:	5d              	pop ebp
+0x9b0034:	c3              	ret
+0x9b0035:	90              	nop
+0x9b0036:	90              	nop
+0x9b0037:	90              	nop
+0x9b0038:	89d8            	mov eax, ebx
+0x9b003a:	01c8            	add eax, ecx
+0x9b003c:	29d0            	sub eax, edx
+0x9b003e:	31c9            	xor ecx, ecx
+0x9b0040:	ffc1            	inc ecx
+0x9b0042:	83f90a          	cmp ecx, 0xa
+0x9b0045:	75f8            	jnz 0xfffffff8
+0x9b0047:	c9              	leave
+0x9b0048:	c3              	ret
+0x9b0049:	cc              	int3
+2100	powershell.exe	0x009c0000	0x9c4000	Vad	PAGE_EXECUTE_READWRITE	1	1	
+0x9c0000  4d 5a 90 00 03 00 00 00 04 00 00 00 ff ff 00 00  MZ..............
+0x9c0010  b8 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00  ........@.......
+0x9c0020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0x9c0030  00 00 00 00 00 00 00 00 00 00 00 00 f0 00 00 00  ................
+0x9c0000:	4d5a            	dec ebp
+0x9c0002:	90              	nop
+0x9c0003:	0003            	add byte [ebx], al
+0x9c0005:	0000            	add byte [eax], al
+0x9c0007:	0400            	add al, 0x0
+0x9c0009:	0000            	add byte [eax], al
+0x9c000b:	ffff            	???
+0x9c000d:	0000            	add byte [eax], al
+0x9c000f:	b800000000      	mov eax, 0x0
+0x9c0014:	0000            	add byte [eax], al
+0x9c0016:	40              	inc eax
+0x9c0017:	0000            	add byte [eax], al
+0x9c0019:	31c0            	xor eax, eax
+0x9c001b:	50              	push eax
+0x9c001c:	6863616c63      	push 0x636c6163
+0x9c0021:	89e1            	mov ecx, esp
+0x9c0023:	ff1500000000    	call dword [0x0]
+0x9c0029:	85c0            	test eax, eax
+0x9c002b:	7405            	jz 0x5
+0x9c002d:	e800000000      	call 0x0
+0x9c0032:	58              	pop eax
+0x9c0033:	5d              	pop ebp
+0x9c0034:	c3              	ret
+0x9c0035:	90              	nop
+0x9c0036:	90              	nop
+0x9c0037:	90              	nop
+0x9c0038:	89d8            	mov eax, ebx
+0x9c003a:	01c8            	add eax, ecx
+0x9c003c:	29d0            	sub eax, edx
+0x9c003e:	31c9            	xor ecx, ecx
+0x9c0040:	ffc1            	inc ecx
+0x9c0042:	83f90a          	cmp ecx, 0xa
+0x9c0045:	75f8            	jnz 0xfffffff8
+0x9c0047:	c9              	leave
+0x9c0048:	c3              	ret
+0x9c0049:	cc              	int3
+2840	cmd.exe	0x00aa0000	0xaa4000	Vad	PAGE_EXECUTE_READWRITE	1	1	
+0xaa0000  4d 5a 90 00 03 00 00 00 04 00 00 00 ff ff 00 00  MZ..............
+0xaa0010  b8 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00  ........@.......
+0xaa0020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0xaa0030  00 00 00 00 00 00 00 00 00 00 00 00 f0 00 00 00  ................
+0xaa0000:	4d5a            	dec ebp
+0xaa0002:	90              	nop
+0xaa0003:	0003            	add byte [ebx], al
+0xaa0005:	0000            	add byte [eax], al
+0xaa0007:	0400            	add al, 0x0
+0xaa0009:	0000            	add byte [eax], al
+0xaa000b:	ffff            	???
+0xaa000d:	0000            	add byte [eax], al
+0xaa000f:	b800000000      	mov eax, 0x0
+0xaa0014:	0000            	add byte [eax], al
+0xaa0016:	40              	inc eax
+0xaa0017:	0000            	add byte [eax], al
+0xaa0019:	31c0            	xor eax, eax
+0xaa001b:	50              	push eax
+0xaa001c:	6863616c63      	push 0x636c6163
+0xaa0021:	89e1            	mov ecx, esp
+0xaa0023:	ff1500000000    	call dword [0x0]
+0xaa0029:	85c0            	test eax, eax
+0xaa002b:	7405            	jz 0x5
+0xaa002d:	e800000000      	call 0x0
+0xaa0032:	58              	pop eax
+0xaa0033:	5d              	pop ebp
+0xaa0034:	c3              	ret
+0xaa0035:	90              	nop
+0xaa0036:	90              	nop
+0xaa0037:	90              	nop
+0xaa0038:	89d8            	mov eax, ebx
+0xaa003a:	01c8            	add eax, ecx
+0xaa003c:	29d0            	sub eax, edx
+0xaa003e:	31c9            	xor ecx, ecx
+0xaa0040:	ffc1            	inc ecx
+0xaa0042:	83f90a          	cmp ecx, 0xa
+0xaa0045:	75f8            	jnz 0xfffffff8
+0xaa0047:	c9              	leave
+0xaa0048:	c3              	ret
+0xaa0049:	cc              	int3
+3100	rundll32.exe	0x00ba0000	0xba4000	Vad	PAGE_EXECUTE_READWRITE	1	1	
+0xba0000  4d 5a 90 00 03 00 00 00 04 00 00 00 ff ff 00 00  MZ..............
+0xba0010  b8 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00  ........@.......
+0xba0020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0xba0030  00 00 00 00 00 00 00 00 00 00 00 00 f0 00 00 00  ................
+0xba0000:	4d5a            	dec ebp
+0xba0002:	90              	nop
+0xba0003:	0003            	add byte [ebx], al
+0xba0005:	0000            	add byte [eax], al
+0xba0007:	0400            	add al, 0x0
+0xba0009:	0000            	add byte [eax], al
+0xba000b:	ffff            	???
+0xba000d:	0000            	add byte [eax], al
+0xba000f:	b800000000      	mov eax, 0x0
+0xba0014:	0000            	add byte [eax], al
+0xba0016:	40              	inc eax
+0xba0017:	0000            	add byte [eax], al
+0xba0019:	31c0            	xor eax, eax
+0xba001b:	50              	push eax
+0xba001c:	6863616c63      	push 0x636c6163
+0xba0021:	89e1            	mov ecx, esp
+0xba0023:	ff1500000000    	call dword [0x0]
+0xba0029:	85c0            	test eax, eax
+0xba002b:	7405            	jz 0x5
+0xba002d:	e800000000      	call 0x0
+0xba0032:	58              	pop eax
+0xba0033:	5d              	pop ebp
+0xba0034:	c3              	ret
+0xba0035:	90              	nop
+0xba0036:	90              	nop
+0xba0037:	90              	nop
+0xba0038:	89d8            	mov eax, ebx
+0xba003a:	01c8            	add eax, ecx
+0xba003c:	29d0            	sub eax, edx
+0xba003e:	31c9            	xor ecx, ecx
+0xba0040:	ffc1            	inc ecx
+0xba0042:	83f90a          	cmp ecx, 0xa
+0xba0045:	75f8            	jnz 0xfffffff8
+0xba0047:	c9              	leave
+0xba0048:	c3              	ret
+0xba0049:	cc              	int3
+3100	rundll32.exe	0x00bb0000	0xbb4000	Vad	PAGE_EXECUTE_READWRITE	1	1	
+0xbb0000  4d 5a 90 00 03 00 00 00 04 00 00 00 ff ff 00 00  MZ..............
+0xbb0010  b8 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00  ........@.......
+0xbb0020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0xbb0030  00 00 00 00 00 00 00 00 00 00 00 00 f0 00 00 00  ................
+0xbb0000:	4d5a            	dec ebp
+0xbb0002:	90              	nop
+0xbb0003:	0003            	add byte [ebx], al
+0xbb0005:	0000            	add byte [eax], al
+0xbb0007:	0400            	add al, 0x0
+0xbb0009:	0000            	add byte [eax], al
+0xbb000b:	ffff            	???
+0xbb000d:	0000            	add byte [eax], al
+0xbb000f:	b800000000      	mov eax, 0x0
+0xbb0014:	0000            	add byte [eax], al
+0xbb0016:	40              	inc eax
+0xbb0017:	0000            	add byte [eax], al
+0xbb0019:	31c0            	xor eax, eax
+0xbb001b:	50              	push eax
+0xbb001c:	6863616c63      	push 0x636c6163
+0xbb0021:	89e1            	mov ecx, esp
+0xbb0023:	ff1500000000    	call dword [0x0]
+0xbb0029:	85c0            	test eax, eax
+0xbb002b:	7405            	jz 0x5
+0xbb002d:	e800000000      	call 0x0
+0xbb0032:	58              	pop eax
+0xbb0033:	5d              	pop ebp
+0xbb0034:	c3              	ret
+0xbb0035:	90              	nop
+0xbb0036:	90              	nop
+0xbb0037:	90              	nop
+0xbb0038:	89d8            	mov eax, ebx
+0xbb003a:	01c8            	add eax, ecx
+0xbb003c:	29d0            	sub eax, edx
+0xbb003e:	31c9            	xor ecx, ecx
+0xbb0040:	ffc1            	inc ecx
+0xbb0042:	83f90a          	cmp ecx, 0xa
+0xbb0045:	75f8            	jnz 0xfffffff8
+0xbb0047:	c9              	leave
+0xbb0048:	c3              	ret
+0xbb0049:	cc              	int3
+3500	regsvr32.exe	0x00ca0000	0xca4000	Vad	PAGE_EXECUTE_READWRITE	1	1	
+0xca0000  4d 5a 90 00 03 00 00 00 04 00 00 00 ff ff 00 00  MZ..............
+0xca0010  b8 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00  ........@.......
+0xca0020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0xca0030  00 00 00 00 00 00 00 00 00 00 00 00 f0 00 00 00  ................
+0xca0000:	4d5a            	dec ebp
+0xca0002:	90              	nop
+0xca0003:	0003            	add byte [ebx], al
+0xca0005:	0000            	add byte [eax], al
+0xca0007:	0400            	add al, 0x0
+0xca0009:	0000            	add byte [eax], al
+0xca000b:	ffff            	???
+0xca000d:	0000            	add byte [eax], al
+0xca000f:	b800000000      	mov eax, 0x0
+0xca0014:	0000            	add byte [eax], al
+0xca0016:	40              	inc eax
+0xca0017:	0000            	add byte [eax], al
+0xca0019:	31c0            	xor eax, eax
+0xca001b:	50              	push eax
+0xca001c:	6863616c63      	push 0x636c6163
+0xca0021:	89e1            	mov ecx, esp
+0xca0023:	ff1500000000    	call dword [0x0]
+0xca0029:	85c0            	test eax, eax
+0xca002b:	7405            	jz 0x5
+0xca002d:	e800000000      	call 0x0
+0xca0032:	58              	pop eax
+0xca0033:	5d              	pop ebp
+0xca0034:	c3              	ret
+0xca0035:	90              	nop
+0xca0036:	90              	nop
+0xca0037:	90              	nop
+0xca0038:	89d8            	mov eax, ebx
+0xca003a:	01c8            	add eax, ecx
+0xca003c:	29d0            	sub eax, edx
+0xca003e:	31c9            	xor ecx, ecx
+0xca0040:	ffc1            	inc ecx
+0xca0042:	83f90a          	cmp ecx, 0xa
+0xca0045:	75f8            	jnz 0xfffffff8
+0xca0047:	c9              	leave
+0xca0048:	c3              	ret
+0xca0049:	cc              	int3
+4200	wscript.exe	0x00da0000	0xda4000	Vad	PAGE_EXECUTE_READWRITE	1	1	
+0xda0000  4d 5a 90 00 03 00 00 00 04 00 00 00 ff ff 00 00  MZ..............
+0xda0010  b8 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00  ........@.......
+0xda0020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0xda0030  00 00 00 00 00 00 00 00 00 00 00 00 f0 00 00 00  ................
+0xda0000:	4d5a            	dec ebp
+0xda0002:	90              	nop
+0xda0003:	0003            	add byte [ebx], al
+0xda0005:	0000            	add byte [eax], al
+0xda0007:	0400            	add al, 0x0
+0xda0009:	0000            	add byte [eax], al
+0xda000b:	ffff            	???
+0xda000d:	0000            	add byte [eax], al
+0xda000f:	b800000000      	mov eax, 0x0
+0xda0014:	0000            	add byte [eax], al
+0xda0016:	40              	inc eax
+0xda0017:	0000            	add byte [eax], al
+0xda0019:	31c0            	xor eax, eax
+0xda001b:	50              	push eax
+0xda001c:	6863616c63      	push 0x636c6163
+0xda0021:	89e1            	mov ecx, esp
+0xda0023:	ff1500000000    	call dword [0x0]
+0xda0029:	85c0            	test eax, eax
+0xda002b:	7405            	jz 0x5
+0xda002d:	e800000000      	call 0x0
+0xda0032:	58              	pop eax
+0xda0033:	5d              	pop ebp
+0xda0034:	c3              	ret
+0xda0035:	90              	nop
+0xda0036:	90              	nop
+0xda0037:	90              	nop
+0xda0038:	89d8            	mov eax, ebx
+0xda003a:	01c8            	add eax, ecx
+0xda003c:	29d0            	sub eax, edx
+0xda003e:	31c9            	xor ecx, ecx
+0xda0040:	ffc1            	inc ecx
+0xda0042:	83f90a          	cmp ecx, 0xa
+0xda0045:	75f8            	jnz 0xfffffff8
+0xda0047:	c9              	leave
+0xda0048:	c3              	ret
+0xda0049:	cc              	int3
+4200	wscript.exe	0x00db0000	0xdb4000	Vad	PAGE_EXECUTE_READWRITE	1	1	
+0xdb0000  4d 5a 90 00 03 00 00 00 04 00 00 00 ff ff 00 00  MZ..............
+0xdb0010  b8 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00  ........@.......
+0xdb0020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0xdb0030  00 00 00 00 00 00 00 00 00 00 00 00 f0 00 00 00  ................
+0xdb0000:	4d5a            	dec ebp
+0xdb0002:	90              	nop
+0xdb0003:	0003            	add byte [ebx], al
+0xdb0005:	0000            	add byte [eax], al
+0xdb0007:	0400            	add al, 0x0
+0xdb0009:	0000            	add byte [eax], al
+0xdb000b:	ffff            	???
+0xdb000d:	0000            	add byte [eax], al
+0xdb000f:	b800000000      	mov eax, 0x0
+0xdb0014:	0000            	add byte [eax], al
+0xdb0016:	40              	inc eax
+0xdb0017:	0000            	add byte [eax], al
+0xdb0019:	31c0            	xor eax, eax
+0xdb001b:	50              	push eax
+0xdb001c:	6863616c63      	push 0x636c6163
+0xdb0021:	89e1            	mov ecx, esp
+0xdb0023:	ff1500000000    	call dword [0x0]
+0xdb0029:	85c0            	test eax, eax
+0xdb002b:	7405            	jz 0x5
+0xdb002d:	e800000000      	call 0x0
+0xdb0032:	58              	pop eax
+0xdb0033:	5d              	pop ebp
+0xdb0034:	c3              	ret
+0xdb0035:	90              	nop
+0xdb0036:	90              	nop
+0xdb0037:	90              	nop
+0xdb0038:	89d8            	mov eax, ebx
+0xdb003a:	01c8            	add eax, ecx
+0xdb003c:	29d0            	sub eax, edx
+0xdb003e:	31c9            	xor ecx, ecx
+0xdb0040:	ffc1            	inc ecx
+0xdb0042:	83f90a          	cmp ecx, 0xa
+0xdb0045:	75f8            	jnz 0xfffffff8
+0xdb0047:	c9              	leave
+0xdb0048:	c3              	ret
+0xdb0049:	cc              	int3
+4800	wmiprvse.exe	0x00ea0000	0xea4000	Vad	PAGE_EXECUTE_READWRITE	1	1	
+0xea0000  4d 5a 90 00 03 00 00 00 04 00 00 00 ff ff 00 00  MZ..............
+0xea0010  b8 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00  ........@.......
+0xea0020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0xea0030  00 00 00 00 00 00 00 00 00 00 00 00 f0 00 00 00  ................
+0xea0000:	4d5a            	dec ebp
+0xea0002:	90              	nop
+0xea0003:	0003            	add byte [ebx], al
+0xea0005:	0000            	add byte [eax], al
+0xea0007:	0400            	add al, 0x0
+0xea0009:	0000            	add byte [eax], al
+0xea000b:	ffff            	???
+0xea000d:	0000            	add byte [eax], al
+0xea000f:	b800000000      	mov eax, 0x0
+0xea0014:	0000            	add byte [eax], al
+0xea0016:	40              	inc eax
+0xea0017:	0000            	add byte [eax], al
+0xea0019:	31c0            	xor eax, eax
+0xea001b:	50              	push eax
+0xea001c:	6863616c63      	push 0x636c6163
+0xea0021:	89e1            	mov ecx, esp
+0xea0023:	ff1500000000    	call dword [0x0]
+0xea0029:	85c0            	test eax, eax
+0xea002b:	7405            	jz 0x5
+0xea002d:	e800000000      	call 0x0
+0xea0032:	58              	pop eax
+0xea0033:	5d              	pop ebp
+0xea0034:	c3              	ret
+0xea0035:	90              	nop
+0xea0036:	90              	nop
+0xea0037:	90              	nop
+0xea0038:	89d8            	mov eax, ebx
+0xea003a:	01c8            	add eax, ecx
+0xea003c:	29d0            	sub eax, edx
+0xea003e:	31c9            	xor ecx, ecx
+0xea0040:	ffc1            	inc ecx
+0xea0042:	83f90a          	cmp ecx, 0xa
+0xea0045:	75f8            	jnz 0xfffffff8
+0xea0047:	c9              	leave
+0xea0048:	c3              	ret
+0xea0049:	cc              	int3
+4800	wmiprvse.exe	0x00eb0000	0xeb4000	Vad	PAGE_EXECUTE_READWRITE	1	1	
+0xeb0000  4d 5a 90 00 03 00 00 00 04 00 00 00 ff ff 00 00  MZ..............
+0xeb0010  b8 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00  ........@.......
+0xeb0020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0xeb0030  00 00 00 00 00 00 00 00 00 00 00 00 f0 00 00 00  ................
+0xeb0000:	4d5a            	dec ebp
+0xeb0002:	90              	nop
+0xeb0003:	0003            	add byte [ebx], al
+0xeb0005:	0000            	add byte [eax], al
+0xeb0007:	0400            	add al, 0x0
+0xeb0009:	0000            	add byte [eax], al
+0xeb000b:	ffff            	???
+0xeb000d:	0000            	add byte [eax], al
+0xeb000f:	b800000000      	mov eax, 0x0
+0xeb0014:	0000            	add byte [eax], al
+0xeb0016:	40              	inc eax
+0xeb0017:	0000            	add byte [eax], al
+0xeb0019:	31c0            	xor eax, eax
+0xeb001b:	50              	push eax
+0xeb001c:	6863616c63      	push 0x636c6163
+0xeb0021:	89e1            	mov ecx, esp
+0xeb0023:	ff1500000000    	call dword [0x0]
+0xeb0029:	85c0            	test eax, eax
+0xeb002b:	7405            	jz 0x5
+0xeb002d:	e800000000      	call 0x0
+0xeb0032:	58              	pop eax
+0xeb0033:	5d              	pop ebp
+0xeb0034:	c3              	ret
+0xeb0035:	90              	nop
+0xeb0036:	90              	nop
+0xeb0037:	90              	nop
+0xeb0038:	89d8            	mov eax, ebx
+0xeb003a:	01c8            	add eax, ecx
+0xeb003c:	29d0            	sub eax, edx
+0xeb003e:	31c9            	xor ecx, ecx
+0xeb0040:	ffc1            	inc ecx
+0xeb0042:	83f90a          	cmp ecx, 0xa
+0xeb0045:	75f8            	jnz 0xfffffff8
+0xeb0047:	c9              	leave
+0xeb0048:	c3              	ret
+0xeb0049:	cc              	int3
+5100	taskhostw.exe	0x00fa0000	0xfa4000	Vad	PAGE_EXECUTE_READWRITE	1	1	
+0xfa0000  4d 5a 90 00 03 00 00 00 04 00 00 00 ff ff 00 00  MZ..............
+0xfa0010  b8 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00  ........@.......
+0xfa0020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0xfa0030  00 00 00 00 00 00 00 00 00 00 00 00 f0 00 00 00  ................
+0xfa0000:	4d5a            	dec ebp
+0xfa0002:	90              	nop
+0xfa0003:	0003            	add byte [ebx], al
+0xfa0005:	0000            	add byte [eax], al
+0xfa0007:	0400            	add al, 0x0
+0xfa0009:	0000            	add byte [eax], al
+0xfa000b:	ffff            	???
+0xfa000d:	0000            	add byte [eax], al
+0xfa000f:	b800000000      	mov eax, 0x0
+0xfa0014:	0000            	add byte [eax], al
+0xfa0016:	40              	inc eax
+0xfa0017:	0000            	add byte [eax], al
+0xfa0019:	31c0            	xor eax, eax
+0xfa001b:	50              	push eax
+0xfa001c:	6863616c63      	push 0x636c6163
+0xfa0021:	89e1            	mov ecx, esp
+0xfa0023:	ff1500000000    	call dword [0x0]
+0xfa0029:	85c0            	test eax, eax
+0xfa002b:	7405            	jz 0x5
+0xfa002d:	e800000000      	call 0x0
+0xfa0032:	58              	pop eax
+0xfa0033:	5d              	pop ebp
+0xfa0034:	c3              	ret
+0xfa0035:	90              	nop
+0xfa0036:	90              	nop
+0xfa0037:	90              	nop
+0xfa0038:	89d8            	mov eax, ebx
+0xfa003a:	01c8            	add eax, ecx
+0xfa003c:	29d0            	sub eax, edx
+0xfa003e:	31c9            	xor ecx, ecx
+0xfa0040:	ffc1            	inc ecx
+0xfa0042:	83f90a          	cmp ecx, 0xa
+0xfa0045:	75f8            	jnz 0xfffffff8
+0xfa0047:	c9              	leave
+0xfa0048:	c3              	ret
+0xfa0049:	cc              	int3
+5100	taskhostw.exe	0x00fb0000	0xfb4000	Vad	PAGE_EXECUTE_READWRITE	1	1	
+0xfb0000  4d 5a 90 00 03 00 00 00 04 00 00 00 ff ff 00 00  MZ..............
+0xfb0010  b8 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00  ........@.......
+0xfb0020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0xfb0030  00 00 00 00 00 00 00 00 00 00 00 00 f0 00 00 00  ................
+0xfb0000:	4d5a            	dec ebp
+0xfb0002:	90              	nop
+0xfb0003:	0003            	add byte [ebx], al
+0xfb0005:	0000            	add byte [eax], al
+0xfb0007:	0400            	add al, 0x0
+0xfb0009:	0000            	add byte [eax], al
+0xfb000b:	ffff            	???
+0xfb000d:	0000            	add byte [eax], al
+0xfb000f:	b800000000      	mov eax, 0x0
+0xfb0014:	0000            	add byte [eax], al
+0xfb0016:	40              	inc eax
+0xfb0017:	0000            	add byte [eax], al
+0xfb0019:	31c0            	xor eax, eax
+0xfb001b:	50              	push eax
+0xfb001c:	6863616c63      	push 0x636c6163
+0xfb0021:	89e1            	mov ecx, esp
+0xfb0023:	ff1500000000    	call dword [0x0]
+0xfb0029:	85c0            	test eax, eax
+0xfb002b:	7405            	jz 0x5
+0xfb002d:	e800000000      	call 0x0
+0xfb0032:	58              	pop eax
+0xfb0033:	5d              	pop ebp
+0xfb0034:	c3              	ret
+0xfb0035:	90              	nop
+0xfb0036:	90              	nop
+0xfb0037:	90              	nop
+0xfb0038:	89d8            	mov eax, ebx
+0xfb003a:	01c8            	add eax, ecx
+0xfb003c:	29d0            	sub eax, edx
+0xfb003e:	31c9            	xor ecx, ecx
+0xfb0040:	ffc1            	inc ecx
+0xfb0042:	83f90a          	cmp ecx, 0xa
+0xfb0045:	75f8            	jnz 0xfffffff8
+0xfb0047:	c9              	leave
+0xfb0048:	c3              	ret
+0xfb0049:	cc              	int3

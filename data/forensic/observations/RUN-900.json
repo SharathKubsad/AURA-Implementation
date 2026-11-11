@@ -1,0 +1,25 @@
+{
+  "run_id": "RUN-900",
+  "sample_id": "EXEC_RUN-900",
+  "label": 1,
+  "family": "fileless_ransomware",
+  "counts": {
+    "processes": 142,
+    "threads": 1691,
+    "handles": 52459,
+    "modules": 6521,
+    "privileges": 4830,
+    "vads": 17846,
+    "malfind_findings": 17,
+    "network_connections": 418,
+    "sysmon_events": 9539,
+    "powershell_events": 489,
+    "command_events": 5127,
+    "relationships_tree": 137,
+    "relationships_network": 124,
+    "relationships_command": 431,
+    "relationships_memory": 17
+  },
+  "malfind_baseline_exceptions": 13,
+  "hidden_processes_psxview": 2
+}

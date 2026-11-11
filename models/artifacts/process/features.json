@@ -1,0 +1,15 @@
+{
+  "feature_names": [
+    "total_process_count",
+    "hidden_process_count",
+    "anomalous_ppid_count",
+    "avg_threads_per_process",
+    "max_threads_in_single_process",
+    "total_handle_count",
+    "suspicious_dll_count",
+    "malfind_process_count",
+    "elevated_privilege_count",
+    "unlinked_dll_count",
+    "thread_to_process_ratio"
+  ]
+}

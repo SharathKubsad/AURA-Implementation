@@ -1,0 +1,14 @@
+﻿{
+    "sample_id":  "EXEC_RUN-501",
+    "label":  1,
+    "family":  "metasploit_memory_payloads",
+    "track":  "TRACK_A",
+    "os":  "microsoft_windows_11_home",
+    "execution_timestamp":  "2026-09-20T11:29:26Z",
+    "source_type":  "custom_sandbox",
+    "source_reference":  "manual_controlled_execution",
+    "evidence_sha256":  "f4b5716fdee01ba05bb90e733eff52a5179fc1907f0866c248d64b557ab6c992",
+    "memory_dump":  true,
+    "sysmon_available":  true,
+    "notes":  "Controlled execution for metasploit_memory_payloads"
+}

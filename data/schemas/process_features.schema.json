@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/Prash-2402/Real-Time-Fileless-Malware-Detection/main/data/schemas/process_features.schema.json",
+  "title": "ProcessFeatures",
+  "description": "Structured forensic and live behavioral telemetry schema for the Process modality (Track A). Scored by XGBoost.",
+  "type": "object",
+  "properties": {
+    "sample_id": {
+      "type": "string",
+      "description": "Foreign key linking to SampleMetadata.sample_id"
+    },
+    "total_process_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Total count of active running processes at acquisition time",
+      "source": "Volatility3 windows.pslist / psutil.pids()",
+      "telemetry_nature": "dynamic",
+      "missing_value_policy": "impute_median"
+    },
+    "hidden_process_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Processes found by unlinked scan (psscan/psxview) but absent from active process list (pslist)",
+      "source": "Volatility3 windows.psscan, windows.psxview / cross-referenced live scan",
+      "telemetry_nature": "dynamic",
+      "missing_value_policy": "fill_zero"
+    },
+    "anomalous_ppid_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Processes whose parent PID does not match standard Windows process hierarchy (e.g. svchost not spawned by services.exe)",
+      "source": "Volatility3 windows.pstree / Sysmon Event ID 1 parent-child verification",
+      "telemetry_nature": "dynamic",
+      "missing_value_policy": "fill_zero"
+    },
+    "avg_threads_per_process": {
+      "type": "number",
+      "minimum": 0.0,
+      "description": "Average thread count per active process",
+      "source": "Volatility3 windows.threads / psutil.Process.num_threads()",
+      "telemetry_nature": "dynamic",
+      "missing_value_policy": "impute_median"
+    },
+    "max_threads_in_single_process": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Peak thread count observed within a single process",
+      "source": "Volatility3 windows.threads / psutil.Process.num_threads()",
+      "telemetry_nature": "dynamic",
+      "missing_value_policy": "impute_median"
+    },
+    "total_handle_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Aggregate open object handles across all running processes",
+      "source": "Volatility3 windows.handles / psutil.Process.num_handles()",
+      "telemetry_nature": "dynamic",
+      "missing_value_policy": "impute_median"
+    },
+    "suspicious_dll_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Count of loaded DLLs from abnormal directories (e.g. AppData, Temp, or unlinked modules)",
+      "source": "Volatility3 windows.dlllist / Sysmon Event ID 7",
+      "telemetry_nature": "dynamic",
+      "missing_value_policy": "fill_zero"
+    },
+    "malfind_process_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Number of processes with memory regions flagged by malfind as containing injected/modified code",
+      "source": "Volatility3 windows.malfind / live memory scan",
+      "telemetry_nature": "dynamic",
+      "missing_value_policy": "fill_zero"
+    },
+    "elevated_privilege_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Processes possessing enabled high-risk privileges (e.g. SeDebugPrivilege, SeTcbPrivilege)",
+      "source": "Volatility3 windows.privileges / Token audit APIs",
+      "telemetry_nature": "dynamic",
+      "missing_value_policy": "fill_zero"
+    },
+    "unlinked_dll_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Loaded modules in memory not present in the InLoadOrderModuleList (reflective DLL loading indicator)",
+      "source": "Volatility3 windows.ldrmodules",
+      "telemetry_nature": "dynamic",
+      "missing_value_policy": "fill_zero"
+    }
+  },
+  "required": [
+    "sample_id",
+    "total_process_count",
+    "hidden_process_count",
+    "anomalous_ppid_count",
+    "avg_threads_per_process",
+    "max_threads_in_single_process",
+    "total_handle_count",
+    "suspicious_dll_count",
+    "malfind_process_count",
+    "elevated_privilege_count"
+  ],
+  "additionalProperties": false
+}

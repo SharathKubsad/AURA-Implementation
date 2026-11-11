@@ -1,0 +1,127 @@
+{
+  "audited_at": "2026-10-02T10:41:34.923128+00:00",
+  "audit_passed": true,
+  "total_samples": 58596,
+  "class_distribution": {
+    "Benign": 29298,
+    "Malware": 29298
+  },
+  "family_distribution": {
+    "benign": 29298,
+    "Ako": 2000,
+    "Conti": 1988,
+    "Maze": 1958,
+    "Pysa": 1717,
+    "Shade": 2128,
+    "180solutions": 2000,
+    "CWS": 2000,
+    "Gator": 2200,
+    "TIBS": 1410,
+    "Transponder": 2410,
+    "Emotet": 1967,
+    "Reconyc": 1570,
+    "Refroso": 2000,
+    "Scar": 2000,
+    "Zeus": 1950
+  },
+  "duplicate_sample_count": 0,
+  "custom_dataset_isolation": {
+    "status": "ISOLATED",
+    "collisions_count": 0
+  },
+  "schema_validity": {
+    "process_schema_errors": 0,
+    "memory_schema_errors": 0
+  },
+  "invalid_numeric_values": 0,
+  "provenance_completeness": {
+    "errors": 0,
+    "completeness_pct": 100.0
+  },
+  "missingness": {
+    "process": {
+      "sample_id": {
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      "total_process_count": {
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      "hidden_process_count": {
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      "anomalous_ppid_count": {
+        "missing_count": 58596,
+        "missing_pct": 100.0
+      },
+      "avg_threads_per_process": {
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      "max_threads_in_single_process": {
+        "missing_count": 58596,
+        "missing_pct": 100.0
+      },
+      "total_handle_count": {
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      "suspicious_dll_count": {
+        "missing_count": 58596,
+        "missing_pct": 100.0
+      },
+      "malfind_process_count": {
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      "elevated_privilege_count": {
+        "missing_count": 58596,
+        "missing_pct": 100.0
+      },
+      "unlinked_dll_count": {
+        "missing_count": 0,
+        "missing_pct": 0.0
+      }
+    },
+    "memory": {
+      "sample_id": {
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      "rwx_page_count": {
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      "injected_code_regions": {
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      "unmapped_executable_pages": {
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      "vad_protection_anomaly_count": {
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      "ldrmodules_inconsistencies": {
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      "yara_shellcode_matches": {
+        "missing_count": 58596,
+        "missing_pct": 100.0
+      },
+      "mean_memory_entropy": {
+        "missing_count": 58596,
+        "missing_pct": 100.0
+      },
+      "max_memory_entropy": {
+        "missing_count": 58596,
+        "missing_pct": 100.0
+      }
+    }
+  }
+}

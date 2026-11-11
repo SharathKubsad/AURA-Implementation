@@ -1,0 +1,101 @@
+{
+  "model": "ProcessModel (XGBoost)",
+  "modality": "process",
+  "validation_metrics": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "roc_auc": 1.0,
+    "confusion_matrix": [
+      [
+        36,
+        0
+      ],
+      [
+        0,
+        39
+      ]
+    ],
+    "fpr": 0.0,
+    "fnr": 0.0,
+    "threshold": 0.5,
+    "total_samples": 75,
+    "true_benign_count": 36,
+    "true_malware_count": 39
+  },
+  "test_metrics": {
+    "accuracy": 0.9867,
+    "precision": 0.975,
+    "recall": 1.0,
+    "f1": 0.9873,
+    "roc_auc": 1.0,
+    "confusion_matrix": [
+      [
+        35,
+        1
+      ],
+      [
+        0,
+        39
+      ]
+    ],
+    "fpr": 0.0278,
+    "fnr": 0.0,
+    "threshold": 0.5,
+    "total_samples": 75,
+    "true_benign_count": 36,
+    "true_malware_count": 39
+  },
+  "metadata": {
+    "model_type": "xgboost",
+    "modality": "process",
+    "dataset_source": "C:\\Users\\PRAJWAL V L\\Downloads\\Real-Time-Fileless-Malware-Detection-main (1)\\Real-Time-Fileless-Malware-Detection-main\\data\\processed\\unified\\unified_dataset.jsonl",
+    "train_sample_count": 350,
+    "validation_sample_count": 75,
+    "test_sample_count": 75,
+    "train_class_distribution": {
+      "benign": 168,
+      "malware": 182
+    },
+    "validation_class_distribution": {
+      "benign": 36,
+      "malware": 39
+    },
+    "test_class_distribution": {
+      "benign": 36,
+      "malware": 39
+    },
+    "feature_names": [
+      "total_process_count",
+      "hidden_process_count",
+      "anomalous_ppid_count",
+      "avg_threads_per_process",
+      "max_threads_in_single_process",
+      "total_handle_count",
+      "suspicious_dll_count",
+      "malfind_process_count",
+      "elevated_privilege_count",
+      "unlinked_dll_count",
+      "thread_to_process_ratio"
+    ],
+    "random_seed": 42,
+    "hyperparameters": {
+      "n_estimators": 100,
+      "max_depth": 3,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "random_state": 42,
+      "eval_metric": "logloss"
+    },
+    "training_timestamp": "2026-09-28T04:28:27.638987+00:00",
+    "software_versions": {
+      "xgboost": "3.4.1",
+      "scikit-learn": "1.9.0",
+      "pandas": "3.0.5"
+    },
+    "git_commit": "94762d7a0d48c50566f0032b90ba3d1764c3f6c6",
+    "small_dataset_warning": "WARNING: This model was trained on an extremely small custom dataset (45 samples). Metrics are intended solely for pipeline and architecture validation. Do NOT treat these results as production-grade or statistically conclusive without benchmark dataset merging."
+  }
+}

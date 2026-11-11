@@ -1,0 +1,76 @@
+{
+  "dataset_name": "CIC-MalMem-2022",
+  "benchmark_strategy": "Strategy C (Separate Domain-Specific Benchmark Models)",
+  "generated_at": "2026-09-21T12:57:17.816751+00:00",
+  "models": {
+    "process": {
+      "algorithm": "XGBoost",
+      "features_count": 6,
+      "features_used": [
+        "total_process_count",
+        "hidden_process_count",
+        "avg_threads_per_process",
+        "total_handle_count",
+        "malfind_process_count",
+        "unlinked_dll_count"
+      ],
+      "test_metrics": {
+        "accuracy": 0.9993,
+        "precision": 1.0,
+        "recall": 0.9986,
+        "f1": 0.9993,
+        "roc_auc": 1.0,
+        "confusion_matrix": [
+          [
+            4395,
+            0
+          ],
+          [
+            6,
+            4389
+          ]
+        ],
+        "fpr": 0.0,
+        "fnr": 0.0014,
+        "threshold": 0.5,
+        "total_samples": 8790,
+        "true_benign_count": 4395,
+        "true_malware_count": 4395
+      }
+    },
+    "memory": {
+      "algorithm": "CatBoost",
+      "features_count": 4,
+      "features_used": [
+        "rwx_page_count",
+        "injected_code_regions",
+        "unmapped_executable_pages",
+        "ldrmodules_inconsistencies"
+      ],
+      "test_metrics": {
+        "accuracy": 0.9724,
+        "precision": 0.9553,
+        "recall": 0.9911,
+        "f1": 0.9729,
+        "roc_auc": 0.9958,
+        "confusion_matrix": [
+          [
+            4191,
+            204
+          ],
+          [
+            39,
+            4356
+          ]
+        ],
+        "fpr": 0.0464,
+        "fnr": 0.0089,
+        "threshold": 0.5,
+        "total_samples": 8790,
+        "true_benign_count": 4395,
+        "true_malware_count": 4395
+      }
+    }
+  },
+  "temporal_grouping_limitation": "CIC-MalMem-2022 contains 29,298 benign memory snapshots taken at 5-second intervals from the same running VM sessions. However, the published dataset does NOT provide session IDs, VM instance IDs, timestamps, or operator identifiers. Grouping by family is impossible for benign samples because all 29,298 share a single 'benign' label. Therefore, ordinary stratified random splitting is applied, but with this explicitly documented limitation: test set metrics reflect in-distribution evaluation and cannot guarantee independence from temporal autocorrelation in the benign class."
+}

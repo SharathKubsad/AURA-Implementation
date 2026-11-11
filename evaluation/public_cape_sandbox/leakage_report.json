@@ -1,0 +1,23 @@
+{
+  "audit_timestamp": "2026-09-22T05:40:25.277551+00:00",
+  "datasets_compared": [
+    "CAPEv2 Dynamic Sandbox Benchmark (120 samples)",
+    "Custom VM Telemetry Dataset (45 samples)",
+    "CIC-MalMem-2022 (58,596 samples)"
+  ],
+  "overlap_analysis": {
+    "sample_id_collision_count": 0,
+    "sample_id_collisions": [],
+    "command_string_overlap_count": 0,
+    "command_string_overlap": [],
+    "hash_collision_count": 0,
+    "session_contamination_detected": false
+  },
+  "verdict": "ZERO_LEAKAGE",
+  "findings": [
+    "Sample IDs follow independent namespace conventions (CAPE_* vs EXEC_RUN-* vs MALMEM_*).",
+    "Command text overlap is 0: Custom Sysmon captured ambient background OS tasks, while CAPEv2 captured realistic attack payloads.",
+    "Network IP addresses and session logs are fully isolated.",
+    "CAPEv2 data is verified free from training/test contamination with the custom VM dataset."
+  ]
+}

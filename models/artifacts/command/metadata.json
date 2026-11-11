@@ -1,0 +1,43 @@
+{
+  "model_type": "distilbert",
+  "modality": "command",
+  "dataset_source": "C:\\Users\\PRAJWAL V L\\Downloads\\Real-Time-Fileless-Malware-Detection-main (1)\\Real-Time-Fileless-Malware-Detection-main\\data\\processed\\unified\\unified_dataset.jsonl",
+  "train_sample_count": 350,
+  "validation_sample_count": 75,
+  "test_sample_count": 75,
+  "train_class_distribution": {
+    "benign": 168,
+    "malware": 182
+  },
+  "validation_class_distribution": {
+    "benign": 36,
+    "malware": 39
+  },
+  "test_class_distribution": {
+    "benign": 36,
+    "malware": 39
+  },
+  "feature_names": [
+    "raw_command_text"
+  ],
+  "random_seed": 42,
+  "hyperparameters": {
+    "architecture": "DistilBertForSequenceClassification",
+    "base_model": "distilbert-base-uncased",
+    "epochs": 3,
+    "batch_size": 4,
+    "learning_rate": 5e-05,
+    "max_length": 128,
+    "random_seed": 42,
+    "device": "cpu"
+  },
+  "training_timestamp": "2026-09-28T04:47:25.670984+00:00",
+  "software_versions": {
+    "torch": "2.14.0",
+    "transformers": "5.17.0",
+    "scikit-learn": "1.9.0",
+    "pandas": "3.0.5"
+  },
+  "git_commit": "94762d7a0d48c50566f0032b90ba3d1764c3f6c6",
+  "small_dataset_warning": "WARNING: This model was trained on an extremely small custom dataset (45 samples). Metrics are intended solely for pipeline and architecture validation. Do NOT treat these results as production-grade or statistically conclusive without benchmark dataset merging."
+}

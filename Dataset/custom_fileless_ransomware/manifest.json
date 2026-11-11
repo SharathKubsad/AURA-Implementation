@@ -1,0 +1,55 @@
+{
+  "dataset": "custom_fileless_ransomware",
+  "label": 1,
+  "family": "fileless_ransomware",
+  "source_type": "controlled_windows_vm",
+  "created_utc": "2026-09-21T02:21:31.852337+00:00",
+  "runs": [
+    {
+      "sample_id": "RUN-900",
+      "memory_exists": "YES",
+      "memory_size_bytes": "6422409216",
+      "volatility_status": "PASS",
+      "extraction_status": "PASS",
+      "validation_status": "PASS",
+      "notes": ""
+    },
+    {
+      "sample_id": "RUN-901",
+      "memory_exists": "YES",
+      "memory_size_bytes": "6422409216",
+      "volatility_status": "PASS",
+      "extraction_status": "PASS",
+      "validation_status": "PASS",
+      "notes": ""
+    },
+    {
+      "sample_id": "RUN-902",
+      "memory_exists": "YES",
+      "memory_size_bytes": "6422409216",
+      "volatility_status": "PASS",
+      "extraction_status": "PASS",
+      "validation_status": "PASS",
+      "notes": ""
+    }
+  ],
+  "pipeline": {
+    "volatility": true,
+    "process_features": true,
+    "memory_features": true,
+    "command_features": false,
+    "network_features": false
+  },
+  "notes": [
+    "Process and Memory features generated using the existing A4 pipeline.",
+    "Command and Network source evidence preserved for Track-B processing.",
+    "Raw memory dumps are not included in the Windows-ready package.",
+    "No unsupported feature values are fabricated."
+  ],
+  "completed_utc": "2026-09-21T02:49:52.781887+00:00",
+  "statistics": {
+    "total": 3,
+    "passed": 3,
+    "failed": 0
+  }
+}

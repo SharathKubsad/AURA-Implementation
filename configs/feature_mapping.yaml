@@ -1,0 +1,100 @@
+# Authoritative Feature Mapping and Harmonization Specifications
+# Defines how external dynamic execution data maps to the 4 forensic schemas.
+
+process_mappings:
+  total_process_count:
+    cic_malmem_2022: { field: "pslist.nproc", type: "DIRECT", confidence: "HIGH" }
+    cape_sandbox: { field: "len(behavior.processes)", type: "DIRECT", confidence: "HIGH" }
+  hidden_process_count:
+    cic_malmem_2022: { field: "psscan.nproc - pslist.nproc", type: "DERIVED", confidence: "HIGH" }
+    cape_sandbox: { field: "behavior.summary.hidden_procs", type: "DERIVED", confidence: "HIGH" }
+  anomalous_ppid_count:
+    cic_malmem_2022: { field: null, type: "UNAVAILABLE", confidence: "LOW" }
+    cape_sandbox: { field: "behavior.tree.broken_parents", type: "DERIVED", confidence: "MEDIUM" }
+  avg_threads_per_process:
+    cic_malmem_2022: { field: "pslist.avg_threads", type: "DIRECT", confidence: "HIGH" }
+    cape_sandbox: { field: "sum(threads)/nproc", type: "DIRECT", confidence: "HIGH" }
+  max_threads_in_single_process:
+    cic_malmem_2022: { field: null, type: "UNAVAILABLE", confidence: "LOW" }
+    cape_sandbox: { field: "max(threads_per_proc)", type: "DIRECT", confidence: "HIGH" }
+  total_handle_count:
+    cic_malmem_2022: { field: "handles.nhandles", type: "DIRECT", confidence: "HIGH" }
+    cape_sandbox: { field: "len(behavior.handles)", type: "DIRECT", confidence: "HIGH" }
+  suspicious_dll_count:
+    cic_malmem_2022: { field: null, type: "UNAVAILABLE", confidence: "LOW" }
+    cape_sandbox: { field: "len(suspicious_loaded_dlls)", type: "DERIVED", confidence: "MEDIUM" }
+  malfind_process_count:
+    cic_malmem_2022: { field: "malfind.ninjections", type: "DIRECT", confidence: "HIGH" }
+    cape_sandbox: { field: null, type: "UNAVAILABLE", confidence: "LOW" }
+  elevated_privilege_count:
+    cic_malmem_2022: { field: null, type: "UNAVAILABLE", confidence: "LOW" }
+    cape_sandbox: { field: "len(privileges.elevated)", type: "DERIVED", confidence: "MEDIUM" }
+  unlinked_dll_count:
+    cic_malmem_2022: { field: "ldrmodules.not_in_load", type: "DIRECT", confidence: "HIGH" }
+    cape_sandbox: { field: null, type: "UNAVAILABLE", confidence: "LOW" }
+
+command_mappings:
+  raw_command_text:
+    cic_malmem_2022: { field: null, type: "UNAVAILABLE", confidence: "LOW" }
+    cape_sandbox: { field: "process.command_line", type: "DIRECT", confidence: "HIGH" }
+  command_length:
+    cic_malmem_2022: { field: null, type: "UNAVAILABLE", confidence: "LOW" }
+    cape_sandbox: { field: "len(process.command_line)", type: "DIRECT", confidence: "HIGH" }
+  shannon_entropy:
+    cic_malmem_2022: { field: null, type: "UNAVAILABLE", confidence: "LOW" }
+    cape_sandbox: { formula: "-sum(p * log2(p))", type: "DERIVED", confidence: "HIGH" }
+  is_base64_encoded:
+    cic_malmem_2022: { field: null, type: "UNAVAILABLE", confidence: "LOW" }
+    cape_sandbox: { rule: "regex_base64_match", type: "DERIVED", confidence: "HIGH" }
+  has_download_cradle:
+    cic_malmem_2022: { field: null, type: "UNAVAILABLE", confidence: "LOW" }
+    cape_sandbox: { rule: "cradle_patterns", type: "DERIVED", confidence: "HIGH" }
+  has_bypass_execution_policy:
+    cic_malmem_2022: { field: null, type: "UNAVAILABLE", confidence: "LOW" }
+    cape_sandbox: { rule: "execution_policy_flag", type: "DERIVED", confidence: "HIGH" }
+  has_hidden_window:
+    cic_malmem_2022: { field: null, type: "UNAVAILABLE", confidence: "LOW" }
+    cape_sandbox: { rule: "hidden_window_flag", type: "DERIVED", confidence: "HIGH" }
+  uses_lolbins:
+    cic_malmem_2022: { field: null, type: "UNAVAILABLE", confidence: "LOW" }
+    cape_sandbox: { rule: "lolbins_match", type: "DERIVED", confidence: "HIGH" }
+  registry_persistence_count:
+    cic_malmem_2022: { field: null, type: "UNAVAILABLE", confidence: "LOW" }
+    cape_sandbox: { field: "len(behavior.registry.keys)", type: "DIRECT", confidence: "HIGH" }
+
+network_mappings:
+  active_connection_count:
+    cic_malmem_2022: { field: null, type: "UNAVAILABLE", confidence: "LOW" }
+    cape_sandbox: { field: "len(network.tcp + network.udp)", type: "DIRECT", confidence: "HIGH" }
+  listening_port_count:
+    cic_malmem_2022: { field: null, type: "UNAVAILABLE", confidence: "LOW" }
+    cape_sandbox: { field: "len(network.listening_ports)", type: "DIRECT", confidence: "HIGH" }
+  outbound_connection_count:
+    cic_malmem_2022: { field: null, type: "UNAVAILABLE", confidence: "LOW" }
+    cape_sandbox: { field: "len(network.outbound_conns)", type: "DIRECT", confidence: "HIGH" }
+  dns_query_count:
+    cic_malmem_2022: { field: null, type: "UNAVAILABLE", confidence: "LOW" }
+    cape_sandbox: { field: "len(network.dns_requests)", type: "DIRECT", confidence: "HIGH" }
+  unique_remote_ips:
+    cic_malmem_2022: { field: null, type: "UNAVAILABLE", confidence: "LOW" }
+    cape_sandbox: { field: "len(set(network.remote_ips))", type: "DIRECT", confidence: "HIGH" }
+
+memory_mappings:
+  rwx_page_count:
+    cic_malmem_2022: { field: "malfind.commitCharge", type: "APPROXIMATED", confidence: "MEDIUM" }
+    cape_sandbox: { field: null, type: "UNAVAILABLE", confidence: "LOW" }
+  injected_code_regions:
+    cic_malmem_2022: { field: "malfind.ninjections", type: "DIRECT", confidence: "HIGH" }
+    cape_sandbox: { field: "behavior.summary.injected_mem", type: "DIRECT", confidence: "HIGH" }
+  unmapped_executable_pages:
+    cic_malmem_2022: { field: "malfind.uniqueInjections", type: "APPROXIMATED", confidence: "MEDIUM" }
+    cape_sandbox: { field: null, type: "UNAVAILABLE", confidence: "LOW" }
+  vad_protection_anomaly_count:
+    cic_malmem_2022: { field: "malfind.protection", type: "DIRECT", confidence: "HIGH" }
+    cape_sandbox: { field: null, type: "UNAVAILABLE", confidence: "LOW" }
+  ldrmodules_inconsistencies:
+    cic_malmem_2022: { field: "ldrmodules.not_in_mem", type: "DIRECT", confidence: "HIGH" }
+    cape_sandbox: { field: null, type: "UNAVAILABLE", confidence: "LOW" }
+  memory_injection_score:
+    cic_malmem_2022: { formula: "2.0*rwx + 3.0*inj + 1.5*vad", type: "DERIVED", confidence: "HIGH" }
+    cape_sandbox: { field: null, type: "UNAVAILABLE", confidence: "LOW" }

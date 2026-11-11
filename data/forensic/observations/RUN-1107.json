@@ -1,0 +1,25 @@
+{
+  "run_id": "RUN-1107",
+  "sample_id": "EXEC_RUN-1107",
+  "label": 0,
+  "family": "benign",
+  "counts": {
+    "processes": 148,
+    "threads": 1668,
+    "handles": 54595,
+    "modules": 6884,
+    "privileges": 5005,
+    "vads": 18594,
+    "malfind_findings": 21,
+    "network_connections": 296,
+    "sysmon_events": 5781,
+    "powershell_events": 482,
+    "command_events": 3213,
+    "relationships_tree": 143,
+    "relationships_network": 77,
+    "relationships_command": 284,
+    "relationships_memory": 21
+  },
+  "malfind_baseline_exceptions": 14,
+  "hidden_processes_psxview": 3
+}

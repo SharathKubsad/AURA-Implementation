@@ -1,0 +1,98 @@
+{
+  "model": "MemoryModel (CatBoost)",
+  "modality": "memory",
+  "validation_metrics": {
+    "accuracy": 0.72,
+    "precision": 0.95,
+    "recall": 0.4872,
+    "f1": 0.6441,
+    "roc_auc": 0.7436,
+    "confusion_matrix": [
+      [
+        35,
+        1
+      ],
+      [
+        20,
+        19
+      ]
+    ],
+    "fpr": 0.0278,
+    "fnr": 0.5128,
+    "threshold": 0.5,
+    "total_samples": 75,
+    "true_benign_count": 36,
+    "true_malware_count": 39
+  },
+  "test_metrics": {
+    "accuracy": 0.7467,
+    "precision": 1.0,
+    "recall": 0.5128,
+    "f1": 0.678,
+    "roc_auc": 0.7496,
+    "confusion_matrix": [
+      [
+        36,
+        0
+      ],
+      [
+        19,
+        20
+      ]
+    ],
+    "fpr": 0.0,
+    "fnr": 0.4872,
+    "threshold": 0.5,
+    "total_samples": 75,
+    "true_benign_count": 36,
+    "true_malware_count": 39
+  },
+  "metadata": {
+    "model_type": "catboost",
+    "modality": "memory",
+    "dataset_source": "C:\\Users\\PRAJWAL V L\\Downloads\\Real-Time-Fileless-Malware-Detection-main (1)\\Real-Time-Fileless-Malware-Detection-main\\data\\processed\\unified\\unified_dataset.jsonl",
+    "train_sample_count": 350,
+    "validation_sample_count": 75,
+    "test_sample_count": 75,
+    "train_class_distribution": {
+      "benign": 168,
+      "malware": 182
+    },
+    "validation_class_distribution": {
+      "benign": 36,
+      "malware": 39
+    },
+    "test_class_distribution": {
+      "benign": 36,
+      "malware": 39
+    },
+    "feature_names": [
+      "rwx_page_count",
+      "injected_code_regions",
+      "unmapped_executable_pages",
+      "vad_protection_anomaly_count",
+      "ldrmodules_inconsistencies",
+      "yara_shellcode_matches",
+      "mean_memory_entropy",
+      "max_memory_entropy",
+      "memory_injection_score"
+    ],
+    "random_seed": 42,
+    "hyperparameters": {
+      "iterations": 100,
+      "depth": 3,
+      "learning_rate": 0.05,
+      "random_seed": 42,
+      "nan_mode": "Min",
+      "verbose": false
+    },
+    "training_timestamp": "2026-09-28T04:28:28.508558+00:00",
+    "software_versions": {
+      "catboost": "1.2.10",
+      "scikit-learn": "1.9.0",
+      "pandas": "3.0.5"
+    },
+    "git_commit": "94762d7a0d48c50566f0032b90ba3d1764c3f6c6",
+    "small_dataset_warning": "WARNING: This model was trained on an extremely small custom dataset (45 samples). Metrics are intended solely for pipeline and architecture validation. Do NOT treat these results as production-grade or statistically conclusive without benchmark dataset merging."
+  }
+}

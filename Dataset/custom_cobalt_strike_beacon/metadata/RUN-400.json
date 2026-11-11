@@ -1,0 +1,14 @@
+﻿{
+    "sample_id":  "EXEC_RUN-400",
+    "label":  1,
+    "family":  "cobalt_strike_beacon",
+    "track":  "TRACK_A",
+    "os":  "microsoft_windows_11_home",
+    "execution_timestamp":  "2026-09-20T10:15:25Z",
+    "source_type":  "custom_sandbox",
+    "source_reference":  "manual_controlled_execution",
+    "evidence_sha256":  "e0c95de85ad550a79443f4381576cf8eaacbac5718bbbfa3b6e56435baf2f7a8",
+    "memory_dump":  true,
+    "sysmon_available":  true,
+    "notes":  "Controlled execution for cobalt_strike_beacon"
+}

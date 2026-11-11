@@ -1,0 +1,92 @@
+{
+  "cmd_total_events_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "cmd_unique_commands_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "cmd_mean_command_length": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "cmd_max_command_length": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "cmd_ps_scriptblock_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "cmd_ps_unique_scriptblocks": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "cmd_ps_mean_script_length": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "cmd_ps_max_script_length": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "cmd_encoded_command_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "cmd_execution_policy_bypass_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "cmd_hidden_window_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "cmd_download_cradle_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "cmd_lolbin_execution_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "cmd_registry_modification_count": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "cmd_diversity_ratio": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  }
+}

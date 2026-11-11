@@ -1,0 +1,43 @@
+{
+  "dataset": "CAPEv2 Dynamic Sandbox Behavioral Benchmark",
+  "modality": "network",
+  "model_type": "lightgbm",
+  "features": [
+    "active_connection_count",
+    "outbound_connection_count",
+    "dns_query_count",
+    "unique_remote_ips",
+    "suspicious_port_usage",
+    "total_bytes_sent",
+    "total_bytes_received"
+  ],
+  "train_samples": 84,
+  "val_samples": 18,
+  "test_samples": 18,
+  "test_metrics": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "fpr": 0.0,
+    "fnr": 0.0,
+    "confusion_matrix": [
+      [
+        9,
+        0
+      ],
+      [
+        0,
+        9
+      ]
+    ],
+    "threshold": 0.5,
+    "total_samples": 18,
+    "true_benign_count": 9,
+    "true_malware_count": 9
+  },
+  "trained_at": "2026-09-22T05:50:03.775920+00:00",
+  "git_commit": "466a8202fd6e40278e810faa4de7bbc5f362286c"
+}

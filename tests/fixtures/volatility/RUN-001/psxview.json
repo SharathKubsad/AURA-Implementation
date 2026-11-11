@@ -1,0 +1,8 @@
+[
+  {"pid": 4, "imagefilename": "System", "pslist": "True", "psscan": "True", "exittime": "N/A"},
+  {"pid": 280, "imagefilename": "smss.exe", "pslist": "True", "psscan": "True", "exittime": "N/A"},
+  {"pid": 520, "imagefilename": "services.exe", "pslist": "True", "psscan": "True", "exittime": "N/A"},
+  {"pid": 680, "imagefilename": "svchost.exe", "pslist": "True", "psscan": "True", "exittime": "N/A"},
+  {"pid": 1820, "imagefilename": "userinit.exe", "pslist": "False", "psscan": "True", "exittime": "2026-09-13 14:10:05.000000 UTC"},
+  {"pid": 1840, "imagefilename": "explorer.exe", "pslist": "True", "psscan": "True", "exittime": "N/A"}
+]

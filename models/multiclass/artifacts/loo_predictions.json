@@ -1,0 +1,194 @@
+[
+  {
+    "fold": 0,
+    "true_label": "PowerShell Fileless",
+    "pred_label": "Registry Malware",
+    "correct": false
+  },
+  {
+    "fold": 1,
+    "true_label": "PowerShell Fileless",
+    "pred_label": "Process Hollowing",
+    "correct": false
+  },
+  {
+    "fold": 2,
+    "true_label": "Process Hollowing",
+    "pred_label": "Registry Malware",
+    "correct": false
+  },
+  {
+    "fold": 3,
+    "true_label": "Empire Framework",
+    "pred_label": "Empire Framework",
+    "correct": true
+  },
+  {
+    "fold": 4,
+    "true_label": "Empire Framework",
+    "pred_label": "Empire Framework",
+    "correct": true
+  },
+  {
+    "fold": 5,
+    "true_label": "Empire Framework",
+    "pred_label": "WMI Malware",
+    "correct": false
+  },
+  {
+    "fold": 6,
+    "true_label": "Process Hollowing",
+    "pred_label": "Memory-only RAT",
+    "correct": false
+  },
+  {
+    "fold": 7,
+    "true_label": "Process Hollowing",
+    "pred_label": "Reflective DLL Injection",
+    "correct": false
+  },
+  {
+    "fold": 8,
+    "true_label": "Memory-only RAT",
+    "pred_label": "LOLBins Abuse",
+    "correct": false
+  },
+  {
+    "fold": 9,
+    "true_label": "Memory-only RAT",
+    "pred_label": "Registry Malware",
+    "correct": false
+  },
+  {
+    "fold": 10,
+    "true_label": "Memory-only RAT",
+    "pred_label": "Memory-only RAT",
+    "correct": true
+  },
+  {
+    "fold": 11,
+    "true_label": "Registry Malware",
+    "pred_label": "Cobalt Strike Beacon",
+    "correct": false
+  },
+  {
+    "fold": 12,
+    "true_label": "Registry Malware",
+    "pred_label": "Cobalt Strike Beacon",
+    "correct": false
+  },
+  {
+    "fold": 13,
+    "true_label": "Registry Malware",
+    "pred_label": "Cobalt Strike Beacon",
+    "correct": false
+  },
+  {
+    "fold": 14,
+    "true_label": "Cobalt Strike Beacon",
+    "pred_label": "Registry Malware",
+    "correct": false
+  },
+  {
+    "fold": 15,
+    "true_label": "Cobalt Strike Beacon",
+    "pred_label": "Registry Malware",
+    "correct": false
+  },
+  {
+    "fold": 16,
+    "true_label": "Cobalt Strike Beacon",
+    "pred_label": "Registry Malware",
+    "correct": false
+  },
+  {
+    "fold": 17,
+    "true_label": "Metasploit Memory Payloads",
+    "pred_label": "WMI Malware",
+    "correct": false
+  },
+  {
+    "fold": 18,
+    "true_label": "Metasploit Memory Payloads",
+    "pred_label": "WMI Malware",
+    "correct": false
+  },
+  {
+    "fold": 19,
+    "true_label": "Metasploit Memory Payloads",
+    "pred_label": "WMI Malware",
+    "correct": false
+  },
+  {
+    "fold": 20,
+    "true_label": "WMI Malware",
+    "pred_label": "Process Hollowing",
+    "correct": false
+  },
+  {
+    "fold": 21,
+    "true_label": "WMI Malware",
+    "pred_label": "Metasploit Memory Payloads",
+    "correct": false
+  },
+  {
+    "fold": 22,
+    "true_label": "WMI Malware",
+    "pred_label": "Metasploit Memory Payloads",
+    "correct": false
+  },
+  {
+    "fold": 23,
+    "true_label": "Reflective DLL Injection",
+    "pred_label": "Process Hollowing",
+    "correct": false
+  },
+  {
+    "fold": 24,
+    "true_label": "Reflective DLL Injection",
+    "pred_label": "LOLBins Abuse",
+    "correct": false
+  },
+  {
+    "fold": 25,
+    "true_label": "Reflective DLL Injection",
+    "pred_label": "Process Hollowing",
+    "correct": false
+  },
+  {
+    "fold": 26,
+    "true_label": "LOLBins Abuse",
+    "pred_label": "Fileless Ransomware",
+    "correct": false
+  },
+  {
+    "fold": 27,
+    "true_label": "LOLBins Abuse",
+    "pred_label": "Memory-only RAT",
+    "correct": false
+  },
+  {
+    "fold": 28,
+    "true_label": "LOLBins Abuse",
+    "pred_label": "Reflective DLL Injection",
+    "correct": false
+  },
+  {
+    "fold": 29,
+    "true_label": "Fileless Ransomware",
+    "pred_label": "Empire Framework",
+    "correct": false
+  },
+  {
+    "fold": 30,
+    "true_label": "Fileless Ransomware",
+    "pred_label": "Empire Framework",
+    "correct": false
+  },
+  {
+    "fold": 31,
+    "true_label": "Fileless Ransomware",
+    "pred_label": "Empire Framework",
+    "correct": false
+  }
+]

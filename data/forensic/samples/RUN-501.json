@@ -1,0 +1,26 @@
+{
+  "sample_id": "EXEC_RUN-501",
+  "run_id": "RUN-501",
+  "label": 1,
+  "family": "metasploit_memory_payloads",
+  "track": "TRACK_A",
+  "os": "microsoft_windows_11_home",
+  "execution_timestamp": "2026-09-20T11:29:26Z",
+  "source_category": "custom_metasploit_memory_payloads",
+  "metadata_source": "C:\\Users\\Prash\\Desktop\\Real-Time-Fileless-Malware-Detection\\Dataset\\custom_metasploit_memory_payloads\\metadata\\RUN-501.json",
+  "evidence_availability": {
+    "volatility": true,
+    "sysmon": true,
+    "powershell": true,
+    "network_connections": true,
+    "process_snapshot": true
+  },
+  "provenance": {
+    "sample_id": "EXEC_RUN-501",
+    "source_file": "metadata/RUN-501.json",
+    "source_type": "METADATA",
+    "source_plugin": "sample_metadata",
+    "extraction_timestamp": "2026-09-24T05:48:49.973646+00:00",
+    "extractor_version": "2.0.0-rich-forensic"
+  }
+}

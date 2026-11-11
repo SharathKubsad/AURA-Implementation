@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/Prash-2402/Real-Time-Fileless-Malware-Detection/main/data/schemas/command_features.schema.json",
+  "title": "CommandFeatures",
+  "description": "Command-line and script execution schema for the Command modality (Track B). Includes raw text representation for NLP fine-tuning (DistilBERT/RoBERTa) and structured derived metrics.",
+  "type": "object",
+  "properties": {
+    "sample_id": {
+      "type": "string",
+      "description": "Foreign key linking to SampleMetadata.sample_id"
+    },
+    "raw_command_text": {
+      "type": "string",
+      "description": "Raw string of the executed command line, script block, or shell sequence. Serves as the direct input representation for NLP tokenization (DistilBERT/RoBERTa). Not a tabular numeric feature.",
+      "source": "Volatility3 windows.cmdline / PowerShell EID 4104 / Sysmon Event ID 1 / bash history",
+      "telemetry_nature": "dynamic",
+      "missing_value_policy": "fill_empty_string"
+    },
+    "command_length": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Character length of the primary executed command string",
+      "source": "Derived from raw_command_text",
+      "telemetry_nature": "dynamic",
+      "missing_value_policy": "fill_zero"
+    },
+    "shannon_entropy": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 8.0,
+      "description": "Calculated Shannon entropy of the command text (high entropy indicates obfuscation/encoding)",
+      "source": "Derived from raw_command_text",
+      "telemetry_nature": "dynamic",
+      "missing_value_policy": "impute_median"
+    },
+    "is_base64_encoded": {
+      "type": "integer",
+      "enum": [0, 1],
+      "description": "Binary flag indicating presence of base64 payloads or arguments (-EncodedCommand, -enc, etc.)",
+      "source": "Derived from raw_command_text / PowerShell ScriptBlock",
+      "telemetry_nature": "dynamic",
+      "missing_value_policy": "fill_zero"
+    },
+    "has_download_cradle": {
+      "type": "integer",
+      "enum": [0, 1],
+      "description": "Binary flag indicating download cradles (Net.WebClient, IWR, Invoke-RestMethod, curl, wget)",
+      "source": "Derived from raw_command_text / PowerShell ScriptBlock",
+      "telemetry_nature": "dynamic",
+      "missing_value_policy": "fill_zero"
+    },
+    "has_bypass_execution_policy": {
+      "type": "integer",
+      "enum": [0, 1],
+      "description": "Binary flag indicating PowerShell execution policy bypass flags (-ExecutionPolicy Bypass / -ep bypass)",
+      "source": "Derived from raw_command_text",
+      "telemetry_nature": "dynamic",
+      "missing_value_policy": "fill_zero"
+    },
+    "has_hidden_window": {
+      "type": "integer",
+      "enum": [0, 1],
+      "description": "Binary flag indicating hidden or non-interactive window execution styles (-WindowStyle Hidden, -w hidden, -noni)",
+      "source": "Derived from raw_command_text",
+      "telemetry_nature": "dynamic",
+      "missing_value_policy": "fill_zero"
+    },
+    "uses_lolbins": {
+      "type": "integer",
+      "enum": [0, 1],
+      "description": "Binary flag indicating invocation of Living-off-the-Land binaries (certutil, mshta, rundll32, regsvr32, bitsadmin, wmic)",
+      "source": "Volatility3 windows.cmdline / Sysmon Event ID 1",
+      "telemetry_nature": "dynamic",
+      "missing_value_policy": "fill_zero"
+    },
+    "registry_persistence_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Count of command executions modifying Run, RunOnce, Winlogon, or ASEP registry keys",
+      "source": "Volatility3 windows.registry.printkey / Sysmon Event ID 12, 13",
+      "telemetry_nature": "dynamic",
+      "missing_value_policy": "fill_zero"
+    }
+  },
+  "required": [
+    "sample_id",
+    "raw_command_text",
+    "command_length",
+    "shannon_entropy",
+    "is_base64_encoded",
+    "has_download_cradle",
+    "has_bypass_execution_policy",
+    "has_hidden_window",
+    "uses_lolbins"
+  ],
+  "additionalProperties": false
+}

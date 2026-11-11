@@ -1,0 +1,13 @@
+{
+  "sample_id": "RUN-1103",
+  "total_process_count": 143,
+  "hidden_process_count": 0,
+  "anomalous_ppid_count": 0,
+  "avg_threads_per_process": 11.8,
+  "max_threads_in_single_process": 151,
+  "total_handle_count": 54284,
+  "suspicious_dll_count": 0,
+  "malfind_process_count": 3,
+  "elevated_privilege_count": 53,
+  "unlinked_dll_count": 423
+}

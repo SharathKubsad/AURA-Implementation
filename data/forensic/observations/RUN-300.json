@@ -1,0 +1,25 @@
+{
+  "run_id": "RUN-300",
+  "sample_id": "EXEC_RUN-300",
+  "label": 1,
+  "family": "registry_resident_malware",
+  "counts": {
+    "processes": 140,
+    "threads": 1515,
+    "handles": 50374,
+    "modules": 6511,
+    "privileges": 4655,
+    "vads": 17393,
+    "malfind_findings": 19,
+    "network_connections": 354,
+    "sysmon_events": 7709,
+    "powershell_events": 504,
+    "command_events": 4231,
+    "relationships_tree": 132,
+    "relationships_network": 84,
+    "relationships_command": 323,
+    "relationships_memory": 19
+  },
+  "malfind_baseline_exceptions": 15,
+  "hidden_processes_psxview": 7
+}

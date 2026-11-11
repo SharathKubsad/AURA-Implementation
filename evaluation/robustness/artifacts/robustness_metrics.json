@@ -1,0 +1,17 @@
+{
+  "accuracy": 0.88,
+  "precision": 0.8065,
+  "recall": 1.0,
+  "f1": 0.8929,
+  "roc_auc": 0.992,
+  "positive_class": "Malware (1)",
+  "threshold": 0.6,
+  "sample_count": 50,
+  "class_distribution": {
+    "benign": 25,
+    "malware": 25
+  },
+  "methodology": "200 adversarial perturbations derived from authentic custom VM samples with beacon jitter, obfuscation stripping, and stealth process trees evaluated through full DetectionService.",
+  "limitations": "Evaluates pipeline response to adversarial perturbations grounded in authentic baseline captures; host-only captures lack external DNS query jitter.",
+  "num_evaluated": 50
+}

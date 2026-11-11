@@ -1,0 +1,14 @@
+﻿{
+    "sample_id":  "EXEC_RUN-800",
+    "label":  1,
+    "family":  "lolbins_abuse",
+    "track":  "TRACK_B",
+    "os":  "microsoft_windows_11_home",
+    "execution_timestamp":  "2026-09-20T16:59:04Z",
+    "source_type":  "custom_sandbox",
+    "source_reference":  "manual_controlled_execution",
+    "evidence_sha256":  "fc9b6ad89fb01a7edbcbc391ddcb8b4e84c5ccb6da1b26e35770f72f89c23185",
+    "memory_dump":  true,
+    "sysmon_available":  true,
+    "notes":  "Controlled execution for lolbins_abuse"
+}

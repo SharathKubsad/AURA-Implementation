@@ -1,0 +1,13 @@
+{
+  "0": "cobalt_strike_beacon",
+  "1": "empire_framework",
+  "2": "fileless_ransomware",
+  "3": "lolbins_abuse",
+  "4": "memory_only_rat",
+  "5": "metasploit_memory_payloads",
+  "6": "powershell_fileless",
+  "7": "process_hollowing",
+  "8": "reflective_dll_injection",
+  "9": "registry_resident_malware",
+  "10": "wmi_malware"
+}

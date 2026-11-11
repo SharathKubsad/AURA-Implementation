@@ -1,0 +1,12 @@
+{
+  "sample_id": "EXEC_RUN-1106",
+  "raw_command_text": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\"",
+  "command_length": 59,
+  "shannon_entropy": 4.5053,
+  "is_base64_encoded": 0,
+  "has_download_cradle": 0,
+  "has_bypass_execution_policy": 0,
+  "has_hidden_window": 0,
+  "uses_lolbins": 0,
+  "registry_persistence_count": 0
+}

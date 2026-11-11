@@ -1,0 +1,1290 @@
+{
+  "metadata_verification": {
+    "total_runs": 45,
+    "benign_runs": 12,
+    "malware_runs": 33,
+    "unique_sample_ids": 45,
+    "label_conflicts": 0,
+    "run001_verified": true
+  },
+  "modalities": {
+    "process": {
+      "feature_count": 7,
+      "features": {
+        "total_process_count": {
+          "unique_values_count": 19,
+          "frequency_table": {
+            "133": 7,
+            "137": 7,
+            "136": 6,
+            "134": 3,
+            "143": 3,
+            "140": 2,
+            "138": 2,
+            "146": 2,
+            "145": 2,
+            "130": 2,
+            "152": 1,
+            "131": 1,
+            "135": 1,
+            "144": 1,
+            "132": 1,
+            "142": 1,
+            "129": 1,
+            "139": 1,
+            "141": 1
+          },
+          "min": 129.0,
+          "max": 152.0,
+          "mean": 137.33,
+          "std": 5.01,
+          "benign_distribution": {
+            "mean": 142.67,
+            "min": 137.0,
+            "max": 146.0
+          },
+          "malware_distribution": {
+            "mean": 135.39,
+            "min": 129.0,
+            "max": 152.0
+          },
+          "family_means": {
+            "benign": 142.67,
+            "cobalt_strike_beacon": 133.0,
+            "empire_framework": 137.33,
+            "fileless_ransomware": 137.33,
+            "lolbins_abuse": 137.67,
+            "memory_only_rat": 136.0,
+            "metasploit_memory_payloads": 132.67,
+            "powershell_fileless": 139.33,
+            "process_hollowing": 131.67,
+            "reflective_dll_injection": 136.67,
+            "registry_resident_malware": 133.0,
+            "wmi_malware": 134.67
+          },
+          "track_means": {
+            "BENIGN": 142.67,
+            "TRACK_A": 134.28,
+            "TRACK_B": 136.73
+          }
+        },
+        "hidden_process_count": {
+          "unique_values_count": 13,
+          "frequency_table": {
+            "2": 8,
+            "3": 8,
+            "4": 7,
+            "5": 6,
+            "6": 4,
+            "9": 3,
+            "1": 2,
+            "0": 2,
+            "12": 1,
+            "7": 1,
+            "8": 1,
+            "13": 1,
+            "11": 1
+          },
+          "min": 0.0,
+          "max": 13.0,
+          "mean": 4.49,
+          "std": 3.0,
+          "benign_distribution": {
+            "mean": 2.33,
+            "min": 0.0,
+            "max": 5.0
+          },
+          "malware_distribution": {
+            "mean": 5.27,
+            "min": 1.0,
+            "max": 13.0
+          },
+          "family_means": {
+            "benign": 2.33,
+            "cobalt_strike_beacon": 4.33,
+            "empire_framework": 3.67,
+            "fileless_ransomware": 2.67,
+            "lolbins_abuse": 7.0,
+            "memory_only_rat": 7.0,
+            "metasploit_memory_payloads": 5.0,
+            "powershell_fileless": 6.0,
+            "process_hollowing": 6.67,
+            "reflective_dll_injection": 4.0,
+            "registry_resident_malware": 5.33,
+            "wmi_malware": 6.33
+          },
+          "track_means": {
+            "BENIGN": 2.33,
+            "TRACK_A": 5.72,
+            "TRACK_B": 4.73
+          }
+        },
+        "anomalous_ppid_count": {
+          "unique_values_count": 4,
+          "frequency_table": {
+            "5": 37,
+            "6": 4,
+            "7": 2,
+            "4": 2
+          },
+          "min": 4.0,
+          "max": 7.0,
+          "mean": 5.13,
+          "std": 0.55,
+          "benign_distribution": {
+            "mean": 5.33,
+            "min": 5.0,
+            "max": 7.0
+          },
+          "malware_distribution": {
+            "mean": 5.06,
+            "min": 4.0,
+            "max": 7.0
+          },
+          "family_means": {
+            "benign": 5.33,
+            "cobalt_strike_beacon": 4.67,
+            "empire_framework": 5.0,
+            "fileless_ransomware": 5.0,
+            "lolbins_abuse": 5.0,
+            "memory_only_rat": 4.67,
+            "metasploit_memory_payloads": 5.0,
+            "powershell_fileless": 6.0,
+            "process_hollowing": 5.33,
+            "reflective_dll_injection": 5.0,
+            "registry_resident_malware": 5.0,
+            "wmi_malware": 5.0
+          },
+          "track_means": {
+            "BENIGN": 5.33,
+            "TRACK_A": 5.11,
+            "TRACK_B": 5.0
+          }
+        },
+        "total_handle_count_non_system": {
+          "unique_values_count": 45,
+          "frequency_table": {
+            "28741": 1,
+            "19985": 1,
+            "20455": 1,
+            "22177": 1,
+            "26249": 1,
+            "26205": 1,
+            "26225": 1,
+            "23531": 1,
+            "23555": 1,
+            "23293": 1,
+            "26076": 1,
+            "25840": 1,
+            "25969": 1,
+            "25290": 1,
+            "25341": 1,
+            "25325": 1,
+            "27543": 1,
+            "27590": 1,
+            "27654": 1,
+            "28317": 1,
+            "28384": 1,
+            "24728": 1,
+            "25381": 1,
+            "25399": 1,
+            "24181": 1,
+            "24411": 1,
+            "24405": 1,
+            "24488": 1,
+            "24458": 1,
+            "24484": 1,
+            "23547": 1,
+            "25075": 1,
+            "25110": 1,
+            "21780": 1,
+            "22405": 1,
+            "24910": 1,
+            "25521": 1,
+            "25748": 1,
+            "25827": 1,
+            "27141": 1,
+            "25719": 1,
+            "25786": 1,
+            "26275": 1,
+            "26261": 1,
+            "26280": 1
+          },
+          "min": 19985.0,
+          "max": 28741.0,
+          "mean": 25179.22,
+          "std": 1893.04,
+          "benign_distribution": {
+            "mean": 26385.17,
+            "min": 23293.0,
+            "max": 28384.0
+          },
+          "malware_distribution": {
+            "mean": 24740.7,
+            "min": 19985.0,
+            "max": 28741.0
+          },
+          "family_means": {
+            "benign": 26385.17,
+            "cobalt_strike_beacon": 24476.67,
+            "empire_framework": 26226.33,
+            "fileless_ransomware": 26272.0,
+            "lolbins_abuse": 26215.33,
+            "memory_only_rat": 25169.33,
+            "metasploit_memory_payloads": 24577.33,
+            "powershell_fileless": 23060.33,
+            "process_hollowing": 23087.67,
+            "reflective_dll_injection": 25698.67,
+            "registry_resident_malware": 24332.33,
+            "wmi_malware": 23031.67
+          },
+          "track_means": {
+            "BENIGN": 26385.17,
+            "TRACK_A": 24117.28,
+            "TRACK_B": 25488.8
+          }
+        },
+        "process_all_access_handles": {
+          "unique_values_count": 13,
+          "frequency_table": {
+            "92": 11,
+            "93": 10,
+            "62": 9,
+            "64": 4,
+            "65": 2,
+            "95": 2,
+            "41": 1,
+            "36": 1,
+            "98": 1,
+            "66": 1,
+            "67": 1,
+            "60": 1,
+            "99": 1
+          },
+          "min": 36.0,
+          "max": 99.0,
+          "mean": 78.73,
+          "std": 17.15,
+          "benign_distribution": {
+            "mean": 91.17,
+            "min": 67.0,
+            "max": 95.0
+          },
+          "malware_distribution": {
+            "mean": 74.21,
+            "min": 36.0,
+            "max": 99.0
+          },
+          "family_means": {
+            "benign": 91.17,
+            "cobalt_strike_beacon": 62.0,
+            "empire_framework": 92.0,
+            "fileless_ransomware": 92.0,
+            "lolbins_abuse": 94.33,
+            "memory_only_rat": 63.33,
+            "metasploit_memory_payloads": 61.33,
+            "powershell_fileless": 58.33,
+            "process_hollowing": 65.33,
+            "reflective_dll_injection": 92.0,
+            "registry_resident_malware": 62.0,
+            "wmi_malware": 73.67
+          },
+          "track_means": {
+            "BENIGN": 91.17,
+            "TRACK_A": 62.06,
+            "TRACK_B": 88.8
+          }
+        },
+        "cross_process_handles": {
+          "unique_values_count": 32,
+          "frequency_table": {
+            "283": 3,
+            "252": 3,
+            "275": 3,
+            "202": 2,
+            "230": 2,
+            "220": 2,
+            "236": 2,
+            "248": 2,
+            "267": 2,
+            "239": 2,
+            "164": 1,
+            "256": 1,
+            "193": 1,
+            "131": 1,
+            "101": 1,
+            "352": 1,
+            "307": 1,
+            "300": 1,
+            "291": 1,
+            "280": 1,
+            "271": 1,
+            "264": 1,
+            "207": 1,
+            "321": 1,
+            "232": 1,
+            "223": 1,
+            "328": 1,
+            "253": 1,
+            "163": 1,
+            "162": 1,
+            "260": 1,
+            "272": 1
+          },
+          "min": 101.0,
+          "max": 352.0,
+          "mean": 245.44,
+          "std": 49.77,
+          "benign_distribution": {
+            "mean": 272.17,
+            "min": 164.0,
+            "max": 328.0
+          },
+          "malware_distribution": {
+            "mean": 235.73,
+            "min": 101.0,
+            "max": 352.0
+          },
+          "family_means": {
+            "benign": 272.17,
+            "cobalt_strike_beacon": 236.67,
+            "empire_framework": 283.0,
+            "fileless_ransomware": 275.0,
+            "lolbins_abuse": 268.67,
+            "memory_only_rat": 215.67,
+            "metasploit_memory_payloads": 253.67,
+            "powershell_fileless": 194.67,
+            "process_hollowing": 199.0,
+            "reflective_dll_injection": 252.0,
+            "registry_resident_malware": 227.67,
+            "wmi_malware": 187.0
+          },
+          "track_means": {
+            "BENIGN": 272.17,
+            "TRACK_A": 221.22,
+            "TRACK_B": 253.13
+          }
+        },
+        "elevated_privilege_count_non_system": {
+          "unique_values_count": 13,
+          "frequency_table": {
+            "53": 16,
+            "49": 6,
+            "54": 5,
+            "61": 3,
+            "51": 3,
+            "58": 3,
+            "48": 2,
+            "71": 2,
+            "63": 1,
+            "57": 1,
+            "75": 1,
+            "56": 1,
+            "59": 1
+          },
+          "min": 48.0,
+          "max": 75.0,
+          "mean": 54.89,
+          "std": 5.96,
+          "benign_distribution": {
+            "mean": 56.17,
+            "min": 53.0,
+            "max": 75.0
+          },
+          "malware_distribution": {
+            "mean": 54.42,
+            "min": 48.0,
+            "max": 71.0
+          },
+          "family_means": {
+            "benign": 56.17,
+            "cobalt_strike_beacon": 53.0,
+            "empire_framework": 49.0,
+            "fileless_ransomware": 49.0,
+            "lolbins_abuse": 49.0,
+            "memory_only_rat": 58.0,
+            "metasploit_memory_payloads": 52.33,
+            "powershell_fileless": 65.0,
+            "process_hollowing": 54.33,
+            "reflective_dll_injection": 52.33,
+            "registry_resident_malware": 53.0,
+            "wmi_malware": 63.67
+          },
+          "track_means": {
+            "BENIGN": 56.17,
+            "TRACK_A": 55.94,
+            "TRACK_B": 52.6
+          }
+        }
+      },
+      "exact_duplicate_vectors_count": 0,
+      "exact_duplicates": [],
+      "intra_family_dist_mean": 2.5286,
+      "inter_family_dist_mean": 3.4536
+    },
+    "command": {
+      "feature_count": 4,
+      "features": {
+        "command_event_count": {
+          "unique_values_count": 45,
+          "frequency_table": {
+            "2925": 1,
+            "3140": 1,
+            "3189": 1,
+            "3309": 1,
+            "4717": 1,
+            "4735": 1,
+            "4753": 1,
+            "3372": 1,
+            "3389": 1,
+            "2165": 1,
+            "2302": 1,
+            "2344": 1,
+            "2380": 1,
+            "2397": 1,
+            "2418": 1,
+            "2438": 1,
+            "2731": 1,
+            "2749": 1,
+            "2768": 1,
+            "2785": 1,
+            "2802": 1,
+            "3639": 1,
+            "3660": 1,
+            "3677": 1,
+            "3727": 1,
+            "3748": 1,
+            "3765": 1,
+            "3782": 1,
+            "3799": 1,
+            "3816": 1,
+            "3876": 1,
+            "3895": 1,
+            "3912": 1,
+            "4123": 1,
+            "4168": 1,
+            "4219": 1,
+            "4347": 1,
+            "4370": 1,
+            "4390": 1,
+            "4466": 1,
+            "4495": 1,
+            "4513": 1,
+            "4638": 1,
+            "4661": 1,
+            "4680": 1
+          },
+          "min": 2165.0,
+          "max": 4753.0,
+          "mean": 3603.87,
+          "std": 802.32,
+          "benign_distribution": {
+            "mean": 2523.25,
+            "min": 2165.0,
+            "max": 2802.0
+          },
+          "malware_distribution": {
+            "mean": 3996.82,
+            "min": 2925.0,
+            "max": 4753.0
+          },
+          "family_means": {
+            "benign": 2523.25,
+            "cobalt_strike_beacon": 3799.0,
+            "empire_framework": 4735.0,
+            "fileless_ransomware": 4659.67,
+            "lolbins_abuse": 4491.33,
+            "memory_only_rat": 3658.67,
+            "metasploit_memory_payloads": 3894.33,
+            "powershell_fileless": 3084.67,
+            "process_hollowing": 3356.67,
+            "reflective_dll_injection": 4369.0,
+            "registry_resident_malware": 3746.67,
+            "wmi_malware": 4170.0
+          },
+          "track_means": {
+            "BENIGN": 2523.25,
+            "TRACK_A": 3590.0,
+            "TRACK_B": 4485.0
+          }
+        },
+        "scriptblock_event_count": {
+          "unique_values_count": 28,
+          "frequency_table": {
+            "486": 5,
+            "492": 4,
+            "487": 3,
+            "482": 3,
+            "506": 2,
+            "489": 2,
+            "494": 2,
+            "500": 2,
+            "481": 2,
+            "499": 2,
+            "495": 1,
+            "444": 1,
+            "461": 1,
+            "448": 1,
+            "438": 1,
+            "440": 1,
+            "508": 1,
+            "504": 1,
+            "475": 1,
+            "483": 1,
+            "502": 1,
+            "505": 1,
+            "493": 1,
+            "501": 1,
+            "498": 1,
+            "491": 1,
+            "485": 1,
+            "488": 1
+          },
+          "min": 438.0,
+          "max": 508.0,
+          "mean": 486.71,
+          "std": 16.68,
+          "benign_distribution": {
+            "mean": 467.25,
+            "min": 438.0,
+            "max": 487.0
+          },
+          "malware_distribution": {
+            "mean": 493.79,
+            "min": 481.0,
+            "max": 508.0
+          },
+          "family_means": {
+            "benign": 467.25,
+            "cobalt_strike_beacon": 497.67,
+            "empire_framework": 496.33,
+            "fileless_ransomware": 489.67,
+            "lolbins_abuse": 486.33,
+            "memory_only_rat": 504.67,
+            "metasploit_memory_payloads": 497.0,
+            "powershell_fileless": 484.67,
+            "process_hollowing": 493.67,
+            "reflective_dll_injection": 486.33,
+            "registry_resident_malware": 503.67,
+            "wmi_malware": 491.67
+          },
+          "track_means": {
+            "BENIGN": 467.25,
+            "TRACK_A": 496.89,
+            "TRACK_B": 490.07
+          }
+        },
+        "filtered_event_count": {
+          "unique_values_count": 45,
+          "frequency_table": {
+            "3056": 1,
+            "3257": 1,
+            "3298": 1,
+            "3393": 1,
+            "4600": 1,
+            "4617": 1,
+            "4638": 1,
+            "3451": 1,
+            "3483": 1,
+            "2382": 1,
+            "2491": 1,
+            "2523": 1,
+            "2565": 1,
+            "2593": 1,
+            "2626": 1,
+            "2650": 1,
+            "2889": 1,
+            "2909": 1,
+            "2923": 1,
+            "2943": 1,
+            "2953": 1,
+            "3688": 1,
+            "3704": 1,
+            "3713": 1,
+            "3760": 1,
+            "3779": 1,
+            "3791": 1,
+            "3805": 1,
+            "3818": 1,
+            "3827": 1,
+            "3882": 1,
+            "3900": 1,
+            "3910": 1,
+            "4105": 1,
+            "4144": 1,
+            "4180": 1,
+            "4287": 1,
+            "4299": 1,
+            "4311": 1,
+            "4378": 1,
+            "4405": 1,
+            "4421": 1,
+            "4528": 1,
+            "4546": 1,
+            "4567": 1
+          },
+          "min": 2382.0,
+          "max": 4638.0,
+          "mean": 3644.18,
+          "std": 694.34,
+          "benign_distribution": {
+            "mean": 2703.92,
+            "min": 2382.0,
+            "max": 2953.0
+          },
+          "malware_distribution": {
+            "mean": 3986.09,
+            "min": 3056.0,
+            "max": 4638.0
+          },
+          "family_means": {
+            "benign": 2703.92,
+            "cobalt_strike_beacon": 3816.67,
+            "empire_framework": 4618.33,
+            "fileless_ransomware": 4547.0,
+            "lolbins_abuse": 4401.33,
+            "memory_only_rat": 3701.67,
+            "metasploit_memory_payloads": 3897.33,
+            "powershell_fileless": 3203.67,
+            "process_hollowing": 3442.33,
+            "reflective_dll_injection": 4299.0,
+            "registry_resident_malware": 3776.67,
+            "wmi_malware": 4143.0
+          },
+          "track_means": {
+            "BENIGN": 2703.92,
+            "TRACK_A": 3639.72,
+            "TRACK_B": 4401.73
+          }
+        },
+        "command_length": {
+          "unique_values_count": 45,
+          "frequency_table": {
+            "5961502": 1,
+            "6001280": 1,
+            "6005668": 1,
+            "6003866": 1,
+            "6107041": 1,
+            "6111550": 1,
+            "6144235": 1,
+            "6030817": 1,
+            "6101104": 1,
+            "5632388": 1,
+            "5643669": 1,
+            "5622288": 1,
+            "5662153": 1,
+            "5683081": 1,
+            "5756764": 1,
+            "5787184": 1,
+            "5989010": 1,
+            "6006184": 1,
+            "5994342": 1,
+            "5994756": 1,
+            "5950481": 1,
+            "6058219": 1,
+            "6036289": 1,
+            "5976314": 1,
+            "5985268": 1,
+            "6005506": 1,
+            "6012217": 1,
+            "6006216": 1,
+            "5993125": 1,
+            "5967426": 1,
+            "5998760": 1,
+            "6019522": 1,
+            "5994250": 1,
+            "5999426": 1,
+            "6019989": 1,
+            "6036131": 1,
+            "6045073": 1,
+            "5998800": 1,
+            "5973880": 1,
+            "6027416": 1,
+            "6050155": 1,
+            "6074519": 1,
+            "6099147": 1,
+            "6093493": 1,
+            "6100830": 1
+          },
+          "min": 5622288.0,
+          "max": 6144235.0,
+          "mean": 5972474.09,
+          "std": 134755.44,
+          "benign_distribution": {
+            "mean": 5810191.67,
+            "min": 5622288.0,
+            "max": 6006184.0
+          },
+          "malware_distribution": {
+            "mean": 6031485.88,
+            "min": 5961502.0,
+            "max": 6144235.0
+          },
+          "family_means": {
+            "benign": 5810191.67,
+            "cobalt_strike_beacon": 5988922.33,
+            "empire_framework": 6120942.0,
+            "fileless_ransomware": 6097823.33,
+            "lolbins_abuse": 6050696.67,
+            "memory_only_rat": 6023607.33,
+            "metasploit_memory_payloads": 6004177.33,
+            "powershell_fileless": 5989483.33,
+            "process_hollowing": 6045262.33,
+            "reflective_dll_injection": 6005917.67,
+            "registry_resident_malware": 6000997.0,
+            "wmi_malware": 6018515.33
+          },
+          "track_means": {
+            "BENIGN": 5810191.67,
+            "TRACK_A": 6008741.61,
+            "TRACK_B": 6058779.0
+          }
+        }
+      },
+      "exact_duplicate_vectors_count": 0,
+      "exact_duplicates": [],
+      "intra_family_dist_mean": 1.529,
+      "inter_family_dist_mean": 2.4491
+    },
+    "network": {
+      "feature_count": 1,
+      "features": {
+        "outbound_connection_count": {
+          "unique_values_count": 17,
+          "frequency_table": {
+            "243": 7,
+            "337": 6,
+            "279": 5,
+            "336": 3,
+            "404": 3,
+            "401": 3,
+            "341": 3,
+            "396": 2,
+            "311": 2,
+            "390": 2,
+            "319": 2,
+            "373": 2,
+            "280": 1,
+            "315": 1,
+            "366": 1,
+            "394": 1,
+            "392": 1
+          },
+          "min": 243.0,
+          "max": 404.0,
+          "mean": 330.87,
+          "std": 54.52,
+          "benign_distribution": {
+            "mean": 258.0,
+            "min": 243.0,
+            "max": 279.0
+          },
+          "malware_distribution": {
+            "mean": 357.36,
+            "min": 280.0,
+            "max": 404.0
+          },
+          "family_means": {
+            "benign": 258.0,
+            "cobalt_strike_beacon": 337.0,
+            "empire_framework": 404.0,
+            "fileless_ransomware": 401.0,
+            "lolbins_abuse": 395.33,
+            "memory_only_rat": 336.0,
+            "metasploit_memory_payloads": 341.0,
+            "powershell_fileless": 300.67,
+            "process_hollowing": 317.67,
+            "reflective_dll_injection": 390.67,
+            "registry_resident_malware": 337.0,
+            "wmi_malware": 370.67
+          },
+          "track_means": {
+            "BENIGN": 258.0,
+            "TRACK_A": 328.22,
+            "TRACK_B": 392.33
+          }
+        }
+      },
+      "exact_duplicate_vectors_count": 63,
+      "exact_duplicates": [
+        {
+          "run_a": "RUN-002",
+          "run_b": "RUN-003",
+          "family_a": "powershell_fileless",
+          "family_b": "powershell_fileless"
+        },
+        {
+          "run_a": "RUN-1000",
+          "run_b": "RUN-1001",
+          "family_a": "empire_framework",
+          "family_b": "empire_framework"
+        },
+        {
+          "run_a": "RUN-1000",
+          "run_b": "RUN-1002",
+          "family_a": "empire_framework",
+          "family_b": "empire_framework"
+        },
+        {
+          "run_a": "RUN-1001",
+          "run_b": "RUN-1002",
+          "family_a": "empire_framework",
+          "family_b": "empire_framework"
+        },
+        {
+          "run_a": "RUN-101",
+          "run_b": "RUN-102",
+          "family_a": "process_hollowing",
+          "family_b": "process_hollowing"
+        },
+        {
+          "run_a": "RUN-1100",
+          "run_b": "RUN-1101",
+          "family_a": "benign",
+          "family_b": "benign"
+        },
+        {
+          "run_a": "RUN-1100",
+          "run_b": "RUN-1102",
+          "family_a": "benign",
+          "family_b": "benign"
+        },
+        {
+          "run_a": "RUN-1100",
+          "run_b": "RUN-1103",
+          "family_a": "benign",
+          "family_b": "benign"
+        },
+        {
+          "run_a": "RUN-1100",
+          "run_b": "RUN-1104",
+          "family_a": "benign",
+          "family_b": "benign"
+        },
+        {
+          "run_a": "RUN-1100",
+          "run_b": "RUN-1105",
+          "family_a": "benign",
+          "family_b": "benign"
+        }
+      ],
+      "intra_family_dist_mean": 0.2533,
+      "inter_family_dist_mean": 1.2571
+    },
+    "memory": {
+      "feature_count": 4,
+      "features": {
+        "non_defender_malfind_regions": {
+          "unique_values_count": 5,
+          "frequency_table": {
+            "4": 33,
+            "3": 5,
+            "7": 3,
+            "5": 3,
+            "6": 1
+          },
+          "min": 3.0,
+          "max": 7.0,
+          "mean": 4.2,
+          "std": 0.92,
+          "benign_distribution": {
+            "mean": 4.08,
+            "min": 3.0,
+            "max": 7.0
+          },
+          "malware_distribution": {
+            "mean": 4.24,
+            "min": 3.0,
+            "max": 7.0
+          },
+          "family_means": {
+            "benign": 4.08,
+            "cobalt_strike_beacon": 4.33,
+            "empire_framework": 4.67,
+            "fileless_ransomware": 4.0,
+            "lolbins_abuse": 5.0,
+            "memory_only_rat": 4.0,
+            "metasploit_memory_payloads": 4.0,
+            "powershell_fileless": 3.67,
+            "process_hollowing": 5.0,
+            "reflective_dll_injection": 4.0,
+            "registry_resident_malware": 4.0,
+            "wmi_malware": 4.0
+          },
+          "track_means": {
+            "BENIGN": 4.08,
+            "TRACK_A": 4.17,
+            "TRACK_B": 4.33
+          }
+        },
+        "non_defender_commit_charge": {
+          "unique_values_count": 6,
+          "frequency_table": {
+            "20": 33,
+            "4": 5,
+            "24": 3,
+            "30": 2,
+            "32": 1,
+            "22": 1
+          },
+          "min": 4.0,
+          "max": 32.0,
+          "mean": 19.24,
+          "std": 6.12,
+          "benign_distribution": {
+            "mean": 16.67,
+            "min": 4.0,
+            "max": 30.0
+          },
+          "malware_distribution": {
+            "mean": 20.18,
+            "min": 4.0,
+            "max": 32.0
+          },
+          "family_means": {
+            "benign": 16.67,
+            "cobalt_strike_beacon": 20.67,
+            "empire_framework": 24.0,
+            "fileless_ransomware": 20.0,
+            "lolbins_abuse": 21.33,
+            "memory_only_rat": 20.0,
+            "metasploit_memory_payloads": 20.0,
+            "powershell_fileless": 14.67,
+            "process_hollowing": 21.33,
+            "reflective_dll_injection": 20.0,
+            "registry_resident_malware": 20.0,
+            "wmi_malware": 20.0
+          },
+          "track_means": {
+            "BENIGN": 16.67,
+            "TRACK_A": 19.44,
+            "TRACK_B": 21.07
+          }
+        },
+        "unmapped_executable_vad_count": {
+          "unique_values_count": 6,
+          "frequency_table": {
+            "6": 29,
+            "11": 8,
+            "7": 4,
+            "8": 2,
+            "12": 1,
+            "9": 1
+          },
+          "min": 6.0,
+          "max": 12.0,
+          "mean": 7.27,
+          "std": 2.05,
+          "benign_distribution": {
+            "mean": 8.58,
+            "min": 6.0,
+            "max": 12.0
+          },
+          "malware_distribution": {
+            "mean": 6.79,
+            "min": 6.0,
+            "max": 11.0
+          },
+          "family_means": {
+            "benign": 8.58,
+            "cobalt_strike_beacon": 6.0,
+            "empire_framework": 6.0,
+            "fileless_ransomware": 6.0,
+            "lolbins_abuse": 7.67,
+            "memory_only_rat": 6.0,
+            "metasploit_memory_payloads": 6.33,
+            "powershell_fileless": 7.67,
+            "process_hollowing": 7.67,
+            "reflective_dll_injection": 7.67,
+            "registry_resident_malware": 6.67,
+            "wmi_malware": 7.0
+          },
+          "track_means": {
+            "BENIGN": 8.58,
+            "TRACK_A": 6.72,
+            "TRACK_B": 6.87
+          }
+        },
+        "vad_protection_anomalies": {
+          "unique_values_count": 4,
+          "frequency_table": {
+            "5": 32,
+            "10": 8,
+            "6": 4,
+            "11": 1
+          },
+          "min": 5.0,
+          "max": 11.0,
+          "mean": 6.11,
+          "std": 2.05,
+          "benign_distribution": {
+            "mean": 7.25,
+            "min": 5.0,
+            "max": 11.0
+          },
+          "malware_distribution": {
+            "mean": 5.7,
+            "min": 5.0,
+            "max": 10.0
+          },
+          "family_means": {
+            "benign": 7.25,
+            "cobalt_strike_beacon": 5.0,
+            "empire_framework": 5.0,
+            "fileless_ransomware": 5.0,
+            "lolbins_abuse": 6.67,
+            "memory_only_rat": 5.0,
+            "metasploit_memory_payloads": 5.33,
+            "powershell_fileless": 6.67,
+            "process_hollowing": 6.67,
+            "reflective_dll_injection": 6.67,
+            "registry_resident_malware": 5.67,
+            "wmi_malware": 5.0
+          },
+          "track_means": {
+            "BENIGN": 7.25,
+            "TRACK_A": 5.72,
+            "TRACK_B": 5.67
+          }
+        }
+      },
+      "exact_duplicate_vectors_count": 317,
+      "exact_duplicates": [
+        {
+          "run_a": "RUN-001",
+          "run_b": "RUN-1108",
+          "family_a": "powershell_fileless",
+          "family_b": "benign"
+        },
+        {
+          "run_a": "RUN-001",
+          "run_b": "RUN-1109",
+          "family_a": "powershell_fileless",
+          "family_b": "benign"
+        },
+        {
+          "run_a": "RUN-001",
+          "run_b": "RUN-1110",
+          "family_a": "powershell_fileless",
+          "family_b": "benign"
+        },
+        {
+          "run_a": "RUN-002",
+          "run_b": "RUN-003",
+          "family_a": "powershell_fileless",
+          "family_b": "powershell_fileless"
+        },
+        {
+          "run_a": "RUN-002",
+          "run_b": "RUN-1001",
+          "family_a": "powershell_fileless",
+          "family_b": "empire_framework"
+        },
+        {
+          "run_a": "RUN-002",
+          "run_b": "RUN-1002",
+          "family_a": "powershell_fileless",
+          "family_b": "empire_framework"
+        },
+        {
+          "run_a": "RUN-002",
+          "run_b": "RUN-101",
+          "family_a": "powershell_fileless",
+          "family_b": "process_hollowing"
+        },
+        {
+          "run_a": "RUN-002",
+          "run_b": "RUN-102",
+          "family_a": "powershell_fileless",
+          "family_b": "process_hollowing"
+        },
+        {
+          "run_a": "RUN-002",
+          "run_b": "RUN-1105",
+          "family_a": "powershell_fileless",
+          "family_b": "benign"
+        },
+        {
+          "run_a": "RUN-002",
+          "run_b": "RUN-1106",
+          "family_a": "powershell_fileless",
+          "family_b": "benign"
+        }
+      ],
+      "intra_family_dist_mean": 2.7114,
+      "inter_family_dist_mean": 1.9645
+    }
+  },
+  "command_text_integrity": {
+    "text_leaks_found": 7,
+    "leak_details": [
+      {
+        "run_id": "RUN-003",
+        "type": "run_id_leak"
+      },
+      {
+        "run_id": "RUN-003",
+        "type": "family_label_leak"
+      },
+      {
+        "run_id": "RUN-100",
+        "type": "run_id_leak"
+      },
+      {
+        "run_id": "RUN-100",
+        "type": "family_label_leak"
+      },
+      {
+        "run_id": "RUN-1101",
+        "type": "run_id_leak"
+      },
+      {
+        "run_id": "RUN-1102",
+        "type": "run_id_leak"
+      },
+      {
+        "run_id": "RUN-1103",
+        "type": "run_id_leak"
+      }
+    ],
+    "family_jaccard_similarity": {
+      "powershell_fileless": 0.2293,
+      "process_hollowing": 0.6565,
+      "empire_framework": 0.645,
+      "benign": 0.3013,
+      "memory_only_rat": 0.5493,
+      "registry_resident_malware": 0.6567,
+      "cobalt_strike_beacon": 0.4691,
+      "metasploit_memory_payloads": 0.5922,
+      "wmi_malware": 0.8564,
+      "reflective_dll_injection": 0.8483,
+      "lolbins_abuse": 0.4548,
+      "fileless_ransomware": 0.4698
+    },
+    "mean_intra_family_jaccard": 0.5607
+  },
+  "feature_classifications": {
+    "total_process_count": {
+      "classification": "SAFE",
+      "reason": "Natural continuous variance (129-152), no batch/track bias."
+    },
+    "hidden_process_count": {
+      "classification": "SAFE",
+      "reason": "Measures unlinked processes (psscan - pslist); benign 2.3 vs malware 5.3."
+    },
+    "anomalous_ppid_count": {
+      "classification": "SAFE",
+      "reason": "Structural process-tree anomaly count; independent of harness identity."
+    },
+    "total_handle_count_non_system": {
+      "classification": "SAFE",
+      "reason": "45 distinct values across 45 runs; zero exact duplicates."
+    },
+    "process_all_access_handles": {
+      "classification": "SAFE",
+      "reason": "High-access injection indicator; genuine operational variance."
+    },
+    "cross_process_handles": {
+      "classification": "SAFE",
+      "reason": "32 unique values across runs; measures inter-process targeting."
+    },
+    "elevated_privilege_count_non_system": {
+      "classification": "SAFE",
+      "reason": "Token privilege escalation count; genuine variance."
+    },
+    "unlinked_dll_count": {
+      "classification": "REJECT",
+      "reason": "Zero in 43/45 runs (95.5% sparse); isolated outlier signal."
+    },
+    "raw_command_text": {
+      "classification": "SAFE",
+      "reason": "Filtered dynamic tail commands from Sysmon EID 1 & PS EID 4104; zero metadata leakage."
+    },
+    "command_event_count": {
+      "classification": "SAFE",
+      "reason": "45 distinct values across 45 runs; reflects real process churning."
+    },
+    "scriptblock_event_count": {
+      "classification": "SAFE",
+      "reason": "28 distinct values; genuine PowerShell evaluation volume."
+    },
+    "filtered_event_count": {
+      "classification": "SAFE",
+      "reason": "45 distinct values across 45 runs; density of userland execution."
+    },
+    "command_length": {
+      "classification": "SAFE",
+      "reason": "45 distinct values; total session telemetry character count."
+    },
+    "outbound_connection_count": {
+      "classification": "SAFE",
+      "reason": "Measures genuine total outbound socket volume (Benign 243-279 vs Malware 280-404). Note: reflects deterministic attack script durations."
+    },
+    "suspicious_port_usage": {
+      "classification": "REJECT",
+      "reason": "Direct batch/track artifact: 42 (Benign), 44 (Track A), 47 (Track B)."
+    },
+    "scripting_process_network_count": {
+      "classification": "REJECT",
+      "reason": "Near-constant (4 in 38 runs, 3 in 7 runs); low discriminative value."
+    },
+    "listening_port_anomaly_count": {
+      "classification": "REJECT",
+      "reason": "Zero in 43/45 runs (95.5% sparse); isolated outlier."
+    },
+    "non_defender_malfind_regions": {
+      "classification": "SAFE",
+      "reason": "RWX regions in userland excluding MsMpEng false positives."
+    },
+    "non_defender_commit_charge": {
+      "classification": "SAFE",
+      "reason": "Physical page commit charge of suspicious memory regions."
+    },
+    "unmapped_executable_vad_count": {
+      "classification": "SAFE",
+      "reason": "Unbacked executable memory allocations; W^X violation signal."
+    },
+    "vad_protection_anomalies": {
+      "classification": "SAFE",
+      "reason": "Userland PAGE_EXECUTE_READWRITE memory pages."
+    },
+    "ldrmodules_unlinked_dll_count": {
+      "classification": "REJECT",
+      "reason": "Zero in 43/45 runs; identical to process unlinked_dll_count outlier."
+    }
+  },
+  "overall_evaluation": {
+    "q1_suitable_for_5fold_cv": "YES (for the corrected candidate feature matrices). Process, Command, and Memory possess distinct vectors per run. Network is constrained to a single volume feature.",
+    "q2_safe_features": [
+      "total_process_count",
+      "hidden_process_count",
+      "anomalous_ppid_count",
+      "total_handle_count_non_system",
+      "process_all_access_handles",
+      "cross_process_handles",
+      "elevated_privilege_count_non_system",
+      "raw_command_text",
+      "command_event_count",
+      "scriptblock_event_count",
+      "filtered_event_count",
+      "command_length",
+      "outbound_connection_count",
+      "non_defender_malfind_regions",
+      "non_defender_commit_charge",
+      "unmapped_executable_vad_count",
+      "vad_protection_anomalies"
+    ],
+    "q3_features_to_remove": [
+      "unlinked_dll_count",
+      "suspicious_port_usage",
+      "scripting_process_network_count",
+      "listening_port_anomaly_count",
+      "ldrmodules_unlinked_dll_count"
+    ],
+    "q4_network_modality_independent": "PARTIALLY. Raw socket count is genuine, but auxiliary port features leaked track identity and were removed.",
+    "q5_three_runs_independent_or_duplicates": "Process and Memory runs are genuinely independent physical observations. Network socket counts reflect deterministic harness runtimes and exhibit near-identical values within families.",
+    "q6_evidence_of_label_leakage": "Zero direct label leakage. Indirect batch leakage was detected in network port counts and removed.",
+    "q7_evidence_dataset_generation_learned": "Previously yes (bootup command prefix and track-specific port counts). Corrected by excising port counts and capturing dynamic tail commands.",
+    "final_verdict": "READY FOR TRAINING (after applying minimum documented corrections)"
+  }
+}

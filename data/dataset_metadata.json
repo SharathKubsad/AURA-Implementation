@@ -1,0 +1,108 @@
+{
+  "dataset_metadata_version": "1.0.0",
+  "generated_at": "2026-09-27T13:05:00Z",
+  "repository_context": "Real-Time Fileless Malware Detection Framework",
+  "data_policy": "STRICT_AUTHENTIC_DATA_ONLY",
+  "unified_dataset": {
+    "path": "data/processed/unified/unified_dataset.jsonl",
+    "format": "JSON-Lines",
+    "total_records": 45,
+    "binary_distribution": {
+      "benign_count": 13,
+      "malware_count": 32,
+      "benign_percentage": 28.89,
+      "malware_percentage": 71.11
+    },
+    "family_distribution": {
+      "Benign": 13,
+      "PowerSploit Invoke-Mimikatz": 3,
+      "Empire Invoke-Assembly": 3,
+      "PowerSploit Invoke-Shellcode": 3,
+      "Cobalt Strike Beacon": 3,
+      "Empire Invoke-CredentialInjection": 3,
+      "Empire Invoke-BypassUAC": 3,
+      "Covenant Grunt": 3,
+      "Empire Invoke-PoshRat": 3,
+      "Metasploit Meterpreter Reverse TCP": 3,
+      "Empire Multi-Launcher": 3,
+      "PowerSploit Invoke-ReflectivePEInjection": 2
+    },
+    "feature_modalities": {
+      "process": {
+        "feature_count": 11,
+        "features": [
+          "cpu_usage", "memory_rss", "thread_count", "handle_count",
+          "is_powershell", "is_cmd", "is_wscript", "has_rwx_flag",
+          "thread_to_process_ratio", "suspicious_env_vars", "injection_risk_score"
+        ],
+        "schema": "forensics.schemas.process_schema.ProcessFeatures",
+        "extractor": "volatility3.windows.pslist / psxview / psutil live"
+      },
+      "command": {
+        "feature_count": 1,
+        "features": ["raw_command"],
+        "representation": "DistilBERT subword tokenization (max_len 128)",
+        "schema": "forensics.schemas.command_schema.CommandFeatures",
+        "extractor": "Windows Event Log 4688 / Script Block 4104 / Sandbox Command Log"
+      },
+      "network": {
+        "feature_count": 15,
+        "features": [
+          "active_connection_count", "listening_port_count", "bytes_sent_per_sec",
+          "bytes_recv_per_sec", "external_ip_ratio", "c2_beaconing_score",
+          "suspicious_port_contact", "dns_lookup_count", "failed_dns_query_count",
+          "dns_entropy", "c2_fast_flux_ratio", "is_syn_scan_active",
+          "is_c2_burst_active", "pcap_available", "pcap_packet_count"
+        ],
+        "schema": "forensics.schemas.network_schema.NetworkFeatures",
+        "extractor": "volatility3.windows.netscan / Zeek / pcapng / live psutil.net_connections"
+      },
+      "memory": {
+        "feature_count": 9,
+        "features": [
+          "rwx_page_count", "unbacked_rx_page_count", "modified_code_page_count",
+          "hidden_process_count", "memory_injection_score", "thread_anomaly_score",
+          "hollowing_flag", "injected_code_indicator", "entropy_mean"
+        ],
+        "schema": "forensics.schemas.memory_schema.MemoryFeatures",
+        "extractor": "volatility3.windows.malfind / vadinfo / psxview"
+      }
+    },
+    "split_lineage": {
+      "strategy": "StratifiedGroupKFold",
+      "train_split": {
+        "samples": 31,
+        "benign": 9,
+        "malware": 22
+      },
+      "val_split": {
+        "samples": 7,
+        "benign": 2,
+        "malware": 5
+      },
+      "test_split": {
+        "samples": 7,
+        "benign": 2,
+        "malware": 5
+      }
+    }
+  },
+  "auxiliary_datasets": {
+    "cic_malmem_2022": {
+      "path": "Dataset/Obfuscated-MalMem2022.csv",
+      "status": "RAW_AVAILABLE",
+      "total_rows": 58596,
+      "columns": 57,
+      "target": "Class / Category",
+      "use_case": "Public volatile memory forensic baseline for standalone memory evaluation"
+    },
+    "cape_sandbox_runs": {
+      "path": "Dataset/dynamic_api_call_sequence_per_malware_100_0_306.csv",
+      "status": "RAW_AVAILABLE",
+      "total_rows": 43876,
+      "columns": 102,
+      "target": "malware (0/1)",
+      "use_case": "API call sequence dynamic behavioral reference"
+    }
+  }
+}

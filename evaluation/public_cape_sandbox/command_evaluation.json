@@ -1,0 +1,34 @@
+{
+  "dataset": "CAPEv2 Dynamic Sandbox Behavioral Benchmark",
+  "modality": "command",
+  "model_type": "distilbert",
+  "train_samples": 84,
+  "val_samples": 18,
+  "test_samples": 18,
+  "test_metrics": {
+    "accuracy": 0.5,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "roc_auc": 0.4383,
+    "pr_auc": 0.5036,
+    "fpr": 0.0,
+    "fnr": 1.0,
+    "confusion_matrix": [
+      [
+        9,
+        0
+      ],
+      [
+        9,
+        0
+      ]
+    ],
+    "threshold": 0.5,
+    "total_samples": 18,
+    "true_benign_count": 9,
+    "true_malware_count": 9
+  },
+  "trained_at": "2026-09-22T05:50:03.498077+00:00",
+  "git_commit": "466a8202fd6e40278e810faa4de7bbc5f362286c"
+}

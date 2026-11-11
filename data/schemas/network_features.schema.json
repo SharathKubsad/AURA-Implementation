@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/Prash-2402/Real-Time-Fileless-Malware-Detection/main/data/schemas/network_features.schema.json",
+  "title": "NetworkFeatures",
+  "description": "Network connection telemetry, beaconing metrics, and socket forensics schema for the Network modality (Track B). Scored by LightGBM.",
+  "type": "object",
+  "properties": {
+    "sample_id": {
+      "type": "string",
+      "description": "Foreign key linking to SampleMetadata.sample_id"
+    },
+    "active_connection_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Total active TCP/UDP sockets in ESTABLISHED or SYN states",
+      "source": "Volatility3 windows.netscan / scapy live sniffer",
+      "telemetry_nature": "dynamic",
+      "missing_value_policy": "fill_zero"
+    },
+    "listening_port_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Total sockets in LISTENING state",
+      "source": "Volatility3 windows.netscan / psutil.net_connections()",
+      "telemetry_nature": "dynamic",
+      "missing_value_policy": "fill_zero"
+    },
+    "outbound_connection_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Active connections targeting external/non-loopback remote IPs",
+      "source": "Volatility3 windows.netscan / tshark pcap parser",
+      "telemetry_nature": "dynamic",
+      "missing_value_policy": "fill_zero"
+    },
+    "dns_query_count": {
+      "type": ["integer", "null"],
+      "minimum": 0,
+      "description": "Total DNS requests observed during the execution capture window",
+      "source": "tshark pcap DNS filter / pyshark live parser",
+      "telemetry_nature": "dynamic",
+      "missing_value_policy": "fill_zero"
+    },
+    "unique_remote_ips": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Cardinality of distinct destination IP addresses contacted",
+      "source": "tshark pcap IP analysis / live flow table",
+      "telemetry_nature": "dynamic",
+      "missing_value_policy": "fill_zero"
+    },
+    "avg_interpacket_interval_ms": {
+      "type": ["number", "null"],
+      "minimum": 0.0,
+      "description": "Mean time delta between consecutive outbound packets targeting primary C2 endpoint",
+      "source": "tshark pcap timing statistics",
+      "telemetry_nature": "dynamic",
+      "missing_value_policy": "impute_median"
+    },
+    "beacon_regularity_score": {
+      "type": ["number", "null"],
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "description": "Standardized periodic beaconing score (1.0 = highly deterministic interval, indicating automated C2 beacon; 0.0 = high jitter/aperiodic)",
+      "source": "Derived from inter-packet arrival time variance",
+      "telemetry_nature": "dynamic",
+      "missing_value_policy": "fill_zero"
+    },
+    "total_bytes_sent": {
+      "type": ["integer", "null"],
+      "minimum": 0,
+      "description": "Cumulative payload and transport bytes transmitted outbound",
+      "source": "tshark pcap / psutil.net_io_counters()",
+      "telemetry_nature": "dynamic",
+      "missing_value_policy": "fill_zero"
+    },
+    "total_bytes_received": {
+      "type": ["integer", "null"],
+      "minimum": 0,
+      "description": "Cumulative bytes received inbound across the network interface",
+      "source": "tshark pcap / psutil.net_io_counters()",
+      "telemetry_nature": "dynamic",
+      "missing_value_policy": "fill_zero"
+    },
+    "suspicious_port_usage": {
+      "type": "integer",
+      "enum": [0, 1],
+      "description": "Binary flag indicating connections over common reverse shell / C2 ports (e.g., 4444, 1337, 8080, 8443, 6667)",
+      "source": "tshark pcap / netstat port analysis",
+      "telemetry_nature": "dynamic",
+      "missing_value_policy": "fill_zero"
+    }
+  },
+  "required": [
+    "sample_id",
+    "active_connection_count",
+    "listening_port_count",
+    "outbound_connection_count",
+    "dns_query_count",
+    "unique_remote_ips",
+    "avg_interpacket_interval_ms",
+    "beacon_regularity_score",
+    "total_bytes_sent",
+    "total_bytes_received",
+    "suspicious_port_usage"
+  ],
+  "additionalProperties": false
+}

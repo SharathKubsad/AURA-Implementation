@@ -1,0 +1,13 @@
+{
+  "feature_names": [
+    "raw_command_text",
+    "command_length",
+    "shannon_entropy",
+    "is_base64_encoded",
+    "has_download_cradle",
+    "has_bypass_execution_policy",
+    "has_hidden_window",
+    "uses_lolbins",
+    "registry_persistence_count"
+  ]
+}

@@ -1,0 +1,7 @@
+[
+  {"pid": 520, "process": "services.exe", "privilege": "SeSecurityPrivilege", "attributes": "Disabled"},
+  {"pid": 540, "process": "lsass.exe", "privilege": "SeDebugPrivilege", "attributes": "Enabled"},
+  {"pid": 540, "process": "lsass.exe", "privilege": "SeTcbPrivilege", "attributes": "Enabled"},
+  {"pid": 680, "process": "svchost.exe", "privilege": "SeImpersonatePrivilege", "attributes": "Enabled"},
+  {"pid": 1840, "process": "explorer.exe", "privilege": "SeChangeNotifyPrivilege", "attributes": "Enabled"}
+]

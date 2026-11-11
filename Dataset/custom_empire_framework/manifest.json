@@ -1,0 +1,55 @@
+{
+  "dataset": "custom_empire_framework",
+  "label": 1,
+  "family": "empire_framework",
+  "source_type": "controlled_windows_vm",
+  "created_utc": "2026-09-21T03:52:52.308041+00:00",
+  "runs": [
+    {
+      "sample_id": "RUN-1000",
+      "memory_exists": "YES",
+      "memory_size_bytes": "6422409216",
+      "volatility_status": "PASS",
+      "extraction_status": "PASS",
+      "validation_status": "PASS",
+      "notes": ""
+    },
+    {
+      "sample_id": "RUN-1001",
+      "memory_exists": "YES",
+      "memory_size_bytes": "6422409216",
+      "volatility_status": "PASS",
+      "extraction_status": "PASS",
+      "validation_status": "PASS",
+      "notes": ""
+    },
+    {
+      "sample_id": "RUN-1002",
+      "memory_exists": "YES",
+      "memory_size_bytes": "6422409216",
+      "volatility_status": "PASS",
+      "extraction_status": "PASS",
+      "validation_status": "PASS",
+      "notes": ""
+    }
+  ],
+  "pipeline": {
+    "volatility": true,
+    "process_features": true,
+    "memory_features": true,
+    "command_features": false,
+    "network_features": false
+  },
+  "notes": [
+    "Process and Memory features generated using the existing A4 pipeline.",
+    "Command and Network source evidence preserved for Track-B processing.",
+    "Raw memory dumps are not included in the Windows-ready package.",
+    "No unsupported feature values are fabricated."
+  ],
+  "completed_utc": "2026-09-21T04:23:16.037772+00:00",
+  "statistics": {
+    "total": 3,
+    "passed": 3,
+    "failed": 0
+  }
+}

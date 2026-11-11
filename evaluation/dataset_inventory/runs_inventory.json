@@ -1,0 +1,3242 @@
+{
+  "RUN-1100": {
+    "category": "custom_benign_batch",
+    "source_archive": "custom_benign_batch.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        816
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        13314
+      ],
+      [
+        "sysmon.evtx",
+        6361088
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        840688
+      ],
+      [
+        "handles.txt",
+        3491028
+      ],
+      [
+        "ldrmodules.txt",
+        553610
+      ],
+      [
+        "malfind.txt",
+        23744
+      ],
+      [
+        "privileges.txt",
+        410051
+      ],
+      [
+        "pslist.txt",
+        13491
+      ],
+      [
+        "psscan.txt",
+        13860
+      ],
+      [
+        "pstree.txt",
+        44286
+      ],
+      [
+        "psxview.txt",
+        7711
+      ],
+      [
+        "threads.txt",
+        302529
+      ],
+      [
+        "vadinfo.txt",
+        2361432
+      ]
+    ],
+    "process_features": "custom_benign_batch\\process\\RUN-1100.json",
+    "memory_features": "custom_benign_batch\\memory\\RUN-1100.json",
+    "metadata": "custom_benign_batch\\metadata\\RUN-1100.json",
+    "manifest": null
+  },
+  "RUN-1101": {
+    "category": "custom_benign_batch",
+    "source_archive": "custom_benign_batch.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        816
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        14833
+      ],
+      [
+        "sysmon.evtx",
+        6361088
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        925574
+      ],
+      [
+        "handles.txt",
+        3735936
+      ],
+      [
+        "ldrmodules.txt",
+        601783
+      ],
+      [
+        "malfind.txt",
+        23720
+      ],
+      [
+        "privileges.txt",
+        417677
+      ],
+      [
+        "pslist.txt",
+        13579
+      ],
+      [
+        "psscan.txt",
+        13615
+      ],
+      [
+        "pstree.txt",
+        50703
+      ],
+      [
+        "psxview.txt",
+        7200
+      ],
+      [
+        "threads.txt",
+        306505
+      ],
+      [
+        "vadinfo.txt",
+        2588266
+      ]
+    ],
+    "process_features": "custom_benign_batch\\process\\RUN-1101.json",
+    "memory_features": "custom_benign_batch\\memory\\RUN-1101.json",
+    "metadata": "custom_benign_batch\\metadata\\RUN-1101.json",
+    "manifest": null
+  },
+  "RUN-1102": {
+    "category": "custom_benign_batch",
+    "source_archive": "custom_benign_batch.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        816
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        14300
+      ],
+      [
+        "sysmon.evtx",
+        6361088
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        907989
+      ],
+      [
+        "handles.txt",
+        3715259
+      ],
+      [
+        "ldrmodules.txt",
+        597351
+      ],
+      [
+        "malfind.txt",
+        23976
+      ],
+      [
+        "privileges.txt",
+        414416
+      ],
+      [
+        "pslist.txt",
+        13671
+      ],
+      [
+        "psscan.txt",
+        13677
+      ],
+      [
+        "pstree.txt",
+        50573
+      ],
+      [
+        "psxview.txt",
+        7170
+      ],
+      [
+        "threads.txt",
+        309357
+      ],
+      [
+        "vadinfo.txt",
+        2606429
+      ]
+    ],
+    "process_features": "custom_benign_batch\\process\\RUN-1102.json",
+    "memory_features": "custom_benign_batch\\memory\\RUN-1102.json",
+    "metadata": "custom_benign_batch\\metadata\\RUN-1102.json",
+    "manifest": null
+  },
+  "RUN-1103": {
+    "category": "custom_benign_batch",
+    "source_archive": "custom_benign_batch.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        816
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        14487
+      ],
+      [
+        "sysmon.evtx",
+        6361088
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        924466
+      ],
+      [
+        "handles.txt",
+        3783786
+      ],
+      [
+        "ldrmodules.txt",
+        599401
+      ],
+      [
+        "malfind.txt",
+        23593
+      ],
+      [
+        "privileges.txt",
+        414277
+      ],
+      [
+        "pslist.txt",
+        13472
+      ],
+      [
+        "psscan.txt",
+        13990
+      ],
+      [
+        "pstree.txt",
+        50398
+      ],
+      [
+        "psxview.txt",
+        7468
+      ],
+      [
+        "threads.txt",
+        298382
+      ],
+      [
+        "vadinfo.txt",
+        2577077
+      ]
+    ],
+    "process_features": "custom_benign_batch\\process\\RUN-1103.json",
+    "memory_features": "custom_benign_batch\\memory\\RUN-1103.json",
+    "metadata": "custom_benign_batch\\metadata\\RUN-1103.json",
+    "manifest": null
+  },
+  "RUN-1104": {
+    "category": "custom_benign_batch",
+    "source_archive": "custom_benign_batch.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        816
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        14255
+      ],
+      [
+        "sysmon.evtx",
+        6361088
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        900651
+      ],
+      [
+        "handles.txt",
+        3656242
+      ],
+      [
+        "ldrmodules.txt",
+        583472
+      ],
+      [
+        "malfind.txt",
+        24171
+      ],
+      [
+        "privileges.txt",
+        405677
+      ],
+      [
+        "pslist.txt",
+        13219
+      ],
+      [
+        "psscan.txt",
+        13133
+      ],
+      [
+        "pstree.txt",
+        49669
+      ],
+      [
+        "psxview.txt",
+        6926
+      ],
+      [
+        "threads.txt",
+        294161
+      ],
+      [
+        "vadinfo.txt",
+        2519583
+      ]
+    ],
+    "process_features": "custom_benign_batch\\process\\RUN-1104.json",
+    "memory_features": "custom_benign_batch\\memory\\RUN-1104.json",
+    "metadata": "custom_benign_batch\\metadata\\RUN-1104.json",
+    "manifest": null
+  },
+  "RUN-1105": {
+    "category": "custom_benign_batch",
+    "source_archive": "custom_benign_batch.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        816
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        14348
+      ],
+      [
+        "sysmon.evtx",
+        6361088
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        884379
+      ],
+      [
+        "handles.txt",
+        3618032
+      ],
+      [
+        "ldrmodules.txt",
+        575990
+      ],
+      [
+        "malfind.txt",
+        23650
+      ],
+      [
+        "privileges.txt",
+        399673
+      ],
+      [
+        "pslist.txt",
+        13034
+      ],
+      [
+        "psscan.txt",
+        13312
+      ],
+      [
+        "pstree.txt",
+        49224
+      ],
+      [
+        "psxview.txt",
+        7069
+      ],
+      [
+        "threads.txt",
+        275128
+      ],
+      [
+        "vadinfo.txt",
+        2510747
+      ]
+    ],
+    "process_features": "custom_benign_batch\\process\\RUN-1105.json",
+    "memory_features": "custom_benign_batch\\memory\\RUN-1105.json",
+    "metadata": "custom_benign_batch\\metadata\\RUN-1105.json",
+    "manifest": null
+  },
+  "RUN-1106": {
+    "category": "custom_benign_batch",
+    "source_archive": "custom_benign_batch.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        816
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        13800
+      ],
+      [
+        "sysmon.evtx",
+        6361088
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        873024
+      ],
+      [
+        "handles.txt",
+        3582230
+      ],
+      [
+        "ldrmodules.txt",
+        568164
+      ],
+      [
+        "malfind.txt",
+        23776
+      ],
+      [
+        "privileges.txt",
+        396610
+      ],
+      [
+        "pslist.txt",
+        12942
+      ],
+      [
+        "psscan.txt",
+        13214
+      ],
+      [
+        "pstree.txt",
+        48995
+      ],
+      [
+        "psxview.txt",
+        7010
+      ],
+      [
+        "threads.txt",
+        274190
+      ],
+      [
+        "vadinfo.txt",
+        2472105
+      ]
+    ],
+    "process_features": "custom_benign_batch\\process\\RUN-1106.json",
+    "memory_features": "custom_benign_batch\\memory\\RUN-1106.json",
+    "metadata": "custom_benign_batch\\metadata\\RUN-1106.json",
+    "manifest": null
+  },
+  "RUN-1107": {
+    "category": "custom_benign_batch",
+    "source_archive": "custom_benign_batch.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        816
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        14428
+      ],
+      [
+        "sysmon.evtx",
+        7409664
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        921169
+      ],
+      [
+        "handles.txt",
+        3811754
+      ],
+      [
+        "ldrmodules.txt",
+        613757
+      ],
+      [
+        "malfind.txt",
+        26188
+      ],
+      [
+        "privileges.txt",
+        412932
+      ],
+      [
+        "pslist.txt",
+        13646
+      ],
+      [
+        "psscan.txt",
+        13658
+      ],
+      [
+        "pstree.txt",
+        50536
+      ],
+      [
+        "psxview.txt",
+        7254
+      ],
+      [
+        "threads.txt",
+        299715
+      ],
+      [
+        "vadinfo.txt",
+        2625996
+      ]
+    ],
+    "process_features": "custom_benign_batch\\process\\RUN-1107.json",
+    "memory_features": "custom_benign_batch\\memory\\RUN-1107.json",
+    "metadata": "custom_benign_batch\\metadata\\RUN-1107.json",
+    "manifest": null
+  },
+  "RUN-1108": {
+    "category": "custom_benign_batch",
+    "source_archive": "custom_benign_batch.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        816
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        14419
+      ],
+      [
+        "sysmon.evtx",
+        7409664
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        866177
+      ],
+      [
+        "handles.txt",
+        3815225
+      ],
+      [
+        "ldrmodules.txt",
+        613474
+      ],
+      [
+        "malfind.txt",
+        22034
+      ],
+      [
+        "privileges.txt",
+        410685
+      ],
+      [
+        "pslist.txt",
+        13416
+      ],
+      [
+        "psscan.txt",
+        13569
+      ],
+      [
+        "pstree.txt",
+        43219
+      ],
+      [
+        "psxview.txt",
+        7200
+      ],
+      [
+        "threads.txt",
+        296193
+      ],
+      [
+        "vadinfo.txt",
+        2809353
+      ]
+    ],
+    "process_features": "custom_benign_batch\\process\\RUN-1108.json",
+    "memory_features": "custom_benign_batch\\memory\\RUN-1108.json",
+    "metadata": "custom_benign_batch\\metadata\\RUN-1108.json",
+    "manifest": null
+  },
+  "RUN-1109": {
+    "category": "custom_benign_batch",
+    "source_archive": "custom_benign_batch.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        816
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        14536
+      ],
+      [
+        "sysmon.evtx",
+        7409664
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        871024
+      ],
+      [
+        "handles.txt",
+        3834239
+      ],
+      [
+        "ldrmodules.txt",
+        616497
+      ],
+      [
+        "malfind.txt",
+        21472
+      ],
+      [
+        "privileges.txt",
+        413670
+      ],
+      [
+        "pslist.txt",
+        13504
+      ],
+      [
+        "psscan.txt",
+        13657
+      ],
+      [
+        "pstree.txt",
+        43432
+      ],
+      [
+        "psxview.txt",
+        7253
+      ],
+      [
+        "threads.txt",
+        289310
+      ],
+      [
+        "vadinfo.txt",
+        2818767
+      ]
+    ],
+    "process_features": "custom_benign_batch\\process\\RUN-1109.json",
+    "memory_features": "custom_benign_batch\\memory\\RUN-1109.json",
+    "metadata": "custom_benign_batch\\metadata\\RUN-1109.json",
+    "manifest": null
+  },
+  "RUN-1110": {
+    "category": "custom_benign_batch",
+    "source_archive": "custom_benign_batch.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        816
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        14857
+      ],
+      [
+        "sysmon.evtx",
+        7409664
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        882176
+      ],
+      [
+        "handles.txt",
+        3882276
+      ],
+      [
+        "ldrmodules.txt",
+        623978
+      ],
+      [
+        "malfind.txt",
+        22315
+      ],
+      [
+        "privileges.txt",
+        421985
+      ],
+      [
+        "pslist.txt",
+        13782
+      ],
+      [
+        "psscan.txt",
+        13939
+      ],
+      [
+        "pstree.txt",
+        44324
+      ],
+      [
+        "psxview.txt",
+        7413
+      ],
+      [
+        "threads.txt",
+        308573
+      ],
+      [
+        "vadinfo.txt",
+        2697149
+      ]
+    ],
+    "process_features": "custom_benign_batch\\process\\RUN-1110.json",
+    "memory_features": "custom_benign_batch\\memory\\RUN-1110.json",
+    "metadata": "custom_benign_batch\\metadata\\RUN-1110.json",
+    "manifest": null
+  },
+  "RUN-1111": {
+    "category": "custom_benign_batch",
+    "source_archive": "custom_benign_batch.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        816
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        14900
+      ],
+      [
+        "sysmon.evtx",
+        7409664
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        877148
+      ],
+      [
+        "handles.txt",
+        3887552
+      ],
+      [
+        "ldrmodules.txt",
+        623621
+      ],
+      [
+        "malfind.txt",
+        22204
+      ],
+      [
+        "privileges.txt",
+        422020
+      ],
+      [
+        "pslist.txt",
+        13786
+      ],
+      [
+        "psscan.txt",
+        13943
+      ],
+      [
+        "pstree.txt",
+        44224
+      ],
+      [
+        "psxview.txt",
+        7414
+      ],
+      [
+        "threads.txt",
+        322070
+      ],
+      [
+        "vadinfo.txt",
+        2879102
+      ]
+    ],
+    "process_features": "custom_benign_batch\\process\\RUN-1111.json",
+    "memory_features": "custom_benign_batch\\memory\\RUN-1111.json",
+    "metadata": "custom_benign_batch\\metadata\\RUN-1111.json",
+    "manifest": null
+  },
+  "RUN-400": {
+    "category": "custom_cobalt_strike_beacon",
+    "source_archive": "custom_cobalt_strike_beacon.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        818
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        13418
+      ],
+      [
+        "sysmon.evtx",
+        9506816
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        878513
+      ],
+      [
+        "handles.txt",
+        3533677
+      ],
+      [
+        "ldrmodules.txt",
+        580041
+      ],
+      [
+        "malfind.txt",
+        24735
+      ],
+      [
+        "privileges.txt",
+        385718
+      ],
+      [
+        "pslist.txt",
+        12573
+      ],
+      [
+        "psscan.txt",
+        13158
+      ],
+      [
+        "pstree.txt",
+        44799
+      ],
+      [
+        "psxview.txt",
+        7009
+      ],
+      [
+        "threads.txt",
+        253569
+      ],
+      [
+        "vadinfo.txt",
+        2455501
+      ]
+    ],
+    "process_features": "custom_cobalt_strike_beacon\\process\\RUN-400.json",
+    "memory_features": "custom_cobalt_strike_beacon\\memory\\RUN-400.json",
+    "metadata": "custom_cobalt_strike_beacon\\metadata\\RUN-400.json",
+    "manifest": null
+  },
+  "RUN-401": {
+    "category": "custom_cobalt_strike_beacon",
+    "source_archive": "custom_cobalt_strike_beacon.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        818
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        13373
+      ],
+      [
+        "sysmon.evtx",
+        9506816
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        878092
+      ],
+      [
+        "handles.txt",
+        3528884
+      ],
+      [
+        "ldrmodules.txt",
+        579456
+      ],
+      [
+        "malfind.txt",
+        24846
+      ],
+      [
+        "privileges.txt",
+        385718
+      ],
+      [
+        "pslist.txt",
+        12572
+      ],
+      [
+        "psscan.txt",
+        13398
+      ],
+      [
+        "pstree.txt",
+        44798
+      ],
+      [
+        "psxview.txt",
+        7172
+      ],
+      [
+        "threads.txt",
+        255837
+      ],
+      [
+        "vadinfo.txt",
+        2445147
+      ]
+    ],
+    "process_features": "custom_cobalt_strike_beacon\\process\\RUN-401.json",
+    "memory_features": "custom_cobalt_strike_beacon\\memory\\RUN-401.json",
+    "metadata": "custom_cobalt_strike_beacon\\metadata\\RUN-401.json",
+    "manifest": null
+  },
+  "RUN-402": {
+    "category": "custom_cobalt_strike_beacon",
+    "source_archive": "custom_cobalt_strike_beacon.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        818
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        13378
+      ],
+      [
+        "sysmon.evtx",
+        9506816
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        879224
+      ],
+      [
+        "handles.txt",
+        3538607
+      ],
+      [
+        "ldrmodules.txt",
+        579830
+      ],
+      [
+        "malfind.txt",
+        24740
+      ],
+      [
+        "privileges.txt",
+        385718
+      ],
+      [
+        "pslist.txt",
+        12573
+      ],
+      [
+        "psscan.txt",
+        13036
+      ],
+      [
+        "pstree.txt",
+        44799
+      ],
+      [
+        "psxview.txt",
+        6925
+      ],
+      [
+        "threads.txt",
+        270200
+      ],
+      [
+        "vadinfo.txt",
+        2453899
+      ]
+    ],
+    "process_features": "custom_cobalt_strike_beacon\\process\\RUN-402.json",
+    "memory_features": "custom_cobalt_strike_beacon\\memory\\RUN-402.json",
+    "metadata": "custom_cobalt_strike_beacon\\metadata\\RUN-402.json",
+    "manifest": null
+  },
+  "RUN-1000": {
+    "category": "custom_empire_framework",
+    "source_archive": "custom_empire_framework.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        818
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        13599
+      ],
+      [
+        "sysmon.evtx",
+        11603968
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        876668
+      ],
+      [
+        "handles.txt",
+        3606029
+      ],
+      [
+        "ldrmodules.txt",
+        577211
+      ],
+      [
+        "malfind.txt",
+        23928
+      ],
+      [
+        "privileges.txt",
+        393057
+      ],
+      [
+        "pslist.txt",
+        12880
+      ],
+      [
+        "psscan.txt",
+        13487
+      ],
+      [
+        "pstree.txt",
+        48730
+      ],
+      [
+        "psxview.txt",
+        7202
+      ],
+      [
+        "threads.txt",
+        279153
+      ],
+      [
+        "vadinfo.txt",
+        2500494
+      ]
+    ],
+    "process_features": "custom_empire_framework\\process\\RUN-1000.json",
+    "memory_features": "custom_empire_framework\\memory\\RUN-1000.json",
+    "metadata": "custom_empire_framework\\metadata\\RUN-1000.json",
+    "manifest": null
+  },
+  "RUN-1001": {
+    "category": "custom_empire_framework",
+    "source_archive": "custom_empire_framework.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        818
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        13704
+      ],
+      [
+        "sysmon.evtx",
+        11603968
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        878320
+      ],
+      [
+        "handles.txt",
+        3601941
+      ],
+      [
+        "ldrmodules.txt",
+        578386
+      ],
+      [
+        "malfind.txt",
+        22654
+      ],
+      [
+        "privileges.txt",
+        393057
+      ],
+      [
+        "pslist.txt",
+        12878
+      ],
+      [
+        "psscan.txt",
+        13364
+      ],
+      [
+        "pstree.txt",
+        48728
+      ],
+      [
+        "psxview.txt",
+        7121
+      ],
+      [
+        "threads.txt",
+        281732
+      ],
+      [
+        "vadinfo.txt",
+        2503367
+      ]
+    ],
+    "process_features": "custom_empire_framework\\process\\RUN-1001.json",
+    "memory_features": "custom_empire_framework\\memory\\RUN-1001.json",
+    "metadata": "custom_empire_framework\\metadata\\RUN-1001.json",
+    "manifest": null
+  },
+  "RUN-1002": {
+    "category": "custom_empire_framework",
+    "source_archive": "custom_empire_framework.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        818
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        13792
+      ],
+      [
+        "sysmon.evtx",
+        11603968
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        882753
+      ],
+      [
+        "handles.txt",
+        3619341
+      ],
+      [
+        "ldrmodules.txt",
+        580918
+      ],
+      [
+        "malfind.txt",
+        22432
+      ],
+      [
+        "privileges.txt",
+        398324
+      ],
+      [
+        "pslist.txt",
+        13150
+      ],
+      [
+        "psscan.txt",
+        13214
+      ],
+      [
+        "pstree.txt",
+        49070
+      ],
+      [
+        "psxview.txt",
+        7008
+      ],
+      [
+        "threads.txt",
+        308835
+      ],
+      [
+        "vadinfo.txt",
+        2516839
+      ]
+    ],
+    "process_features": "custom_empire_framework\\process\\RUN-1002.json",
+    "memory_features": "custom_empire_framework\\memory\\RUN-1002.json",
+    "metadata": "custom_empire_framework\\metadata\\RUN-1002.json",
+    "manifest": null
+  },
+  "RUN-900": {
+    "category": "custom_fileless_ransomware",
+    "source_archive": "custom_fileless_ransomware.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        818
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        13771
+      ],
+      [
+        "sysmon.evtx",
+        11603968
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        878231
+      ],
+      [
+        "handles.txt",
+        3650022
+      ],
+      [
+        "ldrmodules.txt",
+        578847
+      ],
+      [
+        "malfind.txt",
+        22564
+      ],
+      [
+        "privileges.txt",
+        399096
+      ],
+      [
+        "pslist.txt",
+        13062
+      ],
+      [
+        "psscan.txt",
+        13213
+      ],
+      [
+        "pstree.txt",
+        49028
+      ],
+      [
+        "psxview.txt",
+        7007
+      ],
+      [
+        "threads.txt",
+        303167
+      ],
+      [
+        "vadinfo.txt",
+        2515819
+      ]
+    ],
+    "process_features": "custom_fileless_ransomware\\process\\RUN-900.json",
+    "memory_features": "custom_fileless_ransomware\\memory\\RUN-900.json",
+    "metadata": "custom_fileless_ransomware\\metadata\\RUN-900.json",
+    "manifest": null
+  },
+  "RUN-901": {
+    "category": "custom_fileless_ransomware",
+    "source_archive": "custom_fileless_ransomware.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        818
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        13805
+      ],
+      [
+        "sysmon.evtx",
+        11603968
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        883616
+      ],
+      [
+        "handles.txt",
+        3630028
+      ],
+      [
+        "ldrmodules.txt",
+        581445
+      ],
+      [
+        "malfind.txt",
+        22540
+      ],
+      [
+        "privileges.txt",
+        396007
+      ],
+      [
+        "pslist.txt",
+        12970
+      ],
+      [
+        "psscan.txt",
+        13242
+      ],
+      [
+        "pstree.txt",
+        48947
+      ],
+      [
+        "psxview.txt",
+        7034
+      ],
+      [
+        "threads.txt",
+        296479
+      ],
+      [
+        "vadinfo.txt",
+        2515243
+      ]
+    ],
+    "process_features": "custom_fileless_ransomware\\process\\RUN-901.json",
+    "memory_features": "custom_fileless_ransomware\\memory\\RUN-901.json",
+    "metadata": "custom_fileless_ransomware\\metadata\\RUN-901.json",
+    "manifest": null
+  },
+  "RUN-902": {
+    "category": "custom_fileless_ransomware",
+    "source_archive": "custom_fileless_ransomware.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        818
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        13792
+      ],
+      [
+        "sysmon.evtx",
+        11603968
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        883033
+      ],
+      [
+        "handles.txt",
+        3632484
+      ],
+      [
+        "ldrmodules.txt",
+        581328
+      ],
+      [
+        "malfind.txt",
+        23106
+      ],
+      [
+        "privileges.txt",
+        396042
+      ],
+      [
+        "pslist.txt",
+        12969
+      ],
+      [
+        "psscan.txt",
+        13332
+      ],
+      [
+        "pstree.txt",
+        48946
+      ],
+      [
+        "psxview.txt",
+        7090
+      ],
+      [
+        "threads.txt",
+        279358
+      ],
+      [
+        "vadinfo.txt",
+        2514468
+      ]
+    ],
+    "process_features": "custom_fileless_ransomware\\process\\RUN-902.json",
+    "memory_features": "custom_fileless_ransomware\\memory\\RUN-902.json",
+    "metadata": "custom_fileless_ransomware\\metadata\\RUN-902.json",
+    "manifest": null
+  },
+  "RUN-800": {
+    "category": "custom_lolbins_abuse",
+    "source_archive": "custom_lolbins_abuse.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        935
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        14391
+      ],
+      [
+        "sysmon.evtx",
+        11603968
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        900566
+      ],
+      [
+        "handles.txt",
+        3682556
+      ],
+      [
+        "ldrmodules.txt",
+        592642
+      ],
+      [
+        "malfind.txt",
+        24396
+      ],
+      [
+        "privileges.txt",
+        407589
+      ],
+      [
+        "pslist.txt",
+        13342
+      ],
+      [
+        "psscan.txt",
+        13376
+      ],
+      [
+        "pstree.txt",
+        50454
+      ],
+      [
+        "psxview.txt",
+        7086
+      ],
+      [
+        "threads.txt",
+        292350
+      ],
+      [
+        "vadinfo.txt",
+        2541970
+      ]
+    ],
+    "process_features": "custom_lolbins_abuse\\process\\RUN-800.json",
+    "memory_features": "custom_lolbins_abuse\\memory\\RUN-800.json",
+    "metadata": "custom_lolbins_abuse\\metadata\\RUN-800.json",
+    "manifest": null
+  },
+  "RUN-801": {
+    "category": "custom_lolbins_abuse",
+    "source_archive": "custom_lolbins_abuse.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        818
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        13623
+      ],
+      [
+        "sysmon.evtx",
+        11603968
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        865195
+      ],
+      [
+        "handles.txt",
+        3574776
+      ],
+      [
+        "ldrmodules.txt",
+        571706
+      ],
+      [
+        "malfind.txt",
+        21953
+      ],
+      [
+        "privileges.txt",
+        393245
+      ],
+      [
+        "pslist.txt",
+        12876
+      ],
+      [
+        "psscan.txt",
+        13873
+      ],
+      [
+        "pstree.txt",
+        48664
+      ],
+      [
+        "psxview.txt",
+        7476
+      ],
+      [
+        "threads.txt",
+        308757
+      ],
+      [
+        "vadinfo.txt",
+        2475511
+      ]
+    ],
+    "process_features": "custom_lolbins_abuse\\process\\RUN-801.json",
+    "memory_features": "custom_lolbins_abuse\\memory\\RUN-801.json",
+    "metadata": "custom_lolbins_abuse\\metadata\\RUN-801.json",
+    "manifest": null
+  },
+  "RUN-802": {
+    "category": "custom_lolbins_abuse",
+    "source_archive": "custom_lolbins_abuse.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        818
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        13727
+      ],
+      [
+        "sysmon.evtx",
+        11603968
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        871445
+      ],
+      [
+        "handles.txt",
+        3584435
+      ],
+      [
+        "ldrmodules.txt",
+        573310
+      ],
+      [
+        "malfind.txt",
+        22619
+      ],
+      [
+        "privileges.txt",
+        393280
+      ],
+      [
+        "pslist.txt",
+        12879
+      ],
+      [
+        "psscan.txt",
+        14118
+      ],
+      [
+        "pstree.txt",
+        48739
+      ],
+      [
+        "psxview.txt",
+        7640
+      ],
+      [
+        "threads.txt",
+        288789
+      ],
+      [
+        "vadinfo.txt",
+        2490451
+      ]
+    ],
+    "process_features": "custom_lolbins_abuse\\process\\RUN-802.json",
+    "memory_features": "custom_lolbins_abuse\\memory\\RUN-802.json",
+    "metadata": "custom_lolbins_abuse\\metadata\\RUN-802.json",
+    "manifest": null
+  },
+  "RUN-200": {
+    "category": "custom_memory_only_rat",
+    "source_archive": "custom_memory_only_rat.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        818
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        13433
+      ],
+      [
+        "sysmon.evtx",
+        9506816
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        882443
+      ],
+      [
+        "handles.txt",
+        3559155
+      ],
+      [
+        "ldrmodules.txt",
+        580582
+      ],
+      [
+        "malfind.txt",
+        24924
+      ],
+      [
+        "privileges.txt",
+        389047
+      ],
+      [
+        "pslist.txt",
+        12671
+      ],
+      [
+        "psscan.txt",
+        13038
+      ],
+      [
+        "pstree.txt",
+        45043
+      ],
+      [
+        "psxview.txt",
+        6924
+      ],
+      [
+        "threads.txt",
+        284908
+      ],
+      [
+        "vadinfo.txt",
+        2452392
+      ]
+    ],
+    "process_features": "custom_memory_only_rat\\process\\RUN-200.json",
+    "memory_features": "custom_memory_only_rat\\memory\\RUN-200.json",
+    "metadata": "custom_memory_only_rat\\metadata\\RUN-200.json",
+    "manifest": null
+  },
+  "RUN-201": {
+    "category": "custom_memory_only_rat",
+    "source_archive": "custom_memory_only_rat.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        818
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        13904
+      ],
+      [
+        "sysmon.evtx",
+        9506816
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        893204
+      ],
+      [
+        "handles.txt",
+        3598212
+      ],
+      [
+        "ldrmodules.txt",
+        589329
+      ],
+      [
+        "malfind.txt",
+        25032
+      ],
+      [
+        "privileges.txt",
+        397362
+      ],
+      [
+        "pslist.txt",
+        12943
+      ],
+      [
+        "psscan.txt",
+        14029
+      ],
+      [
+        "pstree.txt",
+        46003
+      ],
+      [
+        "psxview.txt",
+        7568
+      ],
+      [
+        "threads.txt",
+        264635
+      ],
+      [
+        "vadinfo.txt",
+        2485723
+      ]
+    ],
+    "process_features": "custom_memory_only_rat\\process\\RUN-201.json",
+    "memory_features": "custom_memory_only_rat\\memory\\RUN-201.json",
+    "metadata": "custom_memory_only_rat\\metadata\\RUN-201.json",
+    "manifest": null
+  },
+  "RUN-202": {
+    "category": "custom_memory_only_rat",
+    "source_archive": "custom_memory_only_rat.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        818
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        13900
+      ],
+      [
+        "sysmon.evtx",
+        9506816
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        894370
+      ],
+      [
+        "handles.txt",
+        3599556
+      ],
+      [
+        "ldrmodules.txt",
+        589974
+      ],
+      [
+        "malfind.txt",
+        25033
+      ],
+      [
+        "privileges.txt",
+        397397
+      ],
+      [
+        "pslist.txt",
+        12946
+      ],
+      [
+        "psscan.txt",
+        14033
+      ],
+      [
+        "pstree.txt",
+        46006
+      ],
+      [
+        "psxview.txt",
+        7568
+      ],
+      [
+        "threads.txt",
+        257664
+      ],
+      [
+        "vadinfo.txt",
+        2480963
+      ]
+    ],
+    "process_features": "custom_memory_only_rat\\process\\RUN-202.json",
+    "memory_features": "custom_memory_only_rat\\memory\\RUN-202.json",
+    "metadata": "custom_memory_only_rat\\metadata\\RUN-202.json",
+    "manifest": null
+  },
+  "RUN-500": {
+    "category": "custom_metasploit_memory_payloads",
+    "source_archive": "custom_metasploit_memory_payloads.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        818
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        13029
+      ],
+      [
+        "sysmon.evtx",
+        9506816
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        860841
+      ],
+      [
+        "handles.txt",
+        3504743
+      ],
+      [
+        "ldrmodules.txt",
+        564778
+      ],
+      [
+        "malfind.txt",
+        24080
+      ],
+      [
+        "privileges.txt",
+        374554
+      ],
+      [
+        "pslist.txt",
+        12317
+      ],
+      [
+        "psscan.txt",
+        13050
+      ],
+      [
+        "pstree.txt",
+        43786
+      ],
+      [
+        "psxview.txt",
+        6982
+      ],
+      [
+        "threads.txt",
+        365187
+      ],
+      [
+        "vadinfo.txt",
+        2389756
+      ]
+    ],
+    "process_features": "custom_metasploit_memory_payloads\\process\\RUN-500.json",
+    "memory_features": "custom_metasploit_memory_payloads\\memory\\RUN-500.json",
+    "metadata": "custom_metasploit_memory_payloads\\metadata\\RUN-500.json",
+    "manifest": null
+  },
+  "RUN-501": {
+    "category": "custom_metasploit_memory_payloads",
+    "source_archive": "custom_metasploit_memory_payloads.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        818
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        13541
+      ],
+      [
+        "sysmon.evtx",
+        9506816
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        889552
+      ],
+      [
+        "handles.txt",
+        3601793
+      ],
+      [
+        "ldrmodules.txt",
+        586495
+      ],
+      [
+        "malfind.txt",
+        24804
+      ],
+      [
+        "privileges.txt",
+        388653
+      ],
+      [
+        "pslist.txt",
+        12668
+      ],
+      [
+        "psscan.txt",
+        13158
+      ],
+      [
+        "pstree.txt",
+        45163
+      ],
+      [
+        "psxview.txt",
+        7007
+      ],
+      [
+        "threads.txt",
+        277342
+      ],
+      [
+        "vadinfo.txt",
+        2487348
+      ]
+    ],
+    "process_features": "custom_metasploit_memory_payloads\\process\\RUN-501.json",
+    "memory_features": "custom_metasploit_memory_payloads\\memory\\RUN-501.json",
+    "metadata": "custom_metasploit_memory_payloads\\metadata\\RUN-501.json",
+    "manifest": null
+  },
+  "RUN-502": {
+    "category": "custom_metasploit_memory_payloads",
+    "source_archive": "custom_metasploit_memory_payloads.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        818
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        13543
+      ],
+      [
+        "sysmon.evtx",
+        9506816
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        887884
+      ],
+      [
+        "handles.txt",
+        3607698
+      ],
+      [
+        "ldrmodules.txt",
+        584513
+      ],
+      [
+        "malfind.txt",
+        24864
+      ],
+      [
+        "privileges.txt",
+        388653
+      ],
+      [
+        "pslist.txt",
+        12666
+      ],
+      [
+        "psscan.txt",
+        13274
+      ],
+      [
+        "pstree.txt",
+        45161
+      ],
+      [
+        "psxview.txt",
+        7085
+      ],
+      [
+        "threads.txt",
+        277543
+      ],
+      [
+        "vadinfo.txt",
+        2477474
+      ]
+    ],
+    "process_features": "custom_metasploit_memory_payloads\\process\\RUN-502.json",
+    "memory_features": "custom_metasploit_memory_payloads\\memory\\RUN-502.json",
+    "metadata": "custom_metasploit_memory_payloads\\metadata\\RUN-502.json",
+    "manifest": null
+  },
+  "RUN-001": {
+    "category": "custom_powershell_fileless",
+    "source_archive": "custom_powershell_fileless.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        933
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        15506
+      ],
+      [
+        "sysmon.evtx",
+        7409664
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        929916
+      ],
+      [
+        "handles.txt",
+        4000175
+      ],
+      [
+        "ldrmodules.txt",
+        638091
+      ],
+      [
+        "malfind.txt",
+        21472
+      ],
+      [
+        "privileges.txt",
+        439550
+      ],
+      [
+        "pslist.txt",
+        14362
+      ],
+      [
+        "psscan.txt",
+        14580
+      ],
+      [
+        "pstree.txt",
+        46613
+      ],
+      [
+        "psxview.txt",
+        7783
+      ],
+      [
+        "threads.txt",
+        344040
+      ],
+      [
+        "vadinfo.txt",
+        2710983
+      ]
+    ],
+    "process_features": "custom_powershell_fileless\\process\\RUN-001.json",
+    "memory_features": "custom_powershell_fileless\\memory\\RUN-001.json",
+    "metadata": "custom_powershell_fileless\\metadata\\RUN-001.json",
+    "manifest": null
+  },
+  "RUN-002": {
+    "category": "custom_powershell_fileless",
+    "source_archive": "custom_powershell_fileless.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        818
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        12617
+      ],
+      [
+        "sysmon.evtx",
+        8458240
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        805770
+      ],
+      [
+        "handles.txt",
+        3212859
+      ],
+      [
+        "ldrmodules.txt",
+        530882
+      ],
+      [
+        "malfind.txt",
+        24056
+      ],
+      [
+        "privileges.txt",
+        384530
+      ],
+      [
+        "pslist.txt",
+        12762
+      ],
+      [
+        "psscan.txt",
+        12960
+      ],
+      [
+        "pstree.txt",
+        38875
+      ],
+      [
+        "psxview.txt",
+        7134
+      ],
+      [
+        "threads.txt",
+        268856
+      ],
+      [
+        "vadinfo.txt",
+        2209783
+      ]
+    ],
+    "process_features": "custom_powershell_fileless\\process\\RUN-002.json",
+    "memory_features": "custom_powershell_fileless\\memory\\RUN-002.json",
+    "metadata": "custom_powershell_fileless\\metadata\\RUN-002.json",
+    "manifest": null
+  },
+  "RUN-003": {
+    "category": "custom_powershell_fileless",
+    "source_archive": "custom_powershell_fileless.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        818
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        12470
+      ],
+      [
+        "sysmon.evtx",
+        8458240
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        795682
+      ],
+      [
+        "handles.txt",
+        3270928
+      ],
+      [
+        "ldrmodules.txt",
+        523599
+      ],
+      [
+        "malfind.txt",
+        24814
+      ],
+      [
+        "privileges.txt",
+        375628
+      ],
+      [
+        "pslist.txt",
+        12418
+      ],
+      [
+        "psscan.txt",
+        13421
+      ],
+      [
+        "pstree.txt",
+        38339
+      ],
+      [
+        "psxview.txt",
+        7160
+      ],
+      [
+        "threads.txt",
+        254973
+      ],
+      [
+        "vadinfo.txt",
+        2253606
+      ]
+    ],
+    "process_features": "custom_powershell_fileless\\process\\RUN-003.json",
+    "memory_features": "custom_powershell_fileless\\memory\\RUN-003.json",
+    "metadata": "custom_powershell_fileless\\metadata\\RUN-003.json",
+    "manifest": null
+  },
+  "RUN-100": {
+    "category": "custom_process_hollowing",
+    "source_archive": "custom_process_hollowing.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        818
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        12925
+      ],
+      [
+        "sysmon.evtx",
+        8458240
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        826577
+      ],
+      [
+        "handles.txt",
+        3308821
+      ],
+      [
+        "ldrmodules.txt",
+        541947
+      ],
+      [
+        "malfind.txt",
+        27434
+      ],
+      [
+        "privileges.txt",
+        378113
+      ],
+      [
+        "pslist.txt",
+        12292
+      ],
+      [
+        "psscan.txt",
+        12995
+      ],
+      [
+        "pstree.txt",
+        43795
+      ],
+      [
+        "psxview.txt",
+        6924
+      ],
+      [
+        "threads.txt",
+        284618
+      ],
+      [
+        "vadinfo.txt",
+        2313945
+      ]
+    ],
+    "process_features": "custom_process_hollowing\\process\\RUN-100.json",
+    "memory_features": "custom_process_hollowing\\memory\\RUN-100.json",
+    "metadata": "custom_process_hollowing\\metadata\\RUN-100.json",
+    "manifest": null
+  },
+  "RUN-101": {
+    "category": "custom_process_hollowing",
+    "source_archive": "custom_process_hollowing.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        818
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        13697
+      ],
+      [
+        "sysmon.evtx",
+        8458240
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        848560
+      ],
+      [
+        "handles.txt",
+        3424610
+      ],
+      [
+        "ldrmodules.txt",
+        541343
+      ],
+      [
+        "malfind.txt",
+        24584
+      ],
+      [
+        "privileges.txt",
+        385973
+      ],
+      [
+        "pslist.txt",
+        12574
+      ],
+      [
+        "psscan.txt",
+        13419
+      ],
+      [
+        "pstree.txt",
+        44809
+      ],
+      [
+        "psxview.txt",
+        7188
+      ],
+      [
+        "threads.txt",
+        263332
+      ],
+      [
+        "vadinfo.txt",
+        2357358
+      ]
+    ],
+    "process_features": "custom_process_hollowing\\process\\RUN-101.json",
+    "memory_features": "custom_process_hollowing\\memory\\RUN-101.json",
+    "metadata": "custom_process_hollowing\\metadata\\RUN-101.json",
+    "manifest": null
+  },
+  "RUN-102": {
+    "category": "custom_process_hollowing",
+    "source_archive": "custom_process_hollowing.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        818
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        13330
+      ],
+      [
+        "sysmon.evtx",
+        8458240
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        843744
+      ],
+      [
+        "handles.txt",
+        3408135
+      ],
+      [
+        "ldrmodules.txt",
+        543403
+      ],
+      [
+        "malfind.txt",
+        24573
+      ],
+      [
+        "privileges.txt",
+        383032
+      ],
+      [
+        "pslist.txt",
+        12480
+      ],
+      [
+        "psscan.txt",
+        13446
+      ],
+      [
+        "pstree.txt",
+        44579
+      ],
+      [
+        "psxview.txt",
+        7217
+      ],
+      [
+        "threads.txt",
+        248426
+      ],
+      [
+        "vadinfo.txt",
+        2364015
+      ]
+    ],
+    "process_features": "custom_process_hollowing\\process\\RUN-102.json",
+    "memory_features": "custom_process_hollowing\\memory\\RUN-102.json",
+    "metadata": "custom_process_hollowing\\metadata\\RUN-102.json",
+    "manifest": null
+  },
+  "RUN-700": {
+    "category": "custom_reflective_dll_injection",
+    "source_archive": "custom_reflective_dll_injection.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        818
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        13825
+      ],
+      [
+        "sysmon.evtx",
+        10555392
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        875637
+      ],
+      [
+        "handles.txt",
+        3566278
+      ],
+      [
+        "ldrmodules.txt",
+        571042
+      ],
+      [
+        "malfind.txt",
+        22805
+      ],
+      [
+        "privileges.txt",
+        396625
+      ],
+      [
+        "pslist.txt",
+        12970
+      ],
+      [
+        "psscan.txt",
+        13341
+      ],
+      [
+        "pstree.txt",
+        49072
+      ],
+      [
+        "psxview.txt",
+        7099
+      ],
+      [
+        "threads.txt",
+        275800
+      ],
+      [
+        "vadinfo.txt",
+        2478924
+      ]
+    ],
+    "process_features": "custom_reflective_dll_injection\\process\\RUN-700.json",
+    "memory_features": "custom_reflective_dll_injection\\memory\\RUN-700.json",
+    "metadata": "custom_reflective_dll_injection\\metadata\\RUN-700.json",
+    "manifest": null
+  },
+  "RUN-701": {
+    "category": "custom_reflective_dll_injection",
+    "source_archive": "custom_reflective_dll_injection.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        818
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        14162
+      ],
+      [
+        "sysmon.evtx",
+        10555392
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        873046
+      ],
+      [
+        "handles.txt",
+        3559444
+      ],
+      [
+        "ldrmodules.txt",
+        569238
+      ],
+      [
+        "malfind.txt",
+        22095
+      ],
+      [
+        "privileges.txt",
+        393554
+      ],
+      [
+        "pslist.txt",
+        12879
+      ],
+      [
+        "psscan.txt",
+        13398
+      ],
+      [
+        "pstree.txt",
+        48850
+      ],
+      [
+        "psxview.txt",
+        7156
+      ],
+      [
+        "threads.txt",
+        280158
+      ],
+      [
+        "vadinfo.txt",
+        2481516
+      ]
+    ],
+    "process_features": "custom_reflective_dll_injection\\process\\RUN-701.json",
+    "memory_features": "custom_reflective_dll_injection\\memory\\RUN-701.json",
+    "metadata": "custom_reflective_dll_injection\\metadata\\RUN-701.json",
+    "manifest": null
+  },
+  "RUN-702": {
+    "category": "custom_reflective_dll_injection",
+    "source_archive": "custom_reflective_dll_injection.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        818
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        13867
+      ],
+      [
+        "sysmon.evtx",
+        11603968
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        876535
+      ],
+      [
+        "handles.txt",
+        3578419
+      ],
+      [
+        "ldrmodules.txt",
+        571394
+      ],
+      [
+        "malfind.txt",
+        22619
+      ],
+      [
+        "privileges.txt",
+        396574
+      ],
+      [
+        "pslist.txt",
+        12973
+      ],
+      [
+        "psscan.txt",
+        13251
+      ],
+      [
+        "pstree.txt",
+        49069
+      ],
+      [
+        "psxview.txt",
+        7045
+      ],
+      [
+        "threads.txt",
+        279341
+      ],
+      [
+        "vadinfo.txt",
+        2492964
+      ]
+    ],
+    "process_features": "custom_reflective_dll_injection\\process\\RUN-702.json",
+    "memory_features": "custom_reflective_dll_injection\\memory\\RUN-702.json",
+    "metadata": "custom_reflective_dll_injection\\metadata\\RUN-702.json",
+    "manifest": null
+  },
+  "RUN-300": {
+    "category": "custom_registry_resident_malware",
+    "source_archive": "custom_registry_resident_malware.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        818
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        13298
+      ],
+      [
+        "sysmon.evtx",
+        9506816
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        877323
+      ],
+      [
+        "handles.txt",
+        3516370
+      ],
+      [
+        "ldrmodules.txt",
+        578601
+      ],
+      [
+        "malfind.txt",
+        24201
+      ],
+      [
+        "privileges.txt",
+        385753
+      ],
+      [
+        "pslist.txt",
+        12574
+      ],
+      [
+        "psscan.txt",
+        13401
+      ],
+      [
+        "pstree.txt",
+        44805
+      ],
+      [
+        "psxview.txt",
+        7176
+      ],
+      [
+        "threads.txt",
+        266417
+      ],
+      [
+        "vadinfo.txt",
+        2457679
+      ]
+    ],
+    "process_features": "custom_registry_resident_malware\\process\\RUN-300.json",
+    "memory_features": "custom_registry_resident_malware\\memory\\RUN-300.json",
+    "metadata": "custom_registry_resident_malware\\metadata\\RUN-300.json",
+    "manifest": null
+  },
+  "RUN-301": {
+    "category": "custom_registry_resident_malware",
+    "source_archive": "custom_registry_resident_malware.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        818
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        13427
+      ],
+      [
+        "sysmon.evtx",
+        9506816
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        878412
+      ],
+      [
+        "handles.txt",
+        3524440
+      ],
+      [
+        "ldrmodules.txt",
+        579892
+      ],
+      [
+        "malfind.txt",
+        24777
+      ],
+      [
+        "privileges.txt",
+        385718
+      ],
+      [
+        "pslist.txt",
+        12572
+      ],
+      [
+        "psscan.txt",
+        13402
+      ],
+      [
+        "pstree.txt",
+        44803
+      ],
+      [
+        "psxview.txt",
+        7177
+      ],
+      [
+        "threads.txt",
+        272766
+      ],
+      [
+        "vadinfo.txt",
+        2458086
+      ]
+    ],
+    "process_features": "custom_registry_resident_malware\\process\\RUN-301.json",
+    "memory_features": "custom_registry_resident_malware\\memory\\RUN-301.json",
+    "metadata": "custom_registry_resident_malware\\metadata\\RUN-301.json",
+    "manifest": null
+  },
+  "RUN-302": {
+    "category": "custom_registry_resident_malware",
+    "source_archive": "custom_registry_resident_malware.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        818
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        13432
+      ],
+      [
+        "sysmon.evtx",
+        9506816
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        879257
+      ],
+      [
+        "handles.txt",
+        3525040
+      ],
+      [
+        "ldrmodules.txt",
+        580056
+      ],
+      [
+        "malfind.txt",
+        24924
+      ],
+      [
+        "privileges.txt",
+        385718
+      ],
+      [
+        "pslist.txt",
+        12573
+      ],
+      [
+        "psscan.txt",
+        13158
+      ],
+      [
+        "pstree.txt",
+        44804
+      ],
+      [
+        "psxview.txt",
+        7009
+      ],
+      [
+        "threads.txt",
+        260406
+      ],
+      [
+        "vadinfo.txt",
+        2456544
+      ]
+    ],
+    "process_features": "custom_registry_resident_malware\\process\\RUN-302.json",
+    "memory_features": "custom_registry_resident_malware\\memory\\RUN-302.json",
+    "metadata": "custom_registry_resident_malware\\metadata\\RUN-302.json",
+    "manifest": null
+  },
+  "RUN-600": {
+    "category": "custom_wmi_malware",
+    "source_archive": "custom_wmi_malware.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        818
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        13124
+      ],
+      [
+        "sysmon.evtx",
+        10555392
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        797079
+      ],
+      [
+        "handles.txt",
+        3248202
+      ],
+      [
+        "ldrmodules.txt",
+        521274
+      ],
+      [
+        "malfind.txt",
+        22851
+      ],
+      [
+        "privileges.txt",
+        370838
+      ],
+      [
+        "pslist.txt",
+        12166
+      ],
+      [
+        "psscan.txt",
+        13286
+      ],
+      [
+        "pstree.txt",
+        41394
+      ],
+      [
+        "psxview.txt",
+        7376
+      ],
+      [
+        "threads.txt",
+        264448
+      ],
+      [
+        "vadinfo.txt",
+        2210543
+      ]
+    ],
+    "process_features": "custom_wmi_malware\\process\\RUN-600.json",
+    "memory_features": "custom_wmi_malware\\memory\\RUN-600.json",
+    "metadata": "custom_wmi_malware\\metadata\\RUN-600.json",
+    "manifest": null
+  },
+  "RUN-601": {
+    "category": "custom_wmi_malware",
+    "source_archive": "custom_wmi_malware.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        818
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        13199
+      ],
+      [
+        "sysmon.evtx",
+        10555392
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        839284
+      ],
+      [
+        "handles.txt",
+        3372737
+      ],
+      [
+        "ldrmodules.txt",
+        547161
+      ],
+      [
+        "malfind.txt",
+        22845
+      ],
+      [
+        "privileges.txt",
+        395205
+      ],
+      [
+        "pslist.txt",
+        12835
+      ],
+      [
+        "psscan.txt",
+        13233
+      ],
+      [
+        "pstree.txt",
+        43310
+      ],
+      [
+        "psxview.txt",
+        7364
+      ],
+      [
+        "threads.txt",
+        280504
+      ],
+      [
+        "vadinfo.txt",
+        2328996
+      ]
+    ],
+    "process_features": "custom_wmi_malware\\process\\RUN-601.json",
+    "memory_features": "custom_wmi_malware\\memory\\RUN-601.json",
+    "metadata": "custom_wmi_malware\\metadata\\RUN-601.json",
+    "manifest": null
+  },
+  "RUN-602": {
+    "category": "custom_wmi_malware",
+    "source_archive": "custom_wmi_malware.tar.gz",
+    "evidence_files": [
+      [
+        "network_connections.csv",
+        818
+      ],
+      [
+        "powershell.evtx",
+        15798272
+      ],
+      [
+        "process_snapshot.csv",
+        13947
+      ],
+      [
+        "sysmon.evtx",
+        10555392
+      ]
+    ],
+    "volatility_files": [
+      [
+        "dlllist.txt",
+        873873
+      ],
+      [
+        "handles.txt",
+        3559039
+      ],
+      [
+        "ldrmodules.txt",
+        573474
+      ],
+      [
+        "malfind.txt",
+        22782
+      ],
+      [
+        "privileges.txt",
+        403123
+      ],
+      [
+        "pslist.txt",
+        13139
+      ],
+      [
+        "psscan.txt",
+        13295
+      ],
+      [
+        "pstree.txt",
+        49285
+      ],
+      [
+        "psxview.txt",
+        7037
+      ],
+      [
+        "threads.txt",
+        295167
+      ],
+      [
+        "vadinfo.txt",
+        2484753
+      ]
+    ],
+    "process_features": "custom_wmi_malware\\process\\RUN-602.json",
+    "memory_features": "custom_wmi_malware\\memory\\RUN-602.json",
+    "metadata": "custom_wmi_malware\\metadata\\RUN-602.json",
+    "manifest": null
+  }
+}

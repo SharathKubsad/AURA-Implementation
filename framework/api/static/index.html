@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURA // Real-Time Fileless Malware Detection &amp; Attribution</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <!-- Ambient Warm Lighting Background -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-logo">
+          <div class="logo-circle">
+            <span class="pulse-ring"></span>
+            <span class="logo-dot"></span>
+          </div>
+        </div>
+        <div class="brand-text">
+          <h1>AURA <span>SENTINEL</span></h1>
+          <p class="subtitle">Input-Driven Hybrid ML Detection &amp; Multimodal Attribution</p>
+        </div>
+      </div>
+
+      <div class="header-status">
+        <div class="badge badge-pulse">
+          <span class="status-indicator live"></span>
+          <span class="status-label">MODELS ACTIVE</span>
+        </div>
+        <div class="badge badge-threshold">
+          <span class="label-dim">Fusion Threshold:</span>
+          <span class="value-highlight" id="lbl-threshold">0.60</span>
+        </div>
+        <button id="btn-live-scan" class="btn btn-secondary" type="button">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+          <span>Live OS Scan</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="main-content">
+
+    <!-- Demonstration Mode Fast-Picker Banner -->
+    <section class="demo-modes-bar card">
+      <div class="demo-modes-header">
+        <span class="demo-label-eyebrow">DEMONSTRATION MODES</span>
+        <h3>Select Evaluation Pathway</h3>
+      </div>
+      <div class="demo-mode-tabs">
+        <button class="demo-tab-btn" id="btn-demo-case-a" type="button">
+          <span class="tab-badge">CASE A</span>
+          <div class="tab-text">
+            <strong>Embedded Benign Preset</strong>
+            <span>Input &rarr; Clean Telemetry &rarr; BENIGN Verdict</span>
+          </div>
+        </button>
+        <button class="demo-tab-btn" id="btn-demo-case-b" type="button">
+          <span class="tab-badge">CASE B</span>
+          <div class="tab-text">
+            <strong>Embedded Suspicious Preset</strong>
+            <span>Input &rarr; Malicious &rarr; Auto Family &rarr; Evidence</span>
+          </div>
+        </button>
+        <button class="demo-tab-btn active" id="btn-demo-case-c" type="button">
+          <span class="tab-badge active">CASE C</span>
+          <div class="tab-text">
+            <strong>User-Defined External Command</strong>
+            <span>Type/Paste Custom Command &rarr; Infer ML Verdict</span>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <!-- Interactive Threat Simulator & Telemetry Studio -->
+    <section class="card studio-card" id="command-simulator-section">
+      <div class="card-header">
+        <div class="card-title-group">
+          <h2>Input-Driven Command Execution &amp; Detection Studio</h2>
+          <p>The system never receives the malware family as an input. Enter any custom command or choose a demonstration preset — both pass through the exact same feature extraction and ML classifier pipeline.</p>
+        </div>
+        <div class="simulator-mode-badge" id="sim-mode-tag">
+          <span class="mode-dot"></span>
+          <span id="lbl-sim-mode">CUSTOM COMMAND MODE</span>
+        </div>
+      </div>
+
+      <!-- Controls Grid: Preset Selector + Custom Terminal Editor -->
+      <div class="simulator-controls-grid">
+        
+        <!-- 1. Built-in Sample Demonstration Presets Library -->
+        <div class="preset-picker-box">
+          <div class="picker-header">
+            <label for="sample-select" class="picker-label">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h7"/></svg>
+              <span>Demonstration Presets Library:</span>
+            </label>
+            <span class="preset-count-badge" id="preset-count-badge">Presets Available</span>
+          </div>
+
+          <!-- Category Quick-Filter Chips (All 12 Categories) -->
+          <div class="category-chips-row" id="category-chips">
+            <button class="chip active" data-category="ALL">All Categories</button>
+            <button class="chip" data-category="Benign Administration">Benign Admin</button>
+            <button class="chip" data-category="PowerShell Fileless">PowerShell Fileless</button>
+            <button class="chip" data-category="WMI Malware">WMI Malware</button>
+            <button class="chip" data-category="Process Hollowing">Process Hollowing</button>
+            <button class="chip" data-category="Reflective DLL Injection">Reflective DLL</button>
+            <button class="chip" data-category="Registry Malware">Registry Resident</button>
+            <button class="chip" data-category="Cobalt Strike Beacon">Cobalt Strike</button>
+            <button class="chip" data-category="Metasploit Memory Payloads">Metasploit</button>
+            <button class="chip" data-category="LOLBins Abuse">LOLBins Abuse</button>
+            <button class="chip" data-category="Fileless Ransomware">Ransomware</button>
+            <button class="chip" data-category="Memory-Only RAT">Memory RAT</button>
+            <button class="chip" data-category="Empire Framework">Empire Framework</button>
+          </div>
+
+          <!-- Sample Dropdown Select Box -->
+          <div class="select-wrapper">
+            <select id="sample-select" class="sample-dropdown" aria-label="Select Built-in Sample Command Preset">
+              <!-- Dynamically populated from /v1/command/samples -->
+            </select>
+            <div class="select-chevron">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+
+          <!-- Sample Detail Context Card -->
+          <div class="sample-info-card" id="sample-info-card">
+            <div class="sample-info-meta">
+              <span class="sample-category-tag" id="sample-card-category">Benign Administration</span>
+              <span class="sample-id-tag" id="sample-card-id">benign-ps-proc</span>
+            </div>
+            <p class="sample-description" id="sample-card-desc">Standard administrative process enumeration filtering by CPU utilization.</p>
+            <div class="sample-expected-box">
+              <span class="expected-label">Expected Behavior Pattern:</span>
+              <span class="expected-text" id="sample-card-expected">Nominal command entropy, no obfuscation flags, benign administrative telemetry.</span>
+            </div>
+            <div class="preset-neutrality-notice">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              <span>Preset command text is evaluated purely by the ML models without passing family ground-truth.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Custom Command Input & Live Editor -->
+        <div class="custom-editor-box">
+          <div class="editor-header">
+            <div class="editor-title">
+              <span class="terminal-prompt">&gt;_</span>
+              <span>Command Input (Paste or Type Any Command)</span>
+            </div>
+            <div class="editor-meta">
+              <span class="entropy-meter" id="entropy-badge">Entropy: <strong id="val-cmd-entropy">0.00</strong></span>
+              <span class="char-count" id="char-counter">0 chars</span>
+            </div>
+          </div>
+
+          <div class="terminal-container">
+            <textarea id="input-command" class="terminal-textarea" spellcheck="false" placeholder="Enter or paste any custom command line, PowerShell scriptblock, or LOLBin stager to analyze..."></textarea>
+          </div>
+
+          <div class="editor-actions-row">
+            <div class="safety-indicator">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>Safe Sandbox Telemetry Extraction &bull; Non-Destructive</span>
+            </div>
+            <div class="btn-group">
+              <button id="btn-clear-command" class="btn btn-secondary" title="Clear command input" type="button">
+                <span>Clear</span>
+              </button>
+              <button id="btn-run-simulation" class="btn btn-primary" type="button">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                <span id="btn-run-label">Execute &amp; Detect</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Pipeline Execution Trace Bar -->
+      <div class="pipeline-trace-container">
+        <div class="trace-label">CONVERGED PIPELINE EXECUTION FLOW:</div>
+        <div class="trace-steps">
+          <div class="trace-step"><span class="step-num">1</span><span>User Command Input</span></div>
+          <div class="trace-arrow">&rarr;</div>
+          <div class="trace-step"><span class="step-num">2</span><span>Controlled Telemetry Collection</span></div>
+          <div class="trace-arrow">&rarr;</div>
+          <div class="trace-step"><span class="step-num">3</span><span>4 Modality ML Models</span></div>
+          <div class="trace-arrow">&rarr;</div>
+          <div class="trace-step"><span class="step-num">4</span><span>Hybrid Fusion (0.60 Gate)</span></div>
+          <div class="trace-arrow">&rarr;</div>
+          <div class="trace-step"><span class="step-num">5</span><span>Benign / Malicious Verdict</span></div>
+          <div class="trace-arrow">&rarr;</div>
+          <div class="trace-step"><span class="step-num">6</span><span>Automatic Family Attribution</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL DETECTION RESULT CARD (Requirement 12) -->
+    <section class="card result-hero-card" id="detection-result-card">
+      <div class="result-card-header">
+        <div class="result-card-title-group">
+          <span class="card-eyebrow">DETECTION RESULT &amp; ATTRIBUTION BREAKDOWN</span>
+          <h2>Comprehensive Threat Assessment</h2>
+        </div>
+        <div class="verdict-pill-wrap">
+          <span class="verdict-badge benign" id="result-classification-badge">BENIGN</span>
+        </div>
+      </div>
+
+      <div class="result-card-grid">
+        
+        <!-- Left Column: Core Verdict & Modality Breakdown -->
+        <div class="result-main-col">
+          
+          <!-- Verdict Stats Row -->
+          <div class="verdict-summary-box">
+            <div class="summary-stat-box">
+              <span class="stat-title">Overall Classification</span>
+              <div class="stat-highlight-val" id="res-classification-text">BENIGN</div>
+              <span class="stat-caption" id="res-verdict-caption">Operating cleanly within nominal behavioral baseline</span>
+            </div>
+            <div class="summary-stat-box">
+              <span class="stat-title">Final Risk Score</span>
+              <div class="stat-highlight-val orange" id="res-risk-score-pct">5.2%</div>
+              <span class="stat-caption">Decision Threshold: 0.60 (60.0%)</span>
+            </div>
+            <div class="summary-stat-box">
+              <span class="stat-title">Primary Detection Vector</span>
+              <div class="stat-highlight-val vector-val" id="res-primary-vector">COMMAND BEHAVIOR</div>
+              <span class="stat-caption" id="res-dominant-sub">Dominant telemetry signal</span>
+            </div>
+          </div>
+
+          <!-- Threshold Visual Track -->
+          <div class="gauge-container" style="margin: 1.25rem 0;">
+            <div class="gauge-labels">
+              <span>0.0% Benign</span>
+              <span class="threshold-marker-label">Threshold (60.0%)</span>
+              <span>100.0% Threat</span>
+            </div>
+            <div class="gauge-track">
+              <div class="gauge-fill" id="res-gauge-fill" style="width: 5.2%;"></div>
+              <div class="threshold-line" style="left: 60%;"></div>
+            </div>
+          </div>
+
+          <!-- Modality Scores Table / List (Requirement 4 & 8) -->
+          <div class="modality-scores-panel">
+            <div class="panel-heading">
+              <h4>Individual Modality Risk Probabilities:</h4>
+              <span class="panel-sub">Calculated independently before hybrid fusion</span>
+            </div>
+
+            <div class="modality-score-rows">
+              
+              <div class="mod-row" id="row-mod-proc">
+                <div class="mod-meta">
+                  <span class="mod-name">Process Model Risk (XGBoost)</span>
+                  <span class="mod-tag" id="tag-proc-primary"></span>
+                </div>
+                <div class="mod-bar-wrap">
+                  <div class="mod-bar-fill" id="bar-proc-fill" style="width: 2%;"></div>
+                </div>
+                <div class="mod-val" id="lbl-risk-proc">2.0%</div>
+              </div>
+
+              <div class="mod-row" id="row-mod-cmd">
+                <div class="mod-meta">
+                  <span class="mod-name">Command Model Risk (DistilBERT / NLP)</span>
+                  <span class="mod-tag primary" id="tag-cmd-primary">&larr; Primary</span>
+                </div>
+                <div class="mod-bar-wrap">
+                  <div class="mod-bar-fill orange" id="bar-cmd-fill" style="width: 4%;"></div>
+                </div>
+                <div class="mod-val" id="lbl-risk-cmd">4.0%</div>
+              </div>
+
+              <div class="mod-row" id="row-mod-net">
+                <div class="mod-meta">
+                  <span class="mod-name">Network Model Risk (LightGBM)</span>
+                  <span class="mod-tag" id="tag-net-primary"></span>
+                </div>
+                <div class="mod-bar-wrap">
+                  <div class="mod-bar-fill" id="bar-net-fill" style="width: 3%;"></div>
+                </div>
+                <div class="mod-val" id="lbl-risk-net">3.0%</div>
+              </div>
+
+              <div class="mod-row" id="row-mod-mem">
+                <div class="mod-meta">
+                  <span class="mod-name">Memory Forensics Risk (CatBoost)</span>
+                  <span class="mod-tag" id="tag-mem-primary"></span>
+                </div>
+                <div class="mod-bar-wrap">
+                  <div class="mod-bar-fill" id="bar-mem-fill" style="width: 5%;"></div>
+                </div>
+                <div class="mod-val" id="lbl-risk-mem">5.0%</div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Modality Hierarchy Breakdown -->
+          <div class="modality-hierarchy-row">
+            <div class="hierarchy-box">
+              <span class="hier-label">Dominant Modality:</span>
+              <strong id="lbl-dominant-mod">Command &mdash; 4.0%</strong>
+            </div>
+            <div class="hierarchy-box">
+              <span class="hier-label">Secondary Modality:</span>
+              <strong id="lbl-secondary-mod">Memory &mdash; 5.0%</strong>
+            </div>
+            <div class="hierarchy-box">
+              <span class="hier-label">Memory Acquisition:</span>
+              <strong id="lbl-memory-status">Idle (Nominal Baseline)</strong>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Family Attribution & Top Evidence -->
+        <div class="result-side-col">
+          
+          <!-- Objective 3: Family Attribution Box -->
+          <div class="attribution-card-box">
+            <div class="attr-head">
+              <div>
+                <span class="attr-eyebrow">AUTOMATIC FAMILY ATTRIBUTION</span>
+                <h3 id="res-family-name">N/A (Benign Activity)</h3>
+              </div>
+              <div class="attr-confidence-badge" id="res-family-conf-badge">
+                <span class="conf-label">Confidence</span>
+                <strong id="res-family-conf-pct">&mdash;</strong>
+              </div>
+            </div>
+
+            <div class="family-dist-wrapper">
+              <span class="dist-title">Family Probability Distribution (Multiclass XGBoost):</span>
+              <div class="family-bars-list" id="res-family-distribution">
+                <!-- Dynamically populated by app.js -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Top Forensic Evidence List (Requirement 7 & 12) -->
+          <div class="evidence-card-box">
+            <div class="evidence-head">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              <h4>Primary Forensic Evidence</h4>
+            </div>
+            <ol class="evidence-numbered-list" id="res-top-evidence-list">
+              <li>Standard administrative command within nominal operational baseline</li>
+              <li>Zero obfuscation flags and zero unmapped memory allocations</li>
+              <li>Normal process handle counts and clean socket telemetry</li>
+            </ol>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- XAI Deep Explanations (LIME & SHAP) -->
+      <div class="result-xai-panel">
+        <div class="xai-panel-header">
+          <h4>Explainable AI (XAI) // Feature Attribution Insights</h4>
+          <span class="xai-badge">SHAP + LIME Active</span>
+        </div>
+
+        <div class="xai-grid-2col">
+          <!-- LIME Token Heatmap -->
+          <div class="xai-subbox">
+            <span class="xai-subhead">LIME Command Token Risk Heatmap:</span>
+            <div class="lime-tokens-box" id="res-lime-box">
+              <span class="token neutral">powershell.exe</span>
+              <span class="token safe">-Command</span>
+            </div>
+          </div>
+
+          <!-- SHAP Top Feature Deviations -->
+          <div class="xai-subbox">
+            <span class="xai-subhead">SHAP Top Feature Contributors (Process &amp; Memory):</span>
+            <div class="shap-bars-list" id="res-shap-bars">
+              <!-- Populated by app.js -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 4-Modality Detailed Telemetry Grid -->
+    <div class="grid-4-modalities">
+      
+      <!-- Modality 1: Process Model (XGBoost) -->
+      <div class="card modality-card" id="card-proc">
+        <div class="modality-head">
+          <div class="icon-bubble orange">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <div>
+            <h3>Process Model</h3>
+            <span class="model-badge">XGBoost Ensemble</span>
+          </div>
+          <div class="modality-score" id="score-proc">0.02</div>
+        </div>
+        <div class="metrics-list">
+          <div class="metric-row"><span>Total Processes</span><strong id="m-proc-total">38</strong></div>
+          <div class="metric-row"><span>Hidden Processes</span><strong id="m-proc-hidden">0</strong></div>
+          <div class="metric-row"><span>Anomalous PPID</span><strong id="m-proc-ppid">0</strong></div>
+          <div class="metric-row"><span>Handle Count</span><strong id="m-proc-handles">8,700</strong></div>
+          <div class="metric-row"><span>Elevated Privileges</span><strong id="m-proc-privs">0</strong></div>
+        </div>
+        <div class="modality-progress">
+          <div class="progress-bar" id="prog-proc" style="width: 2%;"></div>
+        </div>
+      </div>
+
+      <!-- Modality 2: Command Model (NLP + Tabular) -->
+      <div class="card modality-card" id="card-cmd">
+        <div class="modality-head">
+          <div class="icon-bubble orange">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+          </div>
+          <div>
+            <h3>Command Model</h3>
+            <span class="model-badge">DistilBERT / NLP</span>
+          </div>
+          <div class="modality-score" id="score-cmd">0.04</div>
+        </div>
+        <div class="metrics-list">
+          <div class="metric-row"><span>Shannon Entropy</span><strong id="m-cmd-entropy">3.42</strong></div>
+          <div class="metric-row"><span>Base64 Encoded</span><strong id="m-cmd-b64">No</strong></div>
+          <div class="metric-row"><span>Download Cradle</span><strong id="m-cmd-cradle">No</strong></div>
+          <div class="metric-row"><span>Execution Bypass</span><strong id="m-cmd-bypass">No</strong></div>
+          <div class="metric-row"><span>LOLBins Detected</span><strong id="m-cmd-lolbins">No</strong></div>
+        </div>
+        <div class="modality-progress">
+          <div class="progress-bar" id="prog-cmd" style="width: 4%;"></div>
+        </div>
+      </div>
+
+      <!-- Modality 3: Network Model (LightGBM) -->
+      <div class="card modality-card" id="card-net">
+        <div class="modality-head">
+          <div class="icon-bubble orange">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <div>
+            <h3>Network Model</h3>
+            <span class="model-badge">LightGBM Booster</span>
+          </div>
+          <div class="modality-score" id="score-net">0.03</div>
+        </div>
+        <div class="metrics-list">
+          <div class="metric-row"><span>Active Sockets</span><strong id="m-net-conns">0</strong></div>
+          <div class="metric-row"><span>Listening Ports</span><strong id="m-net-ports">0</strong></div>
+          <div class="metric-row"><span>Outbound Remote IPs</span><strong id="m-net-ips">0</strong></div>
+          <div class="metric-row"><span>Beacon Regularity</span><strong id="m-net-beacon">0.00</strong></div>
+          <div class="metric-row"><span>Suspicious Port</span><strong id="m-net-susp-port">None</strong></div>
+        </div>
+        <div class="modality-progress">
+          <div class="progress-bar" id="prog-net" style="width: 3%;"></div>
+        </div>
+      </div>
+
+      <!-- Modality 4: Memory Model (Triggered CatBoost) -->
+      <div class="card modality-card" id="card-mem">
+        <div class="modality-head">
+          <div class="icon-bubble amber">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 19v-3"/><path d="M10 19v-3"/><path d="M14 19v-3"/><path d="M18 19v-3"/><rect x="2" y="5" width="20" height="10" rx="2"/></svg>
+          </div>
+          <div>
+            <h3>Memory Forensics</h3>
+            <span class="model-badge pulse-badge" id="lbl-mem-mode">On-Demand Trigger</span>
+          </div>
+          <div class="modality-score" id="score-mem">0.05</div>
+        </div>
+        <div class="metrics-list">
+          <div class="metric-row"><span>RWX Page Count</span><strong id="m-mem-rwx">0</strong></div>
+          <div class="metric-row"><span>Injected Regions</span><strong id="m-mem-injected">0</strong></div>
+          <div class="metric-row"><span>Unmapped Exec Pages</span><strong id="m-mem-unmapped">0</strong></div>
+          <div class="metric-row"><span>VAD Anomalies</span><strong id="m-mem-vad">0</strong></div>
+          <div class="metric-row"><span>Max Page Entropy</span><strong id="m-mem-entropy">4.20</strong></div>
+        </div>
+        <div class="modality-progress">
+          <div class="progress-bar" id="prog-mem" style="width: 5%;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Comprehensive Model Evaluation & Assurance Metrics Dashboard -->
+    <section class="card assurance-card" id="metrics-dashboard">
+      <div class="card-header">
+        <div class="card-title-group">
+          <h2>Model Evaluation &amp; Empirical Assurance Performance</h2>
+          <p>Scientific validation across holdout test splits, 5-fold cross-validation, adversarial stress tests, and sensor-blinding generalization</p>
+        </div>
+        <div class="badge badge-pulse">
+          <span class="status-indicator live"></span>
+          <span>95.56% ENSEMBLE ACCURACY</span>
+        </div>
+      </div>
+
+      <!-- Top Metric Highlight Cards -->
+      <div class="assurance-grid" style="margin-bottom: 1.5rem;">
+        <div class="assurance-box">
+          <div class="box-title">System Hybrid Accuracy</div>
+          <div class="stat-num" id="stat-overall-acc" style="color: var(--color-success);">95.56%</div>
+          <div class="stat-desc">43 of 45 correct across authentic custom benchmark dataset</div>
+        </div>
+        <div class="assurance-box">
+          <div class="box-title">Malware Recall (Detection Rate)</div>
+          <div class="stat-num" id="stat-overall-recall" style="color: var(--color-success);">100.0%</div>
+          <div class="stat-desc">Zero false negatives (32 of 32 malware executions intercepted)</div>
+        </div>
+        <div class="assurance-box">
+          <div class="box-title">Global ROC-AUC Score</div>
+          <div class="stat-num" id="stat-overall-auc" style="color: var(--orange-dark);">0.9928</div>
+          <div class="stat-desc">Near-perfect separation between benign and malware distributions</div>
+        </div>
+        <div class="assurance-box">
+          <div class="box-title">Real-Time Inference Latency</div>
+          <div class="stat-num">&lt; 15ms</div>
+          <div class="stat-desc">Sub-second continuous telemetry monitoring across all models</div>
+        </div>
+      </div>
+
+      <!-- Detailed Empirical Metrics Table -->
+      <div class="metrics-table-container">
+        <table class="metrics-table">
+          <thead>
+            <tr>
+              <th>Model / Pipeline Component</th>
+              <th>Algorithm Architecture</th>
+              <th>Holdout Accuracy</th>
+              <th>Detection Recall</th>
+              <th>Precision</th>
+              <th>F1-Score</th>
+              <th>ROC-AUC</th>
+              <th>Evaluation Status</th>
+            </tr>
+          </thead>
+          <tbody id="metrics-table-body">
+            <tr class="highlight-row">
+              <td><strong>Hybrid Fusion Pipeline (Full System)</strong></td>
+              <td>Two-Stage Weighted Ensemble</td>
+              <td><span class="badge-score green">95.56%</span></td>
+              <td><span class="badge-score green">100.00%</span></td>
+              <td>94.12%</td>
+              <td><strong>0.9697</strong></td>
+              <td><strong>1.0000</strong></td>
+              <td><span class="tag-verified">Production Active</span></td>
+            </tr>
+            <tr>
+              <td>Process Telemetry Model</td>
+              <td>XGBoost Classifier</td>
+              <td><span class="badge-score">85.71%</span></td>
+              <td>100.00%</td>
+              <td>83.33%</td>
+              <td>0.9091</td>
+              <td>0.9000</td>
+              <td><span class="tag-verified">Verified</span></td>
+            </tr>
+            <tr>
+              <td>Volatile Memory Forensics Model</td>
+              <td>CatBoost Decision Trees</td>
+              <td><span class="badge-score">85.71%</span></td>
+              <td>100.00%</td>
+              <td>83.33%</td>
+              <td>0.9091</td>
+              <td>1.0000</td>
+              <td><span class="tag-verified">Verified</span></td>
+            </tr>
+            <tr>
+              <td>Command Execution Model</td>
+              <td>DistilBERT Transformer</td>
+              <td><span class="badge-score">71.43%</span></td>
+              <td>100.00%</td>
+              <td>71.43%</td>
+              <td>0.8333</td>
+              <td>Softmax</td>
+              <td><span class="tag-verified">Verified</span></td>
+            </tr>
+            <tr>
+              <td>Network Socket &amp; Flow Model</td>
+              <td>LightGBM Booster</td>
+              <td><span class="badge-score">71.43%</span></td>
+              <td>100.00%</td>
+              <td>71.43%</td>
+              <td>0.8333</td>
+              <td>0.5000</td>
+              <td><span class="tag-verified">Verified</span></td>
+            </tr>
+            <tr>
+              <td>Multi-Class Family Classifier</td>
+              <td>XGBoost 11-Family Attributor</td>
+              <td><span class="badge-score">9.38% (LOO)</span></td>
+              <td>9.38%</td>
+              <td>6.88%</td>
+              <td>0.0758</td>
+              <td>11 Classes</td>
+              <td><span class="tag-verified">Research Prototype</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Stress-Testing & Robustness Benchmarks Grid -->
+      <div class="card-header" style="margin-top: 2rem; border-top: 1px solid var(--border-warm); padding-top: 1.5rem;">
+        <div class="card-title-group">
+          <h3>Objective 4 // Robustness &amp; Generalization Stress-Testing</h3>
+          <p>Evaluation under adversarial parameter noise, obfuscated command stagers, and sensor blinding</p>
+        </div>
+      </div>
+
+      <div class="assurance-grid">
+        <div class="assurance-box">
+          <div class="box-title">Adversarial Robustness (Noise &amp; Obfuscation)</div>
+          <div class="stat-num" id="stat-robust-acc">88.00%</div>
+          <div class="stat-desc">50 samples with Gaussian noise (&sigma;=0.20) &amp; PowerShell aliasing. <strong>100% Recall, 0.9920 ROC-AUC</strong></div>
+        </div>
+        <div class="assurance-box">
+          <div class="box-title">Sensor Blinding (Generalization)</div>
+          <div class="stat-num" id="stat-gen-acc">84.00%</div>
+          <div class="stat-desc">50 samples with 40% telemetry dropped across sensors. <strong>100% Recall, 0.9984 ROC-AUC</strong></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>AURA Sentinel &copy; 2026 &bull; Hybrid ML Framework for Real-Time Fileless Malware Detection &bull; Production Grade Build</p>
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

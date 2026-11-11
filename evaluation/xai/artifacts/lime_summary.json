@@ -1,0 +1,54 @@
+{
+  "command_token_weights": [
+    {
+      "token": "EncodedCommand",
+      "weight": -0.0052
+    },
+    {
+      "token": "powershell",
+      "weight": 0.004
+    },
+    {
+      "token": "Bypass",
+      "weight": 0.0023
+    },
+    {
+      "token": "ExecutionPolicy",
+      "weight": 0.0015
+    },
+    {
+      "token": "AQIDBAUG",
+      "weight": 0.0012
+    },
+    {
+      "token": "NoProfile",
+      "weight": 0.0009
+    }
+  ],
+  "process_feature_weights": [
+    {
+      "feature": "total_process_count > 140.00",
+      "weight": -0.387
+    },
+    {
+      "feature": "avg_threads_per_process > 12.05",
+      "weight": 0.037
+    },
+    {
+      "feature": "0.00 < hidden_process_count <= 1.00",
+      "weight": 0.0325
+    },
+    {
+      "feature": "max_threads_in_single_process <= 142.00",
+      "weight": 0.0264
+    },
+    {
+      "feature": "elevated_privilege_count <= 49.00",
+      "weight": 0.0191
+    },
+    {
+      "feature": "total_handle_count <= 50548.00",
+      "weight": 0.0187
+    }
+  ]
+}

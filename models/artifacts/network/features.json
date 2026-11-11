@@ -1,0 +1,14 @@
+{
+  "feature_names": [
+    "active_connection_count",
+    "listening_port_count",
+    "outbound_connection_count",
+    "dns_query_count",
+    "unique_remote_ips",
+    "avg_interpacket_interval_ms",
+    "beacon_regularity_score",
+    "total_bytes_sent",
+    "total_bytes_received",
+    "suspicious_port_usage"
+  ]
+}

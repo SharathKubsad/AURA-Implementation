@@ -1,0 +1,46 @@
+{
+  "modality": "cross_modal_features",
+  "total_records": 45,
+  "fields": {
+    "sample_id": {
+      "type": "str",
+      "nullable": false
+    },
+    "run_id": {
+      "type": "str",
+      "nullable": false
+    },
+    "label": {
+      "type": "int",
+      "nullable": false
+    },
+    "cross_proc_with_memory_and_command": {
+      "type": "int",
+      "nullable": false
+    },
+    "cross_proc_with_command_and_network": {
+      "type": "int",
+      "nullable": false
+    },
+    "cross_proc_with_injection_and_network": {
+      "type": "int",
+      "nullable": false
+    },
+    "cross_proc_with_suspicious_memory_and_tree": {
+      "type": "int",
+      "nullable": false
+    },
+    "cross_high_privilege_network_processes": {
+      "type": "int",
+      "nullable": false
+    },
+    "cross_suspicious_memory_process_ratio": {
+      "type": "float",
+      "nullable": false
+    },
+    "cross_network_enabled_process_ratio": {
+      "type": "float",
+      "nullable": false
+    }
+  }
+}

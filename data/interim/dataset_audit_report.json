@@ -1,0 +1,1833 @@
+{
+  "audit_timestamp": "2026-09-21T07:34:06.176456+00:00",
+  "interim_directory": "data\\interim",
+  "summary": {
+    "total_samples": 45,
+    "status_counts": {
+      "valid": 45,
+      "incomplete": 0,
+      "invalid": 0,
+      "review": 0
+    },
+    "unique_sample_ids": 45,
+    "duplicate_sample_warnings": [],
+    "binary_label_distribution": {
+      "benign": 13,
+      "malware": 32,
+      "unknown": 0
+    },
+    "family_distribution": {
+      "benign": 13,
+      "powershell_fileless": 2,
+      "process_hollowing": 3,
+      "memory_only_rat": 3,
+      "registry_resident_malware": 3,
+      "cobalt_strike_beacon": 3,
+      "metasploit_memory_payloads": 3,
+      "wmi_malware": 3,
+      "reflective_dll_injection": 3,
+      "lolbins_abuse": 3,
+      "fileless_ransomware": 3,
+      "empire_framework": 3
+    },
+    "modality_availability": {
+      "process": {
+        "count": 45,
+        "percentage": 100.0
+      },
+      "memory": {
+        "count": 45,
+        "percentage": 100.0
+      },
+      "command": {
+        "count": 45,
+        "percentage": 100.0
+      },
+      "network": {
+        "count": 45,
+        "percentage": 100.0
+      },
+      "all_four": {
+        "count": 45,
+        "percentage": 100.0
+      }
+    },
+    "process_memory_availability": {
+      "process_present": 45,
+      "memory_present": 45,
+      "both_present": 45,
+      "missing_both": 0
+    },
+    "schema_validation": {
+      "process": {
+        "present": 45,
+        "valid": 45,
+        "invalid": 0
+      },
+      "memory": {
+        "present": 45,
+        "valid": 45,
+        "invalid": 0
+      },
+      "command": {
+        "present": 45,
+        "valid": 45,
+        "invalid": 0
+      },
+      "network": {
+        "present": 45,
+        "valid": 45,
+        "invalid": 0
+      }
+    },
+    "missing_null_fields_per_modality": {
+      "process": {},
+      "memory": {
+        "mean_memory_entropy": 45,
+        "max_memory_entropy": 45
+      },
+      "command": {},
+      "network": {
+        "dns_query_count": 45,
+        "avg_interpacket_interval_ms": 45,
+        "beacon_regularity_score": 45,
+        "total_bytes_sent": 45,
+        "total_bytes_received": 45
+      }
+    },
+    "command_raw_text_stats": {
+      "available_count": 45,
+      "empty_count": 0,
+      "min_length": 59,
+      "max_length": 73,
+      "mean_length": 64.29,
+      "median_length": 59
+    },
+    "network_unsupported_stats": {
+      "dns_query_count": {
+        "null_count": 45,
+        "present_count": 0,
+        "null_percentage": 100.0
+      },
+      "avg_interpacket_interval_ms": {
+        "null_count": 45,
+        "present_count": 0,
+        "null_percentage": 100.0
+      },
+      "beacon_regularity_score": {
+        "null_count": 45,
+        "present_count": 0,
+        "null_percentage": 100.0
+      },
+      "total_bytes_sent": {
+        "null_count": 45,
+        "present_count": 0,
+        "null_percentage": 100.0
+      },
+      "total_bytes_received": {
+        "null_count": 45,
+        "present_count": 0,
+        "null_percentage": 100.0
+      }
+    },
+    "numeric_sanity": {
+      "nan_count": 0,
+      "inf_count": 0,
+      "negative_impossible_count": 0,
+      "constant_features": [
+        {
+          "modality": "process",
+          "feature": "suspicious_dll_count",
+          "constant_value": 0,
+          "samples_observed": 45
+        },
+        {
+          "modality": "memory",
+          "feature": "vad_protection_anomaly_count",
+          "constant_value": 0,
+          "samples_observed": 45
+        },
+        {
+          "modality": "memory",
+          "feature": "yara_shellcode_matches",
+          "constant_value": 0,
+          "samples_observed": 45
+        },
+        {
+          "modality": "command",
+          "feature": "is_base64_encoded",
+          "constant_value": 0,
+          "samples_observed": 45
+        },
+        {
+          "modality": "command",
+          "feature": "has_download_cradle",
+          "constant_value": 0,
+          "samples_observed": 45
+        },
+        {
+          "modality": "command",
+          "feature": "has_bypass_execution_policy",
+          "constant_value": 0,
+          "samples_observed": 45
+        },
+        {
+          "modality": "command",
+          "feature": "has_hidden_window",
+          "constant_value": 0,
+          "samples_observed": 45
+        },
+        {
+          "modality": "command",
+          "feature": "uses_lolbins",
+          "constant_value": 0,
+          "samples_observed": 45
+        },
+        {
+          "modality": "command",
+          "feature": "registry_persistence_count",
+          "constant_value": 0,
+          "samples_observed": 45
+        },
+        {
+          "modality": "network",
+          "feature": "listening_port_count",
+          "constant_value": 10,
+          "samples_observed": 45
+        },
+        {
+          "modality": "network",
+          "feature": "suspicious_port_usage",
+          "constant_value": 0,
+          "samples_observed": 45
+        }
+      ]
+    },
+    "cross_modality_id_mismatches": [],
+    "samples_for_review": [],
+    "invalid_samples": [],
+    "incomplete_samples": []
+  },
+  "samples": {
+    "EXEC_RUN-001": {
+      "status": "valid",
+      "family": "benign",
+      "binary_label": 0,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 73,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-002": {
+      "status": "valid",
+      "family": "powershell_fileless",
+      "binary_label": 1,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 73,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-003": {
+      "status": "valid",
+      "family": "powershell_fileless",
+      "binary_label": 1,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 73,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-100": {
+      "status": "valid",
+      "family": "process_hollowing",
+      "binary_label": 1,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 73,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-101": {
+      "status": "valid",
+      "family": "process_hollowing",
+      "binary_label": 1,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 73,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-102": {
+      "status": "valid",
+      "family": "process_hollowing",
+      "binary_label": 1,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 73,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-200": {
+      "status": "valid",
+      "family": "memory_only_rat",
+      "binary_label": 1,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 73,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-201": {
+      "status": "valid",
+      "family": "memory_only_rat",
+      "binary_label": 1,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 73,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-202": {
+      "status": "valid",
+      "family": "memory_only_rat",
+      "binary_label": 1,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 73,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-300": {
+      "status": "valid",
+      "family": "registry_resident_malware",
+      "binary_label": 1,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 59,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-301": {
+      "status": "valid",
+      "family": "registry_resident_malware",
+      "binary_label": 1,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 59,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-302": {
+      "status": "valid",
+      "family": "registry_resident_malware",
+      "binary_label": 1,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 59,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-400": {
+      "status": "valid",
+      "family": "cobalt_strike_beacon",
+      "binary_label": 1,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 59,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-401": {
+      "status": "valid",
+      "family": "cobalt_strike_beacon",
+      "binary_label": 1,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 59,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-402": {
+      "status": "valid",
+      "family": "cobalt_strike_beacon",
+      "binary_label": 1,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 59,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-500": {
+      "status": "valid",
+      "family": "metasploit_memory_payloads",
+      "binary_label": 1,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 59,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-501": {
+      "status": "valid",
+      "family": "metasploit_memory_payloads",
+      "binary_label": 1,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 59,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-502": {
+      "status": "valid",
+      "family": "metasploit_memory_payloads",
+      "binary_label": 1,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 59,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-600": {
+      "status": "valid",
+      "family": "wmi_malware",
+      "binary_label": 1,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 59,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-601": {
+      "status": "valid",
+      "family": "wmi_malware",
+      "binary_label": 1,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 59,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-602": {
+      "status": "valid",
+      "family": "wmi_malware",
+      "binary_label": 1,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 59,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-700": {
+      "status": "valid",
+      "family": "reflective_dll_injection",
+      "binary_label": 1,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 59,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-701": {
+      "status": "valid",
+      "family": "reflective_dll_injection",
+      "binary_label": 1,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 59,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-702": {
+      "status": "valid",
+      "family": "reflective_dll_injection",
+      "binary_label": 1,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 59,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-800": {
+      "status": "valid",
+      "family": "lolbins_abuse",
+      "binary_label": 1,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 73,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-801": {
+      "status": "valid",
+      "family": "lolbins_abuse",
+      "binary_label": 1,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 73,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-802": {
+      "status": "valid",
+      "family": "lolbins_abuse",
+      "binary_label": 1,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 73,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-900": {
+      "status": "valid",
+      "family": "fileless_ransomware",
+      "binary_label": 1,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 59,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-901": {
+      "status": "valid",
+      "family": "fileless_ransomware",
+      "binary_label": 1,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 59,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-902": {
+      "status": "valid",
+      "family": "fileless_ransomware",
+      "binary_label": 1,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 59,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-1000": {
+      "status": "valid",
+      "family": "empire_framework",
+      "binary_label": 1,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 59,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-1001": {
+      "status": "valid",
+      "family": "empire_framework",
+      "binary_label": 1,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 59,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-1002": {
+      "status": "valid",
+      "family": "empire_framework",
+      "binary_label": 1,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 59,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-1100": {
+      "status": "valid",
+      "family": "benign",
+      "binary_label": 0,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 59,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-1101": {
+      "status": "valid",
+      "family": "benign",
+      "binary_label": 0,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 59,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-1102": {
+      "status": "valid",
+      "family": "benign",
+      "binary_label": 0,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 59,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-1103": {
+      "status": "valid",
+      "family": "benign",
+      "binary_label": 0,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 59,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-1104": {
+      "status": "valid",
+      "family": "benign",
+      "binary_label": 0,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 59,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-1105": {
+      "status": "valid",
+      "family": "benign",
+      "binary_label": 0,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 59,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-1106": {
+      "status": "valid",
+      "family": "benign",
+      "binary_label": 0,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 59,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-1107": {
+      "status": "valid",
+      "family": "benign",
+      "binary_label": 0,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 73,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-1108": {
+      "status": "valid",
+      "family": "benign",
+      "binary_label": 0,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 73,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-1109": {
+      "status": "valid",
+      "family": "benign",
+      "binary_label": 0,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 73,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-1110": {
+      "status": "valid",
+      "family": "benign",
+      "binary_label": 0,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 73,
+      "network_null_count": 5,
+      "issues": []
+    },
+    "EXEC_RUN-1111": {
+      "status": "valid",
+      "family": "benign",
+      "binary_label": 0,
+      "modalities_present": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_valid": {
+        "process": true,
+        "memory": true,
+        "command": true,
+        "network": true
+      },
+      "schema_errors": {},
+      "null_fields": {
+        "memory": [
+          "mean_memory_entropy",
+          "max_memory_entropy"
+        ],
+        "network": [
+          "dns_query_count",
+          "avg_interpacket_interval_ms",
+          "beacon_regularity_score",
+          "total_bytes_sent",
+          "total_bytes_received"
+        ]
+      },
+      "sanity_violations": [],
+      "id_mismatches": [],
+      "raw_command_len": 73,
+      "network_null_count": 5,
+      "issues": []
+    }
+  }
+}

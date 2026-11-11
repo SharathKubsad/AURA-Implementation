@@ -1,0 +1,14 @@
+﻿{
+    "sample_id":  "EXEC_RUN-1109",
+    "label":  0,
+    "family":  "benign",
+    "track":  "BENIGN",
+    "os":  "microsoft_windows_11_home",
+    "execution_timestamp":  "2026-09-19T11:38:54Z",
+    "source_type":  "custom_sandbox",
+    "source_reference":  "manual_controlled_execution",
+    "evidence_sha256":  "f3c6c6d6cfe78e638040b46a55353acdfa4470cfe82f928d04410f1aca16e4d7",
+    "memory_dump":  true,
+    "sysmon_available":  true,
+    "notes":  "Controlled execution for benign"
+}

@@ -1,0 +1,126 @@
+{
+  "manifest_version": "1.0.0",
+  "description": "Standardized public benchmark dataset for Real-Time Fileless Malware Detection",
+  "total_samples": 10,
+  "class_distribution": {
+    "benign": 4,
+    "malware": 6
+  },
+  "source_datasets": {
+    "CIC-MalMem-2022": 5,
+    "AnyRun-Community-Traces": 5
+  },
+  "modality_sample_counts": {
+    "process": 10,
+    "command": 5,
+    "network": 5,
+    "memory": 5
+  },
+  "samples": [
+    {
+      "sample_id": "MALMEM_BENIGN_0001",
+      "binary_label": 0,
+      "family": "benign",
+      "dataset": "CIC-MalMem-2022",
+      "modalities": [
+        "process",
+        "memory"
+      ]
+    },
+    {
+      "sample_id": "MALMEM_BENIGN_0002",
+      "binary_label": 0,
+      "family": "benign",
+      "dataset": "CIC-MalMem-2022",
+      "modalities": [
+        "process",
+        "memory"
+      ]
+    },
+    {
+      "sample_id": "MALMEM_MALWARE_TRANSPONDER_0001",
+      "binary_label": 1,
+      "family": "Spyware-Transponder",
+      "dataset": "CIC-MalMem-2022",
+      "modalities": [
+        "process",
+        "memory"
+      ]
+    },
+    {
+      "sample_id": "MALMEM_MALWARE_AKO_0001",
+      "binary_label": 1,
+      "family": "Ransomware-Ako",
+      "dataset": "CIC-MalMem-2022",
+      "modalities": [
+        "process",
+        "memory"
+      ]
+    },
+    {
+      "sample_id": "MALMEM_MALWARE_EMOTET_0001",
+      "binary_label": 1,
+      "family": "Trojan-Emotet",
+      "dataset": "CIC-MalMem-2022",
+      "modalities": [
+        "process",
+        "memory"
+      ]
+    },
+    {
+      "sample_id": "ANYRUN_BENIGN_0001",
+      "binary_label": 0,
+      "family": "benign",
+      "dataset": "AnyRun-Community-Traces",
+      "modalities": [
+        "process",
+        "command",
+        "network"
+      ]
+    },
+    {
+      "sample_id": "ANYRUN_BENIGN_0002",
+      "binary_label": 0,
+      "family": "benign",
+      "dataset": "AnyRun-Community-Traces",
+      "modalities": [
+        "process",
+        "command",
+        "network"
+      ]
+    },
+    {
+      "sample_id": "ANYRUN_MALWARE_POWERSHELL_0001",
+      "binary_label": 1,
+      "family": "PowerShell Stager",
+      "dataset": "AnyRun-Community-Traces",
+      "modalities": [
+        "process",
+        "command",
+        "network"
+      ]
+    },
+    {
+      "sample_id": "ANYRUN_MALWARE_COBALTSTRIKE_0001",
+      "binary_label": 1,
+      "family": "Cobalt Strike Beacon",
+      "dataset": "AnyRun-Community-Traces",
+      "modalities": [
+        "process",
+        "command",
+        "network"
+      ]
+    },
+    {
+      "sample_id": "ANYRUN_MALWARE_LOLBINS_0001",
+      "binary_label": 1,
+      "family": "LOLBins Abuse",
+      "dataset": "AnyRun-Community-Traces",
+      "modalities": [
+        "process",
+        "command",
+        "network"
+      ]
+    }
+  ]
+}

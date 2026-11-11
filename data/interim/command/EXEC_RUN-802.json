@@ -1,0 +1,12 @@
+{
+  "sample_id": "EXEC_RUN-802",
+  "raw_command_text": "\"C:\\WINDOWS\\system32\\cmd.exe\" /d /c C:\\WINDOWS\\system32\\hpatchmonTask.cmd",
+  "command_length": 73,
+  "shannon_entropy": 4.7242,
+  "is_base64_encoded": 0,
+  "has_download_cradle": 0,
+  "has_bypass_execution_policy": 0,
+  "has_hidden_window": 0,
+  "uses_lolbins": 0,
+  "registry_persistence_count": 0
+}

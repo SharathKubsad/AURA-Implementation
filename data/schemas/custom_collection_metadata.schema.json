@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/Prash-2402/Real-Time-Fileless-Malware-Detection/main/data/schemas/custom_collection_metadata.schema.json",
+  "title": "CustomCollectionMetadata",
+  "description": "Canonical metadata template for A5 custom dataset collection runs across all 12 categories.",
+  "type": "object",
+  "properties": {
+    "sample_id": {
+      "type": "string",
+      "pattern": "^(EXEC|PUB)_[A-Za-z0-9_.-]+$",
+      "description": "Canonical unique primary key across all modalities (e.g. EXEC_RUN-002)"
+    },
+    "label": {
+      "type": "integer",
+      "enum": [0, 1],
+      "description": "0 = Benign, 1 = Malware"
+    },
+    "family": {
+      "type": "string",
+      "description": "Canonical malware family or 'benign'"
+    },
+    "track": {
+      "type": "string",
+      "enum": ["BENIGN", "TRACK_A", "TRACK_B", "JOINT"],
+      "description": "Track ownership for collection"
+    },
+    "os": {
+      "type": "string",
+      "enum": ["windows_10", "windows_11", "ubuntu_linux", "generic_windows", "other"],
+      "description": "Target guest operating system during execution"
+    },
+    "execution_timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 UTC timestamp of execution or acquisition"
+    },
+    "source_type": {
+      "type": "string",
+      "enum": ["custom_sandbox", "public_dataset"],
+      "default": "custom_sandbox",
+      "description": "Origin of sample record"
+    },
+    "source_reference": {
+      "type": "string",
+      "description": "Sample hash (SHA-256), framework payload ID, or baseline test identifier"
+    },
+    "evidence_sha256": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{64}$",
+      "description": "SHA-256 hash of the complete raw evidence package"
+    },
+    "memory_dump": {
+      "type": "boolean",
+      "description": "Indicates whether a full volatile memory dump was acquired"
+    },
+    "sysmon_available": {
+      "type": "boolean",
+      "description": "Indicates whether Sysmon process and network event telemetry was captured"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Operational notes, execution parameters, and forensic observations"
+    }
+  },
+  "required": [
+    "sample_id",
+    "label",
+    "family",
+    "track",
+    "os",
+    "execution_timestamp",
+    "source_type",
+    "source_reference",
+    "evidence_sha256",
+    "memory_dump",
+    "sysmon_available",
+    "notes"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,6 @@
+[
+  {"pid": 4, "handle": "0x4", "type": "Process"},
+  {"pid": 520, "handle": "0x1c", "type": "Key"},
+  {"pid": 680, "handle": "0x28", "type": "Event"},
+  {"pid": 1840, "handle": "0x34", "type": "File"}
+]

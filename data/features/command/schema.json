@@ -1,0 +1,78 @@
+{
+  "modality": "command_features",
+  "total_records": 45,
+  "fields": {
+    "sample_id": {
+      "type": "str",
+      "nullable": false
+    },
+    "run_id": {
+      "type": "str",
+      "nullable": false
+    },
+    "label": {
+      "type": "int",
+      "nullable": false
+    },
+    "cmd_total_events_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "cmd_unique_commands_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "cmd_mean_command_length": {
+      "type": "float",
+      "nullable": false
+    },
+    "cmd_max_command_length": {
+      "type": "int",
+      "nullable": false
+    },
+    "cmd_ps_scriptblock_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "cmd_ps_unique_scriptblocks": {
+      "type": "int",
+      "nullable": false
+    },
+    "cmd_ps_mean_script_length": {
+      "type": "float",
+      "nullable": false
+    },
+    "cmd_ps_max_script_length": {
+      "type": "int",
+      "nullable": false
+    },
+    "cmd_encoded_command_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "cmd_execution_policy_bypass_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "cmd_hidden_window_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "cmd_download_cradle_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "cmd_lolbin_execution_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "cmd_registry_modification_count": {
+      "type": "int",
+      "nullable": false
+    },
+    "cmd_diversity_ratio": {
+      "type": "float",
+      "nullable": false
+    }
+  }
+}

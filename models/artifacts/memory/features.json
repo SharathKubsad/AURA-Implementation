@@ -1,0 +1,13 @@
+{
+  "feature_names": [
+    "rwx_page_count",
+    "injected_code_regions",
+    "unmapped_executable_pages",
+    "vad_protection_anomaly_count",
+    "ldrmodules_inconsistencies",
+    "yara_shellcode_matches",
+    "mean_memory_entropy",
+    "max_memory_entropy",
+    "memory_injection_score"
+  ]
+}

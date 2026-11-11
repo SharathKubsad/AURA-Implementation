@@ -1,0 +1,259 @@
+{
+  "dataset_name": "CIC-MalMem-2022",
+  "manifest_version": "1.0.0",
+  "adapter_version": "1.0.0",
+  "generated_at": "2026-09-21T12:24:19.782831+00:00",
+  "source_reference": "Carrier et al., ICISSP 2022 (https://www.unb.ca/cic/datasets/malmem-2022.html)",
+  "source_file": "data\\raw\\public\\cic_malmem_2022\\Obfuscated-MalMem2022.csv",
+  "source_file_sha256": "624ecb6c9229cf62bd3b8f65d23a2b132760e6bada458aa46eee134a313840c4",
+  "raw_sample_count": 58596,
+  "valid_process_count": 58596,
+  "valid_memory_count": 58596,
+  "benign_count": 29298,
+  "malware_count": 29298,
+  "class_distribution": {
+    "Benign": 29298,
+    "Malware": 29298
+  },
+  "category_distribution": {
+    "Benign": 29298,
+    "Ransomware": 9791,
+    "Spyware": 10020,
+    "Trojan": 9487
+  },
+  "family_distribution": {
+    "benign": 29298,
+    "Ako": 2000,
+    "Conti": 1988,
+    "Maze": 1958,
+    "Pysa": 1717,
+    "Shade": 2128,
+    "180solutions": 2000,
+    "CWS": 2000,
+    "Gator": 2200,
+    "TIBS": 1410,
+    "Transponder": 2410,
+    "Emotet": 1967,
+    "Reconyc": 1570,
+    "Refroso": 2000,
+    "Scar": 2000,
+    "Zeus": 1950
+  },
+  "provenance_completeness": 100.0,
+  "source_fields": [
+    "Category",
+    "pslist.nproc",
+    "pslist.nppid",
+    "pslist.avg_threads",
+    "pslist.nprocs64bit",
+    "pslist.avg_handlers",
+    "dlllist.ndlls",
+    "dlllist.avg_dlls_per_proc",
+    "handles.nhandles",
+    "handles.avg_handles_per_proc",
+    "handles.nport",
+    "handles.nfile",
+    "handles.nevent",
+    "handles.ndesktop",
+    "handles.nkey",
+    "handles.nthread",
+    "handles.ndirectory",
+    "handles.nsemaphore",
+    "handles.ntimer",
+    "handles.nsection",
+    "handles.nmutant",
+    "ldrmodules.not_in_load",
+    "ldrmodules.not_in_init",
+    "ldrmodules.not_in_mem",
+    "ldrmodules.not_in_load_avg",
+    "ldrmodules.not_in_init_avg",
+    "ldrmodules.not_in_mem_avg",
+    "malfind.ninjections",
+    "malfind.commitCharge",
+    "malfind.protection",
+    "malfind.uniqueInjections",
+    "psxview.not_in_pslist",
+    "psxview.not_in_eprocess_pool",
+    "psxview.not_in_ethread_pool",
+    "psxview.not_in_pspcid_list",
+    "psxview.not_in_csrss_handles",
+    "psxview.not_in_session",
+    "psxview.not_in_deskthrd",
+    "psxview.not_in_pslist_false_avg",
+    "psxview.not_in_eprocess_pool_false_avg",
+    "psxview.not_in_ethread_pool_false_avg",
+    "psxview.not_in_pspcid_list_false_avg",
+    "psxview.not_in_csrss_handles_false_avg",
+    "psxview.not_in_session_false_avg",
+    "psxview.not_in_deskthrd_false_avg",
+    "modules.nmodules",
+    "svcscan.nservices",
+    "svcscan.kernel_drivers",
+    "svcscan.fs_drivers",
+    "svcscan.process_services",
+    "svcscan.shared_process_services",
+    "svcscan.interactive_process_services",
+    "svcscan.nactive",
+    "callbacks.ncallbacks",
+    "callbacks.nanonymous",
+    "callbacks.ngeneric",
+    "Class"
+  ],
+  "mapped_fields": {
+    "process": [
+      "pslist.nproc",
+      "psxview.not_in_pslist",
+      "psxview.not_in_csrss_handles",
+      "pslist.avg_threads",
+      "handles.nhandles",
+      "malfind.ninjections",
+      "ldrmodules.not_in_load"
+    ],
+    "memory": [
+      "malfind.protection",
+      "malfind.ninjections",
+      "malfind.uniqueInjections",
+      "malfind.commitCharge",
+      "ldrmodules.not_in_load",
+      "ldrmodules.not_in_init",
+      "ldrmodules.not_in_mem"
+    ]
+  },
+  "unmapped_fields": [
+    "pslist.nppid",
+    "pslist.nprocs64bit",
+    "pslist.avg_handlers",
+    "dlllist.ndlls",
+    "dlllist.avg_dlls_per_proc",
+    "handles.avg_handles_per_proc",
+    "handles.nport",
+    "handles.nfile",
+    "handles.nevent",
+    "handles.ndesktop",
+    "handles.nkey",
+    "handles.nthread",
+    "handles.ndirectory",
+    "handles.nsemaphore",
+    "handles.ntimer",
+    "handles.nsection",
+    "handles.nmutant",
+    "ldrmodules.not_in_load_avg",
+    "ldrmodules.not_in_init_avg",
+    "ldrmodules.not_in_mem_avg",
+    "psxview.not_in_eprocess_pool",
+    "psxview.not_in_ethread_pool",
+    "psxview.not_in_pspcid_list",
+    "psxview.not_in_session",
+    "psxview.not_in_deskthrd",
+    "psxview.not_in_pslist_false_avg",
+    "psxview.not_in_eprocess_pool_false_avg",
+    "psxview.not_in_ethread_pool_false_avg",
+    "psxview.not_in_pspcid_list_false_avg",
+    "psxview.not_in_csrss_handles_false_avg",
+    "psxview.not_in_session_false_avg",
+    "psxview.not_in_deskthrd_false_avg",
+    "modules.nmodules",
+    "svcscan.nservices",
+    "svcscan.kernel_drivers",
+    "svcscan.fs_drivers",
+    "svcscan.process_services",
+    "svcscan.shared_process_services",
+    "svcscan.interactive_process_services",
+    "svcscan.nactive",
+    "callbacks.ncallbacks",
+    "callbacks.nanonymous",
+    "callbacks.ngeneric"
+  ],
+  "missingness": {
+    "process": {
+      "sample_id": {
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      "total_process_count": {
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      "hidden_process_count": {
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      "anomalous_ppid_count": {
+        "missing_count": 58596,
+        "missing_pct": 100.0
+      },
+      "avg_threads_per_process": {
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      "max_threads_in_single_process": {
+        "missing_count": 58596,
+        "missing_pct": 100.0
+      },
+      "total_handle_count": {
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      "suspicious_dll_count": {
+        "missing_count": 58596,
+        "missing_pct": 100.0
+      },
+      "malfind_process_count": {
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      "elevated_privilege_count": {
+        "missing_count": 58596,
+        "missing_pct": 100.0
+      },
+      "unlinked_dll_count": {
+        "missing_count": 0,
+        "missing_pct": 0.0
+      }
+    },
+    "memory": {
+      "sample_id": {
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      "rwx_page_count": {
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      "injected_code_regions": {
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      "unmapped_executable_pages": {
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      "vad_protection_anomaly_count": {
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      "ldrmodules_inconsistencies": {
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      "yara_shellcode_matches": {
+        "missing_count": 58596,
+        "missing_pct": 100.0
+      },
+      "mean_memory_entropy": {
+        "missing_count": 58596,
+        "missing_pct": 100.0
+      },
+      "max_memory_entropy": {
+        "missing_count": 58596,
+        "missing_pct": 100.0
+      }
+    }
+  },
+  "interim_artifacts": {
+    "process_features": "data\\interim\\public\\cic_malmem_2022\\process_features.jsonl",
+    "memory_features": "data\\interim\\public\\cic_malmem_2022\\memory_features.jsonl",
+    "provenance": "data\\interim\\public\\cic_malmem_2022\\provenance.jsonl",
+    "samples": "data\\interim\\public\\cic_malmem_2022\\samples.jsonl"
+  }
+}

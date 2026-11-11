@@ -1,0 +1,40 @@
+# ==============================================================================
+# Git Ignore - Real-Time Fileless Malware Detection
+# ==============================================================================
+
+# --- Safety / OS Cache / Virtual Environment ---
+.venv/
+venv/
+ENV/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+catboost_info/
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# --- GitHub File Size Limit (>100MB) Exclusion ---
+*.safetensors
+
+# --- Mandatory Forensic Artifacts & Raw Dumps (NEVER COMMIT) ---
+*.raw
+*.mem
+*.vmem
+*.dmp
+*.lime
+*.pcap
+*.pcapng
+data/raw/
+sandbox/*.zip
+sandbox/**/*.zip

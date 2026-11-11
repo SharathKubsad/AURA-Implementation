@@ -1,0 +1,25 @@
+{
+  "run_id": "RUN-602",
+  "sample_id": "EXEC_RUN-602",
+  "label": 1,
+  "family": "wmi_malware",
+  "counts": {
+    "processes": 142,
+    "threads": 1663,
+    "handles": 51404,
+    "modules": 6495,
+    "privileges": 4865,
+    "vads": 17627,
+    "malfind_findings": 17,
+    "network_connections": 390,
+    "sysmon_events": 8671,
+    "powershell_events": 491,
+    "command_events": 4710,
+    "relationships_tree": 138,
+    "relationships_network": 101,
+    "relationships_command": 390,
+    "relationships_memory": 17
+  },
+  "malfind_baseline_exceptions": 13,
+  "hidden_processes_psxview": 2
+}

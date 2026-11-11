@@ -1,0 +1,103 @@
+{
+  "created_at": "2026-09-27T12:45:23.879187+00:00",
+  "total_samples": 45,
+  "label_distribution": {
+    "benign": 13,
+    "malware": 32
+  },
+  "family_distribution": {
+    "benign": 13,
+    "powershell_fileless": 2,
+    "process_hollowing": 3,
+    "empire_framework": 3,
+    "memory_only_rat": 3,
+    "registry_resident_malware": 3,
+    "cobalt_strike_beacon": 3,
+    "metasploit_memory_payloads": 3,
+    "wmi_malware": 3,
+    "reflective_dll_injection": 3,
+    "lolbins_abuse": 3,
+    "fileless_ransomware": 3
+  },
+  "modalities": [
+    "process",
+    "memory",
+    "command",
+    "network"
+  ],
+  "process_feature_cols": [
+    "total_process_count",
+    "hidden_process_count",
+    "anomalous_ppid_count",
+    "avg_threads_per_process",
+    "max_threads_in_single_process",
+    "total_handle_count",
+    "suspicious_dll_count",
+    "malfind_process_count",
+    "elevated_privilege_count",
+    "unlinked_dll_count"
+  ],
+  "memory_feature_cols": [
+    "rwx_page_count",
+    "injected_code_regions",
+    "unmapped_executable_pages",
+    "vad_protection_anomaly_count",
+    "ldrmodules_inconsistencies",
+    "yara_shellcode_matches",
+    "mean_memory_entropy",
+    "max_memory_entropy"
+  ],
+  "command_feature_cols": [
+    "command_length",
+    "shannon_entropy",
+    "is_base64_encoded",
+    "has_download_cradle",
+    "has_bypass_execution_policy",
+    "has_hidden_window",
+    "uses_lolbins",
+    "registry_persistence_count"
+  ],
+  "network_feature_cols": [
+    "active_connection_count",
+    "listening_port_count",
+    "outbound_connection_count",
+    "dns_query_count",
+    "unique_remote_ips",
+    "avg_interpacket_interval_ms",
+    "beacon_regularity_score",
+    "total_bytes_sent",
+    "total_bytes_received",
+    "suspicious_port_usage"
+  ],
+  "nlp_text_fields": [
+    "raw_command_text"
+  ],
+  "pcap_null_fields": [
+    "avg_interpacket_interval_ms",
+    "beacon_regularity_score",
+    "dns_query_count",
+    "total_bytes_received",
+    "total_bytes_sent"
+  ],
+  "zero_variance_features": [
+    "suspicious_dll_count",
+    "vad_protection_anomaly_count",
+    "yara_shellcode_matches",
+    "is_base64_encoded",
+    "has_download_cradle",
+    "has_bypass_execution_policy",
+    "has_hidden_window",
+    "uses_lolbins",
+    "registry_persistence_count",
+    "listening_port_count",
+    "suspicious_port_usage"
+  ],
+  "dropped_samples": [],
+  "validation_warnings": [],
+  "outputs": {
+    "jsonl": "data\\processed\\unified\\unified_dataset.jsonl",
+    "csv": "data\\processed\\unified\\unified_dataset.csv",
+    "manifest": "data\\processed\\unified\\dataset_manifest.json",
+    "feature_statistics": "data\\processed\\unified\\feature_statistics.json"
+  }
+}

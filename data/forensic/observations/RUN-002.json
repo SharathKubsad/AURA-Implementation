@@ -1,0 +1,25 @@
+{
+  "run_id": "RUN-002",
+  "sample_id": "EXEC_RUN-002",
+  "label": 1,
+  "family": "powershell_fileless",
+  "counts": {
+    "processes": 145,
+    "threads": 1573,
+    "handles": 46615,
+    "modules": 6005,
+    "privileges": 4620,
+    "vads": 15715,
+    "malfind_findings": 19,
+    "network_connections": 328,
+    "sysmon_events": 6512,
+    "powershell_events": 486,
+    "command_events": 3626,
+    "relationships_tree": 131,
+    "relationships_network": 62,
+    "relationships_command": 323,
+    "relationships_memory": 19
+  },
+  "malfind_baseline_exceptions": 15,
+  "hidden_processes_psxview": 5
+}

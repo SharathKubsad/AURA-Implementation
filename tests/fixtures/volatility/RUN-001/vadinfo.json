@@ -1,0 +1,38 @@
+[
+  {
+    "pid": 520,
+    "process": "services.exe",
+    "offset": "0x7ffb100000",
+    "startvpn": "0x7ffb100000",
+    "endvpn": "0x7ffb110000",
+    "tag": "VadImageMap",
+    "protection": "PAGE_EXECUTE_READ",
+    "initprotection": "PAGE_EXECUTE_READ",
+    "file": "C:\\Windows\\System32\\services.exe",
+    "privatememory": 0
+  },
+  {
+    "pid": 520,
+    "process": "services.exe",
+    "offset": "0x1a0000",
+    "startvpn": "0x1a0000",
+    "endvpn": "0x1b0000",
+    "tag": "Vad",
+    "protection": "PAGE_READWRITE",
+    "initprotection": "PAGE_READWRITE",
+    "file": "N/A",
+    "privatememory": 1
+  },
+  {
+    "pid": 680,
+    "process": "svchost.exe",
+    "offset": "0x7ffb200000",
+    "startvpn": "0x7ffb200000",
+    "endvpn": "0x7ffb220000",
+    "tag": "VadImageMap",
+    "protection": "PAGE_EXECUTE_READ",
+    "initprotection": "PAGE_EXECUTE_READ",
+    "file": "C:\\Windows\\System32\\ntdll.dll",
+    "privatememory": 0
+  }
+]

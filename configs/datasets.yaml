@@ -1,0 +1,63 @@
+# Configuration of External Dynamic Malware Datasets for Benchmark Expansion
+# All external datasets are tracked with explicit provenance and academic citations.
+
+datasets:
+  project_original:
+    name: "PROJECT_ORIGINAL_45_RUNS"
+    description: "Original 45 machine execution runs in isolated sandbox VMs (13 Benign, 32 Malware across 11 families)"
+    path: "data/archive/v1_45_samples/unified_dataset.jsonl"
+    sample_count: 45
+    benign_count: 13
+    malware_count: 32
+    is_original_project_run: true
+    modalities: ["process", "command", "network", "memory"]
+
+  cape_sandbox:
+    name: "CAPEv2 Dynamic Sandbox Behavioral Benchmark"
+    description: "Dynamic sandbox execution telemetry corpus from CAPEv2 / Avast-CTU community"
+    citation: "Avast-CTU / CAPEv2 Dynamic Sandbox Community"
+    license: "GPL-3.0 / CC-BY-4.0 Open Academic Research"
+    target_sample_count: 230
+    target_benign_count: 115
+    target_malware_count: 115
+    is_original_project_run: false
+    modalities: ["process", "command", "network"]
+    families:
+      - "PowerShell Stager"
+      - "Cobalt Strike Beacon"
+      - "Metasploit Payload"
+      - "Empire Framework"
+      - "AsyncRAT"
+      - "AgentTesla"
+      - "RedLine Stealer"
+      - "Remcos RAT"
+      - "LOLBins Abuse"
+
+  cic_malmem_2022:
+    name: "CIC-MalMem-2022"
+    description: "Volatile memory forensics benchmark from Canadian Institute for Cybersecurity (UNB)"
+    citation: "Carrier et al., ICISSP 2022"
+    license: "CC BY-NC-SA 4.0 Academic Research Terms"
+    target_sample_count: 225
+    target_benign_count: 112
+    target_malware_count: 113
+    is_original_project_run: false
+    modalities: ["process", "memory"]
+    families:
+      - "Spyware-Transponder"
+      - "Spyware-Gator"
+      - "Spyware-TIBS"
+      - "Ransomware-Ako"
+      - "Ransomware-Conti"
+      - "Ransomware-Shade"
+      - "Ransomware-WannaCry"
+      - "Trojan-Emotet"
+      - "Trojan-Zeus"
+      - "Trojan-Reconyc"
+      - "Trojan-Refroso"
+
+unified_target:
+  total_samples: 500
+  original_samples: 45
+  external_samples: 455
+  isolation_policy: "STRICT_ORIGINAL_45_TEST_ISOLATION"

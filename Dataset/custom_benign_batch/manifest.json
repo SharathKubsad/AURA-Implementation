@@ -1,0 +1,135 @@
+{
+  "dataset": "custom_benign_batch",
+  "label": 0,
+  "family": "Benign",
+  "source_type": "controlled_windows_vm",
+  "created_utc": "2026-09-19T14:03:43.349897+00:00",
+  "runs": [
+    {
+      "sample_id": "RUN-1100",
+      "memory_exists": "YES",
+      "memory_size_bytes": "6422409216",
+      "volatility_status": "PASS",
+      "extraction_status": "PASS",
+      "validation_status": "PASS",
+      "notes": ""
+    },
+    {
+      "sample_id": "RUN-1101",
+      "memory_exists": "YES",
+      "memory_size_bytes": "6422409216",
+      "volatility_status": "PASS",
+      "extraction_status": "PASS",
+      "validation_status": "PASS",
+      "notes": ""
+    },
+    {
+      "sample_id": "RUN-1102",
+      "memory_exists": "YES",
+      "memory_size_bytes": "6422409216",
+      "volatility_status": "PASS",
+      "extraction_status": "PASS",
+      "validation_status": "PASS",
+      "notes": ""
+    },
+    {
+      "sample_id": "RUN-1103",
+      "memory_exists": "YES",
+      "memory_size_bytes": "6422409216",
+      "volatility_status": "PASS",
+      "extraction_status": "PASS",
+      "validation_status": "PASS",
+      "notes": ""
+    },
+    {
+      "sample_id": "RUN-1104",
+      "memory_exists": "YES",
+      "memory_size_bytes": "6422409216",
+      "volatility_status": "PASS",
+      "extraction_status": "PASS",
+      "validation_status": "PASS",
+      "notes": ""
+    },
+    {
+      "sample_id": "RUN-1105",
+      "memory_exists": "YES",
+      "memory_size_bytes": "6422409216",
+      "volatility_status": "PASS",
+      "extraction_status": "PASS",
+      "validation_status": "PASS",
+      "notes": ""
+    },
+    {
+      "sample_id": "RUN-1106",
+      "memory_exists": "YES",
+      "memory_size_bytes": "6422409216",
+      "volatility_status": "PASS",
+      "extraction_status": "PASS",
+      "validation_status": "PASS",
+      "notes": ""
+    },
+    {
+      "sample_id": "RUN-1107",
+      "memory_exists": "YES",
+      "memory_size_bytes": "6422409216",
+      "volatility_status": "PASS",
+      "extraction_status": "PASS",
+      "validation_status": "PASS",
+      "notes": ""
+    },
+    {
+      "sample_id": "RUN-1108",
+      "memory_exists": "YES",
+      "memory_size_bytes": "6422409216",
+      "volatility_status": "PASS",
+      "extraction_status": "PASS",
+      "validation_status": "PASS",
+      "notes": ""
+    },
+    {
+      "sample_id": "RUN-1109",
+      "memory_exists": "YES",
+      "memory_size_bytes": "6422409216",
+      "volatility_status": "PASS",
+      "extraction_status": "PASS",
+      "validation_status": "PASS",
+      "notes": ""
+    },
+    {
+      "sample_id": "RUN-1110",
+      "memory_exists": "YES",
+      "memory_size_bytes": "6422409216",
+      "volatility_status": "PASS",
+      "extraction_status": "PASS",
+      "validation_status": "PASS",
+      "notes": ""
+    },
+    {
+      "sample_id": "RUN-1111",
+      "memory_exists": "YES",
+      "memory_size_bytes": "6422409216",
+      "volatility_status": "PASS",
+      "extraction_status": "PASS",
+      "validation_status": "PASS",
+      "notes": ""
+    }
+  ],
+  "pipeline": {
+    "volatility": true,
+    "process_features": true,
+    "memory_features": true,
+    "command_features": false,
+    "network_features": false
+  },
+  "notes": [
+    "Process and Memory features generated using the A4 pipeline.",
+    "Command and Network source evidence preserved for Track-B processing.",
+    "Raw memory dumps are not included in the Windows-ready package."
+  ],
+  "completed_utc": "2026-09-19T15:47:39.788550+00:00",
+  "statistics": {
+    "total": 12,
+    "passed": 12,
+    "failed": 0
+  }
+}

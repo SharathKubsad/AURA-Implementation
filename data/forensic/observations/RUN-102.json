@@ -1,0 +1,25 @@
+{
+  "run_id": "RUN-102",
+  "sample_id": "EXEC_RUN-102",
+  "label": 1,
+  "family": "process_hollowing",
+  "counts": {
+    "processes": 141,
+    "threads": 1414,
+    "handles": 49073,
+    "modules": 6273,
+    "privileges": 4620,
+    "vads": 16771,
+    "malfind_findings": 19,
+    "network_connections": 336,
+    "sysmon_events": 7015,
+    "powershell_events": 506,
+    "command_events": 3895,
+    "relationships_tree": 131,
+    "relationships_network": 69,
+    "relationships_command": 326,
+    "relationships_memory": 19
+  },
+  "malfind_baseline_exceptions": 15,
+  "hidden_processes_psxview": 9
+}

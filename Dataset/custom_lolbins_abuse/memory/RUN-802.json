@@ -1,0 +1,11 @@
+{
+  "sample_id": "RUN-802",
+  "rwx_page_count": 19,
+  "injected_code_regions": 17,
+  "unmapped_executable_pages": 19,
+  "vad_protection_anomaly_count": 0,
+  "ldrmodules_inconsistencies": 407,
+  "yara_shellcode_matches": 0,
+  "mean_memory_entropy": null,
+  "max_memory_entropy": null
+}

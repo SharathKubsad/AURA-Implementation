@@ -1,0 +1,25 @@
+{
+  "run_id": "RUN-502",
+  "sample_id": "EXEC_RUN-502",
+  "label": 1,
+  "family": "metasploit_memory_payloads",
+  "counts": {
+    "processes": 140,
+    "threads": 1582,
+    "handles": 51500,
+    "modules": 6584,
+    "privileges": 4690,
+    "vads": 17547,
+    "malfind_findings": 19,
+    "network_connections": 358,
+    "sysmon_events": 8081,
+    "powershell_events": 494,
+    "command_events": 4406,
+    "relationships_tree": 133,
+    "relationships_network": 86,
+    "relationships_command": 339,
+    "relationships_memory": 19
+  },
+  "malfind_baseline_exceptions": 15,
+  "hidden_processes_psxview": 6
+}

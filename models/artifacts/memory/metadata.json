@@ -1,0 +1,48 @@
+{
+  "model_type": "catboost",
+  "modality": "memory",
+  "dataset_source": "C:\\Users\\PRAJWAL V L\\Downloads\\Real-Time-Fileless-Malware-Detection-main (1)\\Real-Time-Fileless-Malware-Detection-main\\data\\processed\\unified\\unified_dataset.jsonl",
+  "train_sample_count": 350,
+  "validation_sample_count": 75,
+  "test_sample_count": 75,
+  "train_class_distribution": {
+    "benign": 168,
+    "malware": 182
+  },
+  "validation_class_distribution": {
+    "benign": 36,
+    "malware": 39
+  },
+  "test_class_distribution": {
+    "benign": 36,
+    "malware": 39
+  },
+  "feature_names": [
+    "rwx_page_count",
+    "injected_code_regions",
+    "unmapped_executable_pages",
+    "vad_protection_anomaly_count",
+    "ldrmodules_inconsistencies",
+    "yara_shellcode_matches",
+    "mean_memory_entropy",
+    "max_memory_entropy",
+    "memory_injection_score"
+  ],
+  "random_seed": 42,
+  "hyperparameters": {
+    "iterations": 100,
+    "depth": 3,
+    "learning_rate": 0.05,
+    "random_seed": 42,
+    "nan_mode": "Min",
+    "verbose": false
+  },
+  "training_timestamp": "2026-09-28T04:28:28.508558+00:00",
+  "software_versions": {
+    "catboost": "1.2.10",
+    "scikit-learn": "1.9.0",
+    "pandas": "3.0.5"
+  },
+  "git_commit": "94762d7a0d48c50566f0032b90ba3d1764c3f6c6",
+  "small_dataset_warning": "WARNING: This model was trained on an extremely small custom dataset (45 samples). Metrics are intended solely for pipeline and architecture validation. Do NOT treat these results as production-grade or statistically conclusive without benchmark dataset merging."
+}

@@ -1,0 +1,13 @@
+{
+  "sample_id": "EXEC_RUN-700",
+  "active_connection_count": 0,
+  "listening_port_count": 10,
+  "outbound_connection_count": 0,
+  "dns_query_count": null,
+  "unique_remote_ips": 0,
+  "avg_interpacket_interval_ms": null,
+  "beacon_regularity_score": null,
+  "total_bytes_sent": null,
+  "total_bytes_received": null,
+  "suspicious_port_usage": 0
+}

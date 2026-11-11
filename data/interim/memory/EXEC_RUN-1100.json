@@ -1,0 +1,11 @@
+{
+  "sample_id": "EXEC_RUN-1100",
+  "rwx_page_count": 20,
+  "injected_code_regions": 18,
+  "unmapped_executable_pages": 22,
+  "vad_protection_anomaly_count": 0,
+  "ldrmodules_inconsistencies": 513,
+  "yara_shellcode_matches": 0,
+  "mean_memory_entropy": null,
+  "max_memory_entropy": null
+}

@@ -1,0 +1,25 @@
+{
+  "run_id": "RUN-702",
+  "sample_id": "EXEC_RUN-702",
+  "label": 1,
+  "family": "reflective_dll_injection",
+  "counts": {
+    "processes": 141,
+    "threads": 1557,
+    "handles": 51377,
+    "modules": 6513,
+    "privileges": 4795,
+    "vads": 17674,
+    "malfind_findings": 17,
+    "network_connections": 409,
+    "sysmon_events": 9034,
+    "powershell_events": 481,
+    "command_events": 4871,
+    "relationships_tree": 136,
+    "relationships_network": 120,
+    "relationships_command": 406,
+    "relationships_memory": 17
+  },
+  "malfind_baseline_exceptions": 13,
+  "hidden_processes_psxview": 3
+}

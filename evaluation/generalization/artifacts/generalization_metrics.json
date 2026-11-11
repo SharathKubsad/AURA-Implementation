@@ -1,0 +1,17 @@
+{
+  "accuracy": 0.84,
+  "precision": 0.7576,
+  "recall": 1.0,
+  "f1": 0.8621,
+  "roc_auc": 0.9984,
+  "positive_class": "Malware (1)",
+  "threshold": 0.6,
+  "sample_count": 50,
+  "class_distribution": {
+    "benign": 25,
+    "malware": 25
+  },
+  "methodology": "200 sensor-blinded samples derived from authentic custom VM samples with handle counts, network volumes, beacon regularity, and command flags blinded, evaluated through full DetectionService.",
+  "limitations": "Tests detector robustness when peripheral behavioral telemetry is suppressed; memory triggers compensate for blinded network and command signals.",
+  "num_evaluated": 50
+}

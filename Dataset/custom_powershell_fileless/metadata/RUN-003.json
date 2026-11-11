@@ -1,0 +1,14 @@
+﻿{
+    "sample_id":  "EXEC_RUN-005",
+    "label":  1,
+    "family":  "powershell_fileless",
+    "track":  "TRACK_A",
+    "os":  "microsoft_windows_11_home",
+    "execution_timestamp":  "2026-09-20T05:30:36Z",
+    "source_type":  "custom_sandbox",
+    "source_reference":  "manual_controlled_execution",
+    "evidence_sha256":  "c7e3fd00255df600a7d7bad287b83f26de0491a842f5e1853f4d49a5c54639aa",
+    "memory_dump":  true,
+    "sysmon_available":  true,
+    "notes":  "Controlled execution for powershell_fileless"
+}

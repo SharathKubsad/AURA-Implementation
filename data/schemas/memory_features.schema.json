@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/Prash-2402/Real-Time-Fileless-Malware-Detection/main/data/schemas/memory_features.schema.json",
+  "title": "MemoryFeatures",
+  "description": "Volatile memory forensic artifacts, Virtual Address Descriptor (VAD) properties, and page entropy metrics for the Memory modality (Track A). Scored by CatBoost upon partial dump trigger.",
+  "type": "object",
+  "properties": {
+    "sample_id": {
+      "type": "string",
+      "description": "Foreign key linking to SampleMetadata.sample_id"
+    },
+    "rwx_page_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Count of committed memory regions with PAGE_EXECUTE_READWRITE permissions",
+      "source": "Volatility3 windows.vadinfo, windows.malfind",
+      "telemetry_nature": "dynamic",
+      "missing_value_policy": "fill_zero"
+    },
+    "injected_code_regions": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Regions with write/execute permissions containing MZ header or raw assembly code without backing image file on disk",
+      "source": "Volatility3 windows.malfind",
+      "telemetry_nature": "dynamic",
+      "missing_value_policy": "fill_zero"
+    },
+    "unmapped_executable_pages": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Executable memory regions not mapped to any valid PE file on disk (private memory execution)",
+      "source": "Volatility3 windows.vadinfo",
+      "telemetry_nature": "dynamic",
+      "missing_value_policy": "fill_zero"
+    },
+    "vad_protection_anomaly_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "VAD nodes where initial allocation protection differs from current protection (VirtualProtect manipulation)",
+      "source": "Volatility3 windows.vadinfo",
+      "telemetry_nature": "dynamic",
+      "missing_value_policy": "fill_zero"
+    },
+    "ldrmodules_inconsistencies": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Discrepancies across InLoadOrder, InMemoryOrder, and InInitOrder module lists indicating unhooked/reflective injection",
+      "source": "Volatility3 windows.ldrmodules",
+      "telemetry_nature": "dynamic",
+      "missing_value_policy": "fill_zero"
+    },
+    "yara_shellcode_matches": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Count of matched memory signatures against standard shellcode and reflective loader YARA rules",
+      "source": "Volatility3 windows.vadyarascan",
+      "telemetry_nature": "dynamic",
+      "missing_value_policy": "fill_zero"
+    },
+    "mean_memory_entropy": {
+      "type": ["number", "null"],
+      "minimum": 0.0,
+      "maximum": 8.0,
+      "description": "Average Shannon entropy across all inspected executable/private memory pages (high entropy indicates encrypted payload)",
+      "source": "Raw memory page entropy calculation",
+      "telemetry_nature": "dynamic",
+      "missing_value_policy": "impute_median"
+    },
+    "max_memory_entropy": {
+      "type": ["number", "null"],
+      "minimum": 0.0,
+      "maximum": 8.0,
+      "description": "Peak Shannon entropy observed in any single suspect memory page",
+      "source": "Raw memory page entropy calculation",
+      "telemetry_nature": "dynamic",
+      "missing_value_policy": "impute_median"
+    }
+  },
+  "required": [
+    "sample_id",
+    "rwx_page_count",
+    "injected_code_regions",
+    "unmapped_executable_pages",
+    "vad_protection_anomaly_count",
+    "ldrmodules_inconsistencies",
+    "yara_shellcode_matches",
+    "mean_memory_entropy",
+    "max_memory_entropy"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,14 @@
+﻿{
+    "sample_id":  "EXEC_RUN-702",
+    "label":  1,
+    "family":  "reflective_dll_injection",
+    "track":  "TRACK_B",
+    "os":  "microsoft_windows_11_home",
+    "execution_timestamp":  "2026-09-20T16:17:01Z",
+    "source_type":  "custom_sandbox",
+    "source_reference":  "manual_controlled_execution",
+    "evidence_sha256":  "33c64b9e763a89a37c961a06abb55e5bed08d697e1f7350fa4c33ded53f8bc3c",
+    "memory_dump":  true,
+    "sysmon_available":  true,
+    "notes":  "Controlled execution for reflective_dll_injection"
+}

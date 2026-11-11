@@ -1,0 +1,110 @@
+{
+  "model_name": "public_cic_malmem_process_xgboost",
+  "architecture": "XGBoost",
+  "dataset_name": "CIC-MalMem-2022",
+  "dataset_checksum": "624ecb6c9229cf62bd3b8f65d23a2b132760e6bada458aa46eee134a313840c4",
+  "adapter_version": "1.0.0",
+  "trained_at": "2026-09-21T12:57:16.519476+00:00",
+  "git_commit": "466a8202fd6e40278e810faa4de7bbc5f362286c",
+  "xgboost_version": "3.4.1",
+  "features_used": [
+    "total_process_count",
+    "hidden_process_count",
+    "avg_threads_per_process",
+    "total_handle_count",
+    "malfind_process_count",
+    "unlinked_dll_count"
+  ],
+  "features_excluded": {
+    "anomalous_ppid_count": "NOT_COMPARABLE. 100% missing in MalMem. Parent-child lineage rules not run.",
+    "max_threads_in_single_process": "NOT_COMPARABLE. 100% missing in MalMem. Only dataset average was recorded.",
+    "suspicious_dll_count": "NOT_COMPARABLE. 100% missing in MalMem. Path-based DLL staging audit not run.",
+    "elevated_privilege_count": "NOT_COMPARABLE. 100% missing in MalMem. Windows privileges plugin not run."
+  },
+  "hyperparameters": {
+    "n_estimators": 100,
+    "max_depth": 5,
+    "learning_rate": 0.05,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "eval_metric": "logloss",
+    "random_state": 42,
+    "tree_method": "hist"
+  },
+  "split_metadata": {
+    "random_state": 42,
+    "split_ratios": {
+      "train": 0.7,
+      "val": 0.15,
+      "test": 0.15
+    },
+    "sample_counts": {
+      "total": 58596,
+      "train": 41016,
+      "val": 8790,
+      "test": 8790
+    },
+    "class_distribution": {
+      "train": {
+        "benign": 20508,
+        "malware": 20508
+      },
+      "val": {
+        "benign": 4395,
+        "malware": 4395
+      },
+      "test": {
+        "benign": 4395,
+        "malware": 4395
+      }
+    },
+    "grouping_possible": false,
+    "temporal_limitation_warning": "CIC-MalMem-2022 contains 29,298 benign memory snapshots taken at 5-second intervals from the same running VM sessions. However, the published dataset does NOT provide session IDs, VM instance IDs, timestamps, or operator identifiers. Grouping by family is impossible for benign samples because all 29,298 share a single 'benign' label. Therefore, ordinary stratified random splitting is applied, but with this explicitly documented limitation: test set metrics reflect in-distribution evaluation and cannot guarantee independence from temporal autocorrelation in the benign class."
+  },
+  "validation_metrics": {
+    "accuracy": 0.9991,
+    "precision": 0.9993,
+    "recall": 0.9989,
+    "f1": 0.9991,
+    "roc_auc": 1.0,
+    "confusion_matrix": [
+      [
+        4392,
+        3
+      ],
+      [
+        5,
+        4390
+      ]
+    ],
+    "fpr": 0.0007,
+    "fnr": 0.0011,
+    "threshold": 0.5,
+    "total_samples": 8790,
+    "true_benign_count": 4395,
+    "true_malware_count": 4395
+  },
+  "test_metrics": {
+    "accuracy": 0.9993,
+    "precision": 1.0,
+    "recall": 0.9986,
+    "f1": 0.9993,
+    "roc_auc": 1.0,
+    "confusion_matrix": [
+      [
+        4395,
+        0
+      ],
+      [
+        6,
+        4389
+      ]
+    ],
+    "fpr": 0.0,
+    "fnr": 0.0014,
+    "threshold": 0.5,
+    "total_samples": 8790,
+    "true_benign_count": 4395,
+    "true_malware_count": 4395
+  }
+}

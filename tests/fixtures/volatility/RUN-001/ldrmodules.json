@@ -1,0 +1,20 @@
+[
+  {
+    "pid": 520,
+    "process": "services.exe",
+    "base": "0x7ffb100000",
+    "name": "services.exe",
+    "inload": true,
+    "ininit": false,
+    "inmem": true
+  },
+  {
+    "pid": 520,
+    "process": "services.exe",
+    "base": "0x7ffb200000",
+    "name": "ntdll.dll",
+    "inload": true,
+    "ininit": true,
+    "inmem": true
+  }
+]

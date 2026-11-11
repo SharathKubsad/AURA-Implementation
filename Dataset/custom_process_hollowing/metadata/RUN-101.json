@@ -1,0 +1,14 @@
+﻿{
+    "sample_id":  "EXEC_RUN-101",
+    "label":  1,
+    "family":  "process_hollowing",
+    "track":  "TRACK_A",
+    "os":  "microsoft_windows_11_home",
+    "execution_timestamp":  "2026-09-20T06:34:23Z",
+    "source_type":  "custom_sandbox",
+    "source_reference":  "manual_controlled_execution",
+    "evidence_sha256":  "d1d6ca2dd6e93abddd29cb0649490bf0bd085f5822ae93c3f502d61986001b1e",
+    "memory_dump":  true,
+    "sysmon_available":  true,
+    "notes":  "Controlled execution for process_hollowing"
+}

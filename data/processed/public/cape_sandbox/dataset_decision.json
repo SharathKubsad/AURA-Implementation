@@ -1,0 +1,23 @@
+{
+  "dataset_name": "CAPEv2 Dynamic Sandbox Behavioral Benchmark",
+  "decision": "APPROVED_FOR_BENCHMARK",
+  "decision_timestamp": "2026-09-22T05:40:25.279575+00:00",
+  "approved_modalities": [
+    "command",
+    "network"
+  ],
+  "excluded_modalities": [
+    "memory",
+    "process"
+  ],
+  "reasons": [
+    "Authoritative academic provenance established (Avast-CTU / CAPEv2).",
+    "Creative Commons open academic license verified.",
+    "Balanced binary class distribution present (60 Benign, 60 Malware).",
+    "Command modality provides authentic, high-entropy malicious & clean commands.",
+    "Network modality provides genuine socket connection and DNS resolution counts.",
+    "Zero overlap or contamination with custom VM dataset.",
+    "Memory modality is cleanly classified as NOT_COMPARABLE with zero synthetic fabrication."
+  ],
+  "role": "Scale Command (DistilBERT) and Network (LightGBM) models independently."
+}

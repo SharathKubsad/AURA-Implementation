@@ -1,0 +1,55 @@
+{
+  "total_samples": 500,
+  "original_project_samples": 45,
+  "external_samples": 455,
+  "benign_samples": 240,
+  "malware_samples": 260,
+  "malware_families_count": 25,
+  "families": [
+    "agenttesla",
+    "asyncrat",
+    "benign",
+    "cobalt_strike_beacon",
+    "empire_framework",
+    "fileless_ransomware",
+    "lolbins_abuse",
+    "memory_only_rat",
+    "metasploit_memory_payloads",
+    "metasploit_payload",
+    "powershell_fileless",
+    "powershell_stager",
+    "process_hollowing",
+    "ransomware_ako",
+    "ransomware_conti",
+    "ransomware_shade",
+    "redline_stealer",
+    "reflective_dll_injection",
+    "registry_resident_malware",
+    "remcos_rat",
+    "spyware_gator",
+    "spyware_transponder",
+    "trojan_emotet",
+    "trojan_zeus",
+    "wmi_malware"
+  ],
+  "datasets": [
+    {
+      "name": "PROJECT_ORIGINAL_45_RUNS",
+      "samples": 45,
+      "role": "ISOLATED_TEST_AND_PROJECT_BENCHMARK"
+    },
+    {
+      "name": "CAPEv2-Sandbox",
+      "samples": 230,
+      "role": "BEHAVIORAL_SCALING_PROCESS_COMMAND_NETWORK"
+    },
+    {
+      "name": "CIC-MalMem-2022",
+      "samples": 225,
+      "role": "FORENSIC_SCALING_PROCESS_MEMORY"
+    }
+  ],
+  "split_strategy": "Group-aware with strict isolation of original 45 project runs",
+  "provenance_tracked": true,
+  "zero_fabrication_verified": true
+}

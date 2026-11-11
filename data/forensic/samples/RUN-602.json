@@ -1,0 +1,26 @@
+{
+  "sample_id": "EXEC_RUN-602",
+  "run_id": "RUN-602",
+  "label": 1,
+  "family": "wmi_malware",
+  "track": "TRACK_B",
+  "os": "microsoft_windows_11_home",
+  "execution_timestamp": "2026-09-20T14:39:25Z",
+  "source_category": "custom_wmi_malware",
+  "metadata_source": "C:\\Users\\Prash\\Desktop\\Real-Time-Fileless-Malware-Detection\\Dataset\\custom_wmi_malware\\metadata\\RUN-602.json",
+  "evidence_availability": {
+    "volatility": true,
+    "sysmon": true,
+    "powershell": true,
+    "network_connections": true,
+    "process_snapshot": true
+  },
+  "provenance": {
+    "sample_id": "EXEC_RUN-602",
+    "source_file": "metadata/RUN-602.json",
+    "source_type": "METADATA",
+    "source_plugin": "sample_metadata",
+    "extraction_timestamp": "2026-09-24T05:49:30.651270+00:00",
+    "extractor_version": "2.0.0-rich-forensic"
+  }
+}

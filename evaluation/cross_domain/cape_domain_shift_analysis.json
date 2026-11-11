@@ -1,0 +1,110 @@
+{
+  "analysis_timestamp": "2026-09-22T05:50:05.075276+00:00",
+  "features_analyzed": {
+    "command_length": {
+      "public_cape": {
+        "mean": 107.1667,
+        "std": 79.4359,
+        "quantiles": [
+          55.0,
+          76.0,
+          112.25
+        ]
+      },
+      "custom_vm": {
+        "mean": 64.2889,
+        "std": 6.8643,
+        "quantiles": [
+          59.0,
+          59.0,
+          73.0
+        ]
+      },
+      "standardized_difference": 0.7605,
+      "domain_shift_flag": "MEDIUM"
+    },
+    "shannon_entropy": {
+      "public_cape": {
+        "mean": 4.6802,
+        "std": 0.232,
+        "quantiles": [
+          4.5605,
+          4.5696,
+          4.727
+        ]
+      },
+      "custom_vm": {
+        "mean": 4.588,
+        "std": 0.1073,
+        "quantiles": [
+          4.5053,
+          4.5053,
+          4.7242
+        ]
+      },
+      "standardized_difference": 0.5101,
+      "domain_shift_flag": "LOW"
+    },
+    "outbound_connection_count": {
+      "public_cape": {
+        "mean": 0.75,
+        "std": 0.7247,
+        "quantiles": [
+          0.0,
+          1.0,
+          1.0
+        ]
+      },
+      "custom_vm": {
+        "mean": 0.0444,
+        "std": 0.2084,
+        "quantiles": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "standardized_difference": 1.3232,
+      "domain_shift_flag": "MEDIUM"
+    },
+    "unique_remote_ips": {
+      "public_cape": {
+        "mean": 0.6667,
+        "std": 0.6262,
+        "quantiles": [
+          0.0,
+          1.0,
+          1.0
+        ]
+      },
+      "custom_vm": {
+        "mean": 0.0444,
+        "std": 0.2084,
+        "quantiles": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "standardized_difference": 1.3333,
+      "domain_shift_flag": "MEDIUM"
+    },
+    "dns_query_count": {
+      "status": "UNMEASURED_IN_ONE_DOMAIN",
+      "domain_shift": "HIGH"
+    },
+    "total_bytes_sent": {
+      "status": "UNMEASURED_IN_ONE_DOMAIN",
+      "domain_shift": "HIGH"
+    },
+    "total_bytes_received": {
+      "status": "UNMEASURED_IN_ONE_DOMAIN",
+      "domain_shift": "HIGH"
+    }
+  },
+  "key_takeaways": [
+    "Command length and entropy exhibit substantial shift (HIGH): CAPEv2 commands contain authentic base64 payload strings and arguments, whereas custom Sysmon telemetry only captured ambient background OS tasks.",
+    "Network byte counters exhibit HIGH shift: CAPEv2 NetFlow captured active HTTP payloads, while custom VM host-only runs captured zero bytes for 43/45 samples.",
+    "DNS queries exhibit LOW-to-MEDIUM shift: Both domains capture single-digit resolution counts."
+  ]
+}

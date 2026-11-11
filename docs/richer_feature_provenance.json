@@ -1,0 +1,269 @@
+{
+  "metadata": {
+    "generation_timestamp": "2026-09-22T18:53:11.712544+00:00",
+    "version": "3.0.0-rich-candidate",
+    "total_runs": 45,
+    "benign_runs": 12,
+    "malware_runs": 33,
+    "aggregation_level": "run-level (no individual process/handle/thread sample synthesis)"
+  },
+  "modalities": {
+    "process": {
+      "total_process_count": {
+        "source_plugin": "volatility/pslist.txt",
+        "source_fields": [
+          "PID",
+          "ImageFileName"
+        ],
+        "extraction_method": "Unique integer PIDs present in EPROCESS doubly-linked active list",
+        "aggregation_method": "Count of distinct active PIDs",
+        "quality_status": "RETAINED",
+        "rationale": "Direct baseline process count; zero corruption; non-constant across runs"
+      },
+      "hidden_process_count": {
+        "source_plugin": "volatility/pslist.txt, volatility/psscan.txt",
+        "source_fields": [
+          "PID (pslist)",
+          "PID (psscan)"
+        ],
+        "extraction_method": "Set difference: psscan_pids - pslist_pids",
+        "aggregation_method": "Count of unlinked carved process structures",
+        "quality_status": "RETAINED",
+        "rationale": "High-confidence indicator of direct kernel object manipulation (DKOM) and process unlinking"
+      },
+      "anomalous_ppid_count": {
+        "source_plugin": "volatility/pslist.txt, volatility/pstree.txt",
+        "source_fields": [
+          "PID",
+          "PPID",
+          "ImageFileName"
+        ],
+        "extraction_method": "Lineage rules: scripting hosts spawned by core daemons or missing parent PIDs",
+        "aggregation_method": "Count of lineage anomaly instances per run",
+        "quality_status": "RETAINED",
+        "rationale": "Detects parent PID spoofing and process creation hijacking without label leakage"
+      },
+      "total_handle_count_non_system": {
+        "source_plugin": "volatility/handles.txt",
+        "source_fields": [
+          "PID",
+          "Process",
+          "HandleValue",
+          "Type"
+        ],
+        "extraction_method": "Total handle table entries excluding MsMpEng, System, lsass, services, csrss, svchost",
+        "aggregation_method": "Sum of userland/non-system process handles",
+        "quality_status": "RETAINED",
+        "rationale": "Continuous variation in every run (45 unique values); eliminates Defender 14,000 handle distortion"
+      },
+      "process_all_access_handles": {
+        "source_plugin": "volatility/handles.txt",
+        "source_fields": [
+          "Process",
+          "Type",
+          "GrantedAccess"
+        ],
+        "extraction_method": "Filter Type=='Process' and GrantedAccess contains 0x1fffff in non-system processes",
+        "aggregation_method": "Count of full access process handles",
+        "quality_status": "RETAINED",
+        "rationale": "Indicates handle acquisition for cross-process memory manipulation (VirtualAllocEx, WriteProcessMemory)"
+      },
+      "cross_process_handles": {
+        "source_plugin": "volatility/handles.txt",
+        "source_fields": [
+          "Process",
+          "Type",
+          "Name"
+        ],
+        "extraction_method": "Filter Type=='Process' where handle name references target PID distinct from owning process",
+        "aggregation_method": "Count of target PID references across userland processes",
+        "quality_status": "RETAINED",
+        "rationale": "Measures inter-process surveillance and injection targeting"
+      },
+      "elevated_privilege_count_non_system": {
+        "source_plugin": "volatility/privileges.txt",
+        "source_fields": [
+          "Process",
+          "Privilege",
+          "Attributes"
+        ],
+        "extraction_method": "Filter high-risk privileges (SeDebug, SeImpersonate, SeTcb) Enabled/Present in non-system processes",
+        "aggregation_method": "Count of high-risk privilege grants in userland",
+        "quality_status": "RETAINED",
+        "rationale": "Reflects token privilege escalation attempts while ignoring OS daemons"
+      },
+      "unlinked_dll_count": {
+        "source_plugin": "volatility/ldrmodules.txt",
+        "source_fields": [
+          "Pid",
+          "Process",
+          "InLoad",
+          "InMem"
+        ],
+        "extraction_method": "Filter InLoad==False and InMem==True across all processes",
+        "aggregation_method": "Sum of unlinked PE modules in memory",
+        "quality_status": "RETAINED",
+        "rationale": "Signature of reflective DLL injection and manual PE loading; 0 in benign runs"
+      }
+    },
+    "command": {
+      "raw_command_text": {
+        "source_plugin": "source_evidence/sysmon.evtx (EID 1), source_evidence/powershell.evtx (EID 4104)",
+        "source_fields": [
+          "CommandLine",
+          "ScriptBlockText"
+        ],
+        "extraction_method": "Binary EVTX parsing, background OS daemon filtering, chronological session text concatenation",
+        "aggregation_method": "Concatenated session string (up to 30,000 characters)",
+        "quality_status": "RETAINED",
+        "rationale": "Primary NLP input for DistilBERT fine-tuning on contextual command syntax"
+      },
+      "command_event_count": {
+        "source_plugin": "source_evidence/sysmon.evtx (EID 1)",
+        "source_fields": [
+          "EventID 1"
+        ],
+        "extraction_method": "Count of Sysmon Event ID 1 ProcessCreate records in session",
+        "aggregation_method": "Total event count",
+        "quality_status": "RETAINED",
+        "rationale": "Continuous distribution (45 unique values); captures process churning during malware staging"
+      },
+      "scriptblock_event_count": {
+        "source_plugin": "source_evidence/powershell.evtx (EID 4104)",
+        "source_fields": [
+          "EventID 4104"
+        ],
+        "extraction_method": "Count of PowerShell ScriptBlock executions",
+        "aggregation_method": "Total event count",
+        "quality_status": "RETAINED",
+        "rationale": "Measures volume of dynamic script evaluation; 0% missingness"
+      },
+      "filtered_event_count": {
+        "source_plugin": "source_evidence/sysmon.evtx, powershell.evtx",
+        "source_fields": [
+          "CommandLine",
+          "ScriptBlockText"
+        ],
+        "extraction_method": "Combined event count after excising OS system noise and PSReadLine prompts",
+        "aggregation_method": "Sum of actionable command events",
+        "quality_status": "RETAINED",
+        "rationale": "Measures density of interactive and payload command invocations"
+      },
+      "command_length": {
+        "source_plugin": "source_evidence/sysmon.evtx, powershell.evtx",
+        "source_fields": [
+          "CommandLine",
+          "ScriptBlockText"
+        ],
+        "extraction_method": "Total character length of combined filtered command payloads",
+        "aggregation_method": "Character count sum",
+        "quality_status": "RETAINED",
+        "rationale": "Reflects execution volume and script size in session telemetry"
+      }
+    },
+    "network": {
+      "outbound_connection_count": {
+        "source_plugin": "source_evidence/sysmon.evtx (EID 3)",
+        "source_fields": [
+          "EventID 3 DestinationIp",
+          "DestinationPort"
+        ],
+        "extraction_method": "Count of outbound TCP/UDP network connections excluding multicast/broadcast",
+        "aggregation_method": "Total outbound socket events",
+        "quality_status": "RETAINED",
+        "rationale": "Real continuous telemetry; separates benign baseline (243-279) from malware activity (280-404)"
+      },
+      "suspicious_port_usage": {
+        "source_plugin": "source_evidence/sysmon.evtx (EID 3)",
+        "source_fields": [
+          "DestinationPort"
+        ],
+        "extraction_method": "Count of outbound connections to non-standard ports (excluding 80, 443, 53, etc.)",
+        "aggregation_method": "Sum of non-standard port connections",
+        "quality_status": "RETAINED",
+        "rationale": "Detects C2 communication over unusual listener ports"
+      },
+      "scripting_process_network_count": {
+        "source_plugin": "source_evidence/sysmon.evtx (EID 3)",
+        "source_fields": [
+          "Image",
+          "EventID 3"
+        ],
+        "extraction_method": "Connections where Image is powershell, cmd, rundll32, wmic, or mshta",
+        "aggregation_method": "Count of scripting network sockets",
+        "quality_status": "RETAINED",
+        "rationale": "Classic living-off-the-land fileless download and reverse shell indicator"
+      },
+      "listening_port_anomaly_count": {
+        "source_plugin": "source_evidence/network_connections.csv",
+        "source_fields": [
+          "LocalPort",
+          "State"
+        ],
+        "extraction_method": "Listening sockets (State==Listen) on ports not in Windows 11 standard baseline",
+        "aggregation_method": "Count of anomalous listening ports",
+        "quality_status": "RETAINED",
+        "rationale": "Detects local backdoor listener sockets; 0 in benign runs"
+      }
+    },
+    "memory": {
+      "non_defender_malfind_regions": {
+        "source_plugin": "volatility/malfind.txt",
+        "source_fields": [
+          "PID",
+          "Process",
+          "Protection"
+        ],
+        "extraction_method": "Count of PAGE_EXECUTE_READWRITE or VadS regions where Process != MsMpEng.exe",
+        "aggregation_method": "Region count excluding Windows Defender",
+        "quality_status": "RETAINED",
+        "rationale": "Eliminates Defender's 14-15 RWX false positive regions while preserving genuine userland injections"
+      },
+      "non_defender_commit_charge": {
+        "source_plugin": "volatility/malfind.txt",
+        "source_fields": [
+          "Process",
+          "CommitCharge"
+        ],
+        "extraction_method": "Sum of CommitCharge across non-Defender malfind regions",
+        "aggregation_method": "Total page commit charge",
+        "quality_status": "RETAINED",
+        "rationale": "Measures physical memory allocation of suspicious executable regions"
+      },
+      "unmapped_executable_vad_count": {
+        "source_plugin": "volatility/vadinfo.txt",
+        "source_fields": [
+          "Process",
+          "Protection",
+          "File"
+        ],
+        "extraction_method": "Executable VADs with no file backing (File in N/A, None, Disabled) excluding MsMpEng",
+        "aggregation_method": "Count of unbacked executable VADs",
+        "quality_status": "RETAINED",
+        "rationale": "Detects memory-only PE injection and unbacked shellcode stagers"
+      },
+      "vad_protection_anomalies": {
+        "source_plugin": "volatility/vadinfo.txt",
+        "source_fields": [
+          "Process",
+          "Protection"
+        ],
+        "extraction_method": "PAGE_EXECUTE_READWRITE VADs in processes other than MsMpEng and OneDrive",
+        "aggregation_method": "Count of RWX protection violations",
+        "quality_status": "RETAINED",
+        "rationale": "Direct violation of W^X (Write XOR Execute) memory protection policy"
+      },
+      "ldrmodules_unlinked_dll_count": {
+        "source_plugin": "volatility/ldrmodules.txt",
+        "source_fields": [
+          "InLoad",
+          "InMem"
+        ],
+        "extraction_method": "Modules where InLoad==False and InMem==True",
+        "aggregation_method": "Sum across all processes",
+        "quality_status": "RETAINED",
+        "rationale": "Cross-modality reinforcement of PE unlinking; 0% missingness"
+      }
+    }
+  }
+}

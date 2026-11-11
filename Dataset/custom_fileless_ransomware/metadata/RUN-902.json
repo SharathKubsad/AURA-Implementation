@@ -1,0 +1,14 @@
+﻿{
+    "sample_id":  "EXEC_RUN-902",
+    "label":  1,
+    "family":  "fileless_ransomware",
+    "track":  "TRACK_B",
+    "os":  "microsoft_windows_11_home",
+    "execution_timestamp":  "2026-09-20T18:30:06Z",
+    "source_type":  "custom_sandbox",
+    "source_reference":  "manual_controlled_execution",
+    "evidence_sha256":  "fd875e92164ac5060dc9d29f62f20af1931999a4b67cfcc9f8c86e92dc5bae9e",
+    "memory_dump":  true,
+    "sysmon_available":  true,
+    "notes":  "Controlled execution for fileless_ransomware"
+}

@@ -1,0 +1,39 @@
+{
+  "evaluation_type": "ZERO-SHOT CROSS-DOMAIN EVALUATION",
+  "source_model": "CAPEv2 Command Benchmark (DistilBERT)",
+  "target_dataset": "Custom VM Telemetry (45 samples: 13 Benign, 32 Malware)",
+  "shared_features": [
+    "raw_command_text"
+  ],
+  "excluded_features": [],
+  "metrics": {
+    "accuracy": 0.2889,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "roc_auc": 0.4411,
+    "pr_auc": 0.7287,
+    "fpr": 0.0,
+    "fnr": 1.0,
+    "confusion_matrix": [
+      [
+        13,
+        0
+      ],
+      [
+        32,
+        0
+      ]
+    ],
+    "threshold": 0.5,
+    "total_samples": 45,
+    "true_benign_count": 13,
+    "true_malware_count": 32
+  },
+  "probability_distribution": {
+    "overall_mean": 0.4566,
+    "benign_mean": 0.4587,
+    "malware_mean": 0.4558
+  },
+  "evaluated_at": "2026-09-22T05:50:05.016946+00:00"
+}

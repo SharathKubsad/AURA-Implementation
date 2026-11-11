@@ -1,0 +1,13 @@
+{
+  "original_dataset": "CIC-MalMem-2022",
+  "original_sample_id": "MALMEM_BENIGN_0001",
+  "original_label": "Benign",
+  "original_family": "benign",
+  "source_reference": "Carrier et al., ICISSP 2022 (https://www.unb.ca/cic/datasets/malmem-2022.html)",
+  "available_modalities": [
+    "process",
+    "memory"
+  ],
+  "mapping_method": "Volatility 2/3 outputs mapped to ProcessFeatures and MemoryFeatures schemas",
+  "checksum": "31d0770e6ce0bd8af740e49adaa5794ea08c84f4e33da8299c6079724b88a885"
+}

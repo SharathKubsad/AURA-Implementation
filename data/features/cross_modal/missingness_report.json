@@ -1,0 +1,44 @@
+{
+  "cross_proc_with_memory_and_command": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "cross_proc_with_command_and_network": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "cross_proc_with_injection_and_network": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "cross_proc_with_suspicious_memory_and_tree": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "cross_high_privilege_network_processes": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "cross_suspicious_memory_process_ratio": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  },
+  "cross_network_enabled_process_ratio": {
+    "total_count": 45,
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "is_explicit_null_field": false
+  }
+}

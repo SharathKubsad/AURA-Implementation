@@ -1,0 +1,25 @@
+{
+  "run_id": "RUN-800",
+  "sample_id": "EXEC_RUN-800",
+  "label": 1,
+  "family": "lolbins_abuse",
+  "counts": {
+    "processes": 144,
+    "threads": 1622,
+    "handles": 52862,
+    "modules": 6684,
+    "privileges": 4935,
+    "vads": 18007,
+    "malfind_findings": 20,
+    "network_connections": 413,
+    "sysmon_events": 9183,
+    "powershell_events": 485,
+    "command_events": 4951,
+    "relationships_tree": 140,
+    "relationships_network": 141,
+    "relationships_command": 412,
+    "relationships_memory": 20
+  },
+  "malfind_baseline_exceptions": 13,
+  "hidden_processes_psxview": 1
+}

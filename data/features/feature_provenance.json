@@ -1,0 +1,713 @@
+[
+  {
+    "feature_name": "proc_total_count",
+    "modality": "Process",
+    "source_evidence": "entities/processes + entities/threads + entities/handles + entities/privileges + relationships/process_tree",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "proc_active_count",
+    "modality": "Process",
+    "source_evidence": "entities/processes + entities/threads + entities/handles + entities/privileges + relationships/process_tree",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "proc_carved_count",
+    "modality": "Process",
+    "source_evidence": "entities/processes + entities/threads + entities/handles + entities/privileges + relationships/process_tree",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "proc_hidden_unlinked_count",
+    "modality": "Process",
+    "source_evidence": "entities/processes + entities/threads + entities/handles + entities/privileges + relationships/process_tree",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "proc_wow64_count",
+    "modality": "Process",
+    "source_evidence": "entities/processes + entities/threads + entities/handles + entities/privileges + relationships/process_tree",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "proc_tree_max_depth",
+    "modality": "Process",
+    "source_evidence": "entities/processes + entities/threads + entities/handles + entities/privileges + relationships/process_tree",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "proc_tree_mean_depth",
+    "modality": "Process",
+    "source_evidence": "entities/processes + entities/threads + entities/handles + entities/privileges + relationships/process_tree",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "proc_orphan_parent_count",
+    "modality": "Process",
+    "source_evidence": "entities/processes + entities/threads + entities/handles + entities/privileges + relationships/process_tree",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "proc_max_children_single_proc",
+    "modality": "Process",
+    "source_evidence": "entities/processes + entities/threads + entities/handles + entities/privileges + relationships/process_tree",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "proc_spawning_concentration",
+    "modality": "Process",
+    "source_evidence": "entities/processes + entities/threads + entities/handles + entities/privileges + relationships/process_tree",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "proc_thread_count_total",
+    "modality": "Process",
+    "source_evidence": "entities/processes + entities/threads + entities/handles + entities/privileges + relationships/process_tree",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "proc_thread_count_mean",
+    "modality": "Process",
+    "source_evidence": "entities/processes + entities/threads + entities/handles + entities/privileges + relationships/process_tree",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "proc_handle_count_total",
+    "modality": "Process",
+    "source_evidence": "entities/processes + entities/threads + entities/handles + entities/privileges + relationships/process_tree",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "proc_handle_count_mean",
+    "modality": "Process",
+    "source_evidence": "entities/processes + entities/threads + entities/handles + entities/privileges + relationships/process_tree",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "proc_working_set_bytes_mean",
+    "modality": "Process",
+    "source_evidence": "entities/processes + entities/threads + entities/handles + entities/privileges + relationships/process_tree",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "proc_cpu_utilization_mean",
+    "modality": "Process",
+    "source_evidence": "entities/processes + entities/threads + entities/handles + entities/privileges + relationships/process_tree",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "proc_user_writable_path_count",
+    "modality": "Process",
+    "source_evidence": "entities/processes + entities/threads + entities/handles + entities/privileges + relationships/process_tree",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "proc_system_directory_count",
+    "modality": "Process",
+    "source_evidence": "entities/processes + entities/threads + entities/handles + entities/privileges + relationships/process_tree",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "proc_temp_directory_count",
+    "modality": "Process",
+    "source_evidence": "entities/processes + entities/threads + entities/handles + entities/privileges + relationships/process_tree",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "proc_unusual_executable_location_count",
+    "modality": "Process",
+    "source_evidence": "entities/processes + entities/threads + entities/handles + entities/privileges + relationships/process_tree",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "proc_elevated_privilege_count",
+    "modality": "Process",
+    "source_evidence": "entities/processes + entities/threads + entities/handles + entities/privileges + relationships/process_tree",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "proc_processes_with_sedebug",
+    "modality": "Process",
+    "source_evidence": "entities/processes + entities/threads + entities/handles + entities/privileges + relationships/process_tree",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "mem_rwx_region_count",
+    "modality": "Memory",
+    "source_evidence": "entities/memory_regions (vadinfo) + events/memory (malfind) + entities/modules (ldrmodules)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "mem_executable_private_count",
+    "modality": "Memory",
+    "source_evidence": "entities/memory_regions (vadinfo) + events/memory (malfind) + entities/modules (ldrmodules)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "mem_executable_writable_count",
+    "modality": "Memory",
+    "source_evidence": "entities/memory_regions (vadinfo) + events/memory (malfind) + entities/modules (ldrmodules)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "mem_vad_total_count",
+    "modality": "Memory",
+    "source_evidence": "entities/memory_regions (vadinfo) + events/memory (malfind) + entities/modules (ldrmodules)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "mem_vad_private_count",
+    "modality": "Memory",
+    "source_evidence": "entities/memory_regions (vadinfo) + events/memory (malfind) + entities/modules (ldrmodules)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "mem_vad_mapped_count",
+    "modality": "Memory",
+    "source_evidence": "entities/memory_regions (vadinfo) + events/memory (malfind) + entities/modules (ldrmodules)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "mem_commit_charge_total",
+    "modality": "Memory",
+    "source_evidence": "entities/memory_regions (vadinfo) + events/memory (malfind) + entities/modules (ldrmodules)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "mem_commit_charge_mean",
+    "modality": "Memory",
+    "source_evidence": "entities/memory_regions (vadinfo) + events/memory (malfind) + entities/modules (ldrmodules)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "mem_region_size_bytes_total",
+    "modality": "Memory",
+    "source_evidence": "entities/memory_regions (vadinfo) + events/memory (malfind) + entities/modules (ldrmodules)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "mem_region_size_bytes_mean",
+    "modality": "Memory",
+    "source_evidence": "entities/memory_regions (vadinfo) + events/memory (malfind) + entities/modules (ldrmodules)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "mem_malfind_total_findings",
+    "modality": "Memory",
+    "source_evidence": "entities/memory_regions (vadinfo) + events/memory (malfind) + entities/modules (ldrmodules)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "mem_malfind_baseline_exception_count",
+    "modality": "Memory",
+    "source_evidence": "entities/memory_regions (vadinfo) + events/memory (malfind) + entities/modules (ldrmodules)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "mem_malfind_suspicious_non_baseline_count",
+    "modality": "Memory",
+    "source_evidence": "entities/memory_regions (vadinfo) + events/memory (malfind) + entities/modules (ldrmodules)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "mem_malfind_affected_processes_count",
+    "modality": "Memory",
+    "source_evidence": "entities/memory_regions (vadinfo) + events/memory (malfind) + entities/modules (ldrmodules)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "mem_malfind_max_findings_single_proc",
+    "modality": "Memory",
+    "source_evidence": "entities/memory_regions (vadinfo) + events/memory (malfind) + entities/modules (ldrmodules)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "mem_unlinked_modules_count",
+    "modality": "Memory",
+    "source_evidence": "entities/memory_regions (vadinfo) + events/memory (malfind) + entities/modules (ldrmodules)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "mem_total_loaded_modules",
+    "modality": "Memory",
+    "source_evidence": "entities/memory_regions (vadinfo) + events/memory (malfind) + entities/modules (ldrmodules)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "mem_modules_per_process_mean",
+    "modality": "Memory",
+    "source_evidence": "entities/memory_regions (vadinfo) + events/memory (malfind) + entities/modules (ldrmodules)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "cmd_total_events_count",
+    "modality": "Command",
+    "source_evidence": "events/commands (pstree, sysmon_eid1) + events/powershell (eid4104 ScriptBlocks)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "cmd_unique_commands_count",
+    "modality": "Command",
+    "source_evidence": "events/commands (pstree, sysmon_eid1) + events/powershell (eid4104 ScriptBlocks)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "cmd_mean_command_length",
+    "modality": "Command",
+    "source_evidence": "events/commands (pstree, sysmon_eid1) + events/powershell (eid4104 ScriptBlocks)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "cmd_max_command_length",
+    "modality": "Command",
+    "source_evidence": "events/commands (pstree, sysmon_eid1) + events/powershell (eid4104 ScriptBlocks)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "cmd_ps_scriptblock_count",
+    "modality": "Command",
+    "source_evidence": "events/commands (pstree, sysmon_eid1) + events/powershell (eid4104 ScriptBlocks)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "cmd_ps_unique_scriptblocks",
+    "modality": "Command",
+    "source_evidence": "events/commands (pstree, sysmon_eid1) + events/powershell (eid4104 ScriptBlocks)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "cmd_ps_mean_script_length",
+    "modality": "Command",
+    "source_evidence": "events/commands (pstree, sysmon_eid1) + events/powershell (eid4104 ScriptBlocks)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "cmd_ps_max_script_length",
+    "modality": "Command",
+    "source_evidence": "events/commands (pstree, sysmon_eid1) + events/powershell (eid4104 ScriptBlocks)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "cmd_encoded_command_count",
+    "modality": "Command",
+    "source_evidence": "events/commands (pstree, sysmon_eid1) + events/powershell (eid4104 ScriptBlocks)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "cmd_execution_policy_bypass_count",
+    "modality": "Command",
+    "source_evidence": "events/commands (pstree, sysmon_eid1) + events/powershell (eid4104 ScriptBlocks)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "cmd_hidden_window_count",
+    "modality": "Command",
+    "source_evidence": "events/commands (pstree, sysmon_eid1) + events/powershell (eid4104 ScriptBlocks)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "cmd_download_cradle_count",
+    "modality": "Command",
+    "source_evidence": "events/commands (pstree, sysmon_eid1) + events/powershell (eid4104 ScriptBlocks)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "cmd_lolbin_execution_count",
+    "modality": "Command",
+    "source_evidence": "events/commands (pstree, sysmon_eid1) + events/powershell (eid4104 ScriptBlocks)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "cmd_registry_modification_count",
+    "modality": "Command",
+    "source_evidence": "events/commands (pstree, sysmon_eid1) + events/powershell (eid4104 ScriptBlocks)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "cmd_diversity_ratio",
+    "modality": "Command",
+    "source_evidence": "events/commands (pstree, sysmon_eid1) + events/powershell (eid4104 ScriptBlocks)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "net_total_observations_count",
+    "modality": "Network",
+    "source_evidence": "events/network (network_connections.csv + sysmon_eid3)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "net_snapshot_count",
+    "modality": "Network",
+    "source_evidence": "events/network (network_connections.csv + sysmon_eid3)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "net_sysmon_eid3_count",
+    "modality": "Network",
+    "source_evidence": "events/network (network_connections.csv + sysmon_eid3)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "net_established_connections_count",
+    "modality": "Network",
+    "source_evidence": "events/network (network_connections.csv + sysmon_eid3)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "net_listening_sockets_count",
+    "modality": "Network",
+    "source_evidence": "events/network (network_connections.csv + sysmon_eid3)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "net_unique_remote_ips_count",
+    "modality": "Network",
+    "source_evidence": "events/network (network_connections.csv + sysmon_eid3)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "net_unique_destination_ports_count",
+    "modality": "Network",
+    "source_evidence": "events/network (network_connections.csv + sysmon_eid3)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "net_outbound_remote_connection_count",
+    "modality": "Network",
+    "source_evidence": "events/network (network_connections.csv + sysmon_eid3)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "net_non_standard_http_ssl_ports_count",
+    "modality": "Network",
+    "source_evidence": "events/network (network_connections.csv + sysmon_eid3)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "net_privileged_ports_count",
+    "modality": "Network",
+    "source_evidence": "events/network (network_connections.csv + sysmon_eid3)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "net_ephemeral_ports_count",
+    "modality": "Network",
+    "source_evidence": "events/network (network_connections.csv + sysmon_eid3)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "net_network_enabled_process_count",
+    "modality": "Network",
+    "source_evidence": "events/network (network_connections.csv + sysmon_eid3)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "net_max_connections_single_process",
+    "modality": "Network",
+    "source_evidence": "events/network (network_connections.csv + sysmon_eid3)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "net_packet_count",
+    "modality": "Network",
+    "source_evidence": "events/network (network_connections.csv + sysmon_eid3)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "EXPLICIT_NULL (PCAP unavailable; zero never fabricated)",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "net_byte_count",
+    "modality": "Network",
+    "source_evidence": "events/network (network_connections.csv + sysmon_eid3)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "EXPLICIT_NULL (PCAP unavailable; zero never fabricated)",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "net_flow_duration_sec",
+    "modality": "Network",
+    "source_evidence": "events/network (network_connections.csv + sysmon_eid3)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "EXPLICIT_NULL (PCAP unavailable; zero never fabricated)",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "net_beacon_periodicity_sec",
+    "modality": "Network",
+    "source_evidence": "events/network (network_connections.csv + sysmon_eid3)",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "EXPLICIT_NULL (PCAP unavailable; zero never fabricated)",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "cross_proc_with_memory_and_command",
+    "modality": "Cross_Modal",
+    "source_evidence": "relationships/process_memory + relationships/process_command + relationships/process_network",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "cross_proc_with_command_and_network",
+    "modality": "Cross_Modal",
+    "source_evidence": "relationships/process_memory + relationships/process_command + relationships/process_network",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "cross_proc_with_injection_and_network",
+    "modality": "Cross_Modal",
+    "source_evidence": "relationships/process_memory + relationships/process_command + relationships/process_network",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "cross_proc_with_suspicious_memory_and_tree",
+    "modality": "Cross_Modal",
+    "source_evidence": "relationships/process_memory + relationships/process_command + relationships/process_network",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "cross_high_privilege_network_processes",
+    "modality": "Cross_Modal",
+    "source_evidence": "relationships/process_memory + relationships/process_command + relationships/process_network",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "cross_suspicious_memory_process_ratio",
+    "modality": "Cross_Modal",
+    "source_evidence": "relationships/process_memory + relationships/process_command + relationships/process_network",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  },
+  {
+    "feature_name": "cross_network_enabled_process_ratio",
+    "modality": "Cross_Modal",
+    "source_evidence": "relationships/process_memory + relationships/process_command + relationships/process_network",
+    "aggregation_scope": "RUN_LEVEL",
+    "null_semantics": "OBSERVED_ZERO or NONE_IF_UNAVAILABLE",
+    "leakage_status": "SAFE (contextual aggregation; excluded collection harness & identity fields)",
+    "excluded_from_model_inputs": false
+  }
+]

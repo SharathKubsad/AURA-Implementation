@@ -1,0 +1,14 @@
+﻿{
+    "sample_id":  "EXEC_RUN-1002",
+    "label":  1,
+    "family":  "empire_framework",
+    "track":  "TRACK_B",
+    "os":  "microsoft_windows_11_home",
+    "execution_timestamp":  "2026-09-20T19:11:32Z",
+    "source_type":  "custom_sandbox",
+    "source_reference":  "manual_controlled_execution",
+    "evidence_sha256":  "0d6aa69e6a83983c0b353f234520afaf33899d662043400568d0144ace1d4ca2",
+    "memory_dump":  true,
+    "sysmon_available":  true,
+    "notes":  "Controlled execution for empire_framework"
+}

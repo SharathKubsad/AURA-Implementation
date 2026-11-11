@@ -1,0 +1,23 @@
+feature,label_association,family_association,batch_association,run_order_association,risk,reason
+proc_total_count,0.5966,0.5657,0.5641,0.3557,CAUTION,Primarily measures Windows background system state (batch eta^2=0.56); useful for sizing but vulnerable to environment drift.
+proc_active_count,0.7787,0.7394,0.5942,0.593,CAUTION,Primarily measures Windows background system state (batch eta^2=0.59); useful for sizing but vulnerable to environment drift.
+proc_carved_count,0.4691,0.4161,0.3557,0.4598,SAFE,"Behaviorally grounded structural anomaly metric; directly captures process hiding, privilege elevation, or execution parentage."
+proc_hidden_unlinked_count,0.5283,0.4884,0.4027,0.4718,SAFE,"Behaviorally grounded structural anomaly metric; directly captures process hiding, privilege elevation, or execution parentage."
+proc_wow64_count,0.046,0.5165,0.3959,0.048,SAFE,"Behaviorally grounded structural anomaly metric; directly captures process hiding, privilege elevation, or execution parentage."
+proc_tree_max_depth,0.0,0.0,0.0,0.0,CONSTANT_FEATURE,Invariant at 6 across all 45 runs due to standardized base Windows VM image process tree.
+proc_tree_mean_depth,0.0748,0.6591,0.4986,0.0626,CAUTION,Batch association eta^2=0.50; assess during feature selection.
+proc_orphan_parent_count,0.145,0.453,0.3371,0.0117,SAFE,"Behaviorally grounded structural anomaly metric; directly captures process hiding, privilege elevation, or execution parentage."
+proc_max_children_single_proc,0.6124,0.6578,0.6798,0.4095,SAFE,"Behaviorally grounded structural anomaly metric; directly captures process hiding, privilege elevation, or execution parentage."
+proc_spawning_concentration,0.3269,0.7944,0.6751,0.2363,SAFE,"Behaviorally grounded structural anomaly metric; directly captures process hiding, privilege elevation, or execution parentage."
+proc_thread_count_total,0.4326,0.4602,0.3948,0.4073,CAUTION,Primarily measures Windows background system state (batch eta^2=0.39); useful for sizing but vulnerable to environment drift.
+proc_thread_count_mean,0.1694,0.3729,0.3296,0.2403,CAUTION,Batch association eta^2=0.33; assess during feature selection.
+proc_handle_count_total,0.6787,0.7556,0.496,0.6499,CAUTION,Primarily measures Windows background system state (batch eta^2=0.50); useful for sizing but vulnerable to environment drift.
+proc_handle_count_mean,0.2537,0.5735,0.4352,0.4498,CAUTION,Batch association eta^2=0.44; assess during feature selection.
+proc_working_set_bytes_mean,0.2156,0.7512,0.7185,0.0124,HIGH_RISK,Moderate batch confounding (batch eta^2=0.72); reflects background Windows Defender/Edge footprint rather than malware activity.
+proc_cpu_utilization_mean,0.2231,0.8041,0.7754,0.1534,INVALID,"High batch confounding (batch eta^2=0.78, order rho=0.15); measures cumulative VM processor uptime seconds, NOT malware CPU load."
+proc_user_writable_path_count,0.2313,0.3971,0.4101,0.2352,SAFE,"Behaviorally grounded structural anomaly metric; directly captures process hiding, privilege elevation, or execution parentage."
+proc_system_directory_count,0.5364,0.5753,0.6831,0.2621,CAUTION,Primarily measures Windows background system state (batch eta^2=0.68); useful for sizing but vulnerable to environment drift.
+proc_temp_directory_count,0.0,0.0,0.0,0.0,CONSTANT_FEATURE,Invariant at 0 across all 45 runs because in-memory fileless payloads do not write to %temp%.
+proc_unusual_executable_location_count,0.1391,0.2148,0.2332,0.0213,SAFE,"Behaviorally grounded structural anomaly metric; directly captures process hiding, privilege elevation, or execution parentage."
+proc_elevated_privilege_count,0.3141,0.4687,0.5149,0.0149,SAFE,"Behaviorally grounded structural anomaly metric; directly captures process hiding, privilege elevation, or execution parentage."
+proc_processes_with_sedebug,0.4182,0.6447,0.6679,0.1008,SAFE,"Behaviorally grounded structural anomaly metric; directly captures process hiding, privilege elevation, or execution parentage."

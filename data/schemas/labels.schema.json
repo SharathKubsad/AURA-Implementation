@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/Prash-2402/Real-Time-Fileless-Malware-Detection/main/data/schemas/labels.schema.json",
+  "title": "DatasetLabels",
+  "description": "Standard label schema for binary detection (Objective 2) and multi-class family classification (Objective 3). Note: Multi-class values represent the initial baseline taxonomy and remain subject to final Phase 1 collection results per PROJECT_MANUAL.md.",
+  "type": "object",
+  "properties": {
+    "binary_label": {
+      "type": "integer",
+      "enum": [0, 1],
+      "description": "0 = Benign, 1 = Malware"
+    },
+    "binary_label_name": {
+      "type": "string",
+      "enum": ["Benign", "Malware"],
+      "description": "Canonical string representation of binary verdict"
+    },
+    "family_label": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Multi-class integer code. Initial project mapping: 0=Benign, 1=PowerShell Fileless, 2=WMI Malware, 3=Process Hollowing, 4=Reflective DLL Injection, 5=Registry Malware. Open to extension based on final Phase 1 collections."
+    },
+    "family_name": {
+      "type": "string",
+      "description": "Canonical malware family or class name (e.g. 'Benign', 'PowerShell Fileless', 'Cobalt Strike Beacon', etc.)"
+    },
+    "mapping_status": {
+      "type": "string",
+      "enum": ["initial_baseline", "phase1_finalized"],
+      "default": "initial_baseline",
+      "description": "Tracks whether the taxonomy is the initial baseline or the finalized post-collection taxonomy"
+    }
+  },
+  "required": [
+    "binary_label",
+    "binary_label_name",
+    "family_label",
+    "family_name"
+  ],
+  "additionalProperties": false
+}

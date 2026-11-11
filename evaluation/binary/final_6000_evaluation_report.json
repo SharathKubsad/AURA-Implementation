@@ -1,0 +1,269 @@
+{
+  "dataset": "C:\\Users\\PRAJWAL V L\\Downloads\\Real-Time-Fileless-Malware-Detection-main (1)\\Real-Time-Fileless-Malware-Detection-main\\Dataset\\fileless_malware_6000_synthetic_samples.csv",
+  "total_samples": 6000,
+  "split": {
+    "train": 4200,
+    "val": 900,
+    "test": 900
+  },
+  "binary_models": {
+    "process": {
+      "accuracy": 0.9811111111111112,
+      "precision": 0.9887133182844243,
+      "recall": 0.9733333333333334,
+      "f1": 0.9809630459126539,
+      "roc_auc": 0.9972888888888889,
+      "fpr": 0.011111111111111112,
+      "fnr": 0.02666666666666667,
+      "confusion_matrix": [
+        [
+          445,
+          5
+        ],
+        [
+          12,
+          438
+        ]
+      ],
+      "tp": 438,
+      "tn": 445,
+      "fp": 5,
+      "fn": 12
+    },
+    "command": {
+      "accuracy": 0.5422222222222223,
+      "precision": 0.5387755102040817,
+      "recall": 0.5866666666666667,
+      "f1": 0.5617021276595745,
+      "roc_auc": 0.5366419753086419,
+      "fpr": 0.5022222222222222,
+      "fnr": 0.41333333333333333,
+      "confusion_matrix": [
+        [
+          224,
+          226
+        ],
+        [
+          186,
+          264
+        ]
+      ],
+      "tp": 264,
+      "tn": 224,
+      "fp": 226,
+      "fn": 186
+    },
+    "network": {
+      "accuracy": 0.5288888888888889,
+      "precision": 0.5155131264916468,
+      "recall": 0.96,
+      "f1": 0.6708074534161491,
+      "roc_auc": 0.5307382716049382,
+      "fpr": 0.9022222222222223,
+      "fnr": 0.04,
+      "confusion_matrix": [
+        [
+          44,
+          406
+        ],
+        [
+          18,
+          432
+        ]
+      ],
+      "tp": 432,
+      "tn": 44,
+      "fp": 406,
+      "fn": 18
+    },
+    "memory": {
+      "accuracy": 0.9111111111111111,
+      "precision": 0.9147982062780269,
+      "recall": 0.9066666666666666,
+      "f1": 0.9107142857142857,
+      "roc_auc": 0.9756024691358025,
+      "fpr": 0.08444444444444445,
+      "fnr": 0.09333333333333334,
+      "confusion_matrix": [
+        [
+          412,
+          38
+        ],
+        [
+          42,
+          408
+        ]
+      ],
+      "tp": 408,
+      "tn": 412,
+      "fp": 38,
+      "fn": 42
+    },
+    "hybrid_fusion": {
+      "accuracy": 0.9566666666666667,
+      "precision": 0.9975786924939467,
+      "recall": 0.9155555555555556,
+      "f1": 0.9548088064889919,
+      "roc_auc": 0.9980592592592592,
+      "fpr": 0.0022222222222222222,
+      "fnr": 0.08444444444444445,
+      "confusion_matrix": [
+        [
+          449,
+          1
+        ],
+        [
+          38,
+          412
+        ]
+      ],
+      "tp": 412,
+      "tn": 449,
+      "fp": 1,
+      "fn": 38
+    }
+  },
+  "multiclass_attribution": {
+    "accuracy": 0.9333333333333333,
+    "macro_f1": 0.9355727194494405,
+    "weighted_f1": 0.933144945332506,
+    "classification_report": {
+      "cobalt_strike_beacon": {
+        "precision": 0.84,
+        "recall": 0.711864406779661,
+        "f1-score": 0.7706422018348624,
+        "support": 59.0
+      },
+      "empire_framework": {
+        "precision": 0.9347826086956522,
+        "recall": 0.8431372549019608,
+        "f1-score": 0.8865979381443299,
+        "support": 51.0
+      },
+      "fileless_ransomware": {
+        "precision": 0.847457627118644,
+        "recall": 0.9433962264150944,
+        "f1-score": 0.8928571428571429,
+        "support": 53.0
+      },
+      "lolbins_abuse": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 61.0
+      },
+      "memory_only_rat": {
+        "precision": 0.9838709677419355,
+        "recall": 0.9838709677419355,
+        "f1-score": 0.9838709677419355,
+        "support": 62.0
+      },
+      "metasploit_memory_payloads": {
+        "precision": 1.0,
+        "recall": 0.9814814814814815,
+        "f1-score": 0.9906542056074766,
+        "support": 54.0
+      },
+      "powershell_fileless": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 36.0
+      },
+      "process_hollowing": {
+        "precision": 0.9827586206896551,
+        "recall": 0.9827586206896551,
+        "f1-score": 0.9827586206896551,
+        "support": 58.0
+      },
+      "reflective_dll_injection": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 55.0
+      },
+      "registry_resident_malware": {
+        "precision": 0.75,
+        "recall": 0.864406779661017,
+        "f1-score": 0.8031496062992126,
+        "support": 59.0
+      },
+      "wmi_malware": {
+        "precision": 0.9807692307692307,
+        "recall": 0.9807692307692307,
+        "f1-score": 0.9807692307692307,
+        "support": 52.0
+      },
+      "accuracy": 0.9333333333333333,
+      "macro avg": {
+        "precision": 0.9381490050013742,
+        "recall": 0.9356077244036396,
+        "f1-score": 0.9355727194494405,
+        "support": 600.0
+      },
+      "weighted avg": {
+        "precision": 0.9356652788012774,
+        "recall": 0.9333333333333333,
+        "f1-score": 0.933144945332506,
+        "support": 600.0
+      }
+    }
+  },
+  "comparison_table": [
+    {
+      "Modality": "Process",
+      "Architecture": "XGBoost",
+      "Accuracy": 0.9811,
+      "Precision": 0.9887,
+      "Recall": 0.9733,
+      "F1-Score": 0.981,
+      "ROC-AUC": 0.9973,
+      "FPR": 0.0111,
+      "FNR": 0.0267
+    },
+    {
+      "Modality": "Command",
+      "Architecture": "TF-IDF + Telemetry GBDT",
+      "Accuracy": 0.5422,
+      "Precision": 0.5388,
+      "Recall": 0.5867,
+      "F1-Score": 0.5617,
+      "ROC-AUC": 0.5366,
+      "FPR": 0.5022,
+      "FNR": 0.4133
+    },
+    {
+      "Modality": "Network",
+      "Architecture": "LightGBM",
+      "Accuracy": 0.5289,
+      "Precision": 0.5155,
+      "Recall": 0.96,
+      "F1-Score": 0.6708,
+      "ROC-AUC": 0.5307,
+      "FPR": 0.9022,
+      "FNR": 0.04
+    },
+    {
+      "Modality": "Memory",
+      "Architecture": "CatBoost",
+      "Accuracy": 0.9111,
+      "Precision": 0.9148,
+      "Recall": 0.9067,
+      "F1-Score": 0.9107,
+      "ROC-AUC": 0.9756,
+      "FPR": 0.0844,
+      "FNR": 0.0933
+    },
+    {
+      "Modality": "Hybrid Fusion",
+      "Architecture": "4-Way Ensemble (Threshold=0.60)",
+      "Accuracy": 0.9567,
+      "Precision": 0.9976,
+      "Recall": 0.9156,
+      "F1-Score": 0.9548,
+      "ROC-AUC": 0.9981,
+      "FPR": 0.0022,
+      "FNR": 0.0844
+    }
+  ]
+}

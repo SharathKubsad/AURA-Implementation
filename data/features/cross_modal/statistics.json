@@ -1,0 +1,86 @@
+{
+  "cross_proc_with_memory_and_command": {
+    "min": 1.0,
+    "max": 3.0,
+    "mean": 1.9556,
+    "median": 2.0,
+    "std": 0.4193,
+    "unique_count": 3,
+    "missing_percentage": 0.0,
+    "zero_percentage": 0.0,
+    "is_constant": false,
+    "is_near_constant": false
+  },
+  "cross_proc_with_command_and_network": {
+    "min": 11.0,
+    "max": 15.0,
+    "mean": 12.3333,
+    "median": 12.0,
+    "std": 1.1926,
+    "unique_count": 5,
+    "missing_percentage": 0.0,
+    "zero_percentage": 0.0,
+    "is_constant": false,
+    "is_near_constant": false
+  },
+  "cross_proc_with_injection_and_network": {
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.0444,
+    "median": 0.0,
+    "std": 0.2061,
+    "unique_count": 2,
+    "missing_percentage": 0.0,
+    "zero_percentage": 95.56,
+    "is_constant": false,
+    "is_near_constant": false
+  },
+  "cross_proc_with_suspicious_memory_and_tree": {
+    "min": 1.0,
+    "max": 2.0,
+    "mean": 1.0667,
+    "median": 1.0,
+    "std": 0.2494,
+    "unique_count": 2,
+    "missing_percentage": 0.0,
+    "zero_percentage": 0.0,
+    "is_constant": false,
+    "is_near_constant": false
+  },
+  "cross_high_privilege_network_processes": {
+    "min": 5.0,
+    "max": 9.0,
+    "mean": 5.7778,
+    "median": 5.0,
+    "std": 1.2273,
+    "unique_count": 5,
+    "missing_percentage": 0.0,
+    "zero_percentage": 0.0,
+    "is_constant": false,
+    "is_near_constant": false
+  },
+  "cross_suspicious_memory_process_ratio": {
+    "min": 0.0064,
+    "max": 0.0221,
+    "mean": 0.0137,
+    "median": 0.0141,
+    "std": 0.0031,
+    "unique_count": 21,
+    "missing_percentage": 0.0,
+    "zero_percentage": 0.0,
+    "is_constant": false,
+    "is_near_constant": false
+  },
+  "cross_network_enabled_process_ratio": {
+    "min": 0.0816,
+    "max": 0.1111,
+    "mean": 0.0928,
+    "median": 0.0915,
+    "std": 0.007,
+    "unique_count": 29,
+    "missing_percentage": 0.0,
+    "zero_percentage": 0.0,
+    "is_constant": false,
+    "is_near_constant": false
+  }
+}

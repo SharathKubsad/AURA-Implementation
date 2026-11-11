@@ -1,0 +1,26 @@
+{
+  "sample_id": "EXEC_RUN-002",
+  "run_id": "RUN-002",
+  "label": 1,
+  "family": "powershell_fileless",
+  "track": "TRACK_A",
+  "os": "microsoft_windows_11_home",
+  "execution_timestamp": "2026-09-20T05:26:58Z",
+  "source_category": "custom_powershell_fileless",
+  "metadata_source": "C:\\Users\\Prash\\Desktop\\Real-Time-Fileless-Malware-Detection\\Dataset\\custom_powershell_fileless\\metadata\\RUN-002.json",
+  "evidence_availability": {
+    "volatility": true,
+    "sysmon": true,
+    "powershell": true,
+    "network_connections": true,
+    "process_snapshot": true
+  },
+  "provenance": {
+    "sample_id": "EXEC_RUN-002",
+    "source_file": "metadata/RUN-002.json",
+    "source_type": "METADATA",
+    "source_plugin": "sample_metadata",
+    "extraction_timestamp": "2026-09-24T05:48:56.685395+00:00",
+    "extractor_version": "2.0.0-rich-forensic"
+  }
+}
